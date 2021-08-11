@@ -1,0 +1,122 @@
+.community{
+    padding:50px 0;
+}
+
+.community_main{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.community_main a{
+    cursor: pointer;
+    background: #ECF0F3;
+    box-shadow: -10px 10px 20px rgba(209, 217, 230, 0.2), 10px -10px 20px rgba(209, 217, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 20px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5);
+    border-radius: 18px;
+    padding: 20px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 58px;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    transition: 0.6s;
+}
+.community_main a::before{
+    content: '';
+    width: 0;
+    height: 100%;
+    transition: 0.6s;
+    position: absolute;
+    border-radius: 17px;
+}
+
+.community_main a:hover::before{
+    content: '';
+    width: 100% ;
+    height: 100% ;
+    background-color: #0075FF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 17px;
+    transition: 0.6s;
+}
+
+.community_main a img{
+    margin-top: 10px;
+}
+
+.community_main a:hover{
+    transition: 0.4s;
+    transform: scale(1);
+    color: #fff !important;
+}
+
+.community a span{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.community a span img:nth-child(2){
+    display: none;
+}
+
+.community a:hover span img:first-child{
+    display: none;
+}
+
+.community a:hover span img:nth-child(2){
+    display: block;
+}
+
+.community a.white_btn{
+    background: #ECF0F3;
+    display: block;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    padding: 20px 30px;
+    color: #015CC8;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+    max-width: 270px;
+}
+
+@media (max-width: 991.98px) {
+    .community_main a{
+        width: 230px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 767.98px){
+  .community_main a {
+        width: auto;
+        width: 30%;
+        font-size: 16px;
+        padding: 10px;
+        line-height: 20px;
+        margin: 0 8px;
+    }
+    .community_main a img{
+        width: 30px;
+    }
+    .community a.white_btn{
+        font-size: 20px;
+        max-width: 240px;
+    }
+    .community {
+    padding: 20px 0;
+}
+}

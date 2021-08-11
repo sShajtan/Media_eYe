@@ -1,0 +1,132 @@
+.roadmap{
+    padding:50px 0;
+}
+
+.roadmap_main{
+    display: flex;
+    justify-content: space-between;
+    padding: 160px 0 140px;
+}
+
+
+.roadmap_block{
+    width: 214px;
+    height: 214px;
+    background: url('../../img/roadmap_block.png') no-repeat center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.roadmap_block h6{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height:24px;
+    color: #0075FF;
+    position: relative;
+    z-index: 2;
+}
+
+.roadmap_block img {
+    position: absolute;
+    top: -60px;
+    width: 250px;
+    max-width: initial;
+}
+
+.roadmap_block.line_bottom img {
+    top: -13px;
+    transform: rotate(180deg);
+}
+
+.roadmap_block span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:-130px;
+    width: 210px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #DC09FF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.roadmap_block.roadmap_block.line_bottom span{
+    top: 290px;
+    color: #0075FF;
+}
+
+@media (max-width: 991.98px) {
+  .roadmap_block {
+    width: 130px;
+    height: 130px;
+  }
+  .roadmap_block img{
+      width: 160px;
+      top: -44px;
+  }
+  .roadmap_block.line_bottom img{
+      top: -19px;
+  }
+  .roadmap_block span{
+      font-size: 14px;
+      width: 170px;
+      left: 60%;
+  }
+  .roadmap_block.roadmap_block.line_bottom span{
+      top: 190px;
+  }
+  
+}
+
+@media (max-width: 767.98px){
+  .roadmap_main{
+      flex-direction: column;
+      padding: 20px 0;
+  }
+  .roadmap_block img, .roadmap_block.line_bottom img{
+      transform: rotate(90deg);
+  }
+  .roadmap_block{
+      margin: 20px;
+  }
+  .roadmap_block img, .roadmap_block.line_bottom img{
+      top: -28px;
+    left: -5px;
+  }
+  .roadmap_block span, .roadmap_block.roadmap_block.line_bottom span{
+      left: auto;
+      right: -170%;
+      top: 50%;
+      transform: translate(0, -50%);
+  }
+}
+
+@media (max-width: 575.98px){
+
+    .roadmap_block{
+        width: 100px;
+        height: 100px;
+    }
+    .roadmap_block img, .roadmap_block.line_bottom img{
+        width: 125px;
+        top: -23px;
+    }
+    .roadmap_block span{
+        width: 130px;
+    }
+    .roadmap_block h6{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .roadmap{
+        padding:20px 0;
+    }
+}

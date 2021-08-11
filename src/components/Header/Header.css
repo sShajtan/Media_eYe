@@ -1,0 +1,306 @@
+header {
+    background: #F0F0F3;
+    box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    height: 90px;
+    position: fixed;
+    z-index: 1111;
+    width: 100%;
+    top: 0;
+}
+
+.header_main{
+    display: flex;
+    align-items: center;
+    height: 90px;
+    justify-content: space-between;
+}
+
+
+.header_left_menu a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #212121;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.4s;
+}
+
+.header_left_menu a:hover{
+  transition: 0.4s;
+  color: #0075FF !important;
+}
+
+.header_search{
+    position: relative;
+}
+
+
+.header_search input{
+    background: #ECF0F3;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(209, 217, 230, 0.5), inset -5px 5px 10px rgba(209, 217, 230, 0.2), inset 5px -5px 10px rgba(209, 217, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(209, 217, 230, 0.9);
+    border-radius: 10px;
+    border: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    outline: none;
+    padding: 8px 40px 8px 10px;
+    transition: 0.2s;
+}
+
+
+.header_search button{
+    border: none;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    background: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.header_search button:hover{
+    transition: 0.4s;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.header_right_menu{
+    display: flex;
+}
+
+.header_right_menu a{
+    margin: 0 20px 0 0;
+}
+.header_right_menu button{
+    margin: 0  0 0 20px;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+z-index: 11111 !important;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 25px;
+  top: 25px;
+  background: #E3E6EC;
+  box-shadow: 11px 0px 28.0763px rgba(209, 217, 230, 0.67), 12px 10.0572px 14.2477px rgba(209, 217, 230, 0.34), 12.5715px 11.7334px 15.9239px rgba(209, 217, 230, 0.4), 12.5715px 5px 18.8572px rgba(209, 217, 230, 0.48), -8.38099px -19px 27.2382px rgba(255, 255, 255, 0.75), -11px -5px 17.8816px rgba(255, 255, 255, 0.539141), -8.38099px -1px 14.6776px rgba(255, 255, 255, 0.44708), -3px 2px 12.6413px rgba(255, 255, 255, 0.375);
+  border-radius: 50%;
+  background: url('../../img/menu_btn.png') no-repeat center;
+  background-size: 80%;
+  display: none;
+}
+
+.open .bm-burger-button{
+     background: url('../../img/menu_btn_close.png') no-repeat center;
+}
+
+.bm-cross-button{
+    display: none !important;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  display: none;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #F3F3F3;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  padding-top: 110px;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  text-align: center;
+}
+div.menu-item div{
+    display:flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+div.menu-item div button{
+    margin:15px;
+    width: 40%;
+}
+
+div.menu-item div button:nth-child(2){
+    color: #0075FF;
+}
+
+a.bm-item {
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+text-align: center;
+color: #0075FF;
+outline: none;
+text-decoration: none;
+padding: 5px 0;
+}
+
+div.menu-item .soc_header_mobile{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.header_right_menu button:nth-child(3){
+    color: #0075FF;
+}
+
+.mobile_search.header_search{
+      display: none;
+      }
+
+      .header_main a span, .header_main button span{
+    position: relative;
+    z-index: 1;
+  }
+.header_main a:hover, .header_main button:hover{
+    text-transform: 0.6s;
+    color: #fff;
+  }
+
+
+  .header_logo {
+    max-width: 170px;
+  }
+
+  
+
+      @media (min-width: 1199.98px){
+    header .container{
+      position: relative;
+    }
+
+    header .header_main{
+      position: absolute;
+      width: 90vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .header_search input{
+      min-width: 274px;
+    }
+  }
+
+  @media (min-width: 1399.98px){
+  .header_search input {
+      min-width: 400px;
+  }
+}
+
+@media (max-width: 1199.98px){
+  .header_right_menu a {
+   margin: 0 10px 0 5px;
+  }
+
+  .header_main a, .header_main button{
+      font-size: 12px;
+  }
+
+  
+  .header_logo{
+      width: 140px;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  .header_right_menu, .header_left_menu{
+      display: none;
+  }
+
+  .header_search {
+      display: none;
+  }
+  .bm-burger-button{
+      display: block;
+  }
+  .mobile_search.header_search{
+      display: block;
+      margin-right: 55px;
+      transition: 0.4s;
+      margin-left: 5px;
+  }
+
+
+  .mobile_search.header_search.hidden input{
+      padding: 0;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      transition: 0.2s;
+  }
+  .mobile_search.header_search.hidden input::-webkit-input-placeholder {
+    opacity: 0;
+   }
+    .mobile_search.header_search.hidden input::-moz-placeholder {
+    opacity: 0;
+    }
+    .mobile_search.header_search.hidden input:-ms-input-placeholder {
+    opacity: 0;
+    }
+    .mobile_search.header_search.hidden input::-ms-input-placeholder {
+    opacity: 0;
+    }
+    .mobile_search.header_search.hidden input::placeholder {
+    opacity: 0;
+    }
+}
