@@ -338,6 +338,7 @@ div.menu-item .soc_header_mobile{
   font-size: 12px;
   line-height: 1;
   padding: 5px;
+  opacity: 0;
 }
 
 .knobs,
