@@ -22,9 +22,13 @@
 
 .tokenomics h4 span{
     transition: 0.4s;
-    color: #3A3A3A;
+    color: #2A00A7;
 }
 
+.dark .tokenomics h4 span{
+    transition: 0.4s;
+    color: #00FFF0;
+}
 /* .dark .tokenomics h4 span{
     transition: 0.4s;
     color:#fff ;

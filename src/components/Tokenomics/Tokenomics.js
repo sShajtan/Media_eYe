@@ -8,18 +8,18 @@ class Tokenomics extends React.Component {
         return (
             <div className="tokenomics">
                 <div className="container">
-                    <img className="title animate__animated animate__zoomIn wow" data-wow-duration="1.5s" data-wow-delay="1s" src="img/tokenomics_title.svg" />
+                    <img className="title animate__animated animate__zoomIn wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/tokenomics_title.svg" />
                     <h4><span>Total token supply:</span>{" "} 1 Billion (fixed supply)</h4>
                     <h5>500M ERC20 and 500M BEP20</h5>
                     <div className="tokenomics_main">
                         <div className="tokenomics_left">
                             <div className="tokenomics_left_wrapper">
-                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s" data-wow-delay="1s" src="img/tokenomics/1.svg" />
-                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s" data-wow-delay="1.2s" src="img/tokenomics/2.svg" />
-                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s" data-wow-delay="1.4s" src="img/tokenomics/3.svg" />
-                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s" data-wow-delay="1.6s" src="img/tokenomics/4.svg" />
-                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s" data-wow-delay="1.8s" src="img/tokenomics/5.svg" />
-                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s" data-wow-delay="2s" src="img/tokenomics/6.svg" />
+                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/tokenomics/1.svg" />
+                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/tokenomics/2.svg" />
+                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/tokenomics/3.svg" />
+                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/tokenomics/4.svg" />
+                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/tokenomics/5.svg" />
+                                <img className="animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/tokenomics/6.svg" />
                             </div>
                         </div>
 
@@ -34,7 +34,7 @@ class Tokenomics extends React.Component {
                                         <line x1="71" y1="20.5" x2="43" y2="20.5" stroke="#FDA4FF" />
                                     </svg>
                                     </div>
-                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="1s">230M eYe (vesting 24 to 36 months)</span>
+                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">230M eYe (vesting 24 to 36 months)</span>
                                 </div>
                                 <div className="tokenomics_right_block">
                                     <div><svg width="159" height="43" viewBox="0 0 159 43" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@ class Tokenomics extends React.Component {
                                         <line x1="71" y1="20.5" x2="43" y2="20.5" stroke="#57A4FF" />
                                     </svg>
                                     </div>
-                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="1s">25M eYe ($0.02 to 0.025 per eYe token) </span>
+                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">25M eYe ($0.02 to 0.025 per eYe token) </span>
                                 </div>
                                 <div className="tokenomics_right_block">
                                     <div><svg width="128" height="43" viewBox="0 0 128 43" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@ class Tokenomics extends React.Component {
                                         <line x1="71" y1="20.5" x2="43" y2="20.5" stroke="#00FF34" />
                                     </svg>
                                     </div>
-                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="1s">75M eYe ($0.025 to 0.035 per/eYe) 60% locked liquidity</span>
+                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">75M eYe ($0.025 to 0.035 per/eYe) 60% locked liquidity</span>
                                 </div>
                                 <div className="tokenomics_right_block">
                                     <div><svg width="214" height="58" viewBox="0 0 214 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,7 @@ class Tokenomics extends React.Component {
                                         <line x1="71" y1="26.5" x2="43" y2="26.5" stroke="#BE7CDE" />
                                     </svg>
                                     </div>
-                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="1s">220M eYe</span>
+                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">220M eYe</span>
                                 </div>
                                 <div className="tokenomics_right_block">
                                     <div><svg width="244" height="58" viewBox="0 0 244 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@ class Tokenomics extends React.Component {
                                         <line x1="71" y1="26.5" x2="43" y2="26.5" stroke="#FF9494" />
                                     </svg>
                                     </div>
-                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="1s">200M eYe</span>
+                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">200M eYe</span>
                                 </div>
                                 <div className="tokenomics_right_block">
                                     <div>                                    <svg width="189" height="58" viewBox="0 0 189 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@ class Tokenomics extends React.Component {
                                         <line x1="71" y1="26.5" x2="43" y2="26.5" stroke="#FFA653" />
                                     </svg>
                                     </div>
-                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="1s">250M eYe</span>
+                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">250M eYe</span>
                                 </div>
                             </div>
                             <svg className="mobile_icons" width="179" height="334" viewBox="0 0 179 334" fill="none" xmlns="http://www.w3.org/2000/svg">

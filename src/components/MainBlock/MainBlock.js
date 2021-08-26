@@ -75,8 +75,8 @@ class MainBlock extends React.Component {
                 <div className="container">
                     <div className="main_block_main">
                         <div className="main_block_main_left">
-                            <img className="animate__animated animate__fadeInLeft wow logo" data-wow-duration="1.5s" data-wow-delay="1s" src="img/big_main_logo.png" />
-                            <h6 className="animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="1s">A frictionless platform for creating, trading, and distributing NFTs.</h6>
+                            <img className="animate__animated animate__fadeInLeft wow logo" data-wow-duration="1s" data-wow-delay="0.5s" src="img/big_main_logo.png" />
+                            <h6 className="animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.5s">A frictionless platform for creating, trading, and distributing NFTs.</h6>
                             <div className="main_left_buttons">
                                 <a className="learn_more"><span>Learn More</span></a>
                                 <a className="sign_up"><span>SignUP</span></a>

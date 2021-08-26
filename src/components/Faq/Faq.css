@@ -27,8 +27,7 @@
 .faq_block.active{
     transition: 0.4s;
     border: 1px solid;
-    border-image-source: linear-gradient(91.2deg, #0075FF 5.13%, #2DDCF8 103.48%);
-border-image-slice: 1;
+   border:  1px solid #035EC9;
 
 }
 

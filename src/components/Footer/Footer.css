@@ -106,3 +106,8 @@ footer{
         margin: 0 auto;
     }
 }
+
+@media (max-width: 575.98px){.footer_menu{
+    flex-direction: column;
+    text-align: center;
+}}

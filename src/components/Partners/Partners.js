@@ -46,8 +46,8 @@ class Partners extends React.Component {
         return (
             <div className="partners">
                 <div className="container">
-                    <img className="title" src="img/partners_title.png" />
-                    <div className="team_main animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="1s">
+                    <img className="title animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/partners_title.png" />
+                    <div className="team_main animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.5s">
                         <Slider {...settings}>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">

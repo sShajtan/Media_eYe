@@ -8,13 +8,13 @@ class Roadmap extends React.Component {
                 <div className="roadmap_left_bg"></div>
                 <div className="roadmap_right_bg"></div>
                 <div className="container">
-                    <img className="title animate__animated animate__zoomIn wow" data-wow-duration="1.5s" data-wow-delay="1s" src="img/roadmap_title.svg" />
+                    <img className="title animate__animated animate__zoomIn wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/roadmap_title.svg" />
                     <div className="roadmap_main">
                         <div className="roadmap_main_block_wrapper active">
                             <span>The MeDIA eYe NFT Portal Concept is developed</span>
                             <div className="roadmap_main_block">
                                 <h4>Q1/21</h4>
-                                <div className="line animate__animated animate__flipInX wow" data-wow-duration="1.5s" data-wow-delay="1.5s"></div>
+                                <div className="line animate__animated animate__flipInX wow" data-wow-duration="1s" data-wow-delay="0.5s"></div>
                             </div>
                             <span></span>
                         </div>
@@ -22,7 +22,7 @@ class Roadmap extends React.Component {
                             <span></span>
                             <div className="roadmap_main_block ">
                                 <h4>Q2/21</h4>
-                                <div className="line animate__animated animate__flipInX wow" data-wow-duration="1.5s" data-wow-delay="2s"></div>
+                                <div className="line animate__animated animate__flipInX wow" data-wow-duration="1s" data-wow-delay="0.8s"></div>
                             </div>
                             <span>TDevelopment MeDIA eYe Platform and Testing
                             </span>
@@ -33,7 +33,7 @@ class Roadmap extends React.Component {
                             </span>
                             <div className="roadmap_main_block">
                                 <h4>Q3/21</h4>
-                                <div className="line animate__animated animate__flipInX wow" data-wow-duration="1.5s" data-wow-delay="2.5s"></div>
+                                <div className="line animate__animated animate__flipInX wow" data-wow-duration="1" data-wow-delay="1.1s"></div>
                             </div>
                             <span></span>
 

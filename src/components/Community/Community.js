@@ -7,7 +7,7 @@ class Community extends React.Component {
         return (
             <div className="community">
                 <div className="container">
-                    <img src="img/community_title.png" className="title" />
+                    <img src="img/community_title.png" className="title  animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="0.5s" />
                     <div className="community_main" >
                         <a>
                             <svg width="167" height="167" viewBox="0 0 167 167" fill="none" xmlns="http://www.w3.org/2000/svg">

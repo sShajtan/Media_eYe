@@ -56,7 +56,7 @@ class Team extends React.Component {
             <div className="team">
                 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet'></link>
                 <div className="container">
-                    <img className="title" src="img/team_title.svg" />
+                    <img className="title animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/team_title.svg" />
                     <div className="team_main " >
 
                         <Slider {...settings}>

@@ -8,11 +8,13 @@ class Header extends React.Component {
         super(props);
         this.state = {
             isOpen: false,
-            mobileInputShow: false
+            mobileInputShow: false,
+            mobileSearch: false
         };
         this.setWrapperRef = this.setWrapperRef.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
         this.showMobileInput = this.showMobileInput.bind(this);
+        this.toggleMobileSearch = this.toggleMobileSearch.bind(this);
 
     }
 
@@ -31,6 +33,10 @@ class Header extends React.Component {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
             this.setState({ mobileInputShow: false })
         }
+    }
+
+    toggleMobileSearch() {
+        this.setState({ mobileSearch: !this.state.mobileSearch });
     }
 
 
@@ -59,7 +65,7 @@ class Header extends React.Component {
                                 <a>Content Marketplace ▾</a>
                                 <a>NFT Gallery</a>
                             </div>
-                            <div className="header_search">
+                            <div className={this.state.mobileSearch ? "header_search active" : "header_search"}>
                                 <input />
                                 <button>
                                     <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,6 +75,12 @@ class Header extends React.Component {
                                     </svg>
 
                                 </button>
+                            </div>
+                            <div className="mobile_search" onClick={this.toggleMobileSearch}>
+                                <img src={this.props.theme ? "img/mobile_search.png" : "img/mobile_search_dark.png"} />
+                            </div>
+                            <div className="mobile_switch" onClick={this.props.toggleTheme}>
+                                <img src={this.props.theme ? "img/sun_mobile.png" : "img/sun_mobile_dark.png"} />
                             </div>
 
                             <div className="header_right_menu">
@@ -85,13 +97,8 @@ class Header extends React.Component {
                                 </div>
                                 <a className="ntf_header">NFT Creator</a>
                             </div>
-                            {/* <div className={this.state.mobileInputShow ? 'mobile_search header_search ' : 'mobile_search header_search hidden'}>
-                                <input placeholder="search" />
-                                <button onClick={this.showMobileInput}>
-                                    <img src="img/search.svg" />
-                                </button>
-                            </div> */}
                         </div>
+
                     </div>
                 </header >
                 <div className={!this.state.isOpen ? "open" : null}>
@@ -99,42 +106,29 @@ class Header extends React.Component {
                         <a className="menu-item" href="/">Content</a>
                         <a className="menu-item" >Marketplace</a>
                         <a className="menu-item" >Media eYe</a>
-                        <a className="menu-item" >GALLERYArtists</a>
+                        <a className="menu-item" >GALLERY</a>
+                        <a className="menu-item" >Artists</a>
                         <a className="menu-item" >Campaigns</a>
-                        <a className="menu-item" >Tutorial</a>
-                        <a className="menu-item" >Support</a>
-                        <a className="menu-item" >News</a>
-                        <a className="menu-item" >Whitepaper</a>
                         <a className="menu-item" >Contact</a>
                         <a className="menu-item" >About Us</a>
                         <a className="menu-item" > Team</a>
                         <a className="menu-item" >Terms Of Service</a>
-                        {/* <div className="menu-item">
-                            <div>
-                                <button className="white_btn"><span>Log In</span></button>
-                                <button className="white_btn"><span>SignUp</span></button>
-                            </div>
-                        </div> */}
                         <div className="menu-item">
                             <div className="soc_header_mobile">
                                 <a>
-                                    <img src="img/soc_mobile_header/1.png" />
+                                    <a href="https://medium.com/@MeDIAeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/1.png" : "img/footer_soc/1-dark.png"} /></a >
                                 </a>
-                                <a>
-                                    <img src="img/soc_mobile_header/2.png" />
-                                </a>
-                                <a>
-                                    <img src="img/soc_mobile_header/3.png" />
-                                </a>
-                                <a>
-                                    <img src="img/soc_mobile_header/4.png" />
-                                </a>
-                                <a>
-                                    <img src="img/soc_mobile_header/5.png" />
-                                </a>
-                                <a>
-                                    <img src="img/soc_mobile_header/6.png" />
-                                </a>
+                                <a href="https://t.me/MeDiaeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/2.png" : "img/footer_soc/2-dark.png"} /></a >
+                                <a href="https://twitter.com/MeDIAeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/3.png" : "img/footer_soc/3-dark.png"} /></a >
+                                <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank"><img src={this.props.theme ? "img/footer_soc/4.png" : "img/footer_soc/4-dark.png"} /></a >
+                                <a ><img src={this.props.theme ? "img/footer_soc/5.png" : "img/footer_soc/5-dark.png"} /></a >
+                                <a href="https://www.instagram.com/mediaeyenfts/" target="_blank"><img src={this.props.theme ? "img/footer_soc/6.png" : "img/footer_soc/6-dark.png"} /></a >
+                            </div>
+                        </div>
+                        <div className="menu-item">
+                            <div>
+                                <button><span>NFT Creator</span></button>
+                                <button className="login"><span>Login</span></button>
                             </div>
                         </div>
                     </Menu></div></React.Fragment >

@@ -12,10 +12,10 @@ class MainInfo extends React.Component {
         return (
             <div className="main_info">
                 <div className="container">
-                    <img className="title animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="1s" src="img/nft_title.svg" />
+                    <img className="title animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="0.5s" src="img/nft_title.svg" />
                     <div className="main_info_main">
                         <div className="main_info_left">
-                            <img className="animate__animated animate__zoomIn wow" data-wow-duration="1.5s" data-wow-delay="1s" src="img/nft_img.png" />
+                            <img className="animate__animated animate__zoomIn wow" data-wow-duration="1.5s" data-wow-delay="0.5s" src="img/nft_img.png" />
                             <img className="title" src="img/nft_title.svg" />
                         </div>
                         <div className="main_info_right">
@@ -23,7 +23,7 @@ class MainInfo extends React.Component {
                             <a className="check_faq_button"><span>Сheck out our FAQ</span></a>
 
                             <div>
-                                <img className="animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="1s" src="img/nft_img_2.png" />
+                                <img className="animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="0.5s" src="img/nft_img_2.png" />
                             </div>
                         </div>
                     </div>

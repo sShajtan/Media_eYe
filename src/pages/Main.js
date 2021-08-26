@@ -42,7 +42,7 @@ class Main extends React.Component {
             <React.Fragment>
                 <TimerPopup showPopup={this.state.showPopup}
                     togglePopup={this.togglePopup} />
-                <Header toggleTheme={this.props.toggleTheme} />
+                <Header toggleTheme={this.props.toggleTheme} theme={this.props.theme} />
                 <MainBlock />
                 <MainInfo />
                 <MainHow />
