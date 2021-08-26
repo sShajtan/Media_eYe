@@ -9,7 +9,7 @@ class Community extends React.Component {
                 <div className="container">
                     <img src="img/community_title.png" className="title  animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="0.5s" />
                     <div className="community_main" >
-                        <a>
+                        <a href="https://t.me/MeDiaeYeNFT" target="_blank">
                             <svg width="167" height="167" viewBox="0 0 167 167" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_f)">
                                     <path className="bg" d="M42.7209 1.86739e-06L-1.99876e-06 45.7262L-7.2998e-06 167L126.221 167L167 127.238L167 7.2998e-06L42.7209 1.86739e-06Z" fill="url(#paint0_linear)" />
@@ -31,7 +31,7 @@ class Community extends React.Component {
                                 </defs>
                             </svg>
                         </a>
-                        <a>
+                        <a href="https://twitter.com/MeDIAeYeNFT" target="_blank">
                             <svg width="167" height="167" viewBox="0 0 167 167" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_a)">
                                     <path className="bg" d="M42.7209 1.86739e-06L-1.99876e-06 45.7262L-7.2998e-06 167L126.221 167L167 127.238L167 7.2998e-06L42.7209 1.86739e-06Z" fill="url(#paint0_linear)" />
@@ -53,7 +53,7 @@ class Community extends React.Component {
                                 </defs>
                             </svg>
                         </a>
-                        <a>
+                        <a href="https://medium.com/@MeDIAeYeNFT" target="_blank">
                             <svg width="167" height="167" viewBox="0 0 167 167" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_c)">
                                     <path className="bg" d="M42.7209 1.86739e-06L-1.99876e-06 45.7262L-7.2998e-06 167L126.221 167L167 127.238L167 7.2998e-06L42.7209 1.86739e-06Z" fill="url(#paint0_linear)" />

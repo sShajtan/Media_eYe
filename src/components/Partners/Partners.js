@@ -51,42 +51,42 @@ class Partners extends React.Component {
                         <Slider {...settings}>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a>
+                                    <a href="https://quai-invest.net/" target="_blank">
                                         <img src="img/partners/1.png" />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a>
+                                    <a href="https://filecoin.io/" target="_blank">
                                         <img src={this.props.theme ? "img/partners/2-dark.png" : "img/partners/2.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a>
+                                    <a href="https://www.mogulproductions.com/" target="_blank">
                                         <img src={this.props.theme ? "img/partners/3-dark.png" : "img/partners/3.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a>
+                                    <a href="https://www.bigleap.com/" target="_blank">
                                         <img src={this.props.theme ? "img/partners/4-dark.png" : "img/partners/4.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a>
+                                    <a href="https://www.moonpay.com/" target="_blank">
                                         <img src={this.props.theme ? "img/partners/5-dark.png" : "img/partners/5.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a>
+                                    <a href="https://www.rampdefi.com/" target="_blank">
                                         <img src={this.props.theme ? "img/partners/6-dark.png" : "img/partners/6.png"} />
                                     </a>
                                 </div>

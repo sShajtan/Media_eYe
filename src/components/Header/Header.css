@@ -65,6 +65,10 @@ header {
 }
 
 .dark .header_search input{
+  color: #fff;
+}
+
+.dark .header_search input{
   transition: 0.2s;
   background: #141233;
 
@@ -446,7 +450,8 @@ div.menu-item .soc_header_mobile{
     transition: 0.4s;
     opacity: 1;
     top: 100px;
-    height: 39px;
+    height: 41px;
+    padding: 1px;
     
   }
 
