@@ -23,7 +23,7 @@ class Footer extends React.Component {
                                     <li><a>Tutorial</a></li>
                                     <li><a>Support</a></li>
                                     <li><a>News</a></li>
-                                    <li><a>Blog</a></li>
+                                    <li><a href="https://mediaeyenft.com/blog/">Blog</a></li>
                                 </ul>
                                 <ul>
                                     <li><a>For Investors:</a></li>

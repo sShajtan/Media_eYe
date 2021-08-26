@@ -410,9 +410,13 @@ div.menu-item .soc_header_mobile{
 }
 
 #button-12 .knobs:before {
-  content: "\002600";
-  left: 4px;
-  top: 46%;
+  content: "";
+  left: 9px;
+  top: 50%;
+  background: url('../../img/sun_dark.png') no-repeat center;
+  background-size: contain;
+  width:20px;
+  height: 20px;
 }
 
 
@@ -430,11 +434,14 @@ div.menu-item .soc_header_mobile{
 }
 
 #button-12 .knobs:after {
-  content: "\263E";
-  right: 4px;
+  content: "";
   right: 8px;
-    top: 45%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
     color: #fff;
+    background: url('../../img/moon.png') no-repeat center;
+    background-size: contain;
     
 }
 
@@ -447,30 +454,34 @@ div.menu-item .soc_header_mobile{
 }
 
 
-#button-12 .knobs span:after {
+/* #button-12 .knobs span:after {
   content: "\263E";
   color: #fff;
   font-weight: 100;
-}
+} */
 
 #button-12 .knobs span:before{
-  content: "\002600";
+  content: "";
   color: #fff;
   font-weight: 100;
+  background: url('../../img/sun.png') no-repeat center;
+  background-size: cover;
 }
 
 #button-12 .knobs span:before {
   left: -40px;
-  background: linear-gradient(90deg, #5507DF 3.7%, #34E7FD 100%);
   width: 37px;
   height: 100%;
 }
 
 #button-12 .knobs span:after {
+  content: '';
   right: -56px;
-  background: linear-gradient(90deg, #5507DF 3.7%, #34E7FD 100%);
-  width: 37px;
+  background: (90deg, #5507DF 3.7%, #34E7FD 100%);
+  width: 38px;
   height: 100%;
+  background:url('../../img/moon_dark.png') no-repeat center;
+  background-size: cover;
 
 }
 

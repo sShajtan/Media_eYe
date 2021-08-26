@@ -32,7 +32,7 @@ class Main extends React.Component {
         if (this.state.showPopup === false) {
             setTimeout(() => {
                 this.setState({ showPopup: true })
-            }, 10000);
+            }, 100000000);
         }
     }
 
