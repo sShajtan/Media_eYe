@@ -1,8 +1,17 @@
 footer{
-    background: #0075FF;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    background: #E9F1FF;
     padding: 50px 0 80px;
+    box-shadow: 0px 4px 25px 0px #00000040;
+
+}
+
+.dark footer{
+    background: #151236;
+}
+
+.footer_logo{
+    max-width: 150px;
+    margin-top: 10px;
 }
 
 .footer_main{
@@ -37,15 +46,19 @@ footer{
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-    color: #FFFFFF;
+    color: #000;
     cursor: pointer;
     transition: 0.4s;
+}
+.dark .footer_menu ul li a{
+    transition: 0.4s;
+    color: #fff;
 }
 
 
 .footer_menu ul li a:hover{
     transition: 0.4s;
-    color:#e6e6e6 ;
+    color:#0075FF ;
 }
 
 .footer_right{

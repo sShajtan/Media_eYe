@@ -37,7 +37,17 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow-x:hidden;
-  background: #F3F3F3;
+   
+}
+
+.App{
+  transition: 0.5s;
+  background: #E9F1FF;
+}
+
+.App.dark{
+  background: #141233;
+  transition: 0.5s;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -218,131 +228,17 @@ header .white_btn:hover::before{
   margin: 20px 0;
 }
 
-body .slick-prev {
-   background: linear-gradient(147.42deg, rgba(64, 72, 93, 0.4) 6.32%, rgba(96, 106, 130, 0.4) 92.25%), linear-gradient(128deg, #E6E7ED -79.65%, #F7F8FA 151.25%);
-  background-blend-mode: soft-light, normal;
-  box-shadow: -7px -7px 16px #FAFBFC, 4px 3px 19px #BDC1D1, inset -1px -1px 16px #F5F6FA, inset 1px 1px 16px #E9EAF2;
-  border-radius:50%;
-  color: #0075FF;
-  transition: 0.6s;
-  width: 45px;
-  height: 45px;
-  left: -4%;
-  transition: 0.4s;
-  display: flex;
-  justify-content: center;
-  padding: 19px;
-  font-size: 36px;
-  cursor: pointer;
-}
-
-body .slick-next {
-  background: linear-gradient(147.42deg, rgba(64, 72, 93, 0.4) 6.32%, rgba(96, 106, 130, 0.4) 92.25%), linear-gradient(128deg, #E6E7ED -79.65%, #F7F8FA 151.25%);
-  background-blend-mode: soft-light, normal;
-  box-shadow: -7px -7px 16px #FAFBFC, 4px 3px 19px #BDC1D1, inset -1px -1px 16px #F5F6FA, inset 1px 1px 16px #E9EAF2;
-  border-radius:50%;
-  color: #0075FF;
-  transition: 0.6s;
-  width: 45px;
-  height: 45px;
-  right: -4%;
-  transition: 0.4s;
-  display: flex;
-  justify-content: center;
-  padding: 19px;
-  font-size: 36px;
-  cursor: pointer;
-}
-
-body .slick-next:hover , body .slick-prev:hover {
-  transition: 0.4s;
-}
-
-
-body .slick-prev::before, body .slick-next::before{
-  display: none;
-}
-
-body .slick-next:focus, body .slick-next:hover{
-  background: linear-gradient(147.42deg, rgba(64, 72, 93, 0.4) 6.32%, rgba(96, 106, 130, 0.4) 92.25%), linear-gradient(128deg, #E6E7ED -79.65%, #F7F8FA 151.25%);
-  background-blend-mode: soft-light, normal;
-  box-shadow: -7px -7px 16px #FAFBFC, 4px 3px 19px #BDC1D1, inset -1px -1px 16px #F5F6FA, inset 1px 1px 16px #E9EAF2;
-  border-radius:50%;
-  background-size: contain;
-  color: #0075FF;
-  transition: 0.6s;
-} 
-
-
-body .slick-dots li, body .slick-dots li button{
-  width: 40px;
-  height: 5px;
-  margin-top: 5px;
-}
-
-body .slick-dots li button:before{
-  content: none;
-}
-
-
-body .slick-dots li.slick-active button{
-  background: #0075FF;
-}
-
-.slick-dots li button{
-  background: #D9DFEA;
-  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
-  border-radius: 7px;
-}
-
 h3 img{
     display: inline;
     margin-bottom: -8px;
 }
 
 
-body .slick-arrow span{
-  position: absolute;
-  height: 0;
-  width: 0;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #0075FF;
-  z-index: 1;
-  transition: 0.8s;
-  border-radius: 50%;
-}
 
-body .slick-next:hover span, body .slick-prev:hover span{
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  transition: 0.8s;
-}
-
-body .slick-next i, body .slick-prev i{
-  transition: 0.8s;
-  font-style: normal;
-  position: relative;
-  z-index: 1;
-}
-
-body .slick-next:hover i, body .slick-prev:hover i{
-  color: #fff;
-  transition: 0.8s;
-}
 
 @media (max-width: 767.98px){
   .block_title {
     font-size: 24px;
   }
 
-  body .slick-next{
-    display: none !important;
-  }
-
-  body .slick-prev{
-    display: none !important;
-  }
 }

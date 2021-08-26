@@ -1,0 +1,74 @@
+.main_howwork{
+    padding: 50px 0;
+    background: url('../../img/mian_bg_nft.png') no-repeat bottom;
+    background-size: contain;
+    padding-bottom: 800px;
+}
+
+.main_howwork .title{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.main_howwork_main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_howwork_main_block{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.main_howwork_main_block h3{
+    font-family: Neumatic Compressed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 134px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.12em;
+    color: #595858;
+    transition: 0.4s;
+}
+
+.main_howwork_main_block span{
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color: #000000;
+transition: 0.4s;
+}
+
+.dark .main_howwork_main_block span, .dark .main_howwork_main_block h3{
+    color: #fff;
+    transition: 0.4s;
+}
+
+@media (max-width: 991.98px){
+    .main_howwork_main_block h3{
+        font-size: 80px;
+    }
+    .main_howwork .title{
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 767.98px){
+    .main_howwork_main{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main_howwork_main_block{
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        margin: 50px 0;
+    }
+}

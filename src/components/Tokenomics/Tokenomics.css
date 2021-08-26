@@ -1,8 +1,12 @@
 .tokenomics{
     padding: 50px 0;
+    margin-top: -800px;
 }
 
-
+.tokenomics .title{
+    max-width: 700px;
+    margin: 50px auto 70px;
+}
 
 
 .tokenomics h4{
@@ -14,6 +18,16 @@
     text-align: center;
     color: #0075FF;
     text-shadow: 0px 4px 4px rgba(86, 86, 86, 0.25);
+}
+
+.tokenomics h4 span{
+    transition: 0.4s;
+    color: #3A3A3A;
+}
+
+.dark .tokenomics h4 span{
+    transition: 0.4s;
+    color:#fff ;
 }
 
 .tokenomics_bg{
@@ -36,7 +50,7 @@
     font-size: 16px;
     line-height: 18px;
     text-align: center;
-    color: #085CB0;
+    color: #0075FF;
     text-shadow: 0px 4px 4px rgba(86, 86, 86, 0.25);
 }
 
@@ -48,26 +62,111 @@
 }
 
 .tokenomics_left{
-    width: 45%;
+    width: 50%;
+    padding-right: 50px;
 }
 
 .tokenomics_right{
-    width: 55%;
+    width: 50%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .tokenomics_left_wrapper{
+    margin-top: 30px;
     display: flex;
-    justify-content: flex-end;
-    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    max-width: 50vw;
+}
+
+.tokenomics_left_wrapper img{
+    height: 50px;
+    max-width: 90%;
 }
 
 .tokenomics_right_block{
     display: flex;
     height: 50px;
     align-items: center;
+    justify-content: space-between;
+}
+
+.tokenomics .buy_btn {
+    background: url('../../img/learn_more_button_bg.png') no-repeat center;
+    background-size: contain;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 50px;
+    position: relative;
+    transition: 0.4s;
+    width: 140px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .tokenomics_right_block:first-child span{
+    color: #FDA4FF;
+}
+ .tokenomics_right_block:nth-child(2) span{
+    color: #57A4FF;
+}
+
+ .tokenomics_right_block:nth-child(3) span{
+    color: #00FF34;
+}
+
+ .tokenomics_right_block:nth-child(4) span{
+    color: #BD7CDE;
+}
+
+ .tokenomics_right_block:nth-child(5) span{
+    color: #FF9395;
+}
+
+ .tokenomics_right_block:nth-child(6) span{
+    color: #FEA555;
+}
+
+.tokenomics .buy_btn:hover{
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .tokenomics .buy_btn:hover{
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.tokenomics .buy_btn::before {
+  content: '';
+  background: url('../../img/signup_button_bg.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.tokenomics .buy_btn:hover::before{
+  transition: 0.4s;
+  opacity: 1;
 }
 
 .tokenomics_right_block h6{
@@ -103,11 +202,18 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
-    color: #57A4FF;
-    text-shadow: 0px 4px 4px rgba(86, 86, 86, 0.25);
+    color: #000000;
     width: 300px;
+    transition: 0.4s;
+    margin-left: 25px;
+    
+}
+
+.dark .tokenomics_right_block span{
+    color: #fff;
+    transition: 0.4s;
 }
 
 .tokenomics_right_wrapper{
@@ -210,68 +316,58 @@
 }
 
 @media (max-width: 1199.98px) {
-    .tokenomics_bg{
-        left: 95px;
+    .tokenomics_left {
+    width: 40%;
+    }
+    .tokenomics_left_wrapper{
+        max-width: 45vw;
+    }
+    .tokenomics_right_block span{
+        width: 250px;
     }
 }
 
 @media (max-width: 991.98px) {
-  .tokenomics_right_footer h6 {
-    width: 200px;
-  }
-  .tokenomics_right_block h6{
-      width: 160px;
-  }
-  
-  .tokenomics_right_block span{
-      width: 260px;
-  }
-  .tokenomics_right_footer span{
-      width: 260px;
-  }
-  .tokenomics_right_footer span
-  .tokenomics_right_block h6{
-      width: 150px;
-  }
 
-  .tokenomics_right_footer h6 {
-    width: 195px;
-}
-.tokenomics_right_wrapper{
-    height: 470px;
-}
-.scale {
-    position: absolute;
-    right: 205px;
-    top: 27px;
-}
 
-.tokenomics_bg{
-    display: none;
-}
+    .tokenomics .title{
+        max-width: 90%;
+        margin: 40px auto;
+    }
+
+    .tokenomics_main{
+        flex-wrap: wrap;
+    }
+
+    .tokenomics_left{
+        width: 100%;
+    }
+
+    .tokenomics_right{
+        width: 100%;
+        margin-top: 550px;
+    }
+    .tokenomics_left_wrapper{
+        max-width: 100%;
+    }
+
+    .tokenomics_right_block{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .tokenomics_right_block span{
+        width: 60%;
+        text-align: end;
+        padding-right: 20px;
+    }
+    .tokenomics_right_wrapper{
+        width: 100%;
+    }
 }
 
 @media (max-width: 767.98px){
-  .tokenomics_left{
-      display: none;
-  }
-  .tokenomics_right{
-      width: 100%;
-  }
-  .tokenomics_right {
-      height: auto;
-      justify-content: space-around;
-  }
-  .tokenomics_right_wrapper {
-    height: 400px;
-    margin-right: -90px;
-    width: 80%;
-}
 .tokenomics_right_footer{
     width: 100%;
-}
-.tokenomics_right_block{
-    justify-content: space-between
 }
 .tokenomics_mobile{
     display: block;
@@ -300,31 +396,71 @@
     margin-left: 0;
 }
 
-.mobile_scale{
-    position: absolute;
-    top: 22%;
-    left: 6%;
-    width: 87%;
-}
+
 .tokenomics_right_block span, .tokenomics_right_block h6{
-    width: 50%;
+    width: 45%;
 }
-.tokenomics_right_block{
-    height: auto;
+
+.tokenomics_right_block div{
+    width: 45%;
 }
+.tokenomics .mobile_icons{
+    display: none;
+}
+
+
 }
 
 
 @media (max-width: 575.98px){
-    .tokenomics_right_block span, .tokenomics_right_block h6{
-        font-size: 16px;
+
+    .tokenomics .mobile_icons{
+        display: block;
+        width: 45%;
+            height: 300px;
     }
-    .tokenomics_right_wrapper {
-    height: 400px;
-    margin-right: -50px;
-    width: 90%;
+    .tokenomics_right_wrapper{
+        width: 55%;
+        height: 300px;
+        margin-top: 0;
+    }
+    .tokenomics_right_block span, .tokenomics_right_block h6 {
+        width: 100%;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .tokenomics_right_block{
+        height: 30px;
+    }
+
+    .tokenomics_right_block div{
+        display: none;
+    }
+    .tokenomics_right {
+        display: flex;
+    }
+    .tokenomics .buy_btn{
+        margin-top: 20px;
+    }
+    .tokenomics_left_wrapper{
+        height: 320px;
+    }
+    .tokenomics_right{
+        margin-top: 370px;
+    }
+
 }
-.tokenomics_footer a{
-    font-size: 18px;
-}
+
+
+@media (max-width: 369.98px){
+    .tokenomics_right_block span{
+        padding-right: 5px;
+        margin: 0;
+    }
+    .tokenomics .mobile_icons {
+        width: 55%;
+    }
+    .tokenomics_right_wrapper{
+        width: 45%;
+    }
 }

@@ -60,22 +60,37 @@ class Header extends React.Component {
                                 <a>NFT Gallery</a>
                             </div>
                             <div className="header_search">
-                                <input placeholder="search" />
+                                <input />
                                 <button>
-                                    <img src="img/search.svg" />
+                                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="13.2923" cy="13.2916" r="8.45833" stroke="#555555" stroke-width="2" />
+                                        <path d="M13.291 9.66675C12.815 9.66675 12.3436 9.76051 11.9038 9.94268C11.464 10.1249 11.0644 10.3919 10.7278 10.7285C10.3911 11.0651 10.1241 11.4647 9.94195 11.9045C9.75978 12.3443 9.66602 12.8157 9.66602 13.2917" stroke="#555555" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M24.166 24.1667L20.541 20.5417" stroke="#555555" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+
                                 </button>
                             </div>
+
                             <div className="header_right_menu">
-                                <a className="blue_btn">NFT Creator</a>
-                                <button className="white_btn"><span>Log In</span></button>
-                                <button className="white_btn"><span>SignUp</span></button>
+                                <div class="toggle-button-cover">
+                                    <div class="button-cover">
+                                        <div class="button b2" id="button-12">
+                                            <input type="checkbox" class="checkbox" onChange={this.props.toggleTheme} />
+                                            <div class="knobs">
+                                                <span></span>
+                                            </div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a className="ntf_header">NFT Creator</a>
                             </div>
-                            <div className={this.state.mobileInputShow ? 'mobile_search header_search ' : 'mobile_search header_search hidden'}>
+                            {/* <div className={this.state.mobileInputShow ? 'mobile_search header_search ' : 'mobile_search header_search hidden'}>
                                 <input placeholder="search" />
                                 <button onClick={this.showMobileInput}>
                                     <img src="img/search.svg" />
                                 </button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </header >
@@ -94,12 +109,12 @@ class Header extends React.Component {
                         <a className="menu-item" >About Us</a>
                         <a className="menu-item" > Team</a>
                         <a className="menu-item" >Terms Of Service</a>
-                        <div className="menu-item">
+                        {/* <div className="menu-item">
                             <div>
                                 <button className="white_btn"><span>Log In</span></button>
                                 <button className="white_btn"><span>SignUp</span></button>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="menu-item">
                             <div className="soc_header_mobile">
                                 <a>

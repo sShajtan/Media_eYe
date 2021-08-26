@@ -1,13 +1,25 @@
 .main_info{
-    padding: 50px 0;
+    padding: 80px 0;
+    background: url('../../img/nft_bg.png') no-repeat right ;
+    background-size: contain;
+    position: relative;
 }
 
 .main_info_main{
     display: flex;
+    
+}
+
+.main_info .title{
+    margin: 0 auto;
+    max-width: 800px;
+    z-index: 2;
+    margin-bottom: -40px;
+    position: relative;
 }
 
 .main_info_left{
-    width: 55%;
+    width: 40%;
 }
 
 .main_info_left img{
@@ -16,106 +28,142 @@
 }
 
 .main_info_right{
-    width: 45%;
+    width: 60%;
+    padding: 80px 0 50px 50px;
 }
+
+.main_info_right .check_faq_button{
+    background: url('../../img/check_faq_bg.png') no-repeat center;
+    background-size: contain;
+    padding: 20px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #121024;
+    margin-top: 50px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+}
+
+.main_info_right .check_faq_button span{
+    transition: 0.4s;
+    z-index: 1;
+    position: relative;
+}
+
+.main_info_right .check_faq_button::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    opacity: 0;
+    background: url('../../img/check_faq_bg_hover.png') no-repeat center;
+    background-size: contain;
+    transition: 0.4s;
+    }
+
+    .main_info_right .check_faq_button:hover::before{
+        opacity: 1;
+        transition: 0.4s;
+    }
 
 .main_info_right p{
-    font-family: Roboto;
+    font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 26px;
-    color: #212121;
-}
-
-.main_info_right{
-    padding: 20px;
-}
-
-.main_info_right img{
-    margin: 40px 0;
-}
-
-.main_info_right a{
-    display: inline-block;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 24px;
-    color: #0075FF;
-    margin: 40px 0;
-    padding: 15px 20px;
-    background: #F3F3F3;
+    color: #444444;
+    max-width: 80%;
+    transition: 0.4s;
+}
+.dark .main_info_right p, .dark .main_info_right .check_faq_button{
+    transition: 0.4s;/* Сheck out our FAQ */
+    color: #FFFFFF;
 }
 
-.main_info_footer{
+
+.main_info_right div{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
-.main_info_footer_block{
-    max-width: 30%;
+.main_info_right div img{
+    max-width: 300px;
+    margin-top: 20px;
+}
+.main_info .main_info_left .title{
+        display: none;
+    }
+
+@media (max-width: 1199.98px){
+    .main_info_right p{
+        max-width: 100%;
+    }
+    .main_info_right .check_faq_button{
+        margin-top: 20px;
+    }
+    .main_info_right {
+        padding: 60px 0 50px 50px;
+    }
+    .main_info_right div img {
+    max-width: 270px;
+
+    }
 }
 
-.main_info_footer_block div{
-    background: #ECF0F3;
-    box-shadow: -18px 18px 30px rgba(209, 217, 230, 0.2), 18px -18px 30px rgba(209, 217, 230, 0.2), -18px -18px 30px rgba(255, 255, 255, 0.9), 18px 18px 30px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5);
-    border-radius: 18px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
+@media (max-width: 991.98px){
+    .main_info_main{
+        flex-wrap: wrap;
+    }
+    .main_info_left{
+        width: 100%;
+    }
+    .main_info_right{
+        width: 100%;
+    }
+    .main_info .title {
+    max-width: 90%;
+    margin-top: -20px;
+    margin-bottom: 0;
 }
-
-.main_info_footer_block img{
-    width: 240px;
-    height: auto;
-    margin: 0 auto;
-    transform: scale(0.7);
-    transition: 0.5s;
-}
-.main_info_footer_block:hover img{
-    transition: 0.5s;
-    transform: scale(1);
-}
-.main_info_footer_block div div:first-child{
-    position: absolute;
-    left: 50%;
-    top:50%;
-    height: 0;
-    width: 0;
-    transform: translate(-50%, -50%);
-    background-color: #0075FF;
-    border-radius: 50%;
-    transition: 0.9s;
-    padding: 0;
+    .main_info_left img{
+        max-width: 70%;
+        margin:  0 auto;
+    }
+    .main_info_right div img {
+        margin-top: -60px;
+    }
     
+
 }
 
-.main_info_footer_block:hover div div:first-child{
-    height: 140%;
-    width: 140%;
-    transition: 0.9s;
-}
-
-.main_info_footer_block h6{
-    -webkit-filter: drop-shadow(0px 4px 4px rgba(86, 86, 86, 0.25));
-
-            filter: drop-shadow(0px 4px 4px rgba(86, 86, 86, 0.25));
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    color: #0075FF;
-    margin: 40px auto;
-}
 
 @media (max-width: 767.98px){
-  .main_how_block{
-    flex-direction: column;
-  }
+
+    .main_info .title{
+        display: none;
+    }
+    .main_info .main_info_left .title{
+        display: block;
+    }
+
+ 
+  .main_info_right {
+        padding: 0;
+    }
+
+.main_info_right div img {
+    max-width: 270px;
+    margin: 0;
+    margin-top: -80px;
+}
   .main_how_block div{
       width: 100%;
       padding: 10px 0;
@@ -160,7 +208,18 @@
       flex-wrap: wrap;
       justify-content: space-around;
   }
-  .main_info{
-    padding: 2s0px 0;
+
 }
+
+
+@media (max-width: 575.98px){
+    .main_info_right div img{
+        max-width: 40%;
+    }
+    .main_info_right .check_faq_button {
+        margin-top: 20px;
+        max-width: 55%;
+        font-size: 13px;
+    }
 }
+

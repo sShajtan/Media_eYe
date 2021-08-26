@@ -1,13 +1,18 @@
 header {
-    background: #F0F0F3;
+    background: #E9F1FF;
     box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
     height: 90px;
     position: fixed;
     z-index: 1111;
     width: 100%;
     top: 0;
+    transition: 0.5s;
+}
+
+.dark header{
+  transition: 0.5s;
+  background: #141233;
+  box-shadow: 0px 4px 25px 0px #00000040;
 }
 
 .header_main{
@@ -30,6 +35,11 @@ header {
     transition: 0.4s;
 }
 
+.dark .header_left_menu a{
+  transition: 0.4s;
+  color: #fff;
+}
+
 .header_left_menu a:hover{
   transition: 0.4s;
   color: #0075FF !important;
@@ -41,10 +51,9 @@ header {
 
 
 .header_search input{
-    background: #ECF0F3;
-    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(209, 217, 230, 0.5), inset -5px 5px 10px rgba(209, 217, 230, 0.2), inset 5px -5px 10px rgba(209, 217, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(209, 217, 230, 0.9);
-    border-radius: 10px;
-    border: none;
+  background: #E9F1FF;
+  border-radius: 10px;
+  border: 1px solid#606060;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -53,6 +62,12 @@ header {
     outline: none;
     padding: 8px 40px 8px 10px;
     transition: 0.2s;
+}
+
+.dark .header_search input{
+  transition: 0.2s;
+  background: #141233;
+
 }
 
 
@@ -69,6 +84,16 @@ header {
     transition: 0.4s;
 }
 
+.header_search button svg{
+ margin-top: 4px;
+ transition: 0.4s;
+}
+
+.dark .header_search button svg path, .dark .header_search button svg circle{
+ transition: 0.4s;
+ stroke: #fff;
+}
+
 .header_search button:hover{
     transition: 0.4s;
     transform: translateY(-50%) scale(1.1);
@@ -78,27 +103,25 @@ header {
     display: flex;
 }
 
-.header_right_menu a{
-    margin: 0 20px 0 0;
-}
-.header_right_menu button{
-    margin: 0  0 0 20px;
-}
+
+
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-z-index: 11111 !important;
+  z-index: 11111 !important;
   position: fixed;
   width: 40px;
   height: 40px;
   right: 25px;
   top: 25px;
   background: #E3E6EC;
-  box-shadow: 11px 0px 28.0763px rgba(209, 217, 230, 0.67), 12px 10.0572px 14.2477px rgba(209, 217, 230, 0.34), 12.5715px 11.7334px 15.9239px rgba(209, 217, 230, 0.4), 12.5715px 5px 18.8572px rgba(209, 217, 230, 0.48), -8.38099px -19px 27.2382px rgba(255, 255, 255, 0.75), -11px -5px 17.8816px rgba(255, 255, 255, 0.539141), -8.38099px -1px 14.6776px rgba(255, 255, 255, 0.44708), -3px 2px 12.6413px rgba(255, 255, 255, 0.375);
-  border-radius: 50%;
   background: url('../../img/menu_btn.png') no-repeat center;
   background-size: 80%;
   display: none;
+}
+
+.dark .bm-burger-button {
+  background: url('../../img/menu_btn_dark.png') no-repeat center;
 }
 
 .open .bm-burger-button{
@@ -141,8 +164,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #F3F3F3;
+  background: #E9F1FF;
   font-size: 1.15em;
+}
+
+.dark .bm-menu{
+  background: #141233;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -247,9 +274,6 @@ div.menu-item .soc_header_mobile{
 }
 
 @media (max-width: 1199.98px){
-  .header_right_menu a {
-   margin: 0 10px 0 5px;
-  }
 
   .header_main a, .header_main button{
       font-size: 12px;
@@ -303,4 +327,207 @@ div.menu-item .soc_header_mobile{
     .mobile_search.header_search.hidden input::placeholder {
     opacity: 0;
     }
+}
+
+
+
+.button-cover:before {
+  counter-increment: button-counter;
+  content: counter(button-counter);
+  color: #d7e3e3;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px;
+}
+
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 75px;
+  height: 34px;
+  border: 1px solid #606060;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+.button.b2 {
+  border-radius: 7px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: transparent;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+
+
+/* Button 12 */
+#button-12 .knobs:before,
+#button-12 .knobs:after,
+#button-12 .knobs span,
+#button-12 .knobs span:before,
+#button-12 .knobs span:after {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 2px;
+  transition: 0.3s ease all;
+  transform: translateY(-50%);
+}
+
+#button-12 .knobs:before {
+  content: "\002600";
+  left: 4px;
+  top: 46%;
+}
+
+
+
+#button-12 .knobs:before,
+#button-12 .knobs:after {
+  color: #474444;
+  z-index: 1;
+  font-weight: 100;
+}
+
+#button-12 .knobs span {
+  display: inline-block;
+  z-index: 2;
+}
+
+#button-12 .knobs:after {
+  content: "\263E";
+  right: 4px;
+  right: 8px;
+    top: 45%;
+    color: #fff;
+    
+}
+
+#button-12 .knobs span,
+#button-12 .knobs span:before,
+#button-12 .knobs span:after {
+  width: 20px;
+  height: 34px;
+  
+}
+
+
+#button-12 .knobs span:after {
+  content: "\263E";
+  color: #fff;
+  font-weight: 100;
+}
+
+#button-12 .knobs span:before{
+  content: "\002600";
+  color: #fff;
+  font-weight: 100;
+}
+
+#button-12 .knobs span:before {
+  left: -40px;
+  background: linear-gradient(90deg, #5507DF 3.7%, #34E7FD 100%);
+  width: 37px;
+  height: 100%;
+}
+
+#button-12 .knobs span:after {
+  right: -56px;
+  background: linear-gradient(90deg, #5507DF 3.7%, #34E7FD 100%);
+  width: 37px;
+  height: 100%;
+
+}
+
+#button-12 .checkbox:checked + .knobs span:before {
+  left: 0px;
+}
+
+#button-12 .checkbox:checked + .knobs span:after {
+  right: -90px;
+}
+
+#button-12 .checkbox:checked ~ .layer {
+  background-color: transparent;
+}
+
+.ntf_header {
+  background: url('../../img/ntf_button_bg.png') no-repeat center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding: 10px;
+  margin-left: 40px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s;
+}
+
+.ntf_header:hover{
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .ntf_header:hover{
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.ntf_header::before {
+  content: '';
+  background: url('../../img/ntf_button_bg_dark.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.ntf_header:hover::before{
+  transition: 0.4s;
+  opacity: 1;
 }

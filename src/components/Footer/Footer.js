@@ -10,7 +10,7 @@ class Footer extends React.Component {
                     <div className="footer_main">
                         <div className="footer_left">
                             <a>
-                                <img src="img/footer_logo.png" />
+                                <img className="footer_logo" src={this.props.theme ? "img/footer_logo_dark.png" : "img/logo.png"} />
                             </a>
                             <div className="footer_menu">
                                 <ul>
@@ -34,12 +34,13 @@ class Footer extends React.Component {
                             </div>
                         </div>
                         <div className="footer_right">
-                            <a><img src="img/footer_soc/1.png" /></a>
-                            <a><img src="img/footer_soc/2.png" /></a>
-                            <a><img src="img/footer_soc/3.png" /></a>
-                            <a><img src="img/footer_soc/4.png" /></a>
-                            <a><img src="img/footer_soc/5.png" /></a>
-                            <a><img src="img/footer_soc/6.png" /></a>
+
+                            <a href="https://medium.com/@MeDIAeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/1.png" : "img/footer_soc/1-dark.png"} /></a >
+                            <a href="https://t.me/MeDiaeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/2.png" : "img/footer_soc/2-dark.png"} /></a >
+                            <a href="https://twitter.com/MeDIAeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/3.png" : "img/footer_soc/3-dark.png"} /></a >
+                            <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank"><img src={this.props.theme ? "img/footer_soc/4.png" : "img/footer_soc/4-dark.png"} /></a >
+                            <a ><img src={this.props.theme ? "img/footer_soc/5.png" : "img/footer_soc/5-dark.png"} /></a >
+                            <a href="https://www.instagram.com/mediaeyenfts/" target="_blank"><img src={this.props.theme ? "img/footer_soc/6.png" : "img/footer_soc/6-dark.png"} /></a >
                         </div>
                     </div>
                 </div>

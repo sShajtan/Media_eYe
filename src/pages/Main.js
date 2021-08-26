@@ -6,28 +6,55 @@ import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import MainBlock from '../components/MainBlock/MainBlock';
 import MainHow from '../components/MainHow/MainHow';
+import MainHowWork from '../components/MainHowWork/MainHowWork';
 import MainInfo from '../components/MainInfo/MainInfo';
 import Partners from '../components/Partners/Partners';
 import Roadmap from '../components/Roadmap/Roadmap';
 import Team from '../components/Team/Team';
 import Tokenomics from '../components/Tokenomics/Tokenomics';
+import TimerPopup from '../components/TimerPopup/Popup';
 
 class Main extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showPopup: false
+        }
+        this.togglePopup = this.togglePopup.bind(this);
+    };
+
+    togglePopup() {
+        this.setState({ showPopup: !this.state.showPopup });
+    }
+
+
+    componentDidMount() {
+        if (this.state.showPopup === false) {
+            setTimeout(() => {
+                this.setState({ showPopup: true })
+            }, 10000);
+        }
+    }
+
+
     render() {
         return (
             <React.Fragment>
-                <Header />
+                <TimerPopup showPopup={this.state.showPopup}
+                    togglePopup={this.togglePopup} />
+                <Header toggleTheme={this.props.toggleTheme} />
                 <MainBlock />
                 <MainInfo />
                 <MainHow />
-                <Creators />
+                <MainHowWork />
+                {/* <Creators /> */}
                 <Tokenomics />
-                <Roadmap />
+                <Roadmap theme={this.props.theme} />
                 <Team />
-                <Partners />
+                <Partners theme={this.props.theme} />
                 <Community />
                 <Faq />
-                <Footer />
+                <Footer theme={this.props.theme} />
             </React.Fragment>
         )
     }

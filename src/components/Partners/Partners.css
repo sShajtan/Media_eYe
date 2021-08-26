@@ -1,6 +1,12 @@
 .partners{
     padding: 50px 0;
-    overflow-x: hidden;
+    background: url('../../img/mian_bg_nft.png') no-repeat center;
+    background-size: contain;
+}
+
+.partners .title{
+    max-width: 400px;
+    margin: 40px auto;
 }
 
 .partners_slide_wrapper{
@@ -8,8 +14,6 @@
 }
 
 .partners_slide{
-    background: #ECF0F3;
-    box-shadow: -10px 10px 20px rgba(209, 217, 230, 0.2), 10px -10px 20px rgba(209, 217, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 20px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5);
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -28,4 +32,16 @@
     .partners_slide_wrapper{
         padding: 20px;
     }
+
+    .partners .title{
+        max-width: 60%;
+    }
+    .partners_slide{
+        padding: 0;
+    }
+
+    .partners_slide_wrapper {
+        padding: 0 20px;
+    }
+    
 }

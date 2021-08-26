@@ -1,0 +1,161 @@
+.popup {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  top: 0;
+  transform: scale(0);
+  left: 0;
+
+  height: 100vh;
+  transition: 0.1s;
+  overflow: hidden;
+}
+
+.popup.active {
+  transition: 0.1s;
+  transform: scale(1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.popup-wrapper {
+  position: fixed;
+  z-index: 100000;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition: 0.7s;
+  overflow: hidden;
+  background: url("/src/img/popup-bg.png") no-repeat center;
+  background-size: cover;
+}
+
+.active .popup-wrapper {
+  opacity: 1;
+}
+.main-popup {
+  position: absolute;
+  width: 550px;
+  min-width: 320px;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.defi_popup{
+  width: 80vw  ;
+}
+
+.defi_popup{
+  padding: 50px;
+  background: radial-gradient(102.63% 101.99% at -2.63% -1.99%, #F9F9F9 0%, #DADADA 100%);
+  box-shadow: 15px 9px 78px rgba(0, 0, 0, 0.15);
+}
+.defi_popup .popup-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.defi_popup .popup-main img{
+  width: 250px;
+}
+
+.defi_popup h2{
+font-family: Montserrat;
+font-style: normal;
+font-weight: 800;
+font-size: 32px;
+line-height: 42px;
+color: #000000;
+text-align: center;
+margin: 20px auto;
+}
+
+
+
+.popup-header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #00ffff;
+
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  margin: 10px;
+}
+
+.popup-header h6 {
+  margin: 20px 0;
+}
+
+.popup-main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup-main div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-main a.staking {
+  background: #000000;
+  border: 1px solid #00ffff;
+  box-sizing: border-box;
+  background: transparent;
+  width: 90%;
+  height: 160px;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: 0.4s;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+.popup-main a img {
+  margin: 0 auto;
+}
+
+.popup-main a:hover {
+  transition: 0.4s;
+  background-color: #00ffff;
+  border-color: blue;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.defi_popup .close svg rect{
+  fill: #000;
+}
+
+.staking{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 575.98px) {
+  .main-popup {
+    width: 310px;
+  }
+  .close {
+    right: 10px;
+    top: 15px;
+  }
+}

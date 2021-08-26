@@ -1,32 +1,58 @@
 .faq{
-    padding: 50px 0;
+    padding: 80px 0;
+    background: url('../../img/faq_bg.png') no-repeat bottom;
+    background-size: contain;
+}
+
+.faq .title{
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .faq_block{
-    background: #ECF0F3;
-    box-shadow: -10px 10px 20px rgba(209, 217, 230, 0.2), 10px -10px 20px rgba(209, 217, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 20px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5);
-    border-radius: 7px;
+    background: #FFFFFF;
     padding: 20px;
     margin: 40px 0;
+    border-top-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+    border: 1px solid #797979;
+    transition: 0.4s;
+}
+
+.dark .faq_block{
+    transition: 0.4s;
+    background: transparent;
+}
+
+.faq_block.active{
+    transition: 0.4s;
+    border: 1px solid #0075FF;
 }
 
 .faq_block h5{
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 20px;
-    color: #0075FF;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.61);
+    transition: 0.4s;
     margin: 0;
+    max-width: 90%;
+}
+
+.dark h5{
+    color: #fff;
 }
 
 
 .faq_block span{
     font-family: Poppins;
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 22px;
     color: #000000;
     padding-right: 80px;
     height: 0;
@@ -35,6 +61,11 @@
     padding: 0;
     display: block;
 }
+
+.dark .faq_block span{
+    color: #fff;
+}
+
 .faq_block span.active{
     display:block;
     height:100%;
@@ -51,34 +82,21 @@
 }
 
 .faq_block strong{
-    background: #ECF0F3;
-    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(209, 217, 230, 0.5), inset 10px -6px 25px rgba(209, 217, 230, 0.2), inset 5px -5px 10px rgba(209, 217, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(209, 217, 230, 0.9);
-    border-radius: 50%;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 0;
-    font-weight: 600;
-    color: #0075FF;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    transform: rotate(90deg);
-}
-.faq_block strong.active i{
     transition: 0.5s;
     transform: rotate(0deg);
-
+    font-size: 30px;
 }
-.faq_block strong i{
+.faq_block strong.active{
     transition: 0.5s;
     transform: rotate(90deg);
-    font-style: normal;
-    position: absolute;
+
 }
+
+.dark .faq_block strong{
+    color: #fff;
+    transition: 0.4s;
+}
+
 
 @media (max-width: 768.98px){ 
     .faq_block h5, .faq_block span{
@@ -95,4 +113,7 @@
     .main_how{
     padding: 20px 0;
 }
+    .faq .title{
+        max-width: 60%;
+    }
 }

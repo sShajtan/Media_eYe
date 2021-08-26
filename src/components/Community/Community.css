@@ -1,31 +1,57 @@
 .community{
     padding:50px 0;
+    background: url('../../img/community_bg.png') no-repeat center;
+    background-size: 100% 100%;
+}
+
+.community .title{
+        max-width: 800px;
+        margin: 0 auto;
 }
 
 .community_main{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 50px 0;
 }
 
-.community_main a{
+.community_main a svg .bg{
+    opacity: 0;
+    transition: 0.4s;
+}
+.community_main a:hover svg .bg{
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.community_main svg .main_soc{
+    fill: #5A5454;
+    transition: 0.4s;
+}
+
+.dark .community_main svg .main_soc{
+    fill: #fff;
+    transition: 0.4s;
+}
+
+.community_main  a:hover svg .main_soc{
+    fill: #fff;
+    transition: 0.4s;
+}
+.community_main svg rect {
+    fill: none;
+    transition: 0.4s;
+}
+
+.community_main a:hover svg rect {
+    fill: #111022;
+    transition: 0.4s;
+}
+
+
+.community_main a {
     cursor: pointer;
-    background: #ECF0F3;
-    box-shadow: -10px 10px 20px rgba(209, 217, 230, 0.2), 10px -10px 20px rgba(209, 217, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 20px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5);
-    border-radius: 18px;
-    padding: 20px;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 58px;
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 .community_main a::before{
     content: '';
@@ -36,61 +62,69 @@
     border-radius: 17px;
 }
 
-.community_main a:hover::before{
-    content: '';
-    width: 100% ;
-    height: 100% ;
-    background-color: #0075FF;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 17px;
-    transition: 0.6s;
-}
 
-.community_main a img{
-    margin-top: 10px;
-}
 
-.community_main a:hover{
-    transition: 0.4s;
-    transform: scale(1);
-    color: #fff !important;
-}
-
-.community a span{
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.community a span img:nth-child(2){
-    display: none;
-}
-
-.community a:hover span img:first-child{
-    display: none;
-}
-
-.community a:hover span img:nth-child(2){
-    display: block;
-}
-
-.community a.white_btn{
-    background: #ECF0F3;
-    display: block;
+.community .contact_button{
+    background: url('../../img/signup_button_bg.png') no-repeat center;
+    background-size: contain;
+    padding: 15px 35px;
+    margin: 0 auto;
     font-family: Poppins;
     font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 32px;
-    padding: 20px 30px;
-    color: #015CC8;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 0 auto;
-    max-width: 270px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #383838;
+    transition: 0.4s;
+    position: relative;
+}
+
+.community .contact_button span{
+    position: relative;
+    z-index: 1;
+}
+
+.community .contact_button:hover span{
+    position: relative;
+    z-index: 1;
+    color: #121024;
+}
+
+.community .contact_button:hover span{
+    color: #fff;
+}
+
+.community .contact_button::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    opacity: 0;
+    background: url('../../img/learn_more_button_bg.png') no-repeat center;
+    background-size: contain;
+    transition: 0.4s;
+}
+
+.community .contact_button:hover::before{
+    transition: 0.4s;
+    opacity: 1;
+}
+
+.dark .community .contact_button{
+    color: #fff;
+    transition: 0.4s;
+}
+
+.community_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.dark .community .contact_button{
+    transition: 0.4s;
+    color: #fff;
 }
 
 @media (max-width: 991.98px) {
@@ -98,25 +132,21 @@
         width: 230px;
         font-size: 32px;
     }
+        .community .title{
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 767.98px){
-  .community_main a {
-        width: auto;
-        width: 30%;
-        font-size: 16px;
-        padding: 10px;
-        line-height: 20px;
-        margin: 0 8px;
-    }
-    .community_main a img{
-        width: 30px;
-    }
-    .community a.white_btn{
-        font-size: 20px;
-        max-width: 240px;
-    }
-    .community {
-    padding: 20px 0;
+
+  .community_main{
+      margin: 0 auto;
+  }
+  .community_main a svg{
+      max-width: 80%;
+      margin: 0 auto;
+  }
 }
-}
+
+

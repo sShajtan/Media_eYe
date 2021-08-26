@@ -44,9 +44,9 @@ class Partners extends React.Component {
         };
 
         return (
-            <div className="team">
+            <div className="partners">
                 <div className="container">
-                    <h3 className="block_title">PARTNERS</h3>
+                    <img className="title" src="img/partners_title.png" />
                     <div className="team_main animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="1s">
                         <Slider {...settings}>
                             <div className="partners_slide_wrapper">
@@ -59,35 +59,35 @@ class Partners extends React.Component {
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a>
-                                        <img src="img/partners/2.png" />
+                                        <img src={this.props.theme ? "img/partners/2-dark.png" : "img/partners/2.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a>
-                                        <img src="img/partners/3.png" />
+                                        <img src={this.props.theme ? "img/partners/3-dark.png" : "img/partners/3.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a>
-                                        <img src="img/partners/4.png" />
+                                        <img src={this.props.theme ? "img/partners/4-dark.png" : "img/partners/4.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a>
-                                        <img src="img/partners/5.png" />
+                                        <img src={this.props.theme ? "img/partners/5-dark.png" : "img/partners/5.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a>
-                                        <img src="img/partners/6.png" />
+                                        <img src={this.props.theme ? "img/partners/6-dark.png" : "img/partners/6.png"} />
                                     </a>
                                 </div>
                             </div>
