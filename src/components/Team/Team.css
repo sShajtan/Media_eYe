@@ -101,8 +101,8 @@
 
 
 .team .slick-next{
-    background: transparent;
-    background-position: 0 -100px;
+    background: url('../../img/next-arrow.png') no-repeat center;
+    background-position: cover;
     transition: 0.4s;
     background-size: cover;
     width: 40px;
@@ -116,11 +116,12 @@
     background-size: cover;
     width: 40px;
     height: 40px;
+    margin-top: -5px;
     z-index: 1;
 }
 .team .slick-prev{
-    background: transparent;
-    background-position: 0 -100px;
+    background: url('../../img/prev-arrow.png') no-repeat center;
+    background-position: cover;
     transition: 0.4s;
     background-size: cover;
     width: 40px;
@@ -129,8 +130,9 @@
 }
 
 .team .slick-prev:hover{
-    background: url('../../img/prev-arrow.png') no-repeat center;
+    background: url('../../img/prev-arrow.png') no-repeat;
     background-size: cover;
+    margin-top: -5px;
     transition: 0.4s;
     width: 40px;
     height: 40px;
@@ -145,37 +147,34 @@
     background: url('../../img/next-arrow-hover.png') no-repeat center;
     display: block;
     background-size: cover;
-    margin-top: -15px;
-    right: -5px;
     z-index: 1;
     position: absolute;
     opacity: 0;
+    top:0;
+    left: 0;
     transition: 0.4s;
-    bottom: -50px;
 }
 
  .team .slick-prev::before{
     content: '';
     width: 40px;
-    bottom: -50px;
     height: 40px;
     background: url('../../img/prev-arrow-hover.png') no-repeat center;
     display: block;
     background-size: cover;
     position: absolute;
-    margin-top: -15px;
-    left: -5px;
     z-index: 1;
     opacity: 0;
-    transition: 0.4s;
-}
-.team .slick-next:hover::before,  .team .slick-prev:hover::before{
-    bottom: -8px;
+    top:0;
+    left: 0;
+    transition: 0.4s
 }
 
 .team .slick-next:hover::before, .team .slick-prev:hover::before{
     opacity: 0.8;
     transition: 0.4s;
+    top:12px;
+    left:5px;
 }
 
 .team .slick-next span, .team .slick-prev span{

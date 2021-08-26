@@ -429,12 +429,14 @@ div.menu-item .soc_header_mobile{
   }
 
   .header_search {
-      
-      position: absolute;
-     bottom: -100vh;
-    left: 38%;
+    position: absolute;
+    top:90px;
+    height: 0;
     transition: 0.4s;
     opacity: 0;
+    width: 90%;
+    left: 5%;
+    overflow: hidden;
   }
   .bm-burger-button{
       display: block;
@@ -443,7 +445,13 @@ div.menu-item .soc_header_mobile{
     display: block;
     transition: 0.4s;
     opacity: 1;
-    bottom: -40px;
+    top: 100px;
+    height: 39px;
+    
+  }
+
+  .header_search input{
+    width: 100%;
   }
   .mobile_search.header_search{
       display: block;
