@@ -23,10 +23,16 @@ class Footer extends React.Component {
                                     <li><a>Tutorial</a></li>
                                     <li><a>Support</a></li>
                                     <li><a>News</a></li>
+                                    <li><a>Blog</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a>Whitepaper</a></li>
-                                    <li><a>Contact</a></li>
+                                    <li><a>For Investors:</a></li>
+                                    <li><a>Litepaper</a></li>
+                                    <li><a>Peachdeck</a></li>
+                                    <li><a>Governance</a></li>
+
+                                </ul>
+                                <ul>
                                     <li><a>About Us</a></li>
                                     <li><a>Team</a></li>
                                     <li><a>Terms Of Service</a></li>

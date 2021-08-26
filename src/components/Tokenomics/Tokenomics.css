@@ -25,10 +25,10 @@
     color: #3A3A3A;
 }
 
-.dark .tokenomics h4 span{
+/* .dark .tokenomics h4 span{
     transition: 0.4s;
     color:#fff ;
-}
+} */
 
 .tokenomics_bg{
     position: absolute;
@@ -211,10 +211,6 @@
     
 }
 
-.dark .tokenomics_right_block span{
-    color: #fff;
-    transition: 0.4s;
-}
 
 .tokenomics_right_wrapper{
     display: flex;
