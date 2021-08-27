@@ -33,12 +33,28 @@ header {
     cursor: pointer;
     margin: 0 10px;
     transition: 0.4s;
+    display: inline;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
 }
 
 .dark .header_left_menu a{
   transition: 0.4s;
   color: #fff;
 }
+
+.header_left_menu div{
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.nft_collapse{
+  position: absolute;
+  margin-top: 20px;
+}
+
 
 .header_left_menu a:hover{
   transition: 0.4s;

@@ -2,7 +2,8 @@ import React from 'react';
 import './Header.css';
 import { slide as Menu } from 'react-burger-menu';
 import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Collapse } from 'react-collapse';
 
 
 class Header extends React.Component {
@@ -11,13 +12,14 @@ class Header extends React.Component {
         this.state = {
             isOpen: false,
             mobileInputShow: false,
-            mobileSearch: false
+            mobileSearch: false,
+            showNftCollapse: false
         };
         this.setWrapperRef = this.setWrapperRef.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
         this.showMobileInput = this.showMobileInput.bind(this);
         this.toggleMobileSearch = this.toggleMobileSearch.bind(this);
-
+        this.toggleNftCollapse = this.toggleNftCollapse.bind(this);
     }
 
     setWrapperRef(node) {
@@ -39,6 +41,10 @@ class Header extends React.Component {
 
     toggleMobileSearch() {
         this.setState({ mobileSearch: !this.state.mobileSearch });
+    }
+
+    toggleNftCollapse() {
+        this.setState({ showNftCollapse: !this.state.showNftCollapse });
     }
 
 
@@ -64,7 +70,14 @@ class Header extends React.Component {
                                 </a>
                             </div>
                             <div className="header_left_menu">
-                                <a>NFT Marketplace ▾</a>
+                                <div>
+                                    <a onClick={this.toggleNftCollapse}>NFT Marketplace ▾</a>
+                                    <div className="nft_collapse">
+                                        <Collapse isOpened={this.state.showNftCollapse}>
+                                            <a>Content Marketplace</a>
+                                        </Collapse>
+                                    </div>
+                                </div>
                                 <a>Gallery</a>
                             </div>
                             <div className={this.state.mobileSearch ? "header_search active" : "header_search"}>
@@ -105,10 +118,9 @@ class Header extends React.Component {
                 </header >
                 <div className={!this.state.isOpen ? "open" : null}>
                     <Menu onStateChange={() => this.setState({ isOpen: !this.state.isOpen })} width={'100%'}>
-                        <a className="menu-item" href="/">Content</a>
-                        <a className="menu-item" >Marketplace</a>
-                        <a className="menu-item" >Media eYe</a>
-                        <a className="menu-item" >GALLERY</a>
+                        <a className="menu-item">NFT Marketplace</a>
+                        <a className="menu-item" >Content Marketplace</a>
+                        <a className="menu-item" >Gallery</a>
                         <a className="menu-item" >Artists</a>
                         <a className="menu-item" >Campaigns</a>
                         <a className="menu-item" >Contact</a>
