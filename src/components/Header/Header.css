@@ -420,6 +420,13 @@ div.menu-item .soc_header_mobile{
 
 
 @media (max-width: 991.98px) {
+  .header_search input{
+    background: linear-gradient(180deg, #E4EAFF 0%, #C5C1F1 100%);
+  }
+
+  .dark .header_search input{
+     background: linear-gradient(355.29deg, #171133 0.12%, #201748 96.01%);
+  }
 
   .mobile_switch {
     display: block;
@@ -438,9 +445,16 @@ div.menu-item .soc_header_mobile{
     height: 0;
     transition: 0.4s;
     opacity: 0;
-    width: 90%;
-    left: 5%;
+    width: 100%;
+    padding: 20px;
     overflow: hidden;
+    left: 0;
+    background:linear-gradient(180deg, #E4EAFF 0%, #C5C1F1 100%);
+    pointer-events: none;
+  }
+
+  .dark .header_search{
+   background: linear-gradient(355.29deg, #171133 0.12%, #201748 96.01%);
   }
   .bm-burger-button{
       display: block;
@@ -449,10 +463,11 @@ div.menu-item .soc_header_mobile{
     display: block;
     transition: 0.4s;
     opacity: 1;
-    top: 100px;
-    height: 41px;
-    padding: 1px;
-    
+    height: 80px;
+  }
+
+  .header_search button{
+    right: 30px;
   }
 
   .header_search input{
@@ -672,7 +687,6 @@ div.menu-item .soc_header_mobile{
   margin-left: 40px;
   cursor: pointer;
   position: relative;
-  transition: 0.4s;
 }
 
 .ntf_header:hover{

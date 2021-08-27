@@ -123,6 +123,7 @@ transition: 0.4s;
     transition: 0.4s;
     position: relative;
     margin: 2%;
+    cursor: pointer;
 }
 
 .main_how_footer_block img{

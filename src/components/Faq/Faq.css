@@ -57,11 +57,11 @@
     line-height: 22px;
     color: #000000;
     padding-right: 80px;
-    height: 0;
-    opacity: 0;
-    transition: 0.4s;
+    transition: 0.6s;
     padding: 0;
     display: block;
+    overflow: hidden;
+    max-height: 0px;
 }
 
 .dark .faq_block span{
@@ -70,9 +70,9 @@
 
 .faq_block span.active{
     display:block;
-    height:100%;
-    opacity: 1;
-    transition: 0.4s;
+    height: auto;
+    max-height: 400px;
+    transition: 0.6s;
     padding: 20px 0;
 }
 
@@ -97,6 +97,11 @@
 .dark .faq_block strong{
     color: #fff;
     transition: 0.4s;
+}
+
+@media (max-width: 991.98px){
+
+    
 }
 
 

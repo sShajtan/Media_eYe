@@ -83,6 +83,21 @@
     max-width: 80%;
     transition: 0.4s;
 }
+.main_info_right p ul{
+    padding: 0 20px;
+}
+
+.main_info_right p ul li{
+    color: #2EE3FA;
+}
+
+.main_info_right p ul li span{
+    color: #444444;
+}
+
+.dark .main_info_right p ul li span{
+    color: #fff;
+}
 .dark .main_info_right p, .dark .main_info_right .check_faq_button{
     transition: 0.4s;/* Сheck out our FAQ */
     color: #FFFFFF;

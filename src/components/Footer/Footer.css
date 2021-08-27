@@ -79,6 +79,10 @@ footer{
     transform: scale(1.1);
 }
 
+.dark footer svg path{
+    fill: #fff;
+}
+
 @media (max-width: 767.98px){
     .footer_main, .footer_left{
         flex-direction: column;

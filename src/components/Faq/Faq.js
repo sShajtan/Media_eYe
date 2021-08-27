@@ -25,7 +25,7 @@ class Faq extends React.Component {
 
     render() {
         return (
-            <div className="faq">
+            <div className="faq" id="faq">
                 <div className="container">
                     <img className="title  animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/faq_title.png" />
                     <div className="faq_main">
@@ -54,7 +54,7 @@ class Faq extends React.Component {
                                 <h5>Can I gift or send a collectible to someone?</h5><strong className={this.state.question_3 ? 'active' : null} >
                                     &#10095;</strong>
                             </div>
-                            <span className={this.state.question_3 ? "active" : null}>Yes, you can and its up to you if you decide to sell it later or not, you can also send multiple NFTs or a series of NFTs using the campaign launcher as part of a unique subscription service we offer.  You can send an NFT to as many people as you wish on Ethereum or Binance Smart Chain, just choose the subscription service that suits you and begin your amazing journey with using using MeDIA eYe NFT Portal.</span>
+                            <span className={this.state.question_3 ? "active" : null}>Yes, you can and its up to you if you decide to sell it later or not, you can also send multiple NFTs or a series of NFTs using the campaign launcher as part of a unique subscription service we offer. You can send an NFT to as many people as you wish on Ethereum or Binance Smart Chain, just choose the subscription service that suits you and begin your amazing journey with using MeDIA eYe NFT Portal.</span>
                         </div>
                         <div className={this.state.question_4 ? "faq_block animate__animated animate__fadeIn wow active" : "faq_block animate__animated animate__fadeIn wow"} data-wow-duration="1s" data-wow-delay="1.6s">
                             <div onClick={() =>
@@ -70,10 +70,10 @@ class Faq extends React.Component {
                             <div onClick={() =>
                                 this.setState({ question_6: !this.state.question_6 })
                             }>
-                                <h5>What is Moderation of Content? </h5><strong className={this.state.question_6 ? 'active' : null} >
+                                <h5>What is Moderation of Content?</h5><strong className={this.state.question_6 ? 'active' : null} >
                                     &#10095;</strong>
                             </div>
-                            <span className={this.state.question_6 ? "active" : null}>You are able to upload your own digital content, to keep our platform safe, friendly and protect users from malicious content, we moderate all content that is uploaded to the MeDIA eYe Platform.  We ensure a great experience for all our users, while providing great environment to create, promote, collect, buy, sell, gift, entertain and earn.</span>
+                            <span className={this.state.question_6 ? "active" : null}>You are able to upload your own digital content, to keep our platform safe, friendly and protect users from malicious content, we moderate all content that is uploaded to the MeDIA eYe Platform. We ensure a great experience for all our users, while providing a safe environment to create, promote, collect, buy, sell, gift, entertain and earn.</span>
                         </div>
                         <div className={this.state.question_7 ? "faq_block animate__animated animate__fadeIn wow active" : "faq_block animate__animated animate__fadeIn wow"} data-wow-duration="1s" data-wow-delay="2.0s">
                             <div onClick={() =>
@@ -106,10 +106,10 @@ class Faq extends React.Component {
                             <div onClick={() =>
                                 this.setState({ question_10: !this.state.question_10 })
                             }>
-                                <h5>Can I on board FIAT currency to the MeDIA eYe NFT Portal and use it buy NFTs?</h5><strong className={this.state.question_9 ? 'active' : null} >
+                                <h5>Can I onboard FIAT currency to the MeDIA eYe NFT Portal and use it buy NFTs?</h5><strong className={this.state.question_10 ? 'active' : null} >
                                     &#10095;</strong>
                             </div>
-                            <span className={this.state.question_10 ? "active" : null}>You can onboard approved FIAT currencies on to the platform using our unique On-Ramp service and then purchase the relevant crypto assets which will be transferred to your user account wallet, its that simple and your are ready to start using MeDIA eYe..</span>
+                            <span className={this.state.question_10 ? "active" : null}>You can onboard approved FIAT currencies to the platform using our on-ramp service and then purchase the relevant crypto assets which will be transferred to your user account wallet, its that simple and your are ready to start using MeDIA eYe..</span>
                         </div>
                     </div>
 

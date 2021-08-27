@@ -32,15 +32,15 @@ class Popup extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // if (this.state.email !== null && this.state.email !== '') {
-    //   emailjs.sendForm('service_73soouc', 'template_uj1tp7c', event.target, 'user_1nI5rWG3deHxADsA0zfNc')
-    //     .then((result) => {
-    //       this.setState({ email: "", showPopup: true });
-    //       this.toggleMainPopup();
-    //     }, (error) => {
-    //       alert('Message not sent')
-    //     });
-    // }
+    if (this.state.email !== null && this.state.email !== '') {
+      emailjs.sendForm('service_73soouc', 'template_uj1tp7c', event.target, 'user_1nI5rWG3deHxADsA0zfNc')
+        .then((result) => {
+          this.setState({ email: "", showPopup: true });
+          this.toggleMainPopup();
+        }, (error) => {
+          alert('Message not sent')
+        });
+    }
   }
 
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Header.css';
 import { slide as Menu } from 'react-burger-menu';
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 class Header extends React.Component {
@@ -66,7 +68,7 @@ class Header extends React.Component {
                                 <a>NFT Gallery</a>
                             </div>
                             <div className={this.state.mobileSearch ? "header_search active" : "header_search"}>
-                                <input />
+                                <input type="search" />
                                 <button>
                                     <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="13.2923" cy="13.2916" r="8.45833" stroke="#555555" stroke-width="2" />
@@ -95,7 +97,7 @@ class Header extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <a className="ntf_header">NFT Creator</a>
+                                <a className="ntf_header" onClick={this.props.toggleSoonPopup}>NFT Creator</a>
                             </div>
                         </div>
 
@@ -110,8 +112,8 @@ class Header extends React.Component {
                         <a className="menu-item" >Artists</a>
                         <a className="menu-item" >Campaigns</a>
                         <a className="menu-item" >Contact</a>
-                        <a className="menu-item" >About Us</a>
-                        <a className="menu-item" > Team</a>
+                        <Link className="menu-item" to="about" spy={true} smooth={true} duration={500}>About Us</Link>
+                        <Link className="menu-item" to="team" spy={true} smooth={true} duration={500}>Team</Link>
                         <a className="menu-item" >Terms Of Service</a>
                         <div className="menu-item">
                             <div className="soc_header_mobile">
@@ -127,7 +129,7 @@ class Header extends React.Component {
                         </div>
                         <div className="menu-item">
                             <div>
-                                <button><span>NFT Creator</span></button>
+                                <button onClick={this.props.toggleSoonPopup}><span>NFT Creator</span></button>
                                 <button className="login"><span>Login</span></button>
                             </div>
                         </div>

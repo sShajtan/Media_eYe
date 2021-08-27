@@ -102,31 +102,30 @@ class MainHow extends React.Component {
                                     </defs>
                                 </svg>
                             </div>
-                            <a><span>Start Campaign</span></a>
-
+                            <a onClick={this.props.toggleSoonPopup}><span >Start Campaign</span></a>
                         </div>
                         <div className="main_how_right">
                             <img className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/right_nft.svg" />
                         </div>
                     </div>
-                    <div className="main_how_footer">
+                    <div className="main_how_footer" onClick={this.props.toggleSoonPopup}>
                         <div className="main_how_footer_block animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">
                             <img src="img/nft/1.png" />
                             <h5>Content Marketplace</h5>
                         </div>
-                        <div className="main_how_footer_block">
+                        <div className="main_how_footer_block" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/4.png" />
                             <h5>NFT Market Place</h5>
                         </div>
-                        <div className="main_how_footer_block animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div className="main_how_footer_block animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/5.png" />
                             <h5>NFT Gallery</h5>
                         </div>
-                        <div className="main_how_footer_block animate__animated animate__fadeInTopRight wow" data-wow-duration="1s" data-wow-delay="1s">
+                        <div className="main_how_footer_block animate__animated animate__fadeInTopRight wow" data-wow-duration="1s" data-wow-delay="1s" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/2.png" />
                             <h5>NFT Creator</h5>
                         </div>
-                        <div className="main_how_footer_block animate__animated animate__fadeInTopLeft wow" data-wow-duration="1s" data-wow-delay="1s">
+                        <div className="main_how_footer_block animate__animated animate__fadeInTopLeft wow" data-wow-duration="1s" data-wow-delay="1s" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/3.png" />
                             <h5>Campaign Launch</h5>
                         </div>

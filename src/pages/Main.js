@@ -13,18 +13,26 @@ import Roadmap from '../components/Roadmap/Roadmap';
 import Team from '../components/Team/Team';
 import Tokenomics from '../components/Tokenomics/Tokenomics';
 import TimerPopup from '../components/TimerPopup/Popup';
+import SoonPopup from '../components/SoonPopup/Popup';
 
 class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showPopup: false
+            showPopup: false,
+            showSoonPopup: false
         }
         this.togglePopup = this.togglePopup.bind(this);
+        this.toggleSoonPopup = this.toggleSoonPopup.bind(this);
+
     };
 
     togglePopup() {
         this.setState({ showPopup: !this.state.showPopup });
+    }
+
+    toggleSoonPopup() {
+        this.setState({ showSoonPopup: !this.state.showSoonPopup });
     }
 
 
@@ -32,7 +40,7 @@ class Main extends React.Component {
         if (this.state.showPopup === false) {
             setTimeout(() => {
                 this.setState({ showPopup: true })
-            }, 100000000);
+            }, 10000);
         }
     }
 
@@ -40,12 +48,14 @@ class Main extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <SoonPopup showPopup={this.state.showSoonPopup}
+                    togglePopup={this.toggleSoonPopup} />
                 <TimerPopup showPopup={this.state.showPopup}
                     togglePopup={this.togglePopup} />
-                <Header toggleTheme={this.props.toggleTheme} theme={this.props.theme} />
+                <Header toggleTheme={this.props.toggleTheme} theme={this.props.theme} toggleSoonPopup={this.toggleSoonPopup} />
                 <MainBlock />
                 <MainInfo />
-                <MainHow />
+                <MainHow toggleSoonPopup={this.toggleSoonPopup} />
                 <MainHowWork />
                 {/* <Creators /> */}
                 <Tokenomics />
