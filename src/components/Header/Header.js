@@ -64,8 +64,8 @@ class Header extends React.Component {
                                 </a>
                             </div>
                             <div className="header_left_menu">
-                                <a>Content Marketplace ▾</a>
-                                <a>NFT Gallery</a>
+                                <a>NFT Marketplace ▾</a>
+                                <a>Gallery</a>
                             </div>
                             <div className={this.state.mobileSearch ? "header_search active" : "header_search"}>
                                 <input type="search" />
@@ -120,7 +120,7 @@ class Header extends React.Component {
                                 <a>
                                     <a href="https://medium.com/@MeDIAeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/1.png" : "img/footer_soc/1-dark.png"} /></a >
                                 </a>
-                                <a href="https://t.me/MeDiaeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/2.png" : "img/footer_soc/2-dark.png"} /></a >
+                                <a href="https://t.me/MeDIAeYeNFTPortal" target="_blank"><img src={this.props.theme ? "img/footer_soc/2.png" : "img/footer_soc/2-dark.png"} /></a >
                                 <a href="https://twitter.com/MeDIAeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/3.png" : "img/footer_soc/3-dark.png"} /></a >
                                 <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank"><img src={this.props.theme ? "img/footer_soc/4.png" : "img/footer_soc/4-dark.png"} /></a >
                                 <a ><img src={this.props.theme ? "img/footer_soc/5.png" : "img/footer_soc/5-dark.png"} /></a >
