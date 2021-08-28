@@ -28,7 +28,7 @@ class MainInfo extends React.Component {
                                         NFTs can be used to:
 
                                         <li><span>remove intermediaries</span></li>
-                                        <li><span>hold record of ownership</span></li>
+                                        <li><span>store record of ownership</span></li>
                                         <li><span>provide immutable provenance</span></li>
                                         <li><span>connect artists with audiences</span></li>
                                         <li><span>promote brands</span></li>
