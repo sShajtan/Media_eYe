@@ -126,7 +126,6 @@ class Header extends React.Component {
                         <a className="menu-item" >Contact</a>
                         <Link className="menu-item" to="about" spy={true} smooth={true} duration={500}>About Us</Link>
                         <Link className="menu-item" to="team" spy={true} smooth={true} duration={500}>Team</Link>
-                        <a className="menu-item" >Terms Of Service</a>
                         <div className="menu-item">
                             <div className="soc_header_mobile">
                                 <a>
