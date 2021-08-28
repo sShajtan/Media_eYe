@@ -46,15 +46,20 @@ header {
 }
 
 .header_left_menu div{
-  display: inline-flex;
-  flex-direction: column;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .nft_collapse{
   position: absolute;
   margin-top: 20px;
-  background: #141233;
+  background: #E9F1FF;
+
   padding-bottom: 10px;
+}
+
+.dark .nft_collapse{
+  background: #141233;
 }
 
 
