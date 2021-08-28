@@ -5,6 +5,7 @@
 .main_block{
     overflow-x: hidden;
     padding-top: 130px;
+    padding-bottom: 40px;
     background: url('../../img/mian_bg_gradient.png') no-repeat left top;
     background-size: contain;
 }

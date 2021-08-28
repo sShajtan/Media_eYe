@@ -11,7 +11,7 @@ class Roadmap extends React.Component {
                     <img className="title animate__animated animate__zoomIn wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/roadmap_title.svg" />
                     <div className="roadmap_main">
                         <div className="roadmap_main_block_wrapper active">
-                            <span>The MeDIA eYe NFT Portal Concept is developed</span>
+                            <span>The MeDIA eYe NFT concept is created</span>
                             <div className="roadmap_main_block">
                                 <h4>Q1/21</h4>
                                 <div className="line animate__animated animate__flipInX wow" data-wow-duration="1s" data-wow-delay="0.5s"></div>
@@ -24,12 +24,10 @@ class Roadmap extends React.Component {
                                 <h4>Q2/21</h4>
                                 <div className="line animate__animated animate__flipInX wow" data-wow-duration="1s" data-wow-delay="0.8s"></div>
                             </div>
-                            <span>TDevelopment MeDIA eYe Platform and Testing
-                            </span>
-
+                            <span>Development of MeDIA eYe platform and testing</span>
                         </div>
                         <div className="roadmap_main_block_wrapper">
-                            <span>Presale and IDO Fundraising Platform Launch (Beta)
+                            <span>Private Sale/Presale and IDO fundraising. Platform launch (Beta).
                             </span>
                             <div className="roadmap_main_block">
                                 <h4>Q3/21</h4>
@@ -43,7 +41,7 @@ class Roadmap extends React.Component {
                             <div className="roadmap_main_block">
                                 <h4>Q4/21</h4>
                             </div>
-                            <span>MeDIA eYe Staking Pool and Rewards Pool Launch, platform goes into full operation</span>
+                            <span>MeDIA eYe staking pool and rewards pool launch. Platform goes into full operation.</span>
                         </div>
                     </div>
                     <div className="roadmap_mobile">

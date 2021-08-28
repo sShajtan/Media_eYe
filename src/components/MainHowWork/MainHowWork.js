@@ -37,7 +37,7 @@ class MainHowWork extends React.Component {
                                 </defs>
                             </svg>
                             <h3>CREATE</h3>
-                            <span>Mint and embed digitized content on an NFT token, such as, art, text, videos, photos, songs or lines of code. NFTs can also represent, in a tokenized form any digitized asset, artwork, movies, music, brands and more.  Discover the unlimited potential of NFTs, become a Creator.</span>
+                            <span>Mint and embed digitized content on an NFT token, such as art, text, videos, photos, songs or lines of code. NFTs can also represent a tokenized form of any digitized content, such as artworks, movies, music, branding and more. Discover the unlimited potential of NFTs, become a Creator.</span>
                         </div>
                         <div className="main_howwork_main_block animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.5s">
                             <svg width="125" height="82" viewBox="0 0 125 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +68,7 @@ class MainHowWork extends React.Component {
                                 </defs>
                             </svg>
                             <h3>PROMOTE</h3>
-                            <span>Use the unlimited potential of NFTs to drive your next ad campaign, create brand awareness, distribute content to your clients or mass audiences, create unique experiences for consumers and much more...</span>
+                            <span>Use the unlimited potential of NFTs to drive your next ad campaign, create brand awareness, distribute content to your clients or mass audiences, create unique experiences for consumers and much more.</span>
                         </div>
                         <div className="main_howwork_main_block animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.5s">
                             <svg width="127" height="82" viewBox="0 0 127 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,7 @@ class MainHowWork extends React.Component {
                                 </defs>
                             </svg>
                             <h3>COLLECT</h3>
-                            <span>As NFTs grow rapidly as a new medium for collectors to store digitized collectables while ensuring immutable provenance. Investors and collectors alike are realizing the value that NFTs can capture and offer,  by providing a secure store of value.</span>
+                            <span>As NFTs grow rapidly as a new medium for collectors to store digitized collectables while ensuring immutable provenance. Investors and collectors alike are realizing the value that NFTs can capture and offer by providing a secure store of value.</span>
                         </div>
                     </div>
                 </div>

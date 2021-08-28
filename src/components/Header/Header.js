@@ -65,8 +65,8 @@ class Header extends React.Component {
                     <div className="container">
                         <div className="header_main" ref={this.setWrapperRef}>
                             <div className="header_logo">
-                                <a>
-                                    <img src="img/logo.png" />
+                                <a href="/">
+                                    <img src="img/logo.png" alt="logo" />
                                 </a>
                             </div>
                             <div className="header_left_menu">
@@ -79,8 +79,8 @@ class Header extends React.Component {
                                         </Collapse>
                                     </div>
                                 </div>
-                                <a>About</a>
-                                <a>Blog</a>
+                                <a href="/static/media/Peachdeck.c4889107.pdf">About</a>
+                                <a href="/blog/">Blog</a>
                             </div>
                             <div className={this.state.mobileSearch ? "header_search active" : "header_search"}>
                                 <input type="search" />

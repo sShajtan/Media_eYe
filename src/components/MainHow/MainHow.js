@@ -13,7 +13,7 @@ class MainHow extends React.Component {
                         </div>
                         <div className="main_how_center">
                             <img src="img/color_logo.png" />
-                            <p>MeDIA eYe NFT Portal puts the power of blockchain to work for your next marketing campaign, promotion, rewards program or creating a collectible..  Sign Up with Googe or Facebook</p>
+                            <p>MeDIA eYe NFT Portal puts the power of blockchain to work for your next marketing campaign, promotion, rewards program or creating a collectible. <br/><br/>Sign Up with Googe or Facebook</p>
                             <div className="mobile_icons">
                                 <svg width="78" height="70" viewBox="0 0 78 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_b)">
@@ -115,7 +115,7 @@ class MainHow extends React.Component {
                         </div>
                         <div className="main_how_footer_block" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/4.png" />
-                            <h5>NFT Market Place</h5>
+                            <h5>NFT Marketplace</h5>
                         </div>
                         <div className="main_how_footer_block animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/5.png" />

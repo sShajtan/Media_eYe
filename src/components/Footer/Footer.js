@@ -12,12 +12,12 @@ class Footer extends React.Component {
                 <div className="container">
                     <div className="footer_main">
                         <div className="footer_left">
-                            <a>
+                            <a href="/">
                                 <img className="footer_logo" src="img/logo.png" />
                             </a>
                             <div className="footer_menu">
                                 <ul>
-                                    <li><a>Content Marketplace</a></li>
+                                    <li><a>NFT Marketplace</a></li>
                                     <li><a>Media eYe GALLERY</a></li>
                                     <li><a>Creators</a></li>
                                     <li><a>Launch Campaign</a></li>
@@ -25,7 +25,7 @@ class Footer extends React.Component {
                                 <ul>
                                     <li><a>Tutorial</a></li>
                                     <li><a>Support</a></li>
-                                    <li><a href="https://mediaeyenft.com/blog/">Blog</a></li>
+                                    <li><a href="/blog/">Blog</a></li>
                                 </ul>
                                 <ul>
                                     <li><a href="https://docs.mediaeyenft.com/" target="_blank">Litepaper</a></li>
@@ -34,7 +34,7 @@ class Footer extends React.Component {
 
                                 </ul>
                                 <ul>
-                                    <li><a>Contact</a></li>
+                                    <li><a href="mailto:webmaster@example.com">Contact</a></li>
                                     <li><Link to="about" spy={true} smooth={true} duration={500}>About</Link></li>
                                     <li><Link to="team" spy={true} smooth={true} duration={500}>Team</Link></li>
 
