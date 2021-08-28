@@ -9,7 +9,7 @@ class Tokenomics extends React.Component {
             <div className="tokenomics">
                 <div className="container">
                     <img className="title animate__animated animate__zoomIn wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/tokenomics_title.svg" />
-                    <h4><span>Total token supply:</span>{" "} 1 Billion (fixed supply)</h4>
+                    <h4><span>Total token supply:</span> &nbsp;1 Billion (fixed supply)</h4>
                     <h5>500M ERC20 and 500M BEP20</h5>
                     <div className="tokenomics_main">
                         <div className="tokenomics_left">
@@ -45,7 +45,7 @@ class Tokenomics extends React.Component {
                                         <line x1="71" y1="20.5" x2="43" y2="20.5" stroke="#57A4FF" />
                                     </svg>
                                     </div>
-                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">25M eYe ($0.02 to 0.025 per eYe token) </span>
+                                    <span className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">25M eYe ($0.015 per eYe token) </span>
                                 </div>
                                 <div className="tokenomics_right_block">
                                     <div><svg width="128" height="43" viewBox="0 0 128 43" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -53,7 +53,7 @@ class Header extends React.Component {
         if (this.state.mobileInputShow === false) {
             this.setState({ mobileInputShow: true })
         } else {
-            // Serach
+
         }
     }
 
@@ -75,10 +75,12 @@ class Header extends React.Component {
                                     <div className="nft_collapse">
                                         <Collapse isOpened={this.state.showNftCollapse}>
                                             <a>Content Marketplace</a>
+                                            <a>Gallery</a>
                                         </Collapse>
                                     </div>
                                 </div>
-                                <a>Gallery</a>
+                                <a>About</a>
+                                <a>Blog</a>
                             </div>
                             <div className={this.state.mobileSearch ? "header_search active" : "header_search"}>
                                 <input type="search" />
@@ -88,7 +90,6 @@ class Header extends React.Component {
                                         <path d="M13.291 9.66675C12.815 9.66675 12.3436 9.76051 11.9038 9.94268C11.464 10.1249 11.0644 10.3919 10.7278 10.7285C10.3911 11.0651 10.1241 11.4647 9.94195 11.9045C9.75978 12.3443 9.66602 12.8157 9.66602 13.2917" stroke="#555555" stroke-width="2" stroke-linecap="round" />
                                         <path d="M24.166 24.1667L20.541 20.5417" stroke="#555555" stroke-width="2" stroke-linecap="round" />
                                     </svg>
-
                                 </button>
                             </div>
                             <div className="mobile_search" onClick={this.toggleMobileSearch}>
@@ -113,7 +114,6 @@ class Header extends React.Component {
                                 <a className="ntf_header" onClick={this.props.toggleSoonPopup}>NFT Creator</a>
                             </div>
                         </div>
-
                     </div>
                 </header >
                 <div className={!this.state.isOpen ? "open" : null}>
@@ -132,7 +132,7 @@ class Header extends React.Component {
                                 <a>
                                     <a href="https://medium.com/@MeDIAeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/1.png" : "img/footer_soc/1-dark.png"} /></a >
                                 </a>
-                                <a href="https://t.me/MeDIAeYeNFTPortal" target="_blank"><img src={this.props.theme ? "img/footer_soc/2.png" : "img/footer_soc/2-dark.png"} /></a >
+                                <a href="https://t.me/MeDIAeYeNFTofficial " target="_blank"><img src={this.props.theme ? "img/footer_soc/2.png" : "img/footer_soc/2-dark.png"} /></a >
                                 <a href="https://twitter.com/MeDIAeYeNFT" target="_blank"><img src={this.props.theme ? "img/footer_soc/3.png" : "img/footer_soc/3-dark.png"} /></a >
                                 <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank"><img src={this.props.theme ? "img/footer_soc/4.png" : "img/footer_soc/4-dark.png"} /></a >
                                 <a ><img src={this.props.theme ? "img/footer_soc/5.png" : "img/footer_soc/5-dark.png"} /></a >

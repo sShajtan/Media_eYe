@@ -336,13 +336,13 @@ body .slick-prev:focus, body .slick-prev:hover{
     .team .slick-next {
         right: 50%;
         border: 2px solid #797979;
-        transform: translateX(364%);
+        transform: translateX(326%);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
     }
     .team .slick-prev {
         left: 50%;
-        transform: translateX(-364%);
+        transform: translateX(-326%);
         border: 2px solid #797979;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;

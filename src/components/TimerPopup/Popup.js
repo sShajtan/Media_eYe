@@ -48,7 +48,7 @@ class Popup extends React.Component {
     return (
       <React.Fragment>
         <div className={this.props.showPopup ? "popup active" : "popup"}>
-          <div className="popup-wrapper timer_popup" onClick={this.props.togglePopup}>
+          <div className="popup-wrapper timer_popup soon_popup timer" onClick={this.props.togglePopup}>
             <div
               className="main-popup"
               onClick={(event) => event.stopPropagation()}

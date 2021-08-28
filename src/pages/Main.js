@@ -53,7 +53,7 @@ class Main extends React.Component {
                 <TimerPopup showPopup={this.state.showPopup}
                     togglePopup={this.togglePopup} />
                 <Header toggleTheme={this.props.toggleTheme} theme={this.props.theme} toggleSoonPopup={this.toggleSoonPopup} />
-                <MainBlock />
+                <MainBlock togglePopup={this.togglePopup} />
                 <MainInfo />
                 <MainHow toggleSoonPopup={this.toggleSoonPopup} />
                 <MainHowWork />

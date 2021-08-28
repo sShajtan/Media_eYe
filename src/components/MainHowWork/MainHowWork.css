@@ -24,16 +24,17 @@
 }
 
 .main_howwork_main_block h3{
-    font-family: Neumatic Compressed;
+    font-family: Poppins;
     font-style: normal;
     font-weight: bold;
-    font-size: 96px;
+    font-size: 58px;
     line-height: 134px;
     display: flex;
     align-items: center;
     letter-spacing: 0.12em;
     color: #595858;
     transition: 0.4s;
+    letter-spacing: 1px;
 }
 
 .main_howwork_main_block span{
@@ -58,6 +59,11 @@ transition: 0.4s;
     .main_howwork .title{
         max-width: 80%;
     }
+
+    
+.main_howwork_main_block h3{
+    font-size: 48px;
+}
 }
 
 @media (max-width: 767.98px){

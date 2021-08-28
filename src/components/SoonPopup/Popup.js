@@ -31,7 +31,7 @@ class Popup extends React.Component {
     return (
       <React.Fragment>
         <div className={this.props.showPopup ? "popup active" : "popup"}>
-          <div className="popup-wrapper timer_popup" onClick={this.props.togglePopup}>
+          <div className="popup-wrapper timer_popup soon_popup" onClick={this.props.togglePopup}>
             <div
               className="main-popup"
               onClick={(event) => event.stopPropagation()}
@@ -75,7 +75,7 @@ class Popup extends React.Component {
                     </defs>
                   </svg>
                   </a >
-                  <a href="https://t.me/MeDIAeYeNFTPortal" target="_blank"><svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <a href="https://t.me/MeDIAeYeNFTofficial" target="_blank"><svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
                       <path d="M20 1.48145C8.95161 1.48145 0 10.1533 0 20.8564C0 31.5596 8.95161 40.2314 20 40.2314C31.0484 40.2314 40 31.5596 40 20.8564C40 10.1533 31.0484 1.48145 20 1.48145ZM29.8226 14.7549L26.5403 29.7393C26.2984 30.8018 25.6452 31.0596 24.7339 30.5596L19.7339 26.9893L17.3226 29.2393C17.0565 29.4971 16.8306 29.7158 16.3145 29.7158L16.6694 24.7861L25.9355 16.6768C26.3387 16.333 25.8468 16.1377 25.3145 16.4814L13.8629 23.4658L8.92742 21.9736C7.85484 21.6455 7.83065 20.9346 9.15323 20.4346L28.4355 13.2314C29.3306 12.9189 30.1129 13.4424 29.8226 14.7549Z" fill="#3E3E3E" />
                     </g>

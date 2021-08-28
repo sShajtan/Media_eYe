@@ -1,7 +1,8 @@
 import React from 'react';
-import './MainBlock.css';
 import Slider from "react-slick";
 import WOW from 'wowjs';
+import './MainBlock.css';
+import Peachdeck from '../../assets/Peachdeck.pdf';
 
 class MainBlock extends React.Component {
     constructor(props) {
@@ -78,11 +79,11 @@ class MainBlock extends React.Component {
                             <img className="animate__animated animate__fadeInLeft wow logo" data-wow-duration="1s" data-wow-delay="0.5s" src="img/big_main_logo.png" />
                             <h6 className="animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.5s">A frictionless platform for creating, trading, and distributing NFTs.</h6>
                             <div className="main_left_buttons">
-                                <a className="learn_more"><span>Learn More</span></a>
-                                <a className="sign_up"><span>SignUP</span></a>
+                                <a className="learn_more" href={Peachdeck} target="_blank"><span>Learn More</span></a>
+                                <a className="sign_up" onClick={this.props.togglePopup}><span>Sign Up</span></a>
                             </div>
                             <div className="left_slider">
-                                <h4>Creators</h4>
+                                <h4>NFT Art</h4>
                                 <div className="left_slider_main">
                                     <Slider asNavFor={this.state.nav3}
                                         ref={slider => (this.slider2 = slider)} {...settings2} >
@@ -90,7 +91,7 @@ class MainBlock extends React.Component {
                                             <div className="left_slide">
                                                 <img src="img/ava.png" />
                                                 <div>
-                                                    <span>Owner</span>
+                                                    <span>Creator</span>
                                                     <h5>Media</h5>
                                                 </div>
                                             </div>
@@ -99,7 +100,7 @@ class MainBlock extends React.Component {
                                             <div className="left_slide">
                                                 <img src="img/ava.png" />
                                                 <div>
-                                                    <span>Owner</span>
+                                                    <span>Creator</span>
                                                     <h5>Media</h5>
                                                 </div>
                                             </div>
@@ -108,7 +109,7 @@ class MainBlock extends React.Component {
                                             <div className="left_slide">
                                                 <img src="img/ava.png" />
                                                 <div>
-                                                    <span>Owner</span>
+                                                    <span>Creator</span>
                                                     <h5>Media</h5>
                                                 </div>
                                             </div>
@@ -117,7 +118,7 @@ class MainBlock extends React.Component {
                                             <div className="left_slide">
                                                 <img src="img/ava.png" />
                                                 <div>
-                                                    <span>Owner</span>
+                                                    <span>Creator</span>
                                                     <h5>Media</h5>
                                                 </div>
                                             </div>
@@ -150,16 +151,28 @@ class MainBlock extends React.Component {
                                     <Slider asNavFor={this.state.nav1}
                                         ref={slider => (this.slider3 = slider)} {...settings3} >
                                         <div className="main_small_slide">
-                                            <img src="img/small_slider/2.jpg" />
+                                            <div>
+                                                <img src="img/ava.png" />
+                                                <span>Klarens Malluta</span>
+                                            </div>
                                         </div>
                                         <div className="main_small_slide">
-                                            <img src="img/small_slider/1.jpg" />
+                                            <div>
+                                                <img src="img/ava.png" />
+                                                <span>Klarens Malluta</span>
+                                            </div>
                                         </div>
                                         <div className="main_small_slide">
-                                            <img src="img/small_slider/3.jpg" />
+                                            <div>
+                                                <img src="img/ava.png" />
+                                                <span>Klarens Malluta</span>
+                                            </div>
                                         </div>
                                         <div className="main_small_slide">
-                                            <img src="img/small_slider/4.jpg" />
+                                            <div>
+                                                <img src="img/ava.png" />
+                                                <span>Klarens Malluta</span>
+                                            </div>
                                         </div>
                                     </Slider>
                                 </div>

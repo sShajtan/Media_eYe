@@ -120,7 +120,7 @@ class Team extends React.Component {
                                     </span>
                                 </div>
                             </div>
-                            <div className="team_slide_wrapper">
+                            {/* <div className="team_slide_wrapper">
                                 <div className="team_slide">
                                     <img src="img/team/miro.png" />
                                     <div>
@@ -139,7 +139,7 @@ class Team extends React.Component {
                                     </div>
                                     <span>Marketing Manager</span>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="team_slide_wrapper">
                                 <div className="team_slide">
                                     <img src="img/team/shaitanov.png" />
@@ -363,7 +363,7 @@ class Team extends React.Component {
                                     <span>UI/UX Designer</span>
                                 </div>
                             </div>
-                            <div className="team_slide_wrapper"></div>
+
                         </Slider>
                     </div>
                 </div>

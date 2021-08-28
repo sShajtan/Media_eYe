@@ -52,7 +52,7 @@ transition: 0.4s;
 .main_how_center a{
     background: url('../../img/check_faq_bg.png') no-repeat center;
     background-size: contain;
-    padding: 20px;
+    padding: 21px 33px;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -108,7 +108,7 @@ transition: 0.4s;
 .main_how_footer{
     display: flex;
     justify-content: center;
-    margin: 150px 0;
+    margin: 150px 0 50px;
     flex-wrap: wrap;
 }
 
