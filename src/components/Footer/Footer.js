@@ -23,8 +23,6 @@ class Footer extends React.Component {
                                     <li><a>Launch Campaign</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a>Tutorial</a></li>
-                                    <li><a>Support</a></li>
                                     <li><a href="/blog/">Blog</a></li>
                                 </ul>
                                 <ul>
@@ -34,7 +32,7 @@ class Footer extends React.Component {
 
                                 </ul>
                                 <ul>
-                                    <li><a href="mailto:webmaster@example.com">Contact</a></li>
+                                    <li><a href="mailto:mediaeye@mediaeyenft.com">Contact</a></li>
                                     <li><Link to="about" spy={true} smooth={true} duration={500}>About</Link></li>
                                     <li><Link to="team" spy={true} smooth={true} duration={500}>Team</Link></li>
 
