@@ -17,11 +17,13 @@ font-size: 20px;
 line-height: 22px;
 text-align: center;
 color: #0075FF;
+text-shadow: 0px 4px 4px rgba(86, 86, 86, 0.25);
+
 }
 
 .tokenomics h4 span{
     transition: 0.4s;
-    color: #00FFF0;
+    color: #2A00A7;
 }
 
 .dark .tokenomics h4 span{

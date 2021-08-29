@@ -42,7 +42,7 @@
     font-size: 20px;
     line-height: 20px;
     color: #121024;
-    margin-top: 50px;
+    margin-top: 20px;
     display: inline-block;
     cursor: pointer;
     transition: 0.4s;
@@ -87,8 +87,15 @@
     padding: 0 20px;
 }
 
+.main_info_right ul>span{
+    margin-left: -20px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
 .main_info_right p ul li{
     color: #2EE3FA;
+    padding: 2px 0;
 }
 
 .main_info_right p ul li span{

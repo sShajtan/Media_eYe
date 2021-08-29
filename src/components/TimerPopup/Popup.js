@@ -85,7 +85,7 @@ class Popup extends React.Component {
                   <input name="email" required type="email" placeholder="Your email address" value={this.state.email} onChange={this.handleChangeEmail} />
                   <button>Subscribe</button>
                 </form>
-                <span>By signing up you consent to receive emails from QUAI Invest and its subsidiaries.</span>
+                <span>By signing up you consent to receive emails from Media eYe and its subsidiaries.</span>
               </div>
             </div>
           </div>

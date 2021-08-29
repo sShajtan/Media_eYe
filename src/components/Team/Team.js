@@ -76,7 +76,7 @@ class Team extends React.Component {
                                         </svg>
                                         </a>
                                     </div>
-                                    <span>Co-Founder - Business Development and Growth</span>
+                                    <span>Co-Founder, Business Development and Growth</span>
                                 </div>
                             </div>
                             <div className="team_slide_wrapper">
@@ -116,7 +116,7 @@ class Team extends React.Component {
                                         </svg>
                                         </a>
                                     </div>
-                                    <span>Senior Manager Growth and Development - Co Founder
+                                    <span>Co-Founder, Senior Manager Growth and Development
                                     </span>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@ class Team extends React.Component {
                                         </svg>
                                         </a>
                                     </div>
-                                    <span>Co - Founder - Senior Solidity Developer and Smart Contracts Architect</span>
+                                    <span>Co - Founder, Senior Solidity Developer and Smart Contracts Architect</span>
                                 </div>
                             </div>
                             {/* <div className="team_slide_wrapper">
@@ -238,7 +238,7 @@ class Team extends React.Component {
                                         </svg>
                                         </a>
                                     </div>
-                                    <span>Finance and economic planning</span>
+                                    <span>Finance and Economic Planning</span>
                                 </div>
                             </div>
                             {/* <div className="team_slide_wrapper">
@@ -279,7 +279,7 @@ class Team extends React.Component {
                                         </svg>
                                         </a>
                                     </div>
-                                    <span className="askar">Co-Founder - Director of Eurasia Accelerator Partnerships, Investments and Business Development</span>
+                                    <span className="askar">Co-Founder, Director of Eurasia Accelerator Partnerships, Investments and Business Development</span>
                                 </div>
                             </div>
                             <div className="team_slide_wrapper">
@@ -299,7 +299,7 @@ class Team extends React.Component {
                                         </svg>
                                         </a>
                                     </div>
-                                    <span>Co-Founder - Tokenomics Expert</span>
+                                    <span>Co-Founder Tokenomics Expert</span>
                                 </div>
                             </div>
                             <div className="team_slide_wrapper">
@@ -319,7 +319,7 @@ class Team extends React.Component {
                                         </svg>
                                         </a>
                                     </div>
-                                    <span>Ci-Founder - Senior
+                                    <span>Ci-Founder, Senior
                                         Developer</span>
                                 </div>
                             </div>
@@ -340,7 +340,7 @@ class Team extends React.Component {
                                         </svg>
                                         </a>
                                     </div>
-                                    <span>Front end developer</span>
+                                    <span>Front-end Developer</span>
                                 </div>
                             </div>
                             <div className="team_slide_wrapper">

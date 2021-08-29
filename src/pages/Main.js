@@ -64,7 +64,7 @@ class Main extends React.Component {
                 <Partners theme={this.props.theme} />
                 <Community />
                 <Faq />
-                <Footer theme={this.props.theme} />
+                <Footer theme={this.props.theme} toggleSoonPopup={this.toggleSoonPopup} />
             </React.Fragment>
         )
     }

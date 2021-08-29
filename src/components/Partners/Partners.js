@@ -25,7 +25,7 @@ class Partners extends React.Component {
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
-            rows: 2,
+            rows: 3,
             slidesPerRow: 1,
             arrows: true,
             autoplay: true,
@@ -65,17 +65,28 @@ class Partners extends React.Component {
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a href="https://www.mogulproductions.com/" target="_blank">
-                                        <img src={this.props.theme ? "img/partners/3-dark.png" : "img/partners/3.png"} />
+                                    <a href="https://www.bigleap.com/" target="_blank">
+                                        <img src={this.props.theme ? "img/partners/4-dark.png" : "img/partners/4.png"} />
                                     </a>
                                 </div>
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a href="https://www.bigleap.com/" target="_blank">
-                                        <img src={this.props.theme ? "img/partners/4-dark.png" : "img/partners/4.png"} />
+                                    <a href="https://www.mogulproductions.com/" target="_blank">
+                                        <img src={this.props.theme ? "img/partners/3-dark.png" : "img/partners/3.png"} />
                                     </a>
                                 </div>
+                            </div>
+
+                            <div className="partners_slide_wrapper">
+                                <div className="partners_slide">
+                                    <a href="https://ramp.network/" target="_blank">
+                                        <img src={this.props.theme ? "img/partners/6-dark.png" : "img/partners/6.png"} />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="partners_slide_wrapper">
+
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
@@ -87,9 +98,12 @@ class Partners extends React.Component {
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a href="https://www.rampdefi.com/" target="_blank">
-                                        <img src={this.props.theme ? "img/partners/6-dark.png" : "img/partners/6.png"} />
+                                        <img src={this.props.theme ? "img/partners/7-dark.png" : "img/partners/7.png"} />
                                     </a>
                                 </div>
+                            </div>
+                            <div className="partners_slide_wrapper">
+
                             </div>
 
                         </Slider>

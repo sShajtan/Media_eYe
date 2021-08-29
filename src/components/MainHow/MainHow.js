@@ -108,8 +108,8 @@ class MainHow extends React.Component {
                             <img className="animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s" src="img/right_nft.svg" />
                         </div>
                     </div>
-                    <div className="main_how_footer" onClick={this.props.toggleSoonPopup}>
-                        <div className="main_how_footer_block animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div className="main_how_footer">
+                        <div className="main_how_footer_block animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.5s" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/1.png" />
                             <h5>Content Marketplace</h5>
                         </div>
@@ -123,7 +123,7 @@ class MainHow extends React.Component {
                         </div>
                         <div className="main_how_footer_block animate__animated animate__fadeInTopRight wow" data-wow-duration="1s" data-wow-delay="1s" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/2.png" />
-                            <h5>NFT Creator</h5>
+                            <h5>Create NFTs</h5>
                         </div>
                         <div className="main_how_footer_block animate__animated animate__fadeInTopLeft wow" data-wow-duration="1s" data-wow-delay="1s" onClick={this.props.toggleSoonPopup}>
                             <img src="img/nft/3.png" />

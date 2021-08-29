@@ -17,25 +17,22 @@ class Footer extends React.Component {
                             </a>
                             <div className="footer_menu">
                                 <ul>
-                                    <li><a>NFT Marketplace</a></li>
-                                    <li><a>Media eYe GALLERY</a></li>
+                                    <li><a onClick={this.props.toggleSoonPopup}>NTF Marketplace</a></li>
+                                    <li><a onClick={this.props.toggleSoonPopup}>Content Marketplace</a></li>
+                                    <li><a onClick={this.props.toggleSoonPopup}>Gallery</a></li>
                                     <li><a>Creators</a></li>
-                                    <li><a>Launch Campaign</a></li>
-                                </ul>
-                                <ul>
-                                    <li><a href="/blog/">Blog</a></li>
                                 </ul>
                                 <ul>
                                     <li><a href="https://docs.mediaeyenft.com/" target="_blank">Litepaper</a></li>
                                     <li><a href={Peachdeck} target="_blank">Pitchdeck</a></li>
+                                    <li><a href="https://mediaeyenft.com/blog/">Blog</a></li>
                                     {/* <li><a href="https://quaidao.io/" target="_blank">Governance</a></li> */}
 
                                 </ul>
                                 <ul>
-                                    <li><a href="mailto:mediaeye@mediaeyenft.com">Contact</a></li>
                                     <li><Link to="about" spy={true} smooth={true} duration={500}>About</Link></li>
                                     <li><Link to="team" spy={true} smooth={true} duration={500}>Team</Link></li>
-
+                                    <li><a href="mailto:mediaeye@mediaeyenft.com">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -90,7 +87,7 @@ class Footer extends React.Component {
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer >
         )
     }
 }

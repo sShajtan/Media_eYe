@@ -25,7 +25,7 @@ class MainInfo extends React.Component {
                                 <br />
                                 <div>
                                     <ul>
-                                        NFTs can be used to:
+                                        <span>NFTs can be used to:</span>
 
                                         <li><span>remove intermediaries</span></li>
                                         <li><span>store record of ownership</span></li>
@@ -39,7 +39,7 @@ class MainInfo extends React.Component {
                                     <img className="animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="0.5s" src="img/nft_img_2.png" />
                                 </div>
                             </p>
-                            <Link to="faq" spy={true} smooth={true} duration={500} className="check_faq_button"><span>Сheck out our FAQ</span></Link>
+                            <Link to="faq" spy={true} smooth={true} duration={500} className="check_faq_button"><span>Check out our FAQ</span></Link>
 
 
                         </div>

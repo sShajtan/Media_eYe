@@ -74,8 +74,8 @@ class Header extends React.Component {
                                     <a onClick={this.toggleNftCollapse}>NFT Marketplace ▾</a>
                                     <div className="nft_collapse">
                                         <Collapse isOpened={this.state.showNftCollapse}>
-                                            <a>Content Marketplace</a>
-                                            <a>Gallery</a>
+                                            <a onClick={this.props.toggleSoonPopup}>Content Marketplace</a>
+                                            <a onClick={this.props.toggleSoonPopup}>Gallery</a>
                                         </Collapse>
                                     </div>
                                 </div>
@@ -111,16 +111,16 @@ class Header extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <a className="ntf_header" onClick={this.props.toggleSoonPopup}>NFT Creator</a>
+                                <a className="ntf_header" onClick={this.props.toggleSoonPopup}>Create NFTs</a>
                             </div>
                         </div>
                     </div>
                 </header >
                 <div className={!this.state.isOpen ? "open" : null}>
                     <Menu onStateChange={() => this.setState({ isOpen: !this.state.isOpen })} width={'100%'}>
-                        <a className="menu-item">NFT Marketplace</a>
-                        <a className="menu-item" >Content Marketplace</a>
-                        <a className="menu-item" >Gallery</a>
+                        <a className="menu-item" onClick={this.props.toggleSoonPopup}>NFT Marketplace</a>
+                        <a className="menu-item" onClick={this.props.toggleSoonPopup}>Content Marketplace</a>
+                        <a className="menu-item" onClick={this.props.toggleSoonPopup}>Gallery</a>
                         <a className="menu-item" >Artists</a>
                         <a className="menu-item" >Campaigns</a>
                         <a className="menu-item" >Contact</a>
@@ -140,7 +140,7 @@ class Header extends React.Component {
                         </div>
                         <div className="menu-item">
                             <div>
-                                <button onClick={this.props.toggleSoonPopup}><span>NFT Creator</span></button>
+                                <button onClick={this.props.toggleSoonPopup}><span>Create NFTs</span></button>
                                 <button className="login"><span>Login</span></button>
                             </div>
                         </div>

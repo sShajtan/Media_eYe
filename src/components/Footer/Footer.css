@@ -29,7 +29,7 @@ footer{
 }
 
 .footer_menu ul{
-    margin: 0 0 0 20px;
+    margin: 0 0 0 60px;
     padding: 0;
 }
 
@@ -81,6 +81,16 @@ footer{
 
 .dark footer svg path{
     fill: #fff;
+}
+@media (max-width: 1199.98px){
+.footer_menu ul{
+    margin: 0 0 0 40px;
+}
+}
+@media (max-width: 991.98px){
+    .footer_menu ul{
+        margin: 0 0 0 15px;
+    }
 }
 
 @media (max-width: 767.98px){
