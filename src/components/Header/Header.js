@@ -111,7 +111,7 @@ class Header extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <a className="ntf_header" onClick={this.props.toggleSoonPopup}>Create NFTs</a>
+                                <a className="ntf_header" onClick={this.props.toggleSoonPopup}>Create NFT</a>
                             </div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@ class Header extends React.Component {
                         </div>
                         <div className="menu-item">
                             <div>
-                                <button onClick={this.props.toggleSoonPopup}><span>Create NFTs</span></button>
+                                <button onClick={this.props.toggleSoonPopup}><span>Create NFT</span></button>
                                 <button className="login"><span>Login</span></button>
                             </div>
                         </div>
