@@ -39,7 +39,7 @@ header {
 }
 
 .ReactCollapse--collapse {
-  transition: height 500ms;
+  transition: none;
 }
 
 .dark .header_left_menu a{
@@ -58,7 +58,7 @@ header {
   background: url('../../img/collapse_bg.png') no-repeat center;
   
   padding: 0;
-  height: 0;
+ opacity: 0;
   transition: 0.2s;
   overflow: hidden;
 }
@@ -66,7 +66,8 @@ header {
 .nft_collapse.active{
     height: 120px;
     transition: 0.2s;
-    width: 180px;
+    width: 200px;
+    opacity: 1;
     padding: 20px 10px 15px 0;
 }
 
