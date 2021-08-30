@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import Peachdeck from '../../assets/Peachdeck.pdf';
+import Peachdeck from '../../assets/Peachdeck.pptx';
 import * as Scroll from 'react-scroll';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
@@ -30,7 +30,7 @@ class Footer extends React.Component {
 
                                 </ul>
                                 <ul>
-                                    <li><Link to="about" spy={true} smooth={true} duration={500}>About</Link></li>
+                                    <li><a href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/">About</a></li>
                                     <li><Link to="team" spy={true} smooth={true} duration={500}>Team</Link></li>
                                     <li><a href="mailto:mediaeye@mediaeyenft.com">Contact</a></li>
                                 </ul>

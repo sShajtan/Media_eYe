@@ -29,6 +29,9 @@
 
 
 @media (max-width: 767.98px){
+    div:has(.empty){
+        display: none;
+    }
     .partners_slide_wrapper{
         padding: 20px;
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import { slide as Menu } from 'react-burger-menu';
+import Peachdeck from '../../assets/Peachdeck.pptx';
 import * as Scroll from 'react-scroll';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import { Collapse } from 'react-collapse';
@@ -71,15 +72,16 @@ class Header extends React.Component {
                             </div>
                             <div className="header_left_menu">
                                 <div>
-                                    <a onClick={this.toggleNftCollapse}>NFT Marketplace ▾</a>
+                                    <a onClick={this.toggleNftCollapse}>MeDia eYe Marketplace ▾</a>
                                     <div className="nft_collapse">
                                         <Collapse isOpened={this.state.showNftCollapse}>
+                                            <a onClick={this.props.toggleSoonPopup}>NFT Marketplace</a>
                                             <a onClick={this.props.toggleSoonPopup}>Content Marketplace</a>
                                             <a onClick={this.props.toggleSoonPopup}>Gallery</a>
                                         </Collapse>
                                     </div>
                                 </div>
-                                <a href="/static/media/Peachdeck.c4889107.pdf">About</a>
+                                <a href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/">About</a>
                                 <a href="/blog/">Blog</a>
                             </div>
                             <div className={this.state.mobileSearch ? "header_search active" : "header_search"}>
@@ -121,11 +123,13 @@ class Header extends React.Component {
                         <a className="menu-item" onClick={this.props.toggleSoonPopup}>NFT Marketplace</a>
                         <a className="menu-item" onClick={this.props.toggleSoonPopup}>Content Marketplace</a>
                         <a className="menu-item" onClick={this.props.toggleSoonPopup}>Gallery</a>
-                        <a className="menu-item" >Artists</a>
-                        <a className="menu-item" >Campaigns</a>
-                        <a className="menu-item" >Contact</a>
-                        <Link className="menu-item" to="about" spy={true} smooth={true} duration={500}>About Us</Link>
+                        <a className="menu-item" >Creators</a>
+                        <a className="menu-item" href="https://docs.mediaeyenft.com/" target="_blank">Litepaper</a>
+                        <a className="menu-item" href={Peachdeck} target="_blank">Pitchdeck</a>
+                        <a className="menu-item" href="https://mediaeyenft.com/blog/">Blog</a>
+                        <a className="menu-item" href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/">About</a>
                         <Link className="menu-item" to="team" spy={true} smooth={true} duration={500}>Team</Link>
+                        <a className="menu-item" href="mailto:mediaeye@mediaeyenft.com">Contact</a>
                         <div className="menu-item">
                             <div className="soc_header_mobile">
                                 <a>

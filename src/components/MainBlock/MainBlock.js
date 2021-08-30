@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import WOW from 'wowjs';
 import './MainBlock.css';
-import Peachdeck from '../../assets/Peachdeck.pdf';
+import Peachdeck from '../../assets/Peachdeck.pptx';
 
 class MainBlock extends React.Component {
     constructor(props) {

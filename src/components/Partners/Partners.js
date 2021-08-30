@@ -18,6 +18,27 @@ function SamplePrevArrow(props) {
 }
 
 class Partners extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0
+        };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
     render() {
 
         const settings = {
@@ -36,7 +57,7 @@ class Partners extends React.Component {
                 {
                     breakpoint: 768,
                     settings: {
-                        rows: 3,
+                        rows: 4,
                         slidesToShow: 2,
                     }
                 },
@@ -85,9 +106,9 @@ class Partners extends React.Component {
                                     </a>
                                 </div>
                             </div>
-                            <div className="partners_slide_wrapper">
+                            {this.state.width > 768 ? <div className="partners_slide_wrapper empty"></div> : null}
 
-                            </div>
+
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a href="https://www.moonpay.com/" target="_blank">
@@ -102,9 +123,7 @@ class Partners extends React.Component {
                                     </a>
                                 </div>
                             </div>
-                            <div className="partners_slide_wrapper">
 
-                            </div>
 
                         </Slider>
                     </div>
