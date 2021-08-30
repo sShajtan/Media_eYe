@@ -53,18 +53,28 @@ header {
 .nft_collapse{
   position: absolute;
   margin-top: 20px;
-  background: #E9F1FF;
+  background: url('../../img/collapse_bg.png') no-repeat center;
+  
+  padding: 0;
+  height: 0;
+  transition: 0.2s;
+  overflow: hidden;
+}
 
-  padding-bottom: 10px;
+.nft_collapse.active{
+  height: 90px;
+  transition: 0.2s;
+  padding: 15px 10px 15px 0;
 }
 
 .dark .nft_collapse{
-  background: #141233;
+  background: url('../../img/collapse_bg_dark.png') no-repeat center;
+  background-size: contain;
 }
 
 
 .nft_collapse a{
-  padding-top: 10px;
+  padding-left: 5px;
 }
 
 .header_left_menu a:hover{

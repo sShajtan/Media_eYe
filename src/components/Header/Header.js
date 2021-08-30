@@ -73,7 +73,7 @@ class Header extends React.Component {
                             <div className="header_left_menu">
                                 <div>
                                     <a onClick={this.toggleNftCollapse}>MeDia eYe Marketplace ▾</a>
-                                    <div className="nft_collapse">
+                                    <div className={this.state.showNftCollapse ? "nft_collapse active" : "nft_collapse"}>
                                         <Collapse isOpened={this.state.showNftCollapse}>
                                             <a onClick={this.props.toggleSoonPopup}>NFT Marketplace</a>
                                             <a onClick={this.props.toggleSoonPopup}>Content Marketplace</a>
