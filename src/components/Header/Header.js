@@ -14,13 +14,12 @@ class Header extends React.Component {
             isOpen: false,
             mobileInputShow: false,
             mobileSearch: false,
-            showNftCollapse: false
+
         };
         this.setWrapperRef = this.setWrapperRef.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
         this.showMobileInput = this.showMobileInput.bind(this);
         this.toggleMobileSearch = this.toggleMobileSearch.bind(this);
-        this.toggleNftCollapse = this.toggleNftCollapse.bind(this);
     }
 
     setWrapperRef(node) {
@@ -44,9 +43,7 @@ class Header extends React.Component {
         this.setState({ mobileSearch: !this.state.mobileSearch });
     }
 
-    toggleNftCollapse() {
-        this.setState({ showNftCollapse: !this.state.showNftCollapse });
-    }
+
 
 
 
@@ -72,9 +69,9 @@ class Header extends React.Component {
                             </div>
                             <div className="header_left_menu">
                                 <div>
-                                    <a onClick={this.toggleNftCollapse}>MeDia eYe Marketplace ▾</a>
-                                    <div className={this.state.showNftCollapse ? "nft_collapse active" : "nft_collapse"}>
-                                        <Collapse isOpened={this.state.showNftCollapse}>
+                                    <a onClick={this.props.toggleNftCollapse}>MeDia eYe Marketplace ▾</a>
+                                    <div className={this.props.showNftCollapse ? "nft_collapse active" : "nft_collapse"}>
+                                        <Collapse isOpened={this.props.showNftCollapse}>
                                             <a onClick={this.props.toggleSoonPopup}>NFT Marketplace</a>
                                             <a onClick={this.props.toggleSoonPopup}>Content Marketplace</a>
                                             <a onClick={this.props.toggleSoonPopup}>Gallery</a>

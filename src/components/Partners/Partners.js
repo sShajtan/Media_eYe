@@ -46,7 +46,7 @@ class Partners extends React.Component {
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
-            rows: 3,
+            rows: 2,
             slidesPerRow: 1,
             arrows: true,
             autoplay: true,
@@ -57,7 +57,7 @@ class Partners extends React.Component {
                 {
                     breakpoint: 768,
                     settings: {
-                        rows: 4,
+                        rows: 3,
                         slidesToShow: 2,
                     }
                 },
@@ -86,19 +86,11 @@ class Partners extends React.Component {
                             </div>
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a href="https://www.bigleap.com/" target="_blank">
-                                        <img src={this.props.theme ? "img/partners/4-dark.png" : "img/partners/4.png"} />
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="partners_slide_wrapper">
-                                <div className="partners_slide">
                                     <a href="https://www.mogulproductions.com/" target="_blank">
                                         <img src={this.props.theme ? "img/partners/3-dark.png" : "img/partners/3.png"} />
                                     </a>
                                 </div>
                             </div>
-
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a href="https://ramp.network/" target="_blank">
@@ -106,23 +98,33 @@ class Partners extends React.Component {
                                     </a>
                                 </div>
                             </div>
-                            {this.state.width > 768 ? <div className="partners_slide_wrapper empty"></div> : null}
+                            <div className="partners_slide_wrapper">
+                                <div className="partners_slide">
+                                    <a href="https://www.bigleap.com/" target="_blank">
+                                        <img src={this.props.theme ? "img/partners/4-dark.png" : "img/partners/4.png"} />
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+                            {/* {this.state.width > 768 ? <div className="partners_slide_wrapper empty"></div> : null} */}
 
 
                             <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
-                                    <a href="https://www.moonpay.com/" target="_blank">
-                                        <img src={this.props.theme ? "img/partners/5-dark.png" : "img/partners/5.png"} />
+                                    <a href="https://apeswap.finance/" target="_blank">
+                                        <img src={this.props.theme ? "img/partners/8.png" : "img/partners/8.png"} />
                                     </a>
                                 </div>
                             </div>
-                            <div className="partners_slide_wrapper">
+                            {/* <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a href="https://www.rampdefi.com/" target="_blank">
                                         <img src={this.props.theme ? "img/partners/7-dark.png" : "img/partners/7.png"} />
                                     </a>
                                 </div>
-                            </div>
+                            </div> */}
 
 
                         </Slider>

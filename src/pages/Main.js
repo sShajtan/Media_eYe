@@ -20,12 +20,18 @@ class Main extends React.Component {
         super(props);
         this.state = {
             showPopup: false,
-            showSoonPopup: false
+            showSoonPopup: false,
+            showNftCollapse: false
+
         }
         this.togglePopup = this.togglePopup.bind(this);
         this.toggleSoonPopup = this.toggleSoonPopup.bind(this);
-
+        this.toggleNftCollapse = this.toggleNftCollapse.bind(this);
     };
+
+    toggleNftCollapse() {
+        this.setState({ showNftCollapse: !this.state.showNftCollapse });
+    }
 
     togglePopup() {
         this.setState({ showPopup: !this.state.showPopup });
@@ -48,23 +54,25 @@ class Main extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <SoonPopup showPopup={this.state.showSoonPopup}
-                    togglePopup={this.toggleSoonPopup} />
-                <TimerPopup showPopup={this.state.showPopup}
-                    togglePopup={this.togglePopup} />
-                <Header toggleTheme={this.props.toggleTheme} theme={this.props.theme} toggleSoonPopup={this.toggleSoonPopup} />
-                <MainBlock togglePopup={this.togglePopup} />
-                <MainInfo />
-                <MainHow toggleSoonPopup={this.toggleSoonPopup} />
-                <MainHowWork />
-                {/* <Creators /> */}
-                <Tokenomics />
-                <Roadmap theme={this.props.theme} />
-                <Team />
-                <Partners theme={this.props.theme} />
-                <Community />
-                <Faq />
-                <Footer theme={this.props.theme} toggleSoonPopup={this.toggleSoonPopup} />
+                <div onClick={this.toggleNftCollapse}>
+                    <SoonPopup showPopup={this.state.showSoonPopup}
+                        togglePopup={this.toggleSoonPopup} />
+                    <TimerPopup showPopup={this.state.showPopup}
+                        togglePopup={this.togglePopup} />
+                    <Header toggleTheme={this.props.toggleTheme} theme={this.props.theme} toggleSoonPopup={this.toggleSoonPopup} toggleNftCollapse={this.toggleNftCollapse} showNftCollapse={this.state.showNftCollapse} />
+                    <MainBlock togglePopup={this.togglePopup} />
+                    <MainInfo />
+                    <MainHow toggleSoonPopup={this.toggleSoonPopup} />
+                    <MainHowWork />
+                    {/* <Creators /> */}
+                    <Tokenomics />
+                    <Roadmap theme={this.props.theme} />
+                    <Team />
+                    <Partners theme={this.props.theme} />
+                    <Community />
+                    <Faq />
+                    <Footer theme={this.props.theme} toggleSoonPopup={this.toggleSoonPopup} />
+                </div>
             </React.Fragment>
         )
     }
