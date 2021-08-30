@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Community",
+    "\\src\\components\\Header",
+    "\\src\\components\\MainBlock",
+    "\\src\\components\\MainHow",
+    "\\src\\components\\Partners",
+    "\\src\\components\\Team",
+    "\\src\\components\\Tokenomics"
+  ],
+  "SelectedNode": "\\src\\components\\Header\\Header.js",
+  "PreviewInSolutionExplorer": false
+}
