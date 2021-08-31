@@ -15,7 +15,7 @@
   transition: 0.1s;
   transform: scale(1);
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .popup-wrapper {
@@ -28,7 +28,7 @@
   height: 100vh;
   transition: 0.7s;
   overflow: hidden;
-  background: url("/src/img/popup-bg.png") no-repeat center;
+  background: url("/src/assets/img/popup-bg.png") no-repeat center;
   background-size: cover;
 }
 
@@ -45,38 +45,40 @@
   transform: translate(-50%, -50%);
 }
 
-.defi_popup{
-  width: 80vw  ;
+.defi_popup {
+  width: 80vw;
 }
 
-.defi_popup{
+.defi_popup {
   padding: 50px;
-  background: radial-gradient(102.63% 101.99% at -2.63% -1.99%, #F9F9F9 0%, #DADADA 100%);
+  background: radial-gradient(
+    102.63% 101.99% at -2.63% -1.99%,
+    #f9f9f9 0%,
+    #dadada 100%
+  );
   box-shadow: 15px 9px 78px rgba(0, 0, 0, 0.15);
 }
-.defi_popup .popup-main{
+.defi_popup .popup-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.defi_popup .popup-main img{
+.defi_popup .popup-main img {
   width: 250px;
 }
 
-.defi_popup h2{
-font-family: Montserrat;
-font-style: normal;
-font-weight: 800;
-font-size: 32px;
-line-height: 42px;
-color: #000000;
-text-align: center;
-margin: 20px auto;
+.defi_popup h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 42px;
+  color: #000000;
+  text-align: center;
+  margin: 20px auto;
 }
-
-
 
 .popup-header {
   display: flex;
@@ -140,11 +142,11 @@ margin: 20px auto;
   cursor: pointer;
 }
 
-.defi_popup .close svg rect{
+.defi_popup .close svg rect {
   fill: #000;
 }
 
-.staking{
+.staking {
   display: flex;
   align-items: center;
   justify-content: center;

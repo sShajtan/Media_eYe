@@ -1,152 +1,146 @@
-.community{
-    padding:40px 0;
-    background: url('../../img/community_bg.png') no-repeat center;
-    background-size: 100% 100%;
+.community {
+  padding: 40px 0;
+  background: url("../../assets/img/community_bg.png") no-repeat center;
+  background-size: 100% 100%;
 }
 
-.community .title{
-        max-width: 800px;
-        margin: 0 auto;
+.community .title {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.community_main{
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0;
+.community_main {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
 }
 
-.community_main a svg .bg{
-    opacity: 0;
-    transition: 0.4s;
+.community_main a svg .bg {
+  opacity: 0;
+  transition: 0.4s;
 }
-.community_main a:hover svg .bg{
-    opacity: 1;
-    transition: 0.4s;
-}
-
-.community_main svg .main_soc{
-    fill: #5A5454;
-    transition: 0.4s;
+.community_main a:hover svg .bg {
+  opacity: 1;
+  transition: 0.4s;
 }
 
-.dark .community_main svg .main_soc{
-    fill: #fff;
-    transition: 0.4s;
+.community_main svg .main_soc {
+  fill: #5a5454;
+  transition: 0.4s;
 }
 
-.community_main  a:hover svg .main_soc{
-    fill: #fff;
-    transition: 0.4s;
+.dark .community_main svg .main_soc {
+  fill: #fff;
+  transition: 0.4s;
+}
+
+.community_main a:hover svg .main_soc {
+  fill: #fff;
+  transition: 0.4s;
 }
 .community_main svg rect {
-    fill: none;
-    transition: 0.4s;
+  fill: none;
+  transition: 0.4s;
 }
 
 .community_main a:hover svg rect {
-    fill: #111022;
-    transition: 0.4s;
+  fill: #111022;
+  transition: 0.4s;
 }
-
 
 .community_main a {
-    cursor: pointer;
-    transition: 0.4s;
+  cursor: pointer;
+  transition: 0.4s;
 }
-.community_main a::before{
-    content: '';
-    width: 0;
-    height: 100%;
-    transition: 0.6s;
-    position: absolute;
-    border-radius: 17px;
-}
-
-
-
-.community .contact_button{
-    background: url('../../img/signup_button_bg.png') no-repeat center;
-    background-size: contain;
-    padding: 15px 35px;
-    margin: 0 auto;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
-    color: #383838;
-    transition: 0.4s;
-    position: relative;
+.community_main a::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  transition: 0.6s;
+  position: absolute;
+  border-radius: 17px;
 }
 
-.community .contact_button span{
-    position: relative;
-    z-index: 1;
+.community .contact_button {
+  background: url("../../assets/img/signup_button_bg.png") no-repeat center;
+  background-size: contain;
+  padding: 15px 35px;
+  margin: 0 auto;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #383838;
+  transition: 0.4s;
+  position: relative;
 }
 
-.community .contact_button:hover span{
-    position: relative;
-    z-index: 1;
-    color: #121024;
+.community .contact_button span {
+  position: relative;
+  z-index: 1;
 }
 
-.community .contact_button:hover span{
-    color: #fff;
+.community .contact_button:hover span {
+  position: relative;
+  z-index: 1;
+  color: #121024;
 }
 
-.community .contact_button::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top:0;
-    opacity: 0;
-    background: url('../../img/learn_more_button_bg.png') no-repeat center;
-    background-size: contain;
-    transition: 0.4s;
+.community .contact_button:hover span {
+  color: #fff;
 }
 
-.community .contact_button:hover::before{
-    transition: 0.4s;
-    opacity: 1;
+.community .contact_button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background: url("../../assets/img/learn_more_button_bg.png") no-repeat center;
+  background-size: contain;
+  transition: 0.4s;
 }
 
-.dark .community .contact_button{
-    color: #fff;
-    transition: 0.4s;
+.community .contact_button:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.dark .community .contact_button {
+  color: #fff;
+  transition: 0.4s;
 }
 
 .community_btn {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.dark .community .contact_button{
-    transition: 0.4s;
-    color: #fff;
+.dark .community .contact_button {
+  transition: 0.4s;
+  color: #fff;
 }
 
 @media (max-width: 991.98px) {
-    .community_main a{
-        width: 230px;
-        font-size: 32px;
-    }
-        .community .title{
-        max-width: 90%;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 767.98px){
-
-  .community_main{
-      margin: 0 auto;
+  .community_main a {
+    width: 230px;
+    font-size: 32px;
   }
-  .community_main a svg{
-      max-width: 80%;
-      margin: 0 auto;
+  .community .title {
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 
-
+@media (max-width: 767.98px) {
+  .community_main {
+    margin: 0 auto;
+  }
+  .community_main a svg {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
