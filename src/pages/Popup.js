@@ -1,35 +1,24 @@
-import React from 'react';
-import SoonPopup from '../components/SoonPopup/Popup';
+import React, { useState } from "react";
+import SoonPopup from "../components/SoonPopup/Popup";
 
-class Main extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showPopup: false,
-            showSoonPopup: false
-        }
-        this.togglePopup = this.togglePopup.bind(this);
-        this.toggleSoonPopup = this.toggleSoonPopup.bind(this);
+const Popup = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [showSoonPopup, setShowSoonPopup] = useState(false);
 
-    };
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+    this.setState({ showPopup: !this.state.showPopup });
+  };
 
-    togglePopup() {
-        this.setState({ showPopup: !this.state.showPopup });
-    }
+  const toggleSoonPopup = () => {
+    setShowSoonPopup(!showSoonPopup);
+  };
 
-    toggleSoonPopup() {
-        this.setState({ showSoonPopup: !this.state.showSoonPopup });
-    }
+  return (
+    <React.Fragment>
+      <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
+    </React.Fragment>
+  );
+};
 
-
-    render() {
-        return (
-            <React.Fragment>
-                <SoonPopup showPopup={this.state.showSoonPopup}
-                    togglePopup={this.toggleSoonPopup} />
-            </React.Fragment>
-        )
-    }
-}
-
-export default Main;
+export default Popup;

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import Main from "./pages/Main";
 import Header from "./components/Header/Header";
 import TimerPopup from "./components/TimerPopup/Popup";
 import SoonPopup from "./components/SoonPopup/Popup";
+import Footer from "./components/Footer/Footer";
 import NoMatch from "./pages/NoMatch";
 import "./App.css";
 import "./fonts/Poppins/stylesheet.css";
@@ -11,7 +13,7 @@ import "./fonts/Roboto/stylesheet.css";
 import "./fonts/neumatic/stylesheet.css";
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const darkTheme = useSelector((state) => state.app.darkTheme);
   const [showSoonPopup, setShowSoonPopup] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
@@ -28,10 +30,6 @@ const App = () => {
     setShowSoonPopup(!showSoonPopup);
   };
 
-  const toggleTheme = () => {
-    setDarkTheme(!darkTheme);
-  };
-
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
@@ -46,8 +44,6 @@ const App = () => {
         <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
         <TimerPopup showPopup={showPopup} togglePopup={togglePopup} />
         <Header
-          toggleTheme={toggleTheme}
-          theme={darkTheme}
           toggleSoonPopup={toggleSoonPopup}
           toggleNftCollapse={toggleNftCollapse}
           showNftCollapse={showNftCollapse}
@@ -55,7 +51,6 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Main
-              theme={darkTheme}
               toggleSoonPopup={toggleSoonPopup}
               togglePopup={togglePopup}
               toggleNftCollapse={toggleNftCollapse}
@@ -65,6 +60,7 @@ const App = () => {
             <NoMatch />
           </Route>
         </Switch>
+        <Footer toggleSoonPopup={toggleSoonPopup} />
       </div>
     </Router>
   );

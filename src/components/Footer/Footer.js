@@ -1,95 +1,96 @@
-import React from 'react';
-import './Footer.css';
-import Peachdeck from '../../assets/Peachdeck.pptx';
-import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import React from "react";
+import { Link } from "react-scroll";
+import Peachdeck from "../../assets/Peachdeck.pptx";
+import GithubIcon from "../Icons/GithubIcon";
+import InstagramIcon from "../Icons/InstagramIcon";
+import MediumIcon from "../Icons/MediumIcon";
+import TelegramIcon from "../Icons/TelegramIcon";
+import TiktokIcon from "../Icons/TiktokIcon";
+import TwitterIcon from "../Icons/TwitterIcon";
+import "./Footer.css";
 
-
-class Footer extends React.Component {
-    render() {
-        return (
-            <footer>
-                <div className="container">
-                    <div className="footer_main">
-                        <div className="footer_left">
-                            <a href="/">
-                                <img className="footer_logo" src="img/logo.png" />
-                            </a>
-                            <div className="footer_menu">
-                                <ul>
-                                    <li><a onClick={this.props.toggleSoonPopup}>NTF Marketplace</a></li>
-                                    <li><a onClick={this.props.toggleSoonPopup}>Content Marketplace</a></li>
-                                    <li><a onClick={this.props.toggleSoonPopup}>Gallery</a></li>
-                                    <li><a>Creators</a></li>
-                                </ul>
-                                <ul>
-                                    <li><a href="https://docs.mediaeyenft.com/" target="_blank">Litepaper</a></li>
-                                    <li><a href={Peachdeck} target="_blank">Pitchdeck</a></li>
-                                    <li><a href="https://mediaeyenft.com/blog/">Blog</a></li>
-                                    {/* <li><a href="https://quaidao.io/" target="_blank">Governance</a></li> */}
-
-                                </ul>
-                                <ul>
-                                    <li><a href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/">About</a></li>
-                                    <li><Link to="team" spy={true} smooth={true} duration={500}>Team</Link></li>
-                                    <li><a href="mailto:mediaeye@mediaeyenft.com">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="footer_right">
-                            <a href="https://medium.com/@MeDIAeYeNFT" target="_blank"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path d="M20 0C8.95536 0 0 8.95536 0 20C0 31.0446 8.95536 40 20 40C31.0446 40 40 31.0446 40 20C40 8.95536 31.0446 0 20 0ZM31.4286 11.3259L29.6071 13.0714C29.4464 13.192 29.3705 13.3884 29.4018 13.5804V26.4241C29.3705 26.6205 29.4464 26.817 29.6071 26.933L31.3929 28.6786V29.067H22.4286V28.6964L24.2723 26.9063C24.4554 26.7232 24.4554 26.6696 24.4554 26.3973V16.0045L19.3214 29.0223H18.6295L12.6562 16.0045V24.7321C12.6027 25.0982 12.7321 25.4688 12.9911 25.7321L15.3929 28.6384V29.0268H8.57143V28.6384L10.9732 25.7321C11.0998 25.6014 11.1939 25.4429 11.2482 25.2692C11.3025 25.0956 11.3153 24.9117 11.2857 24.7321V14.6429C11.317 14.3616 11.2098 14.0893 10.9955 13.8973L8.86161 11.3259V10.9375H15.4911L20.6071 22.1652L25.1116 10.9464H31.4286V11.3259Z" fill="#3E3E3E" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect width="40" height="40" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            </a >
-                            <a href="https://t.me/MeDIAeYeNFTofficial " target="_blank"><svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path d="M20 1.48145C8.95161 1.48145 0 10.1533 0 20.8564C0 31.5596 8.95161 40.2314 20 40.2314C31.0484 40.2314 40 31.5596 40 20.8564C40 10.1533 31.0484 1.48145 20 1.48145ZM29.8226 14.7549L26.5403 29.7393C26.2984 30.8018 25.6452 31.0596 24.7339 30.5596L19.7339 26.9893L17.3226 29.2393C17.0565 29.4971 16.8306 29.7158 16.3145 29.7158L16.6694 24.7861L25.9355 16.6768C26.3387 16.333 25.8468 16.1377 25.3145 16.4814L13.8629 23.4658L8.92742 21.9736C7.85484 21.6455 7.83065 20.9346 9.15323 20.4346L28.4355 13.2314C29.3306 12.9189 30.1129 13.4424 29.8226 14.7549Z" fill="#3E3E3E" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect width="40" height="40" fill="white" transform="translate(0 0.856445)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            </a >
-                            <a href="https://twitter.com/MeDIAeYeNFT" target="_blank"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M39.4049  8.2283C38.0132 8.84497 36.5182 9.26163 34.9465 9.44997C36.5682 8.47962 37.7814 6.95241 38.3599 5.1533C36.8363 6.05828 35.1688 6.69529 33.4299 7.03663C32.2605 5.78807 30.7116 4.96051 29.0237 4.68242C27.3358 4.40434 25.6034 4.69128 24.0953 5.49872C22.5872 6.30616 21.3878 7.5889 20.6834 9.14781C19.9791 10.7067 19.8091 12.4545 20.1999 14.12C17.1127 13.965 14.0926 13.1625 11.3356 11.7648C8.57856 10.3671 6.14626 8.40523 4.19652 6.00663C3.52986 7.15663 3.14652 8.48997 3.14652 9.90997C3.14578 11.1883 3.46058 12.447 4.06299 13.5745C4.6654 14.702 5.53679 15.6634 6.59986 16.3733C5.36698 16.3341 4.16131 16.0009 3.08319 15.4016V15.5016C3.08307 17.2945 3.70324 19.0323 4.8385 20.42C5.97375 21.8077 7.55414 22.7598 9.31152 23.115C8.16783 23.4245 6.96875 23.4701 5.80486 23.2483C6.30069 24.791 7.26652 26.14 8.56714 27.1065C9.86775 28.073 11.4381 28.6086 13.0582 28.6383C10.3079 30.7973 6.91134 31.9684 3.41486 31.9633C2.79549 31.9635 2.17665 31.9273 1.56152 31.855C5.11065 34.1369 9.24209 35.348 13.4615 35.3433C27.7449 35.3433 35.5532 23.5133 35.5532 13.2533C35.5532 12.92 35.5449 12.5833 35.5299 12.25C37.0487 11.1516 38.3597 9.79146 39.4015 8.2333L39.4049 8.2283Z" fill="#3E3E3E" />
-                            </svg>
-                            </a >
-                            <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.8853 0.03375C23.0666 0 25.2353 0.02 27.4016 0C27.5328 2.55125 28.4503 5.15 30.3178 6.95375C32.1816 8.8025 34.8178 9.64875 37.3828 9.935V16.6462C34.9791 16.5675 32.5641 16.0675 30.3828 15.0325C29.4328 14.6025 28.5478 14.0487 27.6816 13.4825C27.6703 18.3525 27.7016 23.2162 27.6503 28.0662C27.5203 30.3962 26.7516 32.715 25.3966 34.635C23.2166 37.8312 19.4328 39.915 15.5466 39.98C13.1628 40.1162 10.7816 39.4663 8.75034 38.2687C5.38409 36.2837 3.01534 32.65 2.67034 28.75C2.62688 27.924 2.62021 27.0966 2.65034 26.27C2.95034 23.0988 4.51909 20.065 6.95409 18.0012C9.71409 15.5975 13.5803 14.4525 17.2003 15.13C17.2341 17.5988 17.1353 20.065 17.1353 22.5338C15.4816 21.9988 13.5491 22.1487 12.1041 23.1525C11.0469 23.849 10.248 24.8736 9.83034 26.0687C9.48534 26.9137 9.58409 27.8525 9.60409 28.75C10.0003 31.485 12.6303 33.7837 15.4378 33.535C17.2991 33.515 19.0828 32.435 20.0528 30.8538C20.3666 30.3 20.7178 29.7338 20.7366 29.0825C20.9003 26.1013 20.8353 23.1325 20.8553 20.1513C20.8691 13.4325 20.8353 6.7325 20.8866 0.035L20.8853 0.03375Z" fill="#3E3E3E" />
-                            </svg>
-                            </a >
-                            <a ><svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0.856445C8.95 0.856445 0 9.80645 0 20.8564C0 29.7064 5.725 37.1814 13.675 39.8314C14.675 40.0064 15.05 39.4064 15.05 38.8814C15.05 38.4064 15.025 36.8314 15.025 35.1564C10 36.0814 8.7 33.9314 8.3 32.8064C8.075 32.2314 7.1 30.4564 6.25 29.9814C5.55 29.6064 4.55 28.6814 6.225 28.6564C7.8 28.6314 8.925 30.1064 9.3 30.7064C11.1 33.7314 13.975 32.8814 15.125 32.3564C15.3 31.0564 15.825 30.1814 16.4 29.6814C11.95 29.1814 7.3 27.4564 7.3 19.8064C7.3 17.6314 8.075 15.8314 9.35 14.4314C9.15 13.9314 8.45 11.8814 9.55 9.13144C9.55 9.13144 11.225 8.60645 15.05 11.1814C16.65 10.7314 18.35 10.5064 20.05 10.5064C21.75 10.5064 23.45 10.7314 25.05 11.1814C28.875 8.58145 30.55 9.13144 30.55 9.13144C31.65 11.8814 30.95 13.9314 30.75 14.4314C32.025 15.8314 32.8 17.6064 32.8 19.8064C32.8 27.4814 28.125 29.1814 23.675 29.6814C24.4 30.3064 25.025 31.5064 25.025 33.3814C25.025 36.0564 25 38.2064 25 38.8814C25 39.4064 25.375 40.0314 26.375 39.8314C30.3453 38.491 33.7953 35.9392 36.2394 32.5354C38.6836 29.1315 39.9988 25.0469 40 20.8564C40 9.80645 31.05 0.856445 20 0.856445Z" fill="#3E3E3E" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect width="40" height="40" fill="white" transform="translate(0 0.856445)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            </a >
-                            <a href="https://www.instagram.com/mediaeyenfts/" target="_blank"><svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M28.333 4.11523H11.6663C7.06397 4.11523 3.33301 7.84619 3.33301 12.4486V29.1152C3.33301 33.7176 7.06397 37.4486 11.6663 37.4486H28.333C32.9354 37.4486 36.6663 33.7176 36.6663 29.1152V12.4486C36.6663 7.84619 32.9354 4.11523 28.333 4.11523Z" stroke="#3E3E3E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M26.6665 19.7318C26.8722 21.1188 26.6353 22.5354 25.9894 23.7801C25.3436 25.0248 24.3217 26.0341 23.0692 26.6645C21.8167 27.295 20.3972 27.5144 19.0128 27.2916C17.6284 27.0689 16.3494 26.4152 15.3579 25.4237C14.3664 24.4322 13.7127 23.1532 13.4899 21.7688C13.2672 20.3843 13.4866 18.9649 14.117 17.7124C14.7475 16.4598 15.7568 15.438 17.0015 14.7922C18.2461 14.1463 19.6628 13.9094 21.0498 14.1151C22.4647 14.3249 23.7746 14.9842 24.786 15.9956C25.7974 17.007 26.4567 18.3169 26.6665 19.7318Z" stroke="#3E3E3E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M29.167 11.6152H29.1837" stroke="#3E3E3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            </a >
-                        </div>
-                    </div>
-                </div>
-            </footer >
-        )
-    }
-}
+const Footer = (props) => {
+  const { toggleSoonPopup } = props;
+  return (
+    <footer>
+      <div className="container">
+        <div className="footer_main">
+          <div className="footer_left">
+            <a href="/">
+              <img className="footer_logo" src="img/logo.png" />
+            </a>
+            <div className="footer_menu">
+              <ul>
+                <li>
+                  <a onClick={toggleSoonPopup}>NTF Marketplace</a>
+                </li>
+                <li>
+                  <a onClick={toggleSoonPopup}>Content Marketplace</a>
+                </li>
+                <li>
+                  <a onClick={toggleSoonPopup}>Gallery</a>
+                </li>
+                <li>
+                  <a>Creators</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://docs.mediaeyenft.com/" target="_blank">
+                    Litepaper
+                  </a>
+                </li>
+                <li>
+                  <a href={Peachdeck} target="_blank">
+                    Pitchdeck
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mediaeyenft.com/blog/">Blog</a>
+                </li>
+                {/* <li><a href="https://quaidao.io/" target="_blank">Governance</a></li> */}
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <Link to="team" spy={true} smooth={true} duration={500}>
+                    Team
+                  </Link>
+                </li>
+                <li>
+                  <a href="mailto:mediaeye@mediaeyenft.com">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer_right">
+            <a href="https://medium.com/@MeDIAeYeNFT" target="_blank">
+              <MediumIcon />
+            </a>
+            <a href="https://t.me/MeDIAeYeNFTofficial " target="_blank">
+              <TelegramIcon />
+            </a>
+            <a href="https://twitter.com/MeDIAeYeNFT" target="_blank">
+              <TwitterIcon />
+            </a>
+            <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank">
+              <TiktokIcon />
+            </a>
+            <a>
+              <GithubIcon />
+            </a>
+            <a href="https://www.instagram.com/mediaeyenfts/" target="_blank">
+              <InstagramIcon />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

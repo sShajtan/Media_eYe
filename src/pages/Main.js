@@ -1,7 +1,6 @@
 import React from "react";
 import Community from "../components/Community/Community";
 import Faq from "../components/Faq/Faq";
-import Footer from "../components/Footer/Footer";
 import MainBlock from "../components/MainBlock/MainBlock";
 // import Creators from "../components/Creators/Creators";
 import MainHow from "../components/MainHow/MainHow";
@@ -13,7 +12,7 @@ import Team from "../components/Team/Team";
 import Tokenomics from "../components/Tokenomics/Tokenomics";
 
 const Main = (props) => {
-  const { toggleNftCollapse, toggleSoonPopup, theme, togglePopup } = props;
+  const { toggleNftCollapse, toggleSoonPopup, togglePopup } = props;
 
   return (
     <React.Fragment>
@@ -24,12 +23,11 @@ const Main = (props) => {
         <MainHowWork />
         {/* <Creators /> */}
         <Tokenomics />
-        <Roadmap theme={theme} />
+        <Roadmap />
         <Team />
-        <Partners theme={theme} />
+        <Partners />
         <Community />
         <Faq />
-        <Footer theme={theme} toggleSoonPopup={toggleSoonPopup} />
       </div>
     </React.Fragment>
   );
