@@ -67,7 +67,7 @@ const Footer = (props) => {
                   <a href="https://mediaeyenft.com/blog/">Blog</a>
                 </li>
                 <li>
-                  <a href="mailto:mediaeye@mediaeyenft.com">Contact</a>
+                  <a href="mailto:support@mediaeyenft.com">Contact</a>
                 </li>
               </ul>
             </div>

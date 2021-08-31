@@ -161,6 +161,7 @@ const Partners = () => {
                             </div> */}
           </Slider>
         </div>
+        <a className="become_partner" href="mailto:support@mediaeyenft.com">Become a partner</a>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const JoinUs = () => {
     return (
         <div className="join_us">
             <div className="main_join_us">
-                <a className="join_us_button">Become a partner</a>
+                <a className="join_us_button" href="mailto:support@mediaeyenft.com">Become a partner</a>
             </div>
         </div >
     );
