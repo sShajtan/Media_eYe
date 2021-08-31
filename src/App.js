@@ -1,35 +1,73 @@
-import React from 'react';
-import './App.css';
-import './fonts/Poppins/stylesheet.css';
-import './fonts/Roboto/stylesheet.css';
-import './fonts/neumatic/stylesheet.css';
-import Main from './pages/Main';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Main from "./pages/Main";
+import Header from "./components/Header/Header";
+import TimerPopup from "./components/TimerPopup/Popup";
+import SoonPopup from "./components/SoonPopup/Popup";
+import NoMatch from "./pages/NoMatch";
+import "./App.css";
+import "./fonts/Poppins/stylesheet.css";
+import "./fonts/Roboto/stylesheet.css";
+import "./fonts/neumatic/stylesheet.css";
 
+const App = () => {
+  const [darkTheme, setDarkTheme] = useState(true);
+  const [showSoonPopup, setShowSoonPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [showNftCollapse, setShowNftCollpase] = useState(false);
 
-class App extends React.Component {
+  useEffect(() => {
+    if (showPopup === false) {
+      setTimeout(() => {
+        setShowPopup(true);
+      }, 10000);
+    }
+  }, []);
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      darkTheme: true
-    };
-  }
+  const toggleSoonPopup = () => {
+    setShowSoonPopup(!showSoonPopup);
+  };
 
-  toggleTheme = () => {
-    this.setState({ darkTheme: !this.state.darkTheme })
-  }
+  const toggleTheme = () => {
+    setDarkTheme(!darkTheme);
+  };
 
-  render() {
-    return (
-      <div className={this.state.darkTheme ? 'App dark' : 'App'} >
-        <Main toggleTheme={this.toggleTheme} theme={this.state.darkTheme} />
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
+  const toggleNftCollapse = () => {
+    setShowNftCollpase(!showNftCollapse);
+  };
+
+  return (
+    <Router>
+      <div className={darkTheme ? "App dark" : "App"}>
+        <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
+        <TimerPopup showPopup={showPopup} togglePopup={togglePopup} />
+        <Header
+          toggleTheme={toggleTheme}
+          theme={darkTheme}
+          toggleSoonPopup={toggleSoonPopup}
+          toggleNftCollapse={toggleNftCollapse}
+          showNftCollapse={showNftCollapse}
+        />
+        <Switch>
+          <Route path="/" exact>
+            <Main
+              theme={darkTheme}
+              toggleSoonPopup={toggleSoonPopup}
+              togglePopup={togglePopup}
+              toggleNftCollapse={toggleNftCollapse}
+            />
+          </Route>
+          <Route path="*">
+            <NoMatch />
+          </Route>
+        </Switch>
       </div>
-    );
-  }
-
-
-}
+    </Router>
+  );
+};
 
 export default App;
-
-
