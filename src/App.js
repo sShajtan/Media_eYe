@@ -11,12 +11,16 @@ import "./App.css";
 import "./fonts/Poppins/stylesheet.css";
 import "./fonts/Roboto/stylesheet.css";
 import "./fonts/neumatic/stylesheet.css";
+import MessagePopup from "./components/MessagePopup/MessagePopup";
+
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
   const [showSoonPopup, setShowSoonPopup] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
+
 
   useEffect(() => {
     if (showPopup === false) {
@@ -25,6 +29,7 @@ const App = () => {
       }, 10000);
     }
   }, []);
+
 
   const toggleSoonPopup = () => {
     setShowSoonPopup(!showSoonPopup);
@@ -38,11 +43,21 @@ const App = () => {
     setShowNftCollpase(!showNftCollapse);
   };
 
+  const toggleMessagePopup = () => {
+    setshowMessagePopup(!showMessagePopup);
+  };
+
+  const closeNftCollapse = () => {
+    setShowNftCollpase(false);
+  }
+
   return (
     <Router>
       <div className={darkTheme ? "App dark" : "App"}>
         <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
         <TimerPopup showPopup={showPopup} togglePopup={togglePopup} />
+        <MessagePopup showPopup={showMessagePopup} togglePopup={toggleMessagePopup}
+        />
         <Header
           toggleSoonPopup={toggleSoonPopup}
           toggleNftCollapse={toggleNftCollapse}
@@ -53,7 +68,9 @@ const App = () => {
             <Main
               toggleSoonPopup={toggleSoonPopup}
               togglePopup={togglePopup}
+              toggleMessagePopup={toggleMessagePopup}
               toggleNftCollapse={toggleNftCollapse}
+              closeNftCollapse={closeNftCollapse}
             />
           </Route>
           <Route path="*">

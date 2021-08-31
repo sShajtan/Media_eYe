@@ -18,7 +18,7 @@ import "./Header.css";
 
 const Header = (props) => {
   const { toggleSoonPopup, toggleNftCollapse, showNftCollapse } = props;
-  const theme = useSelector((state) => state.app.darkThem);
+  const theme = useSelector((state) => state.app.darkTheme);
   const [isOpen, setIsOpen] = useState(false);
   const [mobileInputShow, setMobileInputShow] = useState(false);
   const [mobileSearch, setMobileSearch] = useState(false);
@@ -132,7 +132,6 @@ const Header = (props) => {
                 src={theme ? "img/sun_mobile.png" : "img/sun_mobile_dark.png"}
               />
             </div>
-
             <div className="header_right_menu">
               <div className="toggle-button-cover">
                 <div className="button-cover">
@@ -168,6 +167,15 @@ const Header = (props) => {
             Gallery
           </a>
           <a className="menu-item">Creators</a>
+          <a className="menu-item" onClick={toggleNftCollapse}>Investors ▾</a>
+          <div className="mobile_investors_collapse">
+            <Collapse isOpened={showNftCollapse} >
+              <a href="https://mediaeyenft.com/pitchdesk/" target="_blank">
+                Pitchdeck
+              </a>
+              <a href="https://mediaeyenft.com/pitchdesk/fundraising/" target="_blank">Fundraising</a>
+            </Collapse>
+          </div>
           <a
             className="menu-item"
             href="https://docs.mediaeyenft.com/"
@@ -175,12 +183,7 @@ const Header = (props) => {
           >
             Litepaper
           </a>
-          <a className="menu-item" href={Peachdeck} target="_blank">
-            Pitchdeck
-          </a>
-          <a className="menu-item" href="https://mediaeyenft.com/blog/">
-            Blog
-          </a>
+
           <a
             className="menu-item"
             href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/"
@@ -196,6 +199,9 @@ const Header = (props) => {
           >
             Team
           </Link>
+          <a className="menu-item" href="https://mediaeyenft.com/blog/">
+            Blog
+          </a>
           <a className="menu-item" href="mailto:mediaeye@mediaeyenft.com">
             Contact
           </a>
@@ -257,7 +263,7 @@ const Header = (props) => {
           </div>
         </Menu>
       </div>
-    </React.Fragment>
+    </React.Fragment >
   );
 };
 

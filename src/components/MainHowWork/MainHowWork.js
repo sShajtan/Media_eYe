@@ -1,4 +1,5 @@
 import React from "react";
+import JoinUs from "../JoinUs/JoinUs";
 import "./MainHowWork.css";
 
 const MainHowWork = () => {
@@ -44,57 +45,24 @@ const MainHowWork = () => {
                 </linearGradient>
               </defs>
             </svg>
-            <svg
-              height="auto"
-              width="226"
-              height="23"
-              viewBox="0 0 226 23"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="226" height="23" viewBox="0 0 226 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <line x1="215" y1="11.5" y2="11.5" stroke="#595858" />
               <g filter="url(#filter0_d)">
                 <rect x="212" y="9" width="5" height="5" fill="#0075FF" />
               </g>
               <defs>
-                <filter
-                  id="filter0_d"
-                  x="203"
-                  y="0"
-                  width="23"
-                  height="23"
-                  filterUnits="userSpaceOnUse"
-                  colorInterpolationFilters="sRGB"
-                >
-                  <feFlood floadopacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
+                <filter id="filter0_d" x="203" y="0" width="23" height="23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                   <feOffset />
                   <feGaussianBlur stdDeviation="4.5" />
                   <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.77 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow"
-                    result="shape"
-                  />
+                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.77 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                 </filter>
               </defs>
-            </svg>
-            <h3>CREATE</h3>
+            </svg><h3>CREATE</h3>
             <span>
               Mint and embed digitized content on an NFT token, such as art,
               text, videos, photos, songs or lines of code. NFTs can also
@@ -285,6 +253,7 @@ const MainHowWork = () => {
           </div>
         </div>
       </div>
+      <JoinUs />
     </div>
   );
 };

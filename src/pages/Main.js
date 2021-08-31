@@ -9,14 +9,15 @@ import MainInfo from "../components/MainInfo/MainInfo";
 import Partners from "../components/Partners/Partners";
 import Roadmap from "../components/Roadmap/Roadmap";
 import Team from "../components/Team/Team";
+import MainForm from "../components/MainForm/MainForm";
 import Tokenomics from "../components/Tokenomics/Tokenomics";
 
 const Main = (props) => {
-  const { toggleNftCollapse, toggleSoonPopup, togglePopup } = props;
+  const { toggleNftCollapse, toggleSoonPopup, togglePopup, closeNftCollapse, toggleMessagePopup } = props;
 
   return (
     <React.Fragment>
-      <div onClick={toggleNftCollapse}>
+      <div onClick={closeNftCollapse}>
         <MainBlock togglePopup={togglePopup} />
         <MainInfo />
         <MainHow toggleSoonPopup={toggleSoonPopup} />
@@ -27,6 +28,7 @@ const Main = (props) => {
         <Team />
         <Partners />
         <Community />
+        <MainForm toggleMessagePopup={toggleMessagePopup} />
         <Faq />
       </div>
     </React.Fragment>

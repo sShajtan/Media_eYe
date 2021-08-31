@@ -5,10 +5,12 @@ const Nomatch = () => {
   let location = useLocation();
 
   return (
-    <div>
-      <h3>
-        No match for <code>{location.pathname}</code>
-      </h3>
+    <div className="no_match">
+      <div className="container">
+        <div className="no_match_main">
+          <img src="img/404.png" />
+        </div>
+      </div>
     </div>
   );
 };

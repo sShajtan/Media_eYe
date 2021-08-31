@@ -36,17 +36,19 @@ const Footer = (props) => {
               </ul>
               <ul>
                 <li>
-                  <a href="https://docs.mediaeyenft.com/" target="_blank">
-                    Litepaper
-                  </a>
-                </li>
-                <li>
-                  <a href={Peachdeck} target="_blank">
+                  <a href="https://mediaeyenft.com/pitchdesk/" target="_blank">
                     Pitchdeck
                   </a>
                 </li>
                 <li>
-                  <a href="https://mediaeyenft.com/blog/">Blog</a>
+                  <a href="https://mediaeyenft.com/pitchdesk/fundraising/" target="_blank">
+                    Fundraising
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.mediaeyenft.com/" target="_blank">
+                    Litepaper
+                  </a>
                 </li>
                 {/* <li><a href="https://quaidao.io/" target="_blank">Governance</a></li> */}
               </ul>
@@ -60,6 +62,9 @@ const Footer = (props) => {
                   <Link to="team" spy={true} smooth={true} duration={500}>
                     Team
                   </Link>
+                </li>
+                <li>
+                  <a href="https://mediaeyenft.com/blog/">Blog</a>
                 </li>
                 <li>
                   <a href="mailto:mediaeye@mediaeyenft.com">Contact</a>

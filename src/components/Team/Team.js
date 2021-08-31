@@ -79,182 +79,265 @@ const Team = () => {
           <Slider {...settings}>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/yampolskiy.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/yampolskiy.png" />
+                  <a href="https://www.linkedin.com/in/victor-y-76333b9b/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  </a>
+
+                </div>
                 <div>
                   <h6>Victor Yampolsky</h6>
-                  <a
-                    href="https://www.linkedin.com/in/victor-y-76333b9b/"
-                    target="_blank"
-                  >
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
                 <span>Co-Founder, Business Development and Growth</span>
               </div>
             </div>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/stefan.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/mask.png" />
+                  <a href="https://www.linkedin.com/in/stefan-arsenijevic-73ab54111/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  </a>
+
+                </div>
                 <div>
                   <h6>Stefan Arsenijevic</h6>
-                  <a
-                    href="https://www.linkedin.com/in/stefan-arsenijevic-73ab54111/"
-                    target="_blank"
-                  >
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
-                <span>
-                  Senior Marketing Manager, Web Developer and SEO Expert
-                </span>
+                <span>Senior Marketing Manager Web Developer and SEO Expert</span>
               </div>
             </div>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/anda.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/mask.png" />
+                  <a href="https://www.linkedin.com/in/felipe-de-anda-0769ba1bb/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  </a>
+                </div>
                 <div>
                   <h6>Felipe De Anda</h6>
-                  <a
-                    href="https://www.linkedin.com/in/felipe-de-anda-0769ba1bb/"
-                    target="_blank"
-                  >
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
                 <span>Co-Founder, Senior Manager Growth and Development</span>
               </div>
             </div>
-
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/shaitanov.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/shaitanov.png" />
+                  <a href="https://www.linkedin.com/in/anatolii-shaitanov-788a6819b/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  </a>
+
+                </div>
                 <div>
                   <h6>Anatolii Shaitanov</h6>
-                  <a
-                    href="https://www.linkedin.com/in/anatolii-shaitanov-788a6819b/"
-                    target="_blank"
-                  >
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
                 <span>Senior UI/UX Designer</span>
               </div>
             </div>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/chong.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/mask.png" />
+                  <a href="https://www.linkedin.com/in/roy-chong-0914/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  </a>
+
+                </div>
                 <div>
                   <h6>Roy Chong</h6>
-                  <a
-                    href="https://www.linkedin.com/in/roy-chong-0914/"
-                    target="_blank"
-                  >
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
                 <span>Senior Blockchain & Web Developer</span>
               </div>
             </div>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/commons.png" />
-                <div>
-                  <h6>Jeffery Commons</h6>
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/jcommons"
-                  >
-                    <Linkedinprofileicon />
+                <div className="team_slide_img">
+                  <img src="img/team/mask.png" />
+                  <a href="https://www.linkedin.com/in/jcommons" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
                   </a>
+
                 </div>
-                <span>
-                  Co - Founder, Senior Solidity Developer and Smart Contracts
-                  Architect
-                </span>
+                <div>
+                  <h6>Jeffrey Commons</h6>
+                </div>
+                <span>Co-Founder,  Senior Solidity Developer and Smart Contracts Architrct</span>
               </div>
             </div>
-
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/gupta.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/mask.png" />
+                  <a href="https://www.linkedin.com/in/harishdgupta" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  </a>
+
+                </div>
                 <div>
                   <h6>Harish D. Gupta</h6>
-                  <a
-                    href="https://www.linkedin.com/in/felipe-de-anda-0769ba1bb/"
-                    target="_blank"
-                  >
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
                 <span>Finance and Economic Planning</span>
               </div>
             </div>
-
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/assangaliyev.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/asangaliev.png" />
+                  <a href="https://www.linkedin.com/in/askar-assangaliyev-722bbb37/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  </a>
+
+                </div>
                 <div>
                   <h6>Askar Assangaliyev</h6>
-                  <a
-                    href="https://www.linkedin.com/in/askar-assangaliyev-722bbb37/"
-                    target="_blank"
-                  >
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
-                <span className="askar">
-                  Co-Founder, Director of Eurasia Accelerator Partnerships,
-                  Investments and Business Development
-                </span>
+                <span>Co-Founder, Director of Eurasia Accelerator Partnerships, Investments and Business Development</span>
               </div>
             </div>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/newman.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/mask.png" />
+                  <a href="https://www.linkedin.com/in/shimon-newman-671928153/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip11)">
+                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip11">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  </a>
+
+                </div>
                 <div>
                   <h6>Shimon Newman</h6>
-                  <a
-                    href="https://www.linkedin.com/in/shimon-newman-671928153/"
-                    target="_blank"
-                  >
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
-                <span>Co-Founder Tokenomics Expert</span>
+                <span>Co-Founder, Tokenomics Expert</span>
               </div>
             </div>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/shill.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/mask.png" />
+
+                </div>
                 <div>
-                  <h6>King Shill</h6>
-                  <a>
-                    <Linkedinprofileicon />
-                  </a>
+                  <h6>King Shull</h6>
                 </div>
-                <span>Ci-Founder, Senior Developer</span>
+                <span>Co-Founder, Senior Developer</span>
               </div>
             </div>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/ruslan.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/veronica.png" />
+                </div>
+                <div>
+                  <h6>Veronika Sharma</h6>
+                </div>
+                <span>Director of Social Media Marketing</span>
+              </div>
+            </div>
+            <div className="team_slide_wrapper">
+              <div className="team_slide">
+                <div className="team_slide_img">
+                  <img src="img/team/ruslan.png" />
+
+                </div>
                 <div>
                   <h6>Ruslan Gavriljuk</h6>
-                  <a>
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
                 <span>Front-end Developer</span>
               </div>
             </div>
             <div className="team_slide_wrapper">
               <div className="team_slide">
-                <img src="img/team/roma.png" />
+                <div className="team_slide_img">
+                  <img src="img/team/erica.png" />
+
+                </div>
+                <div>
+                  <h6>Ericka Schwan</h6>
+                </div>
+                <span>Creative Director</span>
+              </div>
+            </div>
+            <div className="team_slide_wrapper">
+              <div className="team_slide">
+                <div className="team_slide_img">
+                  <img src="img/team/roma.png" />
+
+                </div>
                 <div>
                   <h6>Roman Ferlii</h6>
-                  <a>
-                    <Linkedinprofileicon />
-                  </a>
                 </div>
                 <span>UI/UX Designer</span>
               </div>

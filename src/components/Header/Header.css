@@ -218,7 +218,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em;
+  padding: 0.8em 0;
   padding-top: 110px;
 }
 
@@ -313,16 +313,15 @@ a.bm-item {
   color: #000000;
   outline: none;
   text-decoration: none;
-  padding: 5px 0 5px 10%;
+  padding: 10px 0 10px 10%;
+  border-bottom: 1px solid;
+
 }
 
 .dark a.bm-item {
   color: #fff;
 }
-.soc_header_mobile {
-  border-top: 2px solid #676767;
-  margin-top: 10px;
-}
+
 
 .menu-item button {
   background: url("../../assets/img/learn_more_button_bg.png") no-repeat center;
@@ -378,6 +377,37 @@ a.bm-item {
 div.menu-item .soc_header_mobile {
   display: flex;
   justify-content: space-around;
+}
+
+.mobile_investors_collapse .ReactCollapse--collapse{
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.mobile_investors_collapse {
+  border-bottom: 1px solid #100F21;
+  background-color: #D4D3E2;
+}
+
+.dark .mobile_investors_collapse {
+  border-bottom: 1px solid #fff;
+  background-color: #23214e;
+}
+
+.mobile_investors_collapse .ReactCollapse--collapse a{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: #100F21;
+  padding: 10px 0 10px 15%;
+}
+
+.dark .mobile_investors_collapse .ReactCollapse--collapse a{
+  color: #fff;
 }
 
 /* Styling of overlay */

@@ -60,8 +60,14 @@ const MainBlock = (props) => {
     autoplay: false,
   };
 
+
+
   return (
     <div className="main_block">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
       <link
         rel="stylesheet"
         type="text/css"
@@ -91,7 +97,7 @@ const MainBlock = (props) => {
               NFTs.
             </h6>
             <div className="main_left_buttons">
-              <a className="learn_more" href={Peachdeck} target="_blank">
+              <a className="learn_more" href="https://mediaeyenft.com/pitchdesk/" target="_blank">
                 <span>Learn More</span>
               </a>
               <a className="sign_up" onClick={togglePopup}>
