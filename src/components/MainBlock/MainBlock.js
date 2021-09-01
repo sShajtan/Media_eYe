@@ -17,7 +17,7 @@ const MainBlock = (props) => {
     setNav1(slider1.current);
     setNav2(slider2.current);
     setNav3(slider3.current);
-    const wow = new WOW.WOW();
+    const wow = new WOW.WOW({ live: false });
     wow.init();
   }, []);
 
@@ -151,10 +151,8 @@ const MainBlock = (props) => {
           <div className="main_block_main_right">
             <div className="main_block_sliders">
               <svg
-                height="auto"
                 className="slider_border"
                 width="100%"
-                height="auto"
                 viewBox="0 0 699 713"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
