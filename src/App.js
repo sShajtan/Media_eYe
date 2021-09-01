@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Main from "./pages/Main";
 import Header from "./components/Header/Header";
 import TimerPopup from "./components/TimerPopup/Popup";
@@ -13,14 +13,12 @@ import "./fonts/Roboto/stylesheet.css";
 import "./fonts/neumatic/stylesheet.css";
 import MessagePopup from "./components/MessagePopup/MessagePopup";
 
-
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
   const [showSoonPopup, setShowSoonPopup] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
-
 
   useEffect(() => {
     if (showPopup === false) {
@@ -29,7 +27,6 @@ const App = () => {
       }, 10000);
     }
   }, []);
-
 
   const toggleSoonPopup = () => {
     setShowSoonPopup(!showSoonPopup);
@@ -49,14 +46,16 @@ const App = () => {
 
   const closeNftCollapse = () => {
     setShowNftCollpase(false);
-  }
+  };
 
   return (
     <Router>
       <div className={darkTheme ? "App dark" : "App"}>
         <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
         <TimerPopup showPopup={showPopup} togglePopup={togglePopup} />
-        <MessagePopup showPopup={showMessagePopup} togglePopup={toggleMessagePopup}
+        <MessagePopup
+          showPopup={showMessagePopup}
+          togglePopup={toggleMessagePopup}
         />
         <Header
           toggleSoonPopup={toggleSoonPopup}
