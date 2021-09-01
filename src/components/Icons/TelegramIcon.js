@@ -3,7 +3,6 @@ import React from "react";
 export default function TelegramIcon() {
   return (
     <svg
-      height="auto"
       width="40"
       height="41"
       viewBox="0 0 40 41"

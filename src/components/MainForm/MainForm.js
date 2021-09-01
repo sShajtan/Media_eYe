@@ -3,7 +3,7 @@ import "./MainForm.css";
 import emailjs from 'emailjs-com';
 
 const MainForm = (props) => {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState('');
   const { toggleMessagePopup } = props;
 
   const handleChangeEmail = (event) => {

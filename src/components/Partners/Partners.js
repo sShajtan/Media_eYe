@@ -33,7 +33,8 @@ function SamplePrevArrow(props) {
   );
 }
 
-const Partners = () => {
+const Partners = (props) => {
+  const { togglePartnersPopup } = props;
   const theme = useSelector((state) => state.app.darkTheme);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState();
@@ -161,7 +162,7 @@ const Partners = () => {
                             </div> */}
           </Slider>
         </div>
-        <a className="become_partner" href="mailto:support@mediaeyenft.com">Become a partner</a>
+        <a className="become_partner" onClick={togglePartnersPopup} >Become a partner</a>
       </div>
     </div>
   );

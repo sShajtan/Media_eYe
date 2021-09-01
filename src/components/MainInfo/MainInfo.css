@@ -82,7 +82,7 @@
   max-width: 80%;
   transition: 0.4s;
 }
-.main_info_right p ul {
+.main_info_right  ul {
   padding: 0 20px;
 }
 
@@ -90,19 +90,34 @@
   margin-left: -20px;
   font-weight: bolder;
   margin-bottom: 5px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #444444;
+}
+.dark .main_info_right ul > span{
+  color: #fff;
 }
 
-.main_info_right p ul li {
+.main_info_right ul li {
   color: #2ee3fa;
   padding: 2px 0;
 }
 
-.main_info_right p ul li span {
+.main_info_right  ul li span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
   color: #444444;
 }
 
-.dark .main_info_right p ul li span {
+.dark .main_info_right  ul li span {
   color: #fff;
+  
 }
 .dark .main_info_right p,
 .dark .main_info_right .check_faq_button {
@@ -112,7 +127,7 @@
 
 .main_info_right div {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-end;
 }
 
@@ -245,7 +260,7 @@
   }
   .main_info_right .check_faq_button {
     margin-top: 20px;
-    max-width: 55%;
+    max-width: 56%;
     font-size: 13px;
   }
 }

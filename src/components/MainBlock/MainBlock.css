@@ -308,6 +308,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
 }
 
 .main_left_buttons span {

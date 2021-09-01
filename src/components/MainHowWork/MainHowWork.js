@@ -2,7 +2,8 @@ import React from "react";
 import JoinUs from "../JoinUs/JoinUs";
 import "./MainHowWork.css";
 
-const MainHowWork = () => {
+const MainHowWork = (props) => {
+  const { togglePartnersPopup } = props;
   return (
     <div className="main_howwork">
       <div className="container">
@@ -11,6 +12,7 @@ const MainHowWork = () => {
           data-wow-duration="1s"
           data-wow-delay="0.5s"
           src="img/howwork_title.svg"
+          alt="title"
         />
         <div className="main_howwork_main">
           <div
@@ -19,7 +21,6 @@ const MainHowWork = () => {
             data-wow-delay="0.5s"
           >
             <svg
-              height="auto"
               width="105"
               height="82"
               viewBox="0 0 105 82"
@@ -51,8 +52,8 @@ const MainHowWork = () => {
                 <rect x="212" y="9" width="5" height="5" fill="#0075FF" />
               </g>
               <defs>
-                <filter id="filter0_d" x="203" y="0" width="23" height="23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d" x="203" y="0" width="23" height="23" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                   <feOffset />
                   <feGaussianBlur stdDeviation="4.5" />
@@ -77,7 +78,6 @@ const MainHowWork = () => {
             data-wow-delay="0.5s"
           >
             <svg
-              height="auto"
               width="125"
               height="82"
               viewBox="0 0 125 82"
@@ -104,7 +104,6 @@ const MainHowWork = () => {
               </defs>
             </svg>
             <svg
-              height="auto"
               width="226"
               height="23"
               viewBox="0 0 226 23"
@@ -167,7 +166,6 @@ const MainHowWork = () => {
             data-wow-delay="0.5s"
           >
             <svg
-              height="auto"
               width="127"
               height="82"
               viewBox="0 0 127 82"
@@ -194,7 +192,6 @@ const MainHowWork = () => {
               </defs>
             </svg>
             <svg
-              height="auto"
               width="226"
               height="23"
               viewBox="0 0 226 23"
@@ -253,7 +250,7 @@ const MainHowWork = () => {
           </div>
         </div>
       </div>
-      <JoinUs />
+      <JoinUs togglePartnersPopup={togglePartnersPopup} />
     </div>
   );
 };

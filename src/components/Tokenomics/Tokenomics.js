@@ -12,7 +12,7 @@ const Tokenomics = () => {
           src="img/tokenomics_title.svg"
         />
         <h4>
-          <span>Total token supply:</span> &nbsp;1 Billion (fixed supply)
+          <span>Total token supply:</span><br /><br /> &nbsp;1 Billion
         </h4>
         <h5>500M ERC20 and 500M BEP20</h5>
         <div className="tokenomics_main">
@@ -23,36 +23,42 @@ const Tokenomics = () => {
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
                 src="img/tokenomics/1.svg"
+                alt="tokenomics"
               />
               <img
                 className="animate__animated animate__fadeInLeft wow"
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
                 src="img/tokenomics/2.svg"
+                alt="tokenomics"
               />
               <img
                 className="animate__animated animate__fadeInLeft wow"
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
                 src="img/tokenomics/3.svg"
+                alt="tokenomics"
               />
               <img
                 className="animate__animated animate__fadeInLeft wow"
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
                 src="img/tokenomics/4.svg"
+                alt="tokenomics"
               />
               <img
                 className="animate__animated animate__fadeInLeft wow"
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
                 src="img/tokenomics/5.svg"
+                alt="tokenomics"
               />
               <img
                 className="animate__animated animate__fadeInLeft wow"
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
                 src="img/tokenomics/6.svg"
+                alt="tokenomics"
               />
             </div>
           </div>
@@ -62,7 +68,6 @@ const Tokenomics = () => {
               <div className="tokenomics_right_block">
                 <div>
                   <svg
-                    height="auto"
                     width="150"
                     height="43"
                     viewBox="0 0 150 43"
@@ -99,13 +104,12 @@ const Tokenomics = () => {
                   data-wow-duration="1s"
                   data-wow-delay="0.5s"
                 >
-                  230M eYe (vesting 24 to 36 months)
+                  230M eYe <i>(vesting 24 to 36 months)</i>
                 </span>
               </div>
               <div className="tokenomics_right_block">
                 <div>
                   <svg
-                    height="auto"
                     width="159"
                     height="43"
                     viewBox="0 0 159 43"
@@ -142,13 +146,12 @@ const Tokenomics = () => {
                   data-wow-duration="1s"
                   data-wow-delay="0.5s"
                 >
-                  25M eYe ($0.015 per eYe token){" "}
+                  25M eYe <i>($0.015 per eYe token)</i>
                 </span>
               </div>
               <div className="tokenomics_right_block">
                 <div>
                   <svg
-                    height="auto"
                     width="128"
                     height="43"
                     viewBox="0 0 128 43"
@@ -185,13 +188,12 @@ const Tokenomics = () => {
                   data-wow-duration="1s"
                   data-wow-delay="0.5s"
                 >
-                  75M eYe ($0.025 to 0.035 per/eYe) 60% locked liquidity
+                  75M eYe <i> ($0.025 to 0.035 per/eYe) </i> 60% locked liquidity
                 </span>
               </div>
               <div className="tokenomics_right_block">
                 <div>
                   <svg
-                    height="auto"
                     width="214"
                     height="58"
                     viewBox="0 0 214 58"
@@ -234,7 +236,6 @@ const Tokenomics = () => {
               <div className="tokenomics_right_block">
                 <div>
                   <svg
-                    height="auto"
                     width="244"
                     height="58"
                     viewBox="0 0 244 58"
@@ -278,7 +279,6 @@ const Tokenomics = () => {
                 <div>
                   {" "}
                   <svg
-                    height="auto"
                     width="189"
                     height="58"
                     viewBox="0 0 189 58"
@@ -320,7 +320,6 @@ const Tokenomics = () => {
               </div>
             </div>
             <svg
-              height="auto"
               className="mobile_icons"
               width="179"
               height="334"
@@ -421,7 +420,7 @@ const Tokenomics = () => {
             </svg>
           </div>
 
-          <a className="buy_btn">Buy eYe</a>
+          <button className="buy_btn">Buy eYe</button>
         </div>
       </div>
     </div>

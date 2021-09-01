@@ -3,7 +3,6 @@ import React from "react";
 export default function CloseIcon() {
   return (
     <svg
-      height="auto"
       width="21"
       height="20"
       viewBox="0 0 21 20"

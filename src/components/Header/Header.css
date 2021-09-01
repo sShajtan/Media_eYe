@@ -22,7 +22,7 @@ header {
   justify-content: space-between;
 }
 
-.header_left_menu a {
+.header_left_menu a , .header_left_menu button{
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -35,13 +35,18 @@ header {
   display: inline;
   position: relative;
   z-index: 3;
+  border: none;
+  background: none;
+  outline: none;
+  text-align: left;
+  padding: 0;
 }
 
 .ReactCollapse--collapse {
   transition: none;
 }
 
-.dark .header_left_menu a {
+.dark .header_left_menu a , .dark .header_left_menu button{
   transition: 0.4s;
   color: #fff;
 }
@@ -75,7 +80,7 @@ header {
   background-size: contain;
 }
 
-.nft_collapse a {
+.nft_collapse a, .nft_collapse button {
   padding: 5px 0 0 10px;
 }
 
@@ -304,7 +309,12 @@ div.menu-item div button:nth-child(2) {
   color: #0075ff;
 }
 
-a.bm-item {
+button.bm-item{
+  border: none;
+  width: 100%;
+}
+
+a.bm-item, button.bm-item {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -315,10 +325,12 @@ a.bm-item {
   text-decoration: none;
   padding: 10px 0 10px 10%;
   border-bottom: 1px solid;
-
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
 
-.dark a.bm-item {
+.dark a.bm-item, .dark button.bm-item {
   color: #fff;
 }
 
@@ -730,6 +742,8 @@ div.menu-item .soc_header_mobile {
   margin-left: 40px;
   cursor: pointer;
   position: relative;
+  border: none;
+  outline: none;
 }
 
 .ntf_header:hover {
