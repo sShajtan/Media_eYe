@@ -7,12 +7,21 @@
     background: url('../../assets/img/join_us_bg.png') no-repeat top;
     background-size: cover;
     width: 100%;
-    height: 100vh;
     position: relative;
+    margin-bottom:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_join_us img{
+    margin:150px auto 10px; 
+    width: 30%;
 }
 
 .join_us_button{
-        border: none;
+   border: none;
     outline: none;
     cursor: pointer;
     transition: 0.4s;
@@ -31,11 +40,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px auto 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin:0 auto;
 }
 
 .join_us_button::before{
@@ -69,34 +75,40 @@
 }
 
 
+
 @media (max-width: 767.98px){
+
+    .main_join_us img{
+    margin:50px auto 10px; 
+}
     .main_join_us{
-        height: 300px;
+        height: 330px;
     }
+
     .join_us_button {
+    font-size: 12px;
+    line-height: 12px;
     width: 130px;
-    height: 50px;
-    bottom: -50px;
-    font-size: 13px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
 }
 }
 
 
 @media (max-width: 575.98px){
     .main_join_us{
+        height: 270px;
+    }
+}
+
+
+@media (max-width: 420.98px){
+    .main_join_us{
         height: 250px;
     }
 }
 
-@media (max-width: 450.98px){
-    .main_join_us{
-        height: 200px;
-    }
-}
-
-
-@media (max-width: 350.98px){
-    .main_join_us{
-        height: 150px;
-    }
-}

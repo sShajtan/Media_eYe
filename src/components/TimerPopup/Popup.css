@@ -305,6 +305,7 @@
   .popup-wrapper.timer_popup.timer .main-popup .popup-main span {
     font-size: 14px;
     line-height: 18px;
+        width: 80%;
   }
   .popup-wrapper.timer_popup.soon_popup.timer .main-popup .popup-main {
     display: flex;

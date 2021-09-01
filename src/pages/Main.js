@@ -13,7 +13,7 @@ import MainForm from "../components/MainForm/MainForm";
 import Tokenomics from "../components/Tokenomics/Tokenomics";
 
 const Main = (props) => {
-  const { toggleNftCollapse, toggleSoonPopup, togglePopup, closeNftCollapse, toggleMessagePopup } = props;
+  const { togglePartnersPopup, toggleSoonPopup, togglePopup, closeNftCollapse, toggleMessagePopup } = props;
 
   return (
     <React.Fragment>
@@ -21,12 +21,11 @@ const Main = (props) => {
         <MainBlock togglePopup={togglePopup} />
         <MainInfo />
         <MainHow toggleSoonPopup={toggleSoonPopup} />
-        <MainHowWork />
-        {/* <Creators /> */}
+        <MainHowWork togglePartnersPopup={togglePartnersPopup} />
         <Tokenomics />
         <Roadmap />
         <Team />
-        <Partners />
+        <Partners togglePartnersPopup={togglePartnersPopup} />
         <Community />
         <MainForm toggleMessagePopup={toggleMessagePopup} />
         <Faq />

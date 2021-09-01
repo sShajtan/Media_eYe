@@ -1,11 +1,13 @@
 import React from 'react';
 import './JoinUs.css';
 
-const JoinUs = () => {
+const JoinUs = (props) => {
+    const { togglePartnersPopup } = props;
     return (
         <div className="join_us">
             <div className="main_join_us">
-                <a className="join_us_button" href="mailto:support@mediaeyenft.com">Become a partner</a>
+                <img alt="join us" src="img/join_us.png" />
+                <button className="join_us_button" onClick={togglePartnersPopup}>Become a partner</button>
             </div>
         </div >
     );

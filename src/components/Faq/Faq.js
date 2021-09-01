@@ -16,6 +16,7 @@ const Faq = () => {
     <div className="faq" id="faq">
       <div className="container">
         <img
+          alt="title"
           className="title  animate__animated animate__fadeIn wow"
           data-wow-duration="1s"
           data-wow-delay="0.5s"
@@ -196,7 +197,7 @@ const Faq = () => {
               storage which is always free or to create storage of your NFT
               content and metadata on the blockchain, for example on Filecoin,
               in turn ensuring that your content and data are immutable, please
-              refer to rate sheet for charges associate with storage on the
+              refer to rate sheet for charges associated with storage on the
               blockchain. These options are available in your user account to
               choose from.
             </span>

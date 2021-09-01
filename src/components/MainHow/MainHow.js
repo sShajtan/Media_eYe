@@ -11,6 +11,7 @@ const MainHow = (props) => {
           data-wow-duration="1.5s"
           data-wow-delay="0.5s"
           src="img/how_title.svg"
+          alt="title"
         />
         <div className="main_how_main">
           <div className="main_how_left">
@@ -19,10 +20,11 @@ const MainHow = (props) => {
               data-wow-duration="1s"
               data-wow-delay="0.5s"
               src="img/left_nft.svg"
+              alt="nft_image"
             />
           </div>
           <div className="main_how_center">
-            <img src="img/color_logo.png" />
+            <img src="img/color_logo.png" alt="nft_image" />
             <p>
               MeDIA eYe NFT Portal puts the power of blockchain to work for your
               next marketing campaign, promotion, rewards program or creating a
@@ -32,7 +34,6 @@ const MainHow = (props) => {
             </p>
             <div className="mobile_icons">
               <svg
-                height="auto"
                 width="78"
                 height="70"
                 viewBox="0 0 78 70"
@@ -86,7 +87,6 @@ const MainHow = (props) => {
                 </defs>
               </svg>
               <svg
-                height="auto"
                 width="78"
                 height="70"
                 viewBox="0 0 78 70"
@@ -178,7 +178,6 @@ const MainHow = (props) => {
                 </defs>
               </svg>
               <svg
-                height="auto"
                 width="78"
                 height="70"
                 viewBox="0 0 78 70"
@@ -246,7 +245,6 @@ const MainHow = (props) => {
                 </defs>
               </svg>
               <svg
-                height="auto"
                 width="78"
                 height="70"
                 viewBox="0 0 78 70"
@@ -308,9 +306,9 @@ const MainHow = (props) => {
                 </defs>
               </svg>
             </div>
-            <a onClick={toggleSoonPopup}>
+            <button onClick={toggleSoonPopup}>
               <span>Buy NFTs</span>
-            </a>
+            </button>
           </div>
           <div className="main_how_right">
             <img
@@ -318,6 +316,7 @@ const MainHow = (props) => {
               data-wow-duration="1s"
               data-wow-delay="0.5s"
               src="img/right_nft.svg"
+              alt="nft_image"
             />
           </div>
         </div>
@@ -328,11 +327,11 @@ const MainHow = (props) => {
             data-wow-delay="0.5s"
             onClick={toggleSoonPopup}
           >
-            <img src="img/nft/1.png" />
+            <img src="img/nft/1.png" alt="nft_image" />
             <h5>Content Marketplace</h5>
           </div>
           <div className="main_how_footer_block" onClick={toggleSoonPopup}>
-            <img src="img/nft/4.png" />
+            <img src="img/nft/4.png" alt="nft_image" />
             <h5>NFT Marketplace</h5>
           </div>
           <div
@@ -341,7 +340,7 @@ const MainHow = (props) => {
             data-wow-delay="0.5s"
             onClick={toggleSoonPopup}
           >
-            <img src="img/nft/5.png" />
+            <img src="img/nft/5.png" alt="nft_image" />
             <h5>Gallery</h5>
           </div>
           <div
@@ -350,7 +349,7 @@ const MainHow = (props) => {
             data-wow-delay="1s"
             onClick={toggleSoonPopup}
           >
-            <img src="img/nft/2.png" />
+            <img src="img/nft/2.png" alt="nft_image" />
             <h5>Create NFT</h5>
           </div>
           <div
@@ -359,7 +358,7 @@ const MainHow = (props) => {
             data-wow-delay="1s"
             onClick={toggleSoonPopup}
           >
-            <img src="img/nft/3.png" />
+            <img src="img/nft/3.png" alt="nft_image" />
             <h5>Launch Campaign</h5>
           </div>
         </div>

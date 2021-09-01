@@ -5,7 +5,7 @@ import "./Popup.css";
 import CloseIcon from "../Icons/CloseIcon";
 
 const Popup = (props) => {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState('');
   const [showPopup, setShowPopup] = useState(false);
 
   const togglePopup = () => {
@@ -72,8 +72,7 @@ const Popup = (props) => {
                 <button>Subscribe</button>
               </form>
               <span>
-                By signing up you consent to receive emails from Media eYe and
-                its subsidiaries.
+                Stay up to date with our latest services and products.
               </span>
             </div>
           </div>
