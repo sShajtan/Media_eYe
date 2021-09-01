@@ -25,7 +25,6 @@ const App = () => {
   const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
   const dispatch = useDispatch();
-
   useEffect(() => {
     if (timerPopup === false) {
       dispatch(updateTimerPopup());
@@ -58,6 +57,8 @@ const App = () => {
   const closeNftCollapse = () => {
     setShowNftCollpase(false);
   };
+
+
 
 
 
