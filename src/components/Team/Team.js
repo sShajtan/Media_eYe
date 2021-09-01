@@ -65,7 +65,7 @@ const Team = () => {
   return (
     <div className="team" id="team">
       <link
-        href="http://fonts.googleapis.com/css?family=Droid+Sans"
+        href="https://fonts.googleapis.com/css?family=Droid+Sans"
         rel="stylesheet"
       ></link>
       <div className="container">

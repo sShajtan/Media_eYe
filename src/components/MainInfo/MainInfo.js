@@ -4,10 +4,10 @@ import WOW from "wowjs";
 import { Link } from "react-scroll";
 
 const MainInfo = () => {
-  useEffect(() => {
-    const wow = new WOW.WOW();
-    wow.init();
-  }, []);
+  // useEffect(() => {
+  //   const wow = new WOW.WOW();
+  //   wow.init();
+  // }, []);
 
   return (
     <div className="main_info" id="about">
