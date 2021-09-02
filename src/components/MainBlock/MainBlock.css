@@ -169,7 +169,7 @@
 .right_small_slider .slick-prev::before {
   content: "\2794" !important;
   font-size: 32px;
-  line-height: 32px;
+  line-height: 20px;
 }
 .main_small_slide img {
 }
@@ -432,6 +432,10 @@
 }
 
 @media (max-width: 991.98px) {
+  .main_left_buttons {
+    display: flex;
+    justify-content: space-around;
+}
   .main_info_right p {
     margin-top: 40px;
   }
@@ -444,10 +448,10 @@
   }
   .main_left_buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
   .main_left_buttons .learn_more {
-    margin: 0 40px;
+    margin: 0;
   }
   .main_block_main {
     flex-wrap: wrap;
@@ -540,6 +544,10 @@
     margin-top: 500px;
   }
 
+  .main_left_buttons .sign_up, .main_left_buttons .learn_more{
+    width: 130px;
+  }
+
   .main_block_sliders {
     padding-left: 0;
   }
@@ -577,7 +585,7 @@
     padding: 10px 20px;
   }
   .main_left_buttons .learn_more {
-    margin: 0 20px;
+    margin: 0;
   }
   .left_slider .slick-next {
     width: 25px;
@@ -617,6 +625,6 @@
     margin-top: 320px;
   }
   .main_left_buttons .learn_more {
-    margin: 0 7px;
+    margin: 0;
   }
 }

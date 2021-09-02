@@ -194,7 +194,12 @@
 
 
 @media (max-width: 767.98px) {
-
+.partners .close {
+    right: 13%;
+    position: absolute;
+    top: -3%;
+    width: auto;
+  }
   .popup-wrapper.partners .main-popup{
    background: url("/src/assets/img/partners_mobile_popup_bg.png") no-repeat center;
   background-size: contain;
@@ -212,8 +217,8 @@
 }
 
 .popup-wrapper.partners .main-popup form div{
-  width: 100%;
-  padding: 5px 30px;
+    width: 100%;
+    padding: 12px 65px;
 }
 
 .popup-wrapper.partners .main-popup form label{
@@ -236,7 +241,7 @@
 @media (max-width: 575.98px){
 
   .partners .close {
-    right: 15%;
+    right: 25%;
     position: absolute;
     top: 30%;
     width: auto;
@@ -244,7 +249,7 @@
 
   .popup-wrapper.partners .main-popup form div {
     width: 100%;
-    padding: 5px 20%;
+    padding: 5px 28%;
 }
   .partners .main-popup h4 {
       font-size: 16px;
@@ -273,12 +278,12 @@
 }
 .popup-wrapper.partners .main-popup form div {
     width: 100%;
-    padding: 5px 12%;
+    padding: 15px 18%;
 }
 .partners .close {
-    right: 15%;
+    right: 22%;
     position: absolute;
-    top: 38%;
+    top: 27%;
     width: auto;
 }
 }
@@ -286,25 +291,19 @@
 
 @media (max-width: 390.98px){
   .popup-wrapper.partners .main-popup{
-   background: url("/src/assets/img/partners_mobilesm_popup_bg.png") no-repeat center;
-  background-size: contain;
   height: 90vh;
   width: 75%;
 }
 
-.dark .popup-wrapper.partners .main-popup{
-   background: url("/src/assets/img/partners_mobilesm_popup_bg_dark.png") no-repeat center;
-  background-size: contain;
-}
 
 .popup-wrapper.partners .main-popup form div {
     width: 100%;
     padding: 5px 12% 3px;
 }
 .partners .close {
-    right: 11%;
+    right: 15%;
     position: absolute;
-    top: 37%;
+    top: 30%;
     width: auto;
 }
 }

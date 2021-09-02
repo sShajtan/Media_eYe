@@ -80,6 +80,7 @@ const MainInfo = () => {
             </Link>
           </div>
         </div>
+        <img src="img/Line.svg" className="block_line" alt="line" />
       </div>
     </div>
   );

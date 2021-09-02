@@ -68,282 +68,318 @@ const Team = () => {
         href="https://fonts.googleapis.com/css?family=Droid+Sans"
         rel="stylesheet"
       ></link>
-      <div className="container">
-        <img
-          className="title animate__animated animate__fadeIn wow"
-          data-wow-duration="1s"
-          data-wow-delay="0.5s"
-          src="img/team_title.svg"
-        />
-        <div className="team_main ">
-          <Slider {...settings}>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/yampolskiy.png" />
-                  <a href="https://www.linkedin.com/in/victor-y-76333b9b/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
+      <img
+        className="title animate__animated animate__fadeIn wow"
+        data-wow-duration="1s"
+        data-wow-delay="0.5s"
+        src="img/team_title.svg"
+      />
+      <div className="team_wrapper" >
+        <div className="container">
+          <div className="team_main ">
+            <Slider {...settings}>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/yampolskiy.png" />
+                    <a href="https://www.linkedin.com/in/victor-y-76333b9b/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
 
-                </div>
-                <div>
-                  <h6>Victor Yampolsky</h6>
-                </div>
-                <span>Co-Founder, Business Development and Growth</span>
-              </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/mask.png" />
-                  <a href="https://www.linkedin.com/in/stefan-arsenijevic-73ab54111/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
+                    </a>
 
+                  </div>
+                  <div>
+                    <h6>Victor Yampolsky</h6>
+                  </div>
+                  <span>Co-Founder, Business Development and Growth</span>
                 </div>
-                <div>
-                  <h6>Stefan Arsenijevic</h6>
-                </div>
-                <span>Senior Marketing Manager Web Developer and SEO Expert</span>
               </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/mask.png" />
-                  <a href="https://www.linkedin.com/in/felipe-de-anda-0769ba1bb/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
-                </div>
-                <div>
-                  <h6>Felipe De Anda</h6>
-                </div>
-                <span>Co-Founder, Senior Manager Growth and Development</span>
-              </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/shaitanov.png" />
-                  <a href="https://www.linkedin.com/in/anatolii-shaitanov-788a6819b/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/stefan.png" />
+                    <a href="https://www.linkedin.com/in/stefan-arsenijevic-73ab54111/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
 
-                </div>
-                <div>
-                  <h6>Anatolii Shaitanov</h6>
-                </div>
-                <span>Senior UI/UX Designer</span>
-              </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/mask.png" />
-                  <a href="https://www.linkedin.com/in/roy-chong-0914/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
+                    </a>
 
+                  </div>
+                  <div>
+                    <h6>Stefan Arsenijevic</h6>
+                  </div>
+                  <span>Senior Marketing Manager Web Developer and SEO Expert</span>
                 </div>
-                <div>
-                  <h6>Roy Chong</h6>
-                </div>
-                <span>Senior Blockchain & Web Developer</span>
               </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/mask.png" />
-                  <a href="https://www.linkedin.com/in/jcommons" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/anda.png" />
+                    <a href="https://www.linkedin.com/in/felipe-de-anda-0769ba1bb/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
 
+                    </a>
+                  </div>
+                  <div>
+                    <h6>Felipe De Anda</h6>
+                  </div>
+                  <span>Co-Founder, Senior Manager Growth and Development</span>
                 </div>
-                <div>
-                  <h6>Jeffrey Commons</h6>
-                </div>
-                <span>Co-Founder,  Senior Solidity Developer and Smart Contracts Architrct</span>
               </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/mask.png" />
-                  <a href="https://www.linkedin.com/in/harishdgupta" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/shaitanov.png" />
+                    <a href="https://www.linkedin.com/in/anatolii-shaitanov-788a6819b/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
 
-                </div>
-                <div>
-                  <h6>Harish D. Gupta</h6>
-                </div>
-                <span>Finance and Economic Planning</span>
-              </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/asangaliev.png" />
-                  <a href="https://www.linkedin.com/in/askar-assangaliyev-722bbb37/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
+                    </a>
 
+                  </div>
+                  <div>
+                    <h6>Anatolii Shaitanov</h6>
+                  </div>
+                  <span>Senior UI/UX Designer</span>
                 </div>
-                <div>
-                  <h6>Askar Assangaliyev</h6>
-                </div>
-                <span>Co-Founder, Director of Eurasia Accelerator Partnerships, Investments and Business Development</span>
               </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/mask.png" />
-                  <a href="https://www.linkedin.com/in/shimon-newman-671928153/" target="_blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip11)">
-                      <path d="M8.268 28H2.463V9.306H8.268V28ZM5.362 6.756C3.506 6.756 2 5.218 2 3.362C2 2.47034 2.35421 1.6152 2.98471 0.984707C3.6152 0.35421 4.47034 0 5.362 0C6.25366 0 7.1088 0.35421 7.73929 0.984707C8.36979 1.6152 8.724 2.47034 8.724 3.362C8.724 5.218 7.218 6.756 5.362 6.756ZM29.994 28H24.202V18.9C24.202 16.731 24.158 13.95 21.184 13.95C18.166 13.95 17.703 16.306 17.703 18.744V28H11.904V9.306H17.471V11.856H17.552C18.327 10.387 20.22 8.837 23.044 8.837C28.919 8.837 29.999 12.706 29.999 17.731V28H29.994Z" fill="#525252" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip11">
-                        <rect width="32" height="32" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  </a>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/chong.png" />
+                    <a href="https://www.linkedin.com/in/roy-chong-0914/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
 
-                </div>
-                <div>
-                  <h6>Shimon Newman</h6>
-                </div>
-                <span>Co-Founder, Tokenomics Expert</span>
-              </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/mask.png" />
+                    </a>
 
+                  </div>
+                  <div>
+                    <h6>Roy Chong</h6>
+                  </div>
+                  <span>Senior Blockchain & Web Developer</span>
                 </div>
-                <div>
-                  <h6>King Shull</h6>
-                </div>
-                <span>Co-Founder, Senior Developer</span>
               </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/veronica.png" />
-                </div>
-                <div>
-                  <h6>Veronika Sharma</h6>
-                </div>
-                <span>Director of Social Media Marketing</span>
-              </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/ruslan.png" />
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/commons.png" />
+                    <a href="https://www.linkedin.com/in/jcommons" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
 
-                </div>
-                <div>
-                  <h6>Ruslan Gavriljuk</h6>
-                </div>
-                <span>Front-end Developer</span>
-              </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/erica.png" />
+                    </a>
 
+                  </div>
+                  <div>
+                    <h6>Jeffrey Commons</h6>
+                  </div>
+                  <span>Co-Founder,  Senior Solidity Developer and Smart Contracts Architrct</span>
                 </div>
-                <div>
-                  <h6>Ericka Schwan</h6>
-                </div>
-                <span>Creative Director</span>
               </div>
-            </div>
-            <div className="team_slide_wrapper">
-              <div className="team_slide">
-                <div className="team_slide_img">
-                  <img src="img/team/roma.png" />
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/gupta.png" />
+                    <a href="https://www.linkedin.com/in/harishdgupta" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
 
+                    </a>
+
+                  </div>
+                  <div>
+                    <h6>Harish D. Gupta</h6>
+                  </div>
+                  <span>Finance and Economic Planning</span>
                 </div>
-                <div>
-                  <h6>Roman Ferlii</h6>
-                </div>
-                <span>UI/UX Designer</span>
               </div>
-            </div>
-          </Slider>
+              {/* <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/asangaliev.png" />
+                    <a href="https://www.linkedin.com/in/askar-assangaliyev-722bbb37/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#35B5FC"/>
+<stop offset="1" stop-color="#4E37EA"/>
+</linearGradient>
+</defs>
+</svg>
+
+                    </a>
+
+                  </div>
+                  <div>
+                    <h6>Askar Assangaliyev</h6>
+                  </div>
+                  <span>Co-Founder, Director of Eurasia Accelerator Partnerships, Investments and Business Development</span>
+                </div>
+              </div> */}
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/newman.png" />
+                    <a href="https://www.linkedin.com/in/shimon-newman-671928153/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+
+                    </a>
+
+                  </div>
+                  <div>
+                    <h6>Shimon Newman</h6>
+                  </div>
+                  <span>Co-Founder, Tokenomics Expert</span>
+                </div>
+              </div>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/shill.png" />
+
+                  </div>
+                  <div>
+                    <h6>King Shill</h6>
+                  </div>
+                  <span>Co-Founder, Senior Developer</span>
+                </div>
+              </div>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/veronica.png" />
+                  </div>
+                  <div>
+                    <h6>Veronika Sharma</h6>
+                  </div>
+                  <span>Director of Social Media Marketing</span>
+                </div>
+              </div>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/erica.png" />
+                    <a href="https://www.linkedin.com/in/erickaschwan/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+
+                    </a>
+                  </div>
+                  <div>
+                    <h6>Ericka Schwan</h6>
+                  </div>
+                  <span>Creative Director</span>
+                </div>
+              </div>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/ruslan.png" />
+
+                  </div>
+                  <div>
+                    <h6>Ruslan Gavriljuk</h6>
+                  </div>
+                  <span>Front-end Developer</span>
+                </div>
+              </div>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/mask.png" />
+
+                  </div>
+                  <div>
+                    <h6>New Member</h6>
+                  </div>
+                </div>
+              </div>
+              <div className="team_slide_wrapper">
+                <div className="team_slide">
+                  <div className="team_slide_img">
+                    <img src="img/team/roma.png" />
+                    <a href="https://www.linkedin.com/in/erickaschwan/" target="_blank"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)" />
+                      <defs>
+                        <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#35B5FC" />
+                          <stop offset="1" stop-color="#4E37EA" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+
+                    </a>
+                  </div>
+                  <div>
+                    <h6>Roman Ferlii</h6>
+                  </div>
+                  <span>UI/UX Designer</span>
+                </div>
+              </div>
+            </Slider>
+          </div>
         </div>
+      </div>
+      <div className="container">
+        <img src="img/Line.svg" className="block_line" alt="line" />
       </div>
     </div>
   );

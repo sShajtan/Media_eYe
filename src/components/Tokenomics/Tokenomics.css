@@ -66,6 +66,19 @@
   flex-wrap: wrap;
 }
 
+.tokenomics_main_wrapper{ 
+  padding-top: 40px; 
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0px 0px 22px #0057FF;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  border-radius: 43px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  margin: 0 -70px;
+}
+
 .tokenomics_left {
   width: 50%;
   padding-right: 50px;
@@ -84,7 +97,6 @@
   flex-direction: column;
   justify-content: space-between;
   height: 500px;
-  position: absolute;
   left: 0;
   max-width: 50vw;
 }
@@ -324,19 +336,32 @@
   position: relative;
 }
 
+@media (max-width: 1299.98px){
+  .tokenomics_main_wrapper{
+    margin: 0;
+  }
+}
+
 @media (max-width: 1199.98px) {
   .tokenomics_left {
-    width: 40%;
+    width: 50%;
   }
   .tokenomics_left_wrapper {
-    max-width: 45vw;
+    max-width: 50vw;
   }
   .tokenomics_right_block span {
-    width: 250px;
+    width: 200px;
   }
 }
 
 @media (max-width: 991.98px) {
+
+  .tokenomics_main_wrapper{
+    background: none;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
   .tokenomics .title {
     max-width: 90%;
     margin: 40px auto;
@@ -348,6 +373,8 @@
 
   .tokenomics_left {
     width: 100%;
+    position: absolute;
+    left: 0;
   }
 
   .tokenomics_right {

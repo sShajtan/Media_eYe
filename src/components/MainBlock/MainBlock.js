@@ -97,7 +97,7 @@ const MainBlock = (props) => {
               NFTs.
             </h6>
             <div className="main_left_buttons">
-              <a className="learn_more" href="https://mediaeyenft.com/pitchdesk/" target="_blank" rel="noreferrer">
+              <a className="learn_more" href="https://mediaeyenft.com/pitchdeck/" target="_blank" rel="noreferrer">
                 <span>Learn More</span>
               </a>
               <button className="sign_up" onClick={togglePopup}>

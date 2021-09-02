@@ -16,19 +16,22 @@ const Header = (props) => {
   const wrapperRef = useRef(null);
   const dispatch = useDispatch();
 
-
-
   const toggleTheme = () => {
     dispatch(updateTheme());
   };
-
-
 
   const toggleMobileSearch = () => {
     setMobileSearch(!mobileSearch);
   };
 
 
+  const handleIsOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
 
   return (
     <React.Fragment>
@@ -133,8 +136,9 @@ const Header = (props) => {
           </div>
         </div>
       </header>
-      <div className={!isOpen ? "open" : null}>
-        <Menu onStateChange={() => setIsOpen(!isOpen)} width={"100%"}>
+      <div className={isOpen ? "open" : null}>
+        <Menu onOpen={handleIsOpen}
+          onClose={handleIsOpen} isOpen={isOpen} width={"100%"} >
           <button className="menu-item" onClick={toggleSoonPopup}>
             NFT Marketplace
           </button>
@@ -170,15 +174,12 @@ const Header = (props) => {
           >
             About
           </a>
-          <Link
-            className="menu-item"
-            to="team"
-            spy={true}
-            smooth={true}
-            duration={500}
+          <a
+            href="/#team"
+            onClick={closeMenu}
           >
             Team
-          </Link>
+          </a>
           <a className="menu-item" href="https://mediaeyenft.com/blog/">
             Blog
           </a>

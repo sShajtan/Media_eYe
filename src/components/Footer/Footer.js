@@ -35,23 +35,6 @@ const Footer = (props) => {
               </ul>
               <ul>
                 <li>
-                  <a href="https://mediaeyenft.com/pitchdesk/" target="_blank" rel="noreferrer">
-                    Pitchdeck
-                  </a>
-                </li>
-                <li>
-                  <a href="https://mediaeyenft.com/pitchdesk/fundraising/" target="_blank" rel="noreferrer">
-                    Fundraising
-                  </a>
-                </li>
-                <li>
-                  <a href="https://docs.mediaeyenft.com/" target="_blank" rel="noreferrer">
-                    Litepaper
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <li>
                   <a href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/">
                     About
                   </a>
@@ -66,6 +49,23 @@ const Footer = (props) => {
                 </li>
                 <li>
                   <a href="mailto:support@mediaeyenft.com">Contact</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://mediaeyenft.com/pitchdeck/" target="_blank" rel="noreferrer">
+                    Pitchdeck
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mediaeyenft.com/pitchdeck/fundraising/" target="_blank" rel="noreferrer">
+                    Fundraising
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.mediaeyenft.com/" target="_blank" rel="noreferrer">
+                    Litepaper
+                  </a>
                 </li>
               </ul>
             </div>

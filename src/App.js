@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Main from "./pages/Main";
 import Header from "./components/Header/Header";
 import TimerPopup from "./components/TimerPopup/Popup";
+import BusinessPopup from "./components/BusinessPopup/Popup";
 import SoonPopup from "./components/SoonPopup/Popup";
 import PartnersPopup from "./components/PartnersPopup/Popup";
 import Footer from "./components/Footer/Footer";
@@ -15,11 +16,13 @@ import "./fonts/Roboto/stylesheet.css";
 import "./fonts/neumatic/stylesheet.css";
 import { updateTimerPopup } from "./store/app/appSlice";
 import MessagePopup from "./components/MessagePopup/MessagePopup";
+import ContentMarketplace from "./pages/ContentMarketplace";
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
   const timerPopup = useSelector((state) => state.app.timerPopup);
   const [showSoonPopup, setShowSoonPopup] = useState(false);
+  const [showBusinessPopup, setShowBusinessPopup] = useState(false);
   const [showPartnersPopup, setShowPartnersPopup] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showMessagePopup, setshowMessagePopup] = useState(false);
@@ -40,6 +43,10 @@ const App = () => {
 
   const togglePartnersPopup = () => {
     setShowPartnersPopup(!showPartnersPopup);
+  };
+
+  const toggleBusinessPopup = () => {
+    setShowBusinessPopup(!showBusinessPopup);
   };
 
   const togglePopup = () => {
@@ -66,8 +73,9 @@ const App = () => {
     <Router>
       <div className={darkTheme ? "App dark" : "App"}>
         <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
-        <PartnersPopup showPopup={showPartnersPopup} togglePopup={togglePartnersPopup} />
-        <TimerPopup showPopup={showPopup} togglePopup={togglePopup} />
+        <PartnersPopup showPopup={showPartnersPopup} togglePopup={togglePartnersPopup} toggleMessagePopup={toggleMessagePopup} />
+        <TimerPopup showPopup={showPopup} togglePopup={togglePopup} toggleMessagePopup={toggleMessagePopup} />
+        <BusinessPopup showPopup={showBusinessPopup} togglePopup={toggleBusinessPopup} toggleMessagePopup={toggleMessagePopup} />
         <MessagePopup
           showPopup={showMessagePopup}
           togglePopup={toggleMessagePopup}
@@ -80,14 +88,20 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Main
+              darkTheme={darkTheme}
               toggleSoonPopup={toggleSoonPopup}
               togglePartnersPopup={togglePartnersPopup}
+              toggleBusinessPopup={toggleBusinessPopup}
               togglePopup={togglePopup}
               toggleMessagePopup={toggleMessagePopup}
               toggleNftCollapse={toggleNftCollapse}
               closeNftCollapse={closeNftCollapse}
             />
           </Route>
+          {/* <Route path="/content-marketplace" exact>
+            <ContentMarketplace closeNftCollapse={closeNftCollapse}>
+            </ContentMarketplace>
+          </Route> */}
           <Route path="*">
             <NoMatch />
           </Route>

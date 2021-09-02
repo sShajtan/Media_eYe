@@ -1,7 +1,13 @@
 .partners {
-  padding: 40px 0;
+  
   background: url("../../assets/img/mian_bg_nft.png") no-repeat center;
   background-size: contain;
+}
+
+.partners_wrapper{
+  background: url('../../assets/img/partners_bg.png') no-repeat center;
+  background-size: cover;
+  padding: 40px 0;
 }
 
 .partners .title {

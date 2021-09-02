@@ -26,6 +26,21 @@
   justify-content: center;
 }
 
+.main_how_main_wrapper {
+  background:url('../../assets/img/main_how_bg.png') no-repeat center; 
+  background-size: contain;
+}
+
+.main_how_footer_wrapper {
+  background:url('../../assets/img/main_how_footer_bg.png') no-repeat center; 
+  background-size: contain;
+}
+.dark .main_how_footer_wrapper {
+  background:url('../../assets/img/main_how_footer_dark_bg.png') no-repeat center; 
+  background-size: contain;
+}
+
+
 .main_how_main .main_how_center {
   width: 40%;
   text-align: center;
@@ -48,7 +63,7 @@
 }
 
 .main_how_center button {
-  background: url("../../assets/img/check_faq_bg.png") no-repeat center;
+  background: url("../../assets/img/check_faq_bg_white.png") no-repeat center;
   background-size: contain;
   padding: 21px 33px;
   font-family: Poppins;
@@ -64,6 +79,11 @@
   position: relative;
   border: none;
   outline: none;
+}
+
+.dark .main_how_center button {
+  background: url("../../assets/img/check_faq_bg.png") no-repeat center;
+  background-size: contain;
 }
 
 .main_how_center button span {
@@ -123,6 +143,8 @@
   position: relative;
   margin: 2%;
   cursor: pointer;
+  -webkit-backdrop-filter: blur(37px);
+          backdrop-filter: blur(37px);
 }
 
 .main_how_footer_block img {
@@ -187,6 +209,9 @@
 }
 
 @media (max-width: 767.98px) {
+  .dark .main_how_footer_wrapper, .main_how_footer_wrapper{
+    background: none;
+  }
   .main_how_footer {
     margin: 50px 0 0;
   }
