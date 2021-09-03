@@ -121,11 +121,14 @@
 
 @media (max-width: 1199.98px) {
   .roadmap_main .roadmap_main_block_wrapper span {
-    height: 80px;
+    height: 90px;
   }
 }
 
 @media (max-width: 991.98px) {
+  .roadmap{
+    background: none;
+  }
   .roadmap_main {
     display: none;
   }

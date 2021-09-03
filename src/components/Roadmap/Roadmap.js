@@ -17,7 +17,7 @@ const Roadmap = () => {
         />
         <div className="roadmap_main">
           <div className="roadmap_main_block_wrapper active">
-            <span>The MeDIA eYe NFT concept is created</span>
+            <span>The MeDIA eYe NFT concept is created.</span>
             <div className="roadmap_main_block">
               <h4>Q1/21</h4>
               <div
@@ -38,7 +38,7 @@ const Roadmap = () => {
                 data-wow-delay="0.8s"
               ></div>
             </div>
-            <span>Development of MeDIA eYe platform and testing</span>
+            <span>Development of MeDIA eYe platform and testing.</span>
           </div>
           <div className="roadmap_main_block_wrapper">
             <span>

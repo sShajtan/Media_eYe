@@ -5,7 +5,8 @@ import "./Popup.css";
 import CloseIcon from "../Icons/CloseIcon";
 
 const Popup = (props) => {
-  const [email, setEmail] = useState(null);
+  const { toggleMessagePopup } = props;
+  const [email, setEmail] = useState('');
   const [showPopup, setShowPopup] = useState(false);
 
   const togglePopup = () => {
@@ -25,16 +26,17 @@ const Popup = (props) => {
     if (email !== null && email !== "") {
       emailjs
         .sendForm(
-          "service_73soouc",
-          "template_uj1tp7c",
+          "service_8p76rtc",
+          "template_3pxskgn",
           event.target,
-          "user_1nI5rWG3deHxADsA0zfNc"
+          "user_EJiwvXDAMeoW6oOr4UYrR"
         )
         .then(
           (result) => {
             setEmail("");
             setShowPopup(false);
-            toggleMainPopup();
+            props.togglePopup();
+            toggleMessagePopup(true);
           },
           (error) => {
             alert("Message not sent");
@@ -72,8 +74,7 @@ const Popup = (props) => {
                 <button>Subscribe</button>
               </form>
               <span>
-                By signing up you consent to receive emails from Media eYe and
-                its subsidiaries.
+                Stay up to date with our latest services and products.
               </span>
             </div>
           </div>

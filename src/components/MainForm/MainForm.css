@@ -1,6 +1,12 @@
 
 .main_form_main{
-    padding: 50px 0;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0px 0px 22px #0057FF;
+    -webkit-backdrop-filter: blur(7px);
+            backdrop-filter: blur(7px);
+    border-radius: 43px;
+    margin: 50px auto;
 }
 
 .main_form_main h2{
@@ -11,6 +17,7 @@
     line-height: 48px;
     color: #010003;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .dark .main_form_main h2{

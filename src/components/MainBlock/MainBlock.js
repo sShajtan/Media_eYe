@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
 import WOW from "wowjs";
 import "./MainBlock.css";
-import Peachdeck from "../../assets/Peachdeck.pptx";
 
 const MainBlock = (props) => {
   const { togglePopup } = props;
@@ -83,6 +82,7 @@ const MainBlock = (props) => {
         <div className="main_block_main">
           <div className="main_block_main_left">
             <img
+              alt="MeDIA eYe NFT Portal logo"
               className="animate__animated animate__fadeInLeft wow logo"
               data-wow-duration="1s"
               data-wow-delay="0.5s"
@@ -97,12 +97,12 @@ const MainBlock = (props) => {
               NFTs.
             </h6>
             <div className="main_left_buttons">
-              <a className="learn_more" href="https://mediaeyenft.com/pitchdesk/" target="_blank">
+              <a className="learn_more" href="https://mediaeyenft.com/pitchdeck/" target="_blank" rel="noreferrer">
                 <span>Learn More</span>
               </a>
-              <a className="sign_up" onClick={togglePopup}>
+              <button className="sign_up" onClick={togglePopup}>
                 <span>Sign Up</span>
-              </a>
+              </button>
             </div>
             <div className="left_slider">
               <h4>NFT Art</h4>
@@ -110,7 +110,7 @@ const MainBlock = (props) => {
                 <Slider asNavFor={nav3} ref={slider2} {...settings2}>
                   <div className="left_slide_wrapper">
                     <div className="left_slide">
-                      <img src="img/ava.png" />
+                      <img src="img/ava.png" alt="avatar" />
                       <div>
                         <span>Creator</span>
                         <h5>Media</h5>
@@ -119,7 +119,7 @@ const MainBlock = (props) => {
                   </div>
                   <div className="left_slide_wrapper">
                     <div className="left_slide">
-                      <img src="img/ava.png" />
+                      <img src="img/ava.png" alt="avatar" />
                       <div>
                         <span>Creator</span>
                         <h5>Media</h5>
@@ -128,7 +128,7 @@ const MainBlock = (props) => {
                   </div>
                   <div className="left_slide_wrapper">
                     <div className="left_slide">
-                      <img src="img/ava.png" />
+                      <img src="img/ava.png" alt="avatar" />
                       <div>
                         <span>Creator</span>
                         <h5>Media</h5>
@@ -137,7 +137,7 @@ const MainBlock = (props) => {
                   </div>
                   <div className="left_slide_wrapper">
                     <div className="left_slide">
-                      <img src="img/ava.png" />
+                      <img src="img/ava.png" alt="avatar" />
                       <div>
                         <span>Creator</span>
                         <h5>Media</h5>
@@ -164,41 +164,41 @@ const MainBlock = (props) => {
               </svg>
               <Slider asNavFor={nav2} ref={slider1} {...settings1}>
                 <div className="main_slide">
-                  <img src="img/main_slider/1.jpg"></img>
+                  <img src="img/main_slider/1.jpg" alt="slide"></img>
                 </div>
                 <div className="main_slide">
-                  <img src="img/main_slider/2.jpg"></img>
+                  <img src="img/main_slider/2.jpg" alt="slide"></img>
                 </div>
                 <div className="main_slide">
-                  <img src="img/main_slider/3.jpg"></img>
+                  <img src="img/main_slider/3.jpg" alt="slide"></img>
                 </div>
                 <div className="main_slide">
-                  <img src="img/main_slider/4.jpg"></img>
+                  <img src="img/main_slider/4.jpg" alt="slide"></img>
                 </div>
               </Slider>
               <div className="right_small_slider">
                 <Slider asNavFor={nav1} ref={slider3} {...settings3}>
                   <div className="main_small_slide">
                     <div>
-                      <img src="img/ava.png" />
+                      <img src="img/ava.png" alt="avatar" />
                       <span>Klarens Malluta</span>
                     </div>
                   </div>
                   <div className="main_small_slide">
                     <div>
-                      <img src="img/ava.png" />
+                      <img src="img/ava.png" alt="avatar" />
                       <span>Klarens Malluta</span>
                     </div>
                   </div>
                   <div className="main_small_slide">
                     <div>
-                      <img src="img/ava.png" />
+                      <img src="img/ava.png" alt="avatar" />
                       <span>Klarens Malluta</span>
                     </div>
                   </div>
                   <div className="main_small_slide">
                     <div>
-                      <img src="img/ava.png" />
+                      <img src="img/ava.png" alt="avatar" />
                       <span>Klarens Malluta</span>
                     </div>
                   </div>

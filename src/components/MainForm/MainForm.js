@@ -3,7 +3,7 @@ import "./MainForm.css";
 import emailjs from "emailjs-com";
 
 const MainForm = (props) => {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState('');
   const { toggleMessagePopup } = props;
 
   const handleChangeEmail = (event) => {
@@ -12,17 +12,18 @@ const MainForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.email !== null && this.state.email !== "") {
+    if (email !== null && email !== "") {
       emailjs
         .sendForm(
-          "service_73soouc",
-          "template_uj1tp7c",
+          "service_8p76rtc",
+          "template_3pxskgn",
           event.target,
-          "user_1nI5rWG3deHxADsA0zfNc"
+          "user_EJiwvXDAMeoW6oOr4UYrR"
         )
         .then(
           (result) => {
-            toggleMessagePopup();
+            setEmail("");
+            toggleMessagePopup(true);
           },
           (error) => {
             alert("Message not sent");

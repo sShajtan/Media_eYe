@@ -33,7 +33,8 @@ function SamplePrevArrow(props) {
   );
 }
 
-const Partners = () => {
+const Partners = (props) => {
+  const { toggleBusinessPopup } = props;
   const theme = useSelector((state) => state.app.darkTheme);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState();
@@ -76,92 +77,97 @@ const Partners = () => {
 
   return (
     <div className="partners">
-      <div className="container">
-        <img
-          className="title animate__animated animate__fadeIn wow"
-          data-wow-duration="1s"
-          data-wow-delay="0.5s"
-          src="img/partners_title.png"
-        />
-        <div
-          className="team_main animate__animated animate__fadeInUp wow"
-          data-wow-duration="1s"
-          data-wow-delay="0.5s"
-        >
-          <Slider {...settings}>
-            <div className="partners_slide_wrapper">
-              <div className="partners_slide">
-                <a href="https://quai-invest.net/" target="_blank">
-                  <img src="img/partners/1.png" />
-                </a>
+      <div className="partners_wrapper">
+        <div className="container">
+          <img
+            className="title animate__animated animate__fadeIn wow"
+            data-wow-duration="1s"
+            data-wow-delay="0.5s"
+            src="img/partners_title.png"
+          />
+          <div
+            className="team_main animate__animated animate__fadeInUp wow"
+            data-wow-duration="1s"
+            data-wow-delay="0.5s"
+          >
+            <Slider {...settings}>
+              <div className="partners_slide_wrapper">
+                <div className="partners_slide">
+                  <a href="https://quai-invest.net/" target="_blank">
+                    <img src="img/partners/1.png" />
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="partners_slide_wrapper">
-              <div className="partners_slide">
-                <a href="https://filecoin.io/" target="_blank">
-                  <img
-                    src={
-                      theme ? "img/partners/2-dark.png" : "img/partners/2.png"
-                    }
-                  />
-                </a>
+              <div className="partners_slide_wrapper">
+                <div className="partners_slide">
+                  <a href="https://filecoin.io/" target="_blank">
+                    <img
+                      src={
+                        theme ? "img/partners/2-dark.png" : "img/partners/2.png"
+                      }
+                    />
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="partners_slide_wrapper">
-              <div className="partners_slide">
-                <a href="https://www.mogulproductions.com/" target="_blank">
-                  <img
-                    src={
-                      theme ? "img/partners/3-dark.png" : "img/partners/3.png"
-                    }
-                  />
-                </a>
+              <div className="partners_slide_wrapper">
+                <div className="partners_slide">
+                  <a href="https://www.mogulproductions.com/" target="_blank">
+                    <img
+                      src={
+                        theme ? "img/partners/3-dark.png" : "img/partners/3.png"
+                      }
+                    />
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="partners_slide_wrapper">
-              <div className="partners_slide">
-                <a href="https://ramp.network/" target="_blank">
-                  <img
-                    src={
-                      theme ? "img/partners/6-dark.png" : "img/partners/6.png"
-                    }
-                  />
-                </a>
+              <div className="partners_slide_wrapper">
+                <div className="partners_slide">
+                  <a href="https://ramp.network/" target="_blank">
+                    <img
+                      src={
+                        theme ? "img/partners/6-dark.png" : "img/partners/6.png"
+                      }
+                    />
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="partners_slide_wrapper">
-              <div className="partners_slide">
-                <a href="https://www.bigleap.com/" target="_blank">
-                  <img
-                    src={
-                      theme ? "img/partners/4-dark.png" : "img/partners/4.png"
-                    }
-                  />
-                </a>
+              <div className="partners_slide_wrapper">
+                <div className="partners_slide">
+                  <a href="https://www.bigleap.com/" target="_blank">
+                    <img
+                      src={
+                        theme ? "img/partners/4-dark.png" : "img/partners/4.png"
+                      }
+                    />
+                  </a>
+                </div>
               </div>
-            </div>
 
-            {/* {this.state.width > 768 ? <div className="partners_slide_wrapper empty"></div> : null} */}
+              {/* {this.state.width > 768 ? <div className="partners_slide_wrapper empty"></div> : null} */}
 
-            <div className="partners_slide_wrapper">
-              <div className="partners_slide">
-                <a href="https://apeswap.finance/" target="_blank">
-                  <img
-                    src={theme ? "img/partners/8.png" : "img/partners/8.png"}
-                  />
-                </a>
+              <div className="partners_slide_wrapper">
+                <div className="partners_slide">
+                  <a href="https://apeswap.finance/" target="_blank">
+                    <img
+                      src={theme ? "img/partners/8.png" : "img/partners/8.png"}
+                    />
+                  </a>
+                </div>
               </div>
-            </div>
-            {/* <div className="partners_slide_wrapper">
+              {/* <div className="partners_slide_wrapper">
                                 <div className="partners_slide">
                                     <a href="https://www.rampdefi.com/" target="_blank">
                                         <img src={theme ? "img/partners/7-dark.png" : "img/partners/7.png"} />
                                     </a>
                                 </div>
                             </div> */}
-          </Slider>
+            </Slider>
+          </div>
+          <a className="become_partner" onClick={toggleBusinessPopup} >Become a partner</a>
         </div>
-        <a className="become_partner" href="mailto:support@mediaeyenft.com">Become a partner</a>
+      </div>
+      <div className="container">
+        <img src="img/Line.svg" className="block_line" alt="line" />
       </div>
     </div>
   );

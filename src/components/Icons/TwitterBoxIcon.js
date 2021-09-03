@@ -3,7 +3,6 @@ import React from "react";
 export default function TwitterBoxIcon() {
   return (
     <svg
-      height="auto"
       width="167"
       height="167"
       viewBox="0 0 167 167"

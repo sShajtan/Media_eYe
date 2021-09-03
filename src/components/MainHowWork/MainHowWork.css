@@ -1,8 +1,12 @@
 .main_howwork {
   padding: 40px 0;
   background: url("../../assets/img/mian_bg_nft.png") no-repeat bottom;
-  background-size: contain;
   padding-bottom: 800px;
+}
+
+.main_howwork_wrapper{
+  background: url('../../assets/img/howworks_bg.png') no-repeat center;
+  background-size: contain;
 }
 
 .main_howwork .title {
@@ -67,6 +71,10 @@
 }
 
 @media (max-width: 767.98px) {
+  .main_howwork_wrapper{
+    background:url('../../assets/img/how_it_works_mobile.png') no-repeat top;
+    background-size: cover;
+  }
   .main_howwork_main {
     flex-wrap: wrap;
     flex-direction: column;

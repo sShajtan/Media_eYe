@@ -2,7 +2,6 @@ import React from "react";
 import Community from "../components/Community/Community";
 import Faq from "../components/Faq/Faq";
 import MainBlock from "../components/MainBlock/MainBlock";
-// import Creators from "../components/Creators/Creators";
 import MainHow from "../components/MainHow/MainHow";
 import MainHowWork from "../components/MainHowWork/MainHowWork";
 import MainInfo from "../components/MainInfo/MainInfo";
@@ -13,20 +12,19 @@ import MainForm from "../components/MainForm/MainForm";
 import Tokenomics from "../components/Tokenomics/Tokenomics";
 
 const Main = (props) => {
-  const { toggleNftCollapse, toggleSoonPopup, togglePopup, closeNftCollapse, toggleMessagePopup } = props;
+  const { togglePartnersPopup, toggleBusinessPopup, toggleSoonPopup, togglePopup, closeNftCollapse, toggleMessagePopup, darkTheme } = props;
 
   return (
     <React.Fragment>
       <div onClick={closeNftCollapse}>
         <MainBlock togglePopup={togglePopup} />
         <MainInfo />
-        <MainHow toggleSoonPopup={toggleSoonPopup} />
-        <MainHowWork />
-        {/* <Creators /> */}
+        <MainHow toggleSoonPopup={toggleSoonPopup} darkTheme={darkTheme} />
+        <MainHowWork togglePartnersPopup={togglePartnersPopup} toggleMessagePopup={toggleMessagePopup} />
         <Tokenomics />
         <Roadmap />
         <Team />
-        <Partners />
+        <Partners toggleBusinessPopup={toggleBusinessPopup} toggleMessagePopup={toggleMessagePopup} />
         <Community />
         <MainForm toggleMessagePopup={toggleMessagePopup} />
         <Faq />

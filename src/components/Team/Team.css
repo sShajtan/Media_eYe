@@ -1,6 +1,10 @@
 .team {
     padding: 40px 0;
+}
 
+.team_wrapper{
+    background: url('../../assets/img/team_bg.png') no-repeat center;
+    background-size: cover;
 }
 .team_slide_wrapper{
     padding: 2px;
@@ -30,8 +34,6 @@
 .team_slide{
     position: relative;
     background: transparent;
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
             z-index: 2;
             height: 350px;
             width: 200px;
@@ -50,14 +52,14 @@
 .team_slide a{
     position: absolute;
     box-sizing: border-box;
-    -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
     border-top-right-radius:28px;
     border-bottom-left-radius:28px;
     transition: 0.4s;
     cursor: pointer;
     bottom: -10px;
 }
+
+
 
 /* .team_slide div a:hover{
     background: linear-gradient(180deg, #5419E3 0%, #39CCFC 100%);
@@ -72,6 +74,8 @@
 .team_slide a img{
     border: none;
 }
+
+
 
 .team_slide div{
     margin-top: 20px;
@@ -120,6 +124,11 @@
  .dark .team_slide_wrapper .team_slide svg path{
     transition: 0.4s;
     fill: #fff;
+}
+
+ .dark .team_slide_wrapper .team_slide a:hover svg path{
+    transition: 0.4s;
+    fill: #5032EA;
 }
 
 
@@ -293,8 +302,7 @@ body .slick-prev:focus, body .slick-prev:hover{
         opacity: 0.7;
     }
     .dark .team .slick-dots {
-        border: 2px solid #fff;
-        
+        /* border: 2px solid #fff; */
     }
 
 
@@ -312,9 +320,7 @@ body .slick-prev:focus, body .slick-prev:hover{
         border: 2px solid #797979;
         position: absolute;
         display: block;
-        max-width: -moz-fit-content;
-        max-width: -webkit-fit-content;
-        max-width: fit-content;
+        width: 214px;
         margin: 0 auto;
         height: 38px;
         top: 100%;
@@ -409,6 +415,6 @@ body .slick-prev:focus, body .slick-prev:hover{
 .team_slide {
     padding: 10px 5px;
     margin: 10px 15px 10px 10px;
-    height: 225px;
+    height: 270px;
 }
 }

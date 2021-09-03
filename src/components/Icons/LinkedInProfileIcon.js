@@ -3,7 +3,6 @@ import React from "react";
 export default function LinkedinProfileIcon() {
   return (
     <svg
-      height="auto"
       width="32"
       height="32"
       viewBox="0 0 32 32"

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-scroll";
-import Peachdeck from "../../assets/Peachdeck.pptx";
 import GithubIcon from "../Icons/GithubIcon";
 import InstagramIcon from "../Icons/InstagramIcon";
 import MediumIcon from "../Icons/MediumIcon";
@@ -17,40 +16,22 @@ const Footer = (props) => {
         <div className="footer_main">
           <div className="footer_left">
             <a href="/">
-              <img className="footer_logo" src="img/logo.png" />
+              <img className="footer_logo" src="img/logo.png" alt="logo" />
             </a>
             <div className="footer_menu">
               <ul>
                 <li>
-                  <a onClick={toggleSoonPopup}>NTF Marketplace</a>
+                  <button onClick={toggleSoonPopup}>NTF Marketplace</button>
                 </li>
                 <li>
-                  <a onClick={toggleSoonPopup}>Content Marketplace</a>
+                  <button onClick={toggleSoonPopup}>Content Marketplace</button>
                 </li>
                 <li>
-                  <a onClick={toggleSoonPopup}>Gallery</a>
+                  <button onClick={toggleSoonPopup}>Gallery</button>
                 </li>
                 <li>
-                  <a>Creators</a>
+                  <button>Creators</button>
                 </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="https://mediaeyenft.com/pitchdesk/" target="_blank">
-                    Pitchdeck
-                  </a>
-                </li>
-                <li>
-                  <a href="https://mediaeyenft.com/pitchdesk/fundraising/" target="_blank">
-                    Fundraising
-                  </a>
-                </li>
-                <li>
-                  <a href="https://docs.mediaeyenft.com/" target="_blank">
-                    Litepaper
-                  </a>
-                </li>
-                {/* <li><a href="https://quaidao.io/" target="_blank">Governance</a></li> */}
               </ul>
               <ul>
                 <li>
@@ -64,31 +45,48 @@ const Footer = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://mediaeyenft.com/blog/">Blog</a>
+                  <a href="https://mediaeyenft.com/blog/" target="_blank" rel="noreferrer">Blog</a>
                 </li>
                 <li>
                   <a href="mailto:support@mediaeyenft.com">Contact</a>
                 </li>
               </ul>
+              <ul>
+                <li>
+                  <a href="https://mediaeyenft.com/pitchdeck/" target="_blank" rel="noreferrer">
+                    Pitchdeck
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mediaeyenft.com/pitchdeck/fundraising/" target="_blank" rel="noreferrer">
+                    Fundraising
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.mediaeyenft.com/" target="_blank" rel="noreferrer">
+                    Litepaper
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="footer_right">
-            <a href="https://medium.com/@MeDIAeYeNFT" target="_blank">
+            <a href="https://medium.com/@MeDIAeYeNFT" target="_blank" rel="noreferrer">
               <MediumIcon />
             </a>
-            <a href="https://t.me/MeDIAeYeNFTofficial " target="_blank">
+            <a href="https://t.me/MeDIAeYeNFTofficial " target="_blank" rel="noreferrer">
               <TelegramIcon />
             </a>
-            <a href="https://twitter.com/MeDIAeYeNFT" target="_blank">
+            <a href="https://twitter.com/MeDIAeYeNFT" target="_blank" rel="noreferrer">
               <TwitterIcon />
             </a>
-            <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank">
+            <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank" rel="noreferrer">
               <TiktokIcon />
             </a>
-            <a>
+            <button>
               <GithubIcon />
-            </a>
-            <a href="https://www.instagram.com/mediaeyenfts/" target="_blank">
+            </button>
+            <a href="https://www.instagram.com/mediaeyenfts/" target="_blank" rel="noreferrer">
               <InstagramIcon />
             </a>
           </div>
