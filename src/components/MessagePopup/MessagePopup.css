@@ -39,45 +39,14 @@
   position: absolute;
   width: 550px;
   min-width: 320px;
-  background-color: #000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+
 .defi_popup {
   width: 80vw;
-}
-
-.defi_popup {
-  padding: 50px;
-  background: radial-gradient(
-    102.63% 101.99% at -2.63% -1.99%,
-    #f9f9f9 0%,
-    #dadada 100%
-  );
-  box-shadow: 15px 9px 78px rgba(0, 0, 0, 0.15);
-}
-.defi_popup .popup-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.defi_popup .popup-main img {
-  width: 250px;
-}
-
-.defi_popup h2 {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 32px;
-  line-height: 42px;
-  color: #000000;
-  text-align: center;
-  margin: 20px auto;
 }
 
 .popup-header {
@@ -137,9 +106,65 @@
 
 .close {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 40px;
+  top: 40px;
   cursor: pointer;
+}
+
+.got_it{
+        border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+    background: url('../../assets/img/learn_more_button_bg.png') no-repeat center;
+    background-size: contain;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.4s;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0;
+    position: absolute;
+    bottom: 40px;
+}
+
+.got_it::before{
+    content: '';
+    background: url('../../assets/img/signup_button_bg.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.got_it:hover{
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .got_it:hover{
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.got_it:hover::before{
+  transition: 0.4s;
+  opacity: 1;
 }
 
 .defi_popup .close svg rect {
@@ -153,11 +178,17 @@
 }
 
 @media (max-width: 575.98px) {
+  
+.got_it{
+  width: 100px;
+  bottom: 20px;
+}
+  
   .main-popup {
     width: 310px;
   }
-  .close {
-    right: 10px;
-    top: 15px;
+  .message_popup  .close {
+    right: 20px;
+    top: 150px;
   }
 }

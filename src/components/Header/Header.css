@@ -22,7 +22,7 @@ header {
   justify-content: space-between;
 }
 
-.header_left_menu a {
+.header_left_menu a , .header_left_menu button{
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -35,13 +35,18 @@ header {
   display: inline;
   position: relative;
   z-index: 3;
+  border: none;
+  background: none;
+  outline: none;
+  text-align: left;
+  padding: 0;
 }
 
 .ReactCollapse--collapse {
   transition: none;
 }
 
-.dark .header_left_menu a {
+.dark .header_left_menu a , .dark .header_left_menu button{
   transition: 0.4s;
   color: #fff;
 }
@@ -55,7 +60,7 @@ header {
   position: absolute;
   margin-top: 5px;
   background: url("../../assets/img/collapse_bg.png") no-repeat center;
-
+  background-size: contain;
   padding: 0;
   opacity: 0;
   transition: 0.2s;
@@ -75,11 +80,11 @@ header {
   background-size: contain;
 }
 
-.nft_collapse a {
+.nft_collapse a, .nft_collapse button {
   padding: 5px 0 0 10px;
 }
 
-.header_left_menu a:hover {
+.header_left_menu a:hover, .header_left_menu button:hover  {
   transition: 0.4s;
   color: #0075ff !important;
 }
@@ -218,7 +223,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em;
+  padding: 0.8em 0;
   padding-top: 110px;
 }
 
@@ -304,7 +309,12 @@ div.menu-item div button:nth-child(2) {
   color: #0075ff;
 }
 
-a.bm-item {
+button.bm-item{
+  border: none;
+  width: 100%;
+}
+
+a.bm-item, button.bm-item {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -313,16 +323,17 @@ a.bm-item {
   color: #000000;
   outline: none;
   text-decoration: none;
-  padding: 5px 0 5px 10%;
+  padding: 10px 0 10px 10%;
+  border-bottom: 1px solid;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
 
-.dark a.bm-item {
+.dark a.bm-item, .dark button.bm-item {
   color: #fff;
 }
-.soc_header_mobile {
-  border-top: 2px solid #676767;
-  margin-top: 10px;
-}
+
 
 .menu-item button {
   background: url("../../assets/img/learn_more_button_bg.png") no-repeat center;
@@ -378,6 +389,37 @@ a.bm-item {
 div.menu-item .soc_header_mobile {
   display: flex;
   justify-content: space-around;
+}
+
+.mobile_investors_collapse .ReactCollapse--collapse{
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.mobile_investors_collapse {
+  border-bottom: 1px solid #100F21;
+  background-color: #D4D3E2;
+}
+
+.dark .mobile_investors_collapse {
+  border-bottom: 1px solid #fff;
+  background-color: #23214e;
+}
+
+.mobile_investors_collapse .ReactCollapse--collapse a{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: #100F21;
+  padding: 10px 0 10px 15%;
+}
+
+.dark .mobile_investors_collapse .ReactCollapse--collapse a{
+  color: #fff;
 }
 
 /* Styling of overlay */
@@ -700,6 +742,8 @@ div.menu-item .soc_header_mobile {
   margin-left: 40px;
   cursor: pointer;
   position: relative;
+  border: none;
+  outline: none;
 }
 
 .ntf_header:hover {

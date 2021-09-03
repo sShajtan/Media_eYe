@@ -1,35 +1,52 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import Main from "./pages/Main";
 import Header from "./components/Header/Header";
 import TimerPopup from "./components/TimerPopup/Popup";
+import BusinessPopup from "./components/BusinessPopup/Popup";
 import SoonPopup from "./components/SoonPopup/Popup";
+import PartnersPopup from "./components/PartnersPopup/Popup";
+import Footer from "./components/Footer/Footer";
 import NoMatch from "./pages/NoMatch";
 import "./App.css";
 import "./fonts/Poppins/stylesheet.css";
+import "./fonts/Rambla/stylesheet.css";
 import "./fonts/Roboto/stylesheet.css";
 import "./fonts/neumatic/stylesheet.css";
+import { updateTimerPopup } from "./store/app/appSlice";
+import MessagePopup from "./components/MessagePopup/MessagePopup";
+import ContentMarketplace from "./pages/ContentMarketplace";
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const darkTheme = useSelector((state) => state.app.darkTheme);
+  const timerPopup = useSelector((state) => state.app.timerPopup);
   const [showSoonPopup, setShowSoonPopup] = useState(false);
+  const [showBusinessPopup, setShowBusinessPopup] = useState(false);
+  const [showPartnersPopup, setShowPartnersPopup] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
-
+  const dispatch = useDispatch();
   useEffect(() => {
-    if (showPopup === false) {
+    if (timerPopup === false) {
+      dispatch(updateTimerPopup());
       setTimeout(() => {
-        setShowPopup(true);
+        setShowPopup(true)
       }, 10000);
     }
-  }, []);
+  });
 
   const toggleSoonPopup = () => {
     setShowSoonPopup(!showSoonPopup);
   };
 
-  const toggleTheme = () => {
-    setDarkTheme(!darkTheme);
+  const togglePartnersPopup = () => {
+    setShowPartnersPopup(!showPartnersPopup);
+  };
+
+  const toggleBusinessPopup = () => {
+    setShowBusinessPopup(!showBusinessPopup);
   };
 
   const togglePopup = () => {
@@ -40,14 +57,31 @@ const App = () => {
     setShowNftCollpase(!showNftCollapse);
   };
 
+  const toggleMessagePopup = () => {
+    setshowMessagePopup(!showMessagePopup);
+  };
+
+  const closeNftCollapse = () => {
+    setShowNftCollpase(false);
+  };
+
+
+
+
+
   return (
     <Router>
       <div className={darkTheme ? "App dark" : "App"}>
         <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
-        <TimerPopup showPopup={showPopup} togglePopup={togglePopup} />
+        <PartnersPopup showPopup={showPartnersPopup} togglePopup={togglePartnersPopup} toggleMessagePopup={toggleMessagePopup} />
+        <TimerPopup showPopup={showPopup} togglePopup={togglePopup} toggleMessagePopup={toggleMessagePopup} />
+        <BusinessPopup showPopup={showBusinessPopup} togglePopup={toggleBusinessPopup} toggleMessagePopup={toggleMessagePopup} />
+        <MessagePopup
+          darkTheme={darkTheme}
+          showPopup={showMessagePopup}
+          togglePopup={toggleMessagePopup}
+        />
         <Header
-          toggleTheme={toggleTheme}
-          theme={darkTheme}
           toggleSoonPopup={toggleSoonPopup}
           toggleNftCollapse={toggleNftCollapse}
           showNftCollapse={showNftCollapse}
@@ -55,16 +89,25 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Main
-              theme={darkTheme}
+              darkTheme={darkTheme}
               toggleSoonPopup={toggleSoonPopup}
+              togglePartnersPopup={togglePartnersPopup}
+              toggleBusinessPopup={toggleBusinessPopup}
               togglePopup={togglePopup}
+              toggleMessagePopup={toggleMessagePopup}
               toggleNftCollapse={toggleNftCollapse}
+              closeNftCollapse={closeNftCollapse}
             />
           </Route>
+          {/* <Route path="/content-marketplace" exact>
+            <ContentMarketplace closeNftCollapse={closeNftCollapse}>
+            </ContentMarketplace>
+          </Route> */}
           <Route path="*">
             <NoMatch />
           </Route>
         </Switch>
+        <Footer toggleSoonPopup={toggleSoonPopup} />
       </div>
     </Router>
   );

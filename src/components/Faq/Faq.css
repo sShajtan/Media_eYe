@@ -1,7 +1,7 @@
 .faq {
-  padding: 40px 0;
+  padding: 60px 0;
   background: url("../../assets/img/faq_bg.png") no-repeat bottom;
-  background-size: contain;
+  background-size: 80%;
 }
 
 .faq .title {
@@ -17,6 +17,9 @@
   border-bottom-left-radius: 28px;
   border: 1px solid #797979;
   transition: 0.4s;
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(37px);
+          backdrop-filter: blur(37px);
 }
 
 .dark .faq_block {
@@ -100,6 +103,10 @@
 }
 
 @media (max-width: 768.98px) {
+
+  .faq {
+    background-size: 180%;
+}
   .faq_block h5,
   .faq_block span {
     font-size: 16px;

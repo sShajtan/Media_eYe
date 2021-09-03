@@ -1,24 +1,29 @@
 .team {
-  padding: 40px 0;
-}
-.team_slide_wrapper {
-  padding: 2px;
+    padding: 40px 0;
 }
 
-.team_slide_wrapper::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: linear-gradient(180deg, #2ccdff 0%, #5032ea 100%);
-  border-top-right-radius: 28px;
-  border-bottom-left-radius: 28px;
-  z-index: 1;
-  width: 220px;
-  height: 310px;
-  margin-left: 20px;
-  margin-top: 20px;
-  transition: 0.4s;
-  opacity: 0;
+.team_wrapper{
+    background: url('../../assets/img/team_bg.png') no-repeat center;
+    background-size: cover;
+}
+.team_slide_wrapper{
+    padding: 2px;
+}
+
+.team_slide_wrapper::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: linear-gradient(180deg, #2CCDFF 0%, #5032EA 100%);
+    border-top-right-radius:28px;
+    border-bottom-left-radius:28px;
+    z-index:1;
+    width: 220px;
+    height: 310px;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: 0.4s;
+    opacity: 0;
 }
 /* .team_slide_wrapper:hover::before{
     content: '';
@@ -26,396 +31,390 @@
     opacity: 1;
 } */
 
-.team_slide {
-  position: relative;
-  padding: 15px;
-  margin: 30px 22px;
-  border: 1px solid #797979;
-  border-top-right-radius: 28px;
-  border-bottom-left-radius: 28px;
-  background: transparent;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  z-index: 2;
-  height: 350px;
-}
-
-.team .title {
-  max-width: 300px;
-  margin: 40px auto;
-}
-
-.team_slide div a {
-  position: absolute;
-  top: -1px;
-  right: -25px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid #797979;
-  box-sizing: border-box;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  padding: 10px 20px;
-  border-top-right-radius: 28px;
-  border-bottom-left-radius: 28px;
-  transition: 0.4s;
-  cursor: pointer;
-}
-
-.team_slide div a:hover {
-  background: linear-gradient(180deg, #5419e3 0%, #39ccfc 100%);
-  transition: 0.4s;
-}
-
-.team_slide img {
-  margin: 0 auto;
-}
-
-.team_slide a img {
-  border: none;
-}
-
-.team_slide div {
-  margin-top: 20px;
-}
-
-.team_slide div h6 {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 20px;
-  text-align: center;
-  color: #000000;
-  margin: 0;
-  transition: 0.4s;
-}
-
-.dark .team_slide_wrapper div h6 {
-  color: #fff;
-  transition: 0.4s;
-}
-
-.team_slide span {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000000;
-  transition: 0.4s;
-  text-align: center;
-  display: block;
-  margin-top: 10px;
-}
-
-.team_slide span.askar {
-  font-size: 14px;
-}
-.dark .team_slide_wrapper .team_slide span {
-  color: #fff;
-  transition: 0.4s;
-}
-.team_slide_wrapper .team_slide svg path {
-  transition: 0.4s;
-}
-.dark .team_slide_wrapper .team_slide svg path {
-  transition: 0.4s;
-  fill: #fff;
-}
-
-.team .slick-next {
-  background: url("../../assets/img/next-arrow.png") no-repeat center;
-  background-position: cover;
-  transition: 0.4s;
-  background-size: cover;
-  width: 40px;
-  height: 40px;
-  z-index: 1;
-}
-
-.team .slick-next:hover {
-  background: url("../../assets/img/next-arrow.png") no-repeat center;
-  transition: 0.4s;
-  background-size: cover;
-  width: 40px;
-  height: 40px;
-  margin-top: -5px;
-  z-index: 1;
-}
-.team .slick-prev {
-  background: url("../../assets/img/prev-arrow.png") no-repeat center;
-  background-position: cover;
-  transition: 0.4s;
-  background-size: cover;
-  width: 40px;
-  height: 40px;
-  z-index: 1;
-}
-
-.team .slick-prev:hover {
-  background: url("../../assets/img/prev-arrow.png") no-repeat;
-  background-size: cover;
-  margin-top: -5px;
-  transition: 0.4s;
-  width: 40px;
-  height: 40px;
-  z-index: 1;
-}
-
-.team .slick-next::before {
-  content: "";
-  width: 40px;
-  height: 40px;
-  background: url("../../assets/img/next-arrow-hover.png") no-repeat center;
-  display: block;
-  background-size: cover;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  transition: 0.4s;
-}
-
-.team .slick-prev::before {
-  content: "";
-  width: 40px;
-  height: 40px;
-  background: url("../../assets/img/prev-arrow-hover.png") no-repeat center;
-  display: block;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  transition: 0.4s;
-}
-
-.team .slick-next:hover::before,
-.team .slick-prev:hover::before {
-  opacity: 0.8;
-  transition: 0.4s;
-  top: 8px;
-  left: 3px;
-}
-
-.team .slick-next span,
-.team .slick-prev span {
-  position: relative;
-  z-index: 3;
-  font-size: 24px;
-  color: #797979;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transition: 0.4s;
-  font-family: "Droid Sans", sans-serif;
-}
-
-.team .slick-next:hover span,
-.team .slick-prev:hover span {
-  position: relative;
-  z-index: 3;
-  font-size: 24px;
-  color: #fff;
-  position: absolute;
-  top: 47%;
-  left: 20%;
-  transition: 0.4s;
-}
-
-.dark .team .slick-next span,
-.dark .team .slick-prev span {
-  color: #fff;
-}
-body .slick-next:focus,
-body .slick-next:hover {
-  background: url("../../assets/img/next-arrow.png") no-repeat center;
-  background-size: cover;
-}
-
-body .slick-prev:focus,
-body .slick-prev:hover {
-  background: url("../../assets/img/prev-arrow.png") no-repeat center;
-  background-size: cover;
-}
-
-@media (max-width: 1191.98px) {
-  .team_slide_wrapper::before {
-    width: 180px;
-  }
-  .team_slide {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .team {
-    margin-top: 130%;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .team .slick-next:hover,
-  .team .slick-prev:hover {
+.team_slide{
+    position: relative;
     background: transparent;
-    height: 38px;
-    color: #797979;
-  }
-  .team .slick-next:hover span,
-  .team .slick-prev:hover span {
-    color: #797979;
-  }
-  .team_slide {
-    margin: 20px 27px;
-  }
-
-  .team .title {
-    max-width: 50%;
-  }
-  .team_slide_wrapper::before {
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 220px;
-    height: 310px;
-  }
-
-  .team .slick-next,
-  .team .slick-prev {
-    top: 105%;
-  }
-  .team .slick-prev {
-    left: 23px;
-  }
-  .team .slick-next {
-    right: 23px;
-  }
-  .team .slick-dots li button:before {
-    font-size: 10px;
-  }
-  .dark .team .slick-dots li button:before {
-    font-size: 10px;
-    color: #fff;
-    opacity: 0.7;
-  }
-  .dark .team .slick-dots {
-    border: 2px solid #fff;
-  }
-
-  .team .slick-dots li.slick-active button:before {
-    color: #5032ea;
-    font-size: 14px;
-  }
-
-  .dark .team .slick-dots li.slick-active button:before {
-    color: #fff;
-    font-size: 14px;
-    opacity: 1;
-  }
-  .team .slick-dots {
-    border: 2px solid #797979;
-    position: absolute;
-    display: block;
-    max-width: -moz-fit-content;
-    max-width: -webkit-fit-content;
-    max-width: fit-content;
+            z-index: 2;
+            height: 350px;
+            width: 200px;
     margin: 0 auto;
-    height: 38px;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0px 0px 5px 0px;
-  }
-  .team .slick-next,
-  .team .slick-prev {
-    background: none;
-    top: 100%;
-    height: 38px;
-  }
-  .team .slick-next:hover,
-  .team .slick-prev:hover {
-    margin-top: 0;
-  }
-  .team .slick-next {
-    right: 50%;
-    border: 2px solid #797979;
-    transform: translateX(326%);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  .team .slick-prev {
-    left: 50%;
-    transform: translateX(-326%);
-    border: 2px solid #797979;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-
-  .dark .team .slick-next,
-  .dark .team .slick-prev,
-  .dark .team .slick-dots {
-    color: #fff;
-    border-color: #fff;
-  }
-  .team .slick-next::before,
-  .team .slick-prev::before {
-    content: none;
-  }
-  body .slick-next:focus,
-  body .slick-next:hover {
-    background: none;
-  }
-  .team .slick-next span,
-  .team .slick-prev span {
-    color: #797979;
-  }
-
-  .dark .team .slick-next span,
-  .dark .team .slick-prev span {
-    color: #fff;
-  }
 }
 
-@media (max-width: 575.98px) {
-  .team_slide {
-    padding: 10px;
-    margin: 10px 20px 10px 10px;
-    height: 330px;
-  }
-  .team_slide div a {
-    right: -15px;
-    padding: 10px 15px;
-  }
+.team_slide_img {
+    position: relative;
+}
 
-  .team_slide div h6 {
-    font-size: 14px;
-  }
-  .team_slide a img {
-    max-width: 20px;
-  }
-  .team_slide span {
+.team .title{
+    max-width: 300px;
+    margin: 40px auto;
+}
+
+.team_slide a{
+    position: absolute;
+    box-sizing: border-box;
+    border-top-right-radius:28px;
+    border-bottom-left-radius:28px;
+    transition: 0.4s;
+    cursor: pointer;
+    bottom: -10px;
+}
+
+
+
+/* .team_slide div a:hover{
+    background: linear-gradient(180deg, #5419E3 0%, #39CCFC 100%);
+    transition: 0.4s
+} */
+
+
+.team_slide img{
+    margin: 0 auto;
+}
+
+.team_slide a img{
+    border: none;
+}
+
+
+
+.team_slide div{
+    margin-top: 20px;
+}
+
+.team_slide div h6{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+    transition: 0.4s;
+}
+
+ .dark .team_slide_wrapper div h6 {
+    color: #fff;
+    transition: 0.4s;
+}
+
+.team_slide span{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    transition: 0.4s;
+    text-align: center;
+    display: block;
     margin-top: 10px;
-    font-size: 14px;
-    line-height: 18px;
-  }
 }
 
-@media (max-width: 425.98px) {
-  .team_slide_wrapper:hover::before {
-    height: 45%;
-  }
+.team_slide span.askar{
+    font-size: 14px;
+}
+ .dark .team_slide_wrapper .team_slide span {
+    color: #fff;
+    transition: 0.4s;
+}
+.team_slide_wrapper .team_slide svg path{
+    transition: 0.4s;
+}
+ .dark .team_slide_wrapper .team_slide svg path{
+    transition: 0.4s;
+    fill: #fff;
+}
 
-  .team_slide span,
-  .team_slide span.askar {
+ .dark .team_slide_wrapper .team_slide a:hover svg path{
+    transition: 0.4s;
+    fill: #5032EA;
+}
+
+
+.team .slick-next{
+    background: url('../../assets/img/next-arrow.png') no-repeat center;
+    background-position: cover;
+    transition: 0.4s;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.team .slick-next:hover{
+    background: url('../../assets/img/next-arrow.png') no-repeat center;
+    transition: 0.4s;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin-top: -5px;
+    z-index: 1;
+}
+.team .slick-prev{
+    background: url('../../assets/img/prev-arrow.png') no-repeat center;
+    background-position: cover;
+    transition: 0.4s;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.team .slick-prev:hover{
+    background: url('../../assets/img/prev-arrow.png') no-repeat;
+    background-size: cover;
+    margin-top: -5px;
+    transition: 0.4s;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+
+.team .slick-next::before{
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: url('../../assets/img/next-arrow-hover.png') no-repeat center;
+    display: block;
+    background-size: cover;
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+    top:0;
+    left: 0;
+    transition: 0.4s;
+}
+
+ .team .slick-prev::before{
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: url('../../assets/img/prev-arrow-hover.png') no-repeat center;
+    display: block;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    top:0;
+    left: 0;
+    transition: 0.4s
+}
+
+.team .slick-next:hover::before, .team .slick-prev:hover::before{
+    opacity: 0.8;
+    transition: 0.4s;
+    top: 8px;
+    left: 3px;
+}
+
+.team .slick-next span, .team .slick-prev span{
+    position: relative;
+    z-index: 3;
+    font-size: 24px;
+    color: #797979;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transition:0.4s;
+    font-family: "Droid Sans", sans-serif;
+}
+
+.team .slick-next:hover span, .team .slick-prev:hover span{
+    position: relative;
+    z-index: 3;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top: 47%;
+    left: 20%;
+    transition: 0.4s;
+}
+
+.dark .team .slick-next span, .dark .team .slick-prev span{
+    color: #fff;
+}
+body .slick-next:focus, body .slick-next:hover{
+    background: url('../../assets/img/next-arrow.png') no-repeat center;
+    background-size: cover;
+
+}
+
+body .slick-prev:focus, body .slick-prev:hover{
+    background: url('../../assets/img/prev-arrow.png') no-repeat center;
+    background-size: cover;
+}
+
+@media (max-width: 1191.98px){
+    .team_slide_wrapper::before{
+        width: 180px;
+    }
+    .team_slide{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 991.98px){
+    .team{
+        margin-top: 130%;
+    }
+}
+
+@media (max-width: 767.98px){
+    .team .slick-next:hover, .team .slick-prev:hover{
+        background: transparent;
+        height: 38px;
+        color: #797979;
+    }
+    .team .slick-next:hover span, .team .slick-prev:hover span{
+        color: #797979;
+    }
+    .team_slide{
+        margin: 20px 27px;
+    }
+
+    .team .title{
+        max-width: 50%;
+    }
+    .team_slide_wrapper::before {
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 220px;
+        height: 310px;
+    }
+
+    .team .slick-next, .team .slick-prev{
+        top: 105%;
+    }
+    .team .slick-prev{
+        left: 23px;
+    }
+    .team .slick-next{
+        right: 23px;
+    }
+    .team .slick-dots li button:before{
+        font-size: 10px;
+    }
+    .dark .team .slick-dots li button:before{
+        font-size: 10px;
+        color: #fff;
+        opacity: 0.7;
+    }
+    .dark .team .slick-dots {
+        /* border: 2px solid #fff; */
+    }
+
+
+    .team .slick-dots li.slick-active button:before{
+        color: #5032EA;
+        font-size: 14px;
+    }
+
+    .dark .team .slick-dots li.slick-active button:before{
+        color: #fff;
+        font-size: 14px;
+        opacity: 1;
+    }
+    .team .slick-dots{
+        border: 2px solid #797979;
+        position: absolute;
+        display: block;
+        width: 214px;
+        margin: 0 auto;
+        height: 38px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px 0px 5px 0px;
+    }
+    .team .slick-next, .team .slick-prev {
+        background: none;
+        top: 100%;
+        height: 38px;
+    }
+    .team .slick-next:hover, .team .slick-prev:hover{
+         margin-top: 0;
+    }
+    .team .slick-next {
+        right: 50%;
+        border: 2px solid #797979;
+        transform: translateX(362%);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .team .slick-prev {
+        left: 50%;
+        transform: translateX(-362%);
+        border: 2px solid #797979;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .dark .team .slick-next, .dark .team .slick-prev, .dark .team .slick-dots{
+        color: #fff;
+        border-color: #fff;
+    }
+    .team .slick-next::before, .team .slick-prev::before{
+        content: none;
+    }
+    body .slick-next:focus, body .slick-next:hover{
+        background: none;
+    }
+    .team .slick-next span, .team .slick-prev span{
+        color: #797979;
+    }
+
+    .dark .team .slick-next span, .dark .team .slick-prev span{
+        color: #fff;
+    }
+}
+
+
+@media (max-width: 575.98px){
+   
+
+    .team_slide {
+        padding: 10px;
+        margin: 10px 20px 10px 10px;
+            height: 330px;
+            max-width: 100%;
+    }
+    .team_slide div a svg{
+       width: 21px;
+    }
+
+    
+    
+
+    
+    .team_slide div h6{
+        font-size: 14px;
+    }
+    .team_slide a img{
+        max-width: 20px;
+    }
+    .team_slide span{
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 425.98px){
+.team_slide_wrapper:hover::before {
+        height: 45%;
+    }
+
+    .team_slide span, .team_slide span.askar{
     margin-top: 12px;
     font-size: 11px;
     line-height: 15px;
-  }
+}
 
-  .team_slide {
+.team_slide {
     padding: 10px 5px;
     margin: 10px 15px 10px 10px;
-    height: 300px;
-  }
+    height: 270px;
+}
 }
