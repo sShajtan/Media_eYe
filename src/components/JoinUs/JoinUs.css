@@ -1,0 +1,121 @@
+.join_us{
+    padding-top: 50px;
+}
+
+
+.main_join_us{
+    background: url('../../assets/img/join_us_bg.png') no-repeat top;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    margin-bottom:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_join_us>img{
+    margin:150px auto 10px; 
+    width: 30%;
+}
+
+.join_us_button{
+   border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+    background: url('../../assets/img/learn_more_button_bg.png') no-repeat center;
+    background-size: contain;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin:0 auto;
+}
+
+.join_us_button::before{
+    content: '';
+    background: url('../../assets/img/signup_button_bg.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.join_us_button:hover{
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .join_us_button:hover{
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.join_us_button:hover::before{
+  transition: 0.4s;
+  opacity: 1;
+}
+
+
+
+@media (max-width: 767.98px){
+
+    .main_join_us>img {
+        margin: 0 auto;
+        width: 75%;
+    }
+
+    .main_join_us img{
+    margin:100px auto 10px; 
+}
+    .main_join_us{
+        height: auto;
+    }
+
+    .join_us_button {
+    font-size: 18px;
+    line-height: 18px;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: -60px;
+}
+}
+
+
+@media (max-width: 575.98px){
+    .main_join_us{
+        height: auto;
+    }
+}
+
+
+@media (max-width: 420.98px){
+    .main_join_us{
+        height: auto;
+    }
+}
+

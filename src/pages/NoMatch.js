@@ -1,15 +1,20 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
+
 
 const Nomatch = () => {
   let location = useLocation();
+  let history = useHistory();
 
   return (
-    <div>
-      <h3>
-        No match for <code>{location.pathname}</code>
-      </h3>
-    </div>
+    <div className="no_match">
+      <div className="container">
+        <div className="no_match_main">
+          <a className="goBack_button" onClick={() => history.goBack()}><span>&#129120; </span> GoBack</a>
+          <img src="img/404.png" />
+        </div>
+      </div>
+    </div >
   );
 };
 
