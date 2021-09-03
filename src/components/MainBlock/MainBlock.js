@@ -82,7 +82,7 @@ const MainBlock = (props) => {
         <div className="main_block_main">
           <div className="main_block_main_left">
             <img
-              alt="logo"
+              alt="MeDIA eYe NFT Portal logo"
               className="animate__animated animate__fadeInLeft wow logo"
               data-wow-duration="1s"
               data-wow-delay="0.5s"

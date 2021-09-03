@@ -13,7 +13,7 @@ const MainInfo = () => {
           data-wow-duration="1.5s"
           data-wow-delay="0.5s"
           src="img/nft_title.svg"
-          alt="title"
+          alt="What is an NFT"
         />
         <div className="main_info_main">
           <div className="main_info_left">
@@ -24,7 +24,7 @@ const MainInfo = () => {
               src="img/nft_img.png"
               alt="nft_image"
             />
-            <img className="title" src="img/nft_title.svg" alt="title" />
+            <img className="title" src="img/nft_title.svg" alt="What is an NFT" />
           </div>
           <div className="main_info_right">
             <p>

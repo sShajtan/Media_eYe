@@ -11,7 +11,7 @@ const MainHowWork = (props) => {
         data-wow-duration="1s"
         data-wow-delay="0.5s"
         src="img/howwork_title.svg"
-        alt="title"
+        alt="How it Works"
       />
       <div className="main_howwork_wrapper">
         <div className="container">

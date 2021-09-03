@@ -10,7 +10,7 @@ const MainHow = (props) => {
         data-wow-duration="1.5s"
         data-wow-delay="0.5s"
         src="img/how_title.svg"
-        alt="title"
+        alt="MeDIA eYe NFT Portal"
       />
       <div className="main_how_main_wrapper">
         <div className="container">
@@ -25,7 +25,7 @@ const MainHow = (props) => {
               />
             </div>
             <div className="main_how_center">
-              <img src="img/color_logo.png" alt="nft_image" />
+              <img src="img/color_logo.png" alt="MeDIA eYe NFT Portal logo" />
               <p>
                 MeDIA eYe NFT Portal puts the power of blockchain to work for your
                 next marketing campaign, promotion, rewards program or creating a
