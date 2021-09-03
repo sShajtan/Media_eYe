@@ -35,7 +35,7 @@ const Popup = (props) => {
           (result) => {
             setEmail("");
             setShowPopup(false);
-            toggleMainPopup();
+            props.togglePopup();
             toggleMessagePopup(true);
           },
           (error) => {
