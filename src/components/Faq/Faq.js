@@ -56,7 +56,7 @@ const Faq = () => {
             >
               <div onClick={() => setQuestion_2(!question_2)}>
                 <h5>
-                  Can I create an NFT on Media eYe without putting it on sale?{" "}
+                  Can I create an NFT on MeDIA eYe without putting it on sale?{" "}
                 </h5>
                 <strong className={question_2 ? "active" : null}>&#10095;</strong>
               </div>

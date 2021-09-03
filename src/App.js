@@ -77,6 +77,7 @@ const App = () => {
         <TimerPopup showPopup={showPopup} togglePopup={togglePopup} toggleMessagePopup={toggleMessagePopup} />
         <BusinessPopup showPopup={showBusinessPopup} togglePopup={toggleBusinessPopup} toggleMessagePopup={toggleMessagePopup} />
         <MessagePopup
+          darkTheme={darkTheme}
           showPopup={showMessagePopup}
           togglePopup={toggleMessagePopup}
         />

@@ -31,7 +31,7 @@ const MainHow = (props) => {
                 next marketing campaign, promotion, rewards program or creating a
                 collectible. <br />
                 <br />
-                Sign Up with Googe or Facebook.
+                Sign up with Google or Facebook.
               </p>
               <div className="mobile_icons">
                 <svg
