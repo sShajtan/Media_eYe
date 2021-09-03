@@ -1,7 +1,8 @@
 import React from "react";
 import "./Tokenomics.css";
 
-const Tokenomics = () => {
+const Tokenomics = (props) => {
+  const {darktheme } = props;
   return (
     <div className="tokenomics">
       <div className="container">
@@ -11,6 +12,7 @@ const Tokenomics = () => {
           data-wow-delay="0.5s"
           src="img/tokenomics_title.svg"
           alt="Tokenomics"
+          src={darktheme ? "img/tokenomics_title_dark.svg": "img/tokenomics_title.svg" }
         />
         <div className="tokenomics_main_wrapper">
           <h4>

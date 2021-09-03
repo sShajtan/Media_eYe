@@ -4,8 +4,8 @@
   padding-bottom: 800px;
 }
 
-.main_howwork_wrapper{
-  background: url('../../assets/img/howworks_bg.png') no-repeat center;
+.main_howwork_wrapper {
+  background: url("../../assets/img/howworks_bg.png") no-repeat center;
   background-size: contain;
 }
 
@@ -25,6 +25,15 @@
   max-width: 30%;
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+.main_howwork_main_block .number {
+  width: 110px;
+}
+
+.line_sm {
+  margin-top: 10px;
+  width: 227px;
 }
 
 .main_howwork_main_block h3 {
@@ -71,8 +80,8 @@
 }
 
 @media (max-width: 767.98px) {
-  .main_howwork_wrapper{
-    background:url('../../assets/img/how_it_works_mobile.png') no-repeat top;
+  .main_howwork_wrapper {
+    background: url("../../assets/img/how_it_works_mobile.png") no-repeat top;
     background-size: cover;
   }
   .main_howwork_main {

@@ -17,17 +17,17 @@ const Main = (props) => {
   return (
     <React.Fragment>
       <div onClick={closeNftCollapse}>
-        <MainBlock togglePopup={togglePopup} />
-        <MainInfo />
+        <MainBlock togglePopup={togglePopup} darkTheme={darkTheme}/>
+        <MainInfo darkTheme={darkTheme} />
         <MainHow toggleSoonPopup={toggleSoonPopup} darkTheme={darkTheme} />
-        <MainHowWork togglePartnersPopup={togglePartnersPopup} toggleMessagePopup={toggleMessagePopup} />
-        <Tokenomics />
-        <Roadmap />
-        <Team />
-        <Partners toggleBusinessPopup={toggleBusinessPopup} toggleMessagePopup={toggleMessagePopup} />
-        <Community />
+        <MainHowWork togglePartnersPopup={togglePartnersPopup} toggleMessagePopup={toggleMessagePopup} darkTheme={darkTheme}/>
+        <Tokenomics darkTheme={darkTheme}/>
+        <Roadmap darkTheme={darkTheme}/>
+        <Team darkTheme={darkTheme}/>
+        <Partners toggleBusinessPopup={toggleBusinessPopup} toggleMessagePopup={toggleMessagePopup} darkTheme={darkTheme}/>
+        <Community darkTheme={darkTheme} />
         <MainForm toggleMessagePopup={toggleMessagePopup} />
-        <Faq />
+        <Faq darkTheme={darkTheme} />
       </div>
     </React.Fragment>
   );

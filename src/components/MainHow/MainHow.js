@@ -9,8 +9,7 @@ const MainHow = (props) => {
         className="title animate__animated animate__fadeInLeft wow"
         data-wow-duration="1.5s"
         data-wow-delay="0.5s"
-        src="img/how_title.svg"
-        alt="MeDIA eYe NFT Portal"
+        src={darkTheme ? "img/how_title_dark.svg": "img/how_title.svg" }
       />
       <div className="main_how_main_wrapper">
         <div className="container">

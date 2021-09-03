@@ -1,4 +1,11 @@
 import React from "react";
+import All from "../../Icons/Categories/All";
+import Entertaiment from "../../Icons/Categories/Entertaiment";
+import Art from "../../Icons/Categories/Art";
+import Media from "../../Icons/Categories/Media";
+import Crypto from "../../Icons/Categories/Crypto";
+import Business from "../../Icons/Categories/Business";
+import Sport from "../../Icons/Categories/Sport";
 import "./ContentMarketplaceHeader.css";
 
 const ContentMarketplaceHeader = () => {
@@ -103,19 +110,62 @@ const ContentMarketplaceHeader = () => {
                                             <span>&#10095;</span>
                                         </div>
                                         <div className="filter_fields categories_filter">
-                                            <button><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15.4062 17H1.59375C0.714645 17 0 16.2846 0 15.4062V1.59375C0 0.715424 0.714645 0 1.59375 0H15.4062C16.2854 0 17 0.715424 17 1.59375V15.4062C17 16.2846 16.2854 17 15.4062 17ZM1.59375 1.0625C1.3005 1.0625 1.0625 1.30115 1.0625 1.59375V15.4062C1.0625 15.6989 1.3005 15.9375 1.59375 15.9375H15.4062C15.6995 15.9375 15.9375 15.6989 15.9375 15.4062V1.59375C15.9375 1.30115 15.6995 1.0625 15.4062 1.0625H1.59375Z" fill="white" />
-                                                <path d="M16.4688 9.03125H0.53125C0.237999 9.03125 0 8.79325 0 8.5C0 8.20675 0.237999 7.96875 0.53125 7.96875H16.4688C16.762 7.96875 17 8.20675 17 8.5C17 8.79325 16.762 9.03125 16.4688 9.03125Z" fill="white" />
-                                                <path d="M8.5 17C8.20675 17 7.96875 16.762 7.96875 16.4688V0.53125C7.96875 0.237999 8.20675 0 8.5 0C8.79325 0 9.03125 0.237999 9.03125 0.53125V16.4688C9.03125 16.762 8.79325 17 8.5 17Z" fill="white" />
-                                            </svg>
-                                                All</button>
-                                            <button>Entertainment</button>
+                                            <button><All />All</button>
+                                            <button><Entertaiment />Entertainment</button>
+                                            <button><Media />Media</button>
+                                            <button><Art />Art</button>
+                                            <button><Crypto />Crypto</button>
+                                            <button><Business />Business</button>
+                                            <button><Sport />Sports</button>
                                         </div>
                                     </li>
-                                    <li><div className="filter_title status_title active">
-                                        <span>Status</span>
-                                        <span>&#10095;</span>
-                                    </div></li>
+                                    <li>
+                                        <div className="filter_title on_sale_in_title active">
+                                            <span>On Sale In</span>
+                                            <span>&#10095;</span>
+                                        </div>
+                                        <div className="filter_fields on_sale_in_filter">
+                                            <div className="on_sale_in_search">
+                                                <input placeholder="filter" />
+                                                <button>
+                                                    <svg
+                                                        width="29"
+                                                        height="29"
+                                                        viewBox="0 0 29 29"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <circle
+                                                            cx="13.2923"
+                                                            cy="13.2916"
+                                                            r="8.45833"
+                                                            stroke="#555555"
+                                                            strokeWidth="2"
+                                                        />
+                                                        <path
+                                                            d="M13.291 9.66675C12.815 9.66675 12.3436 9.76051 11.9038 9.94268C11.464 10.1249 11.0644 10.3919 10.7278 10.7285C10.3911 11.0651 10.1241 11.4647 9.94195 11.9045C9.75978 12.3443 9.66602 12.8157 9.66602 13.2917"
+                                                            stroke="#555555"
+                                                            strokeWidth="2"
+                                                            strokeLinecap="round"
+                                                        />
+                                                        <path
+                                                            d="M24.166 24.1667L20.541 20.5417"
+                                                            stroke="#555555"
+                                                            strokeWidth="2"
+                                                            strokeLinecap="round"
+                                                        />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div className="on_sale_in_checkbox">
+                                                <div><label for="11"></label><input name="11" type="checkbox" className="checkbox" />ETH</div>
+                                                <div><label></label><input type="checkbox" className="checkbox" />WETH</div>
+                                                <div><label></label><input type="checkbox" className="checkbox" />0xBTC</div>
+                                                <div><label></label><input type="checkbox" className="checkbox" />1337</div>
+                                                <div><label></label><input type="checkbox" className="checkbox" />1MT</div>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
