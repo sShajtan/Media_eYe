@@ -17,7 +17,7 @@ const Faq = () => {
       <div className="faq_wrapper">
         <div className="container">
           <img
-            alt="title"
+            alt="FAQ"
             className="title  animate__animated animate__fadeIn wow"
             data-wow-duration="1s"
             data-wow-delay="0.5s"

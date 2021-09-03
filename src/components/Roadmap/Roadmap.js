@@ -14,6 +14,7 @@ const Roadmap = () => {
           data-wow-duration="1s"
           data-wow-delay="0.5s"
           src="img/roadmap_title.svg"
+          alt="Roadmap"
         />
         <div className="roadmap_main">
           <div className="roadmap_main_block_wrapper active">

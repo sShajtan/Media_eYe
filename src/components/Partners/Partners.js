@@ -84,6 +84,7 @@ const Partners = (props) => {
             data-wow-duration="1s"
             data-wow-delay="0.5s"
             src="img/partners_title.png"
+            alt="Partners"
           />
           <div
             className="team_main animate__animated animate__fadeInUp wow"
@@ -94,7 +95,7 @@ const Partners = (props) => {
               <div className="partners_slide_wrapper">
                 <div className="partners_slide">
                   <a href="https://quai-invest.net/" target="_blank">
-                    <img src="img/partners/1.png" />
+                    <img src="img/partners/1.png" alt="QUAI Invest" />
                   </a>
                 </div>
               </div>
@@ -105,6 +106,7 @@ const Partners = (props) => {
                       src={
                         theme ? "img/partners/2-dark.png" : "img/partners/2.png"
                       }
+                      alt="Filecoin"
                     />
                   </a>
                 </div>
@@ -116,6 +118,7 @@ const Partners = (props) => {
                       src={
                         theme ? "img/partners/3-dark.png" : "img/partners/3.png"
                       }
+                      alt="Mogul Productions"
                     />
                   </a>
                 </div>
@@ -127,6 +130,7 @@ const Partners = (props) => {
                       src={
                         theme ? "img/partners/6-dark.png" : "img/partners/6.png"
                       }
+                      alt="Ramp"
                     />
                   </a>
                 </div>
@@ -138,6 +142,7 @@ const Partners = (props) => {
                       src={
                         theme ? "img/partners/4-dark.png" : "img/partners/4.png"
                       }
+                      alt="Big Leap"
                     />
                   </a>
                 </div>
@@ -150,6 +155,7 @@ const Partners = (props) => {
                   <a href="https://apeswap.finance/" target="_blank">
                     <img
                       src={theme ? "img/partners/8.png" : "img/partners/8.png"}
+                      alt="ApeSwap"
                     />
                   </a>
                 </div>
