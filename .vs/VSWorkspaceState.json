@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public"
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Community",
+    "\\src\\components\\Faq",
+    "\\src\\components\\Header",
+    "\\src\\components\\Partners",
+    "\\src\\components\\Roadmap",
+    "\\src\\components\\Team",
+    "\\src\\components\\Tokenomics"
   ],
   "PreviewInSolutionExplorer": false
 }
