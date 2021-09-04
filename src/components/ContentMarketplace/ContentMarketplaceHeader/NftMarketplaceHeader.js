@@ -8,9 +8,9 @@ import Business from "../../Icons/Categories/Business";
 import Sport from "../../Icons/Categories/Sport";
 import "./ContentMarketplaceHeader.css";
 import { Collapse } from "react-collapse";
-import Filter from "../Filter/Filter"; 
+import Filter from "../Filter/Filter";
 
-const ContentMarketplaceHeader = (props) => {
+const NftMarketplaceHeader = (props) => {
     const {darkTheme} = props;
 const [showMobileCategories, setShowMobileCategories] = useState(false);
 
@@ -26,7 +26,7 @@ const [showMobileCategories, setShowMobileCategories] = useState(false);
         <div className="content_marketplace_header">
             <div className="container">
                 <div className="content_marketplace_header_main">
-                    <img src={darkTheme ? "img/content_marketplace_title_dark.png" : "img/content_marketplace_title.png"} alt="title" />
+                    <img src={darkTheme ? "img/nft_marketplace_title_dark.png" : "img/nft_marketplace_title.png"} alt="title" />
                     <div className="content_marketplace_header_main_wrapper">
                         <div className="content_marketplace_header_menu_mobile">
                             <button className={showMobileCategories ? "categories_mobile_button open" : "categories_mobile_button" } onClick={toggleMobileCategories}>
@@ -45,16 +45,15 @@ const [showMobileCategories, setShowMobileCategories] = useState(false);
                             </Collapse>
                         </div>
                         <div className="content_marketplace_header_menu">
-                            <button className="active"><span>All</span></button>
-                            <button><span>Entertainment</span></button>
-                            <button><span>Media</span></button>
-                            <button><span>Art</span></button>
-                            <button><span>Crypto</span></button>
-                            <button><span>Business</span></button>
-                            <button><span>Sports</span></button>
+                            <button className="active">All</button>
+                            <button>Entertainment</button>
+                            <button>Media</button>
+                            <button>Art</button>
+                            <button>Crypto</button>
+                            <button>Business</button>
+                            <button>Sports</button>
                         </div>
                         <Filter />
-                        
                     </div>
                 </div>
             </div>
@@ -62,4 +61,4 @@ const [showMobileCategories, setShowMobileCategories] = useState(false);
     );
 };
 
-export default ContentMarketplaceHeader;
+export default NftMarketplaceHeader;
