@@ -113,10 +113,10 @@ const Partners = (props) => {
               </div>
               <div className="partners_slide_wrapper">
                 <div className="partners_slide">
-                  <a href="https://www.mogulproductions.com/" target="_blank">
+                  <a href="https://twitter.com/squirrel_wallet" target="_blank">
                     <img
                       src={
-                        theme ? "img/partners/3-dark.png" : "img/partners/3.png"
+                        theme ? "img/partners/9.png" : "img/partners/9.png"
                       }
                       alt="Mogul Productions"
                     />

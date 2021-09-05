@@ -1,7 +1,7 @@
 import React from "react";
-import "./ContentMarketplaceFeatured.css";
+import "./MarketplaceSlider.css";
 import Slider from "react-slick";
-import ContentMarketplaceBlock from "../ContentMarketplaceBlock/ContentMarketplaceBlock";
+import MarketplaceBlock from "../MarketplaceBlock/MarketplaceBlock";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -31,7 +31,8 @@ function SamplePrevArrow(props) {
     );
 }
 
-const ContentMarketplaceFeatured = () => {
+const MarketplaceSlider = (props) => {
+    const {title} = props
     const settings = {
         dots: false,
         infinite: true,
@@ -45,11 +46,31 @@ const ContentMarketplaceFeatured = () => {
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
         responsive: [
+             {
+                breakpoint: 991,
+                settings: {
+                slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                slidesToShow: 2,
+                dots: true,
+                },
+            },
+            {
+                breakpoint: 574,
+                settings: {
+                dots: true,
+                slidesToShow: 1,
+                },
+            },
         ],
     };
 
     return (
-        <div className="content_marketplace_featured">
+        <div className="marketplace_slider">
             <link
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -66,14 +87,14 @@ const ContentMarketplaceFeatured = () => {
                 href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
             <div className="container">
-                <h4>Featured Content</h4>
-                <div className="content_marketplace_featured_main">
+                <h4>{title}</h4>
+                <div className="marketplace_slider_main">
                     <Slider {...settings}>
-                        <ContentMarketplaceBlock />
-                        <ContentMarketplaceBlock />
-                        <ContentMarketplaceBlock />
-                        <ContentMarketplaceBlock />
-                        <ContentMarketplaceBlock />
+                        <MarketplaceBlock />
+                        <MarketplaceBlock />
+                        <MarketplaceBlock />
+                        <MarketplaceBlock />
+                        <MarketplaceBlock />
                     </Slider>
 
                 </div>
@@ -82,4 +103,4 @@ const ContentMarketplaceFeatured = () => {
     );
 };
 
-export default ContentMarketplaceFeatured;
+export default MarketplaceSlider;

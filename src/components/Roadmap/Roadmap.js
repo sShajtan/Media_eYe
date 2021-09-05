@@ -2,7 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./Roadmap.css";
 
-const Roadmap = () => {
+const Roadmap = (props) => {
+  const {darktheme } = props;
   const theme = useSelector((state) => state.app.darkTheme);
   return (
     <div className="roadmap">
@@ -13,8 +14,7 @@ const Roadmap = () => {
           className="title animate__animated animate__zoomIn wow"
           data-wow-duration="1s"
           data-wow-delay="0.5s"
-          src="img/roadmap_title.svg"
-          alt="Roadmap"
+          src={darktheme ? "img/roadmap_title_dark.svg" : "img/roadmap_title.svg"}
         />
         <div className="roadmap_main">
           <div className="roadmap_main_block_wrapper active">

@@ -1,22 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import Main from "./pages/Main";
-import Header from "./components/Header/Header";
-import TimerPopup from "./components/TimerPopup/Popup";
-import BusinessPopup from "./components/BusinessPopup/Popup";
-import SoonPopup from "./components/SoonPopup/Popup";
-import PartnersPopup from "./components/PartnersPopup/Popup";
-import Footer from "./components/Footer/Footer";
-import NoMatch from "./pages/NoMatch";
-import "./App.css";
-import "./fonts/Poppins/stylesheet.css";
-import "./fonts/Rambla/stylesheet.css";
-import "./fonts/Roboto/stylesheet.css";
-import "./fonts/neumatic/stylesheet.css";
-import { updateTimerPopup } from "./store/app/appSlice";
-import MessagePopup from "./components/MessagePopup/MessagePopup";
-import ContentMarketplace from "./pages/ContentMarketplace";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import Main from './pages/Main';
+import Header from './components/Header/Header';
+import TimerPopup from './components/TimerPopup/Popup';
+import BusinessPopup from './components/BusinessPopup/Popup';
+import SoonPopup from './components/SoonPopup/Popup';
+import PartnersPopup from './components/PartnersPopup/Popup';
+import Footer from './components/Footer/Footer';
+import NoMatch from './pages/NoMatch';
+import './App.css';
+import './fonts/Poppins/stylesheet.css';
+import './fonts/Rambla/stylesheet.css';
+import './fonts/Roboto/stylesheet.css';
+import './fonts/neumatic/stylesheet.css';
+import { updateTimerPopup } from './store/app/appSlice';
+import MessagePopup from './components/MessagePopup/MessagePopup';
+import ContentMarketplace from './pages/ContentMarketplace';
+import NftMarketplace from './pages/NftMarketplace';
+import LogIn from './pages/LogIn';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -32,7 +35,7 @@ const App = () => {
     if (timerPopup === false) {
       dispatch(updateTimerPopup());
       setTimeout(() => {
-        setShowPopup(true)
+        setShowPopup(true);
       }, 10000);
     }
   });
@@ -65,17 +68,25 @@ const App = () => {
     setShowNftCollpase(false);
   };
 
-
-
-
-
   return (
     <Router>
-      <div className={darkTheme ? "App dark" : "App"}>
+      <div className={darkTheme ? 'App dark' : 'App'}>
         <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
-        <PartnersPopup showPopup={showPartnersPopup} togglePopup={togglePartnersPopup} toggleMessagePopup={toggleMessagePopup} />
-        <TimerPopup showPopup={showPopup} togglePopup={togglePopup} toggleMessagePopup={toggleMessagePopup} />
-        <BusinessPopup showPopup={showBusinessPopup} togglePopup={toggleBusinessPopup} toggleMessagePopup={toggleMessagePopup} />
+        <PartnersPopup
+          showPopup={showPartnersPopup}
+          togglePopup={togglePartnersPopup}
+          toggleMessagePopup={toggleMessagePopup}
+        />
+        <TimerPopup
+          showPopup={showPopup}
+          togglePopup={togglePopup}
+          toggleMessagePopup={toggleMessagePopup}
+        />
+        <BusinessPopup
+          showPopup={showBusinessPopup}
+          togglePopup={toggleBusinessPopup}
+          toggleMessagePopup={toggleMessagePopup}
+        />
         <MessagePopup
           darkTheme={darkTheme}
           showPopup={showMessagePopup}
@@ -99,10 +110,24 @@ const App = () => {
               closeNftCollapse={closeNftCollapse}
             />
           </Route>
-          {/* <Route path="/content-marketplace" exact>
-            <ContentMarketplace closeNftCollapse={closeNftCollapse}>
-            </ContentMarketplace>
-          </Route> */}
+          <Route path="/content-marketplace" exact>
+            <ContentMarketplace
+              closeNftCollapse={closeNftCollapse}
+              darkTheme={darkTheme}
+            ></ContentMarketplace>
+          </Route>
+          <Route path="/nft-marketplace" exact>
+          <NftMarketplace
+              closeNftCollapse={closeNftCollapse}
+              darkTheme={darkTheme}
+            ></NftMarketplace>
+          </Route>
+          <Route path="/signup" exact>
+              <SignUp darkTheme={darkTheme} />
+          </Route>
+          <Route path="/login" exact>
+            <LogIn darkTheme={darkTheme} />
+          </Route>
           <Route path="*">
             <NoMatch />
           </Route>
