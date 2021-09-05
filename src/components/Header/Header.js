@@ -7,6 +7,7 @@ import {
 import { Collapse } from "react-collapse";
 import { updateTheme } from "../../store/app/appSlice";
 import "./Header.css";
+import { NavLink } from "react-router-dom";
 
 const Header = (props) => {
   const { toggleSoonPopup, toggleNftCollapse, showNftCollapse } = props;
@@ -132,14 +133,14 @@ const Header = (props) => {
               <button className="ntf_header" onClick={toggleSoonPopup}>
                 Create NFT
               </button>
-              <div className="auth">
-                <a className="login" onClick={toggleSoonPopup}>
+              {/* <div className="auth">
+                <NavLink  to="/login" className="login">
                   <span>Log in</span>
-                </a>
-                <a className="signup" onClick={toggleSoonPopup}>
+                </NavLink>
+                <NavLink to="/signup" className="signup">
                   <span>Sign Up</span>
-                </a> 
-              </div>
+                </NavLink> 
+              </div> */}
             </div>
           </div>
         </div>
