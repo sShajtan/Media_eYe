@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
+    "\\src",
     "\\src\\components",
-    "\\src\\components\\Community",
     "\\src\\components\\Faq",
+    "\\src\\components\\Footer",
     "\\src\\components\\Header",
     "\\src\\components\\Partners",
     "\\src\\components\\Roadmap",
