@@ -155,7 +155,7 @@ const Header = (props) => {
               <a href="https://mediaeyenft.com/pitchdesk/" target="_blank" rel="noreferrer">
                 Pitchdeck
               </a>
-              <a href="https://mediaeyenft.com/pitchdesk/fundraising/" target="_blank" rel="noreferrer">Fundraising</a>
+              <a href="https://mediaeyenft.com/pitchdeck/whitelist/" target="_blank" rel="noreferrer">Fundraising</a>
             </Collapse>
           </div>
           <a

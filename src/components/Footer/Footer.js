@@ -58,7 +58,7 @@ const Footer = (props) => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://mediaeyenft.com/pitchdeck/fundraising/" target="_blank" rel="noreferrer">
+                  <a href="https://mediaeyenft.com/pitchdeck/whitelist/" target="_blank" rel="noreferrer">
                     Fundraising
                   </a>
                 </li>
