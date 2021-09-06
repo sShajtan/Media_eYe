@@ -9,6 +9,7 @@ import SoonPopup from './components/SoonPopup/Popup';
 import PartnersPopup from './components/PartnersPopup/Popup';
 import Footer from './components/Footer/Footer';
 import NoMatch from './pages/NoMatch';
+import Gallerey from './pages/Gallerey';
 import './App.css';
 import './fonts/Poppins/stylesheet.css';
 import './fonts/Rambla/stylesheet.css';
@@ -127,6 +128,9 @@ const App = () => {
           </Route>
           <Route path="/login" exact>
             <LogIn darkTheme={darkTheme} />
+          </Route>
+          <Route path="/gallerey" exact>
+            <Gallerey  darkTheme={darkTheme} />
           </Route>
           <Route path="*">
             <NoMatch />

@@ -7,6 +7,18 @@
 }
 
 .signup_page .goBack_button {
+  color: #000;
+}
+
+.signup_page .goBack_button span {
+  color: #000;
+}
+
+.dark .signup_page .goBack_button {
+  color: #fff;
+}
+
+.dark .signup_page .goBack_button span {
   color: #fff;
 }
 .signup_left {
@@ -18,11 +30,15 @@
 .signup_right {
   width: 70%;
   min-height: 100vh;
-  background-color: #141233;
+  background-color: #e5e5e5;
   background-image: url('../../assets/img/login_right_bg.png');
   background-repeat: no-repeat;
   background-position: center left;
   background-size: cover;
+}
+
+.dark .signup_right {
+  background-color: #141233;
 }
 
 .signup_page_main {
@@ -40,8 +56,12 @@
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: #000;
   margin: 40px 0 20px;
+}
+
+.dark .signup_page h2 {
+  color: #fff;
 }
 
 .signup_form {
@@ -88,9 +108,13 @@
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: #000;
   margin-bottom: 5px;
   margin-top: 15px;
+}
+
+.dark .signup_form div label {
+  color: #fff;
 }
 
 .signup_form div input {
@@ -102,9 +126,13 @@
   border-radius: 12px;
   padding: 5px 40px 5px 10px;
   outline: none;
-  color: #fff;
+  color: #000;
   font-size: 18px;
   width: 100%;
+}
+
+.dark .signup_form div input {
+  color: #fff;
 }
 
 .sign_up_btn {
@@ -128,11 +156,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #000;
 }
 
 .dark .sign_up_btn {
   background: url('../../assets/img/check_faq_bg.png') no-repeat center;
   background-size: contain;
+  color: #fff;
 }
 
 .sign_up_btn {
@@ -181,7 +211,11 @@
   line-height: 30px;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: #000;
+}
+
+.dark .signup_page_main span {
+  color: #fff;
 }
 
 .signup_page_main span a {

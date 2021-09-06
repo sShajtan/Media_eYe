@@ -1,5 +1,5 @@
 import React from "react";
-import ContentMarketplaceHeader from "../components/ContentMarketplace/ContentMarketplaceHeader/ContentMarketplaceHeader";
+import ContentMarketplaceHeader from "../components/ContentMarketplace/MarketplaceHeader/ContentMarketplaceHeader";
 import MarketplaceMain from "../components/ContentMarketplace/MarketplaceMain/MarketplaceMain";
 import MarketplaceSlider from "../components/ContentMarketplace/MarketplaceSlider/MarketplaceSlider";
 

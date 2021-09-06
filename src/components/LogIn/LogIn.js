@@ -7,13 +7,17 @@ const [showPassword, setShowPassword] = useState(false);
 let history = useHistory();
   return (
     <div className="login_page">
+    <link
+        href="https://fonts.googleapis.com/css?family=Droid+Sans"
+        rel="stylesheet"
+      ></link>
         <div className="login_left">
         </div>
         <div className="login_right">
           <div className="container">
             <div className="login_page_main">
               <a className="goBack_button" onClick={() => history.goBack()}>
-                <span>&#129120; </span> GoBack
+                <span>	&#8592;</span> GoBack
               </a>
               <h2>LOG IN</h2>
               <form className="login_form">
