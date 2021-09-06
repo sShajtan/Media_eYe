@@ -574,7 +574,7 @@ div.menu-item .soc_header_mobile {
     width: 78px;
     font-size: 12px;
   }
-  button.ntf_header {
+  .ntf_header {
     height: 42px;
     width: 78px;
     margin-left: 10px;
@@ -850,6 +850,9 @@ div.menu-item .soc_header_mobile {
   outline: none;
   height: 40px;
   width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ntf_header:hover {

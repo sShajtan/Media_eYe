@@ -21,6 +21,7 @@ import ContentMarketplace from './pages/ContentMarketplace';
 import NftMarketplace from './pages/NftMarketplace';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
+import ConnectWallet from './pages/ConnectWallet';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -131,6 +132,9 @@ const App = () => {
           </Route>
           <Route path="/gallerey" exact>
             <Gallerey  darkTheme={darkTheme} />
+          </Route>
+          <Route path="/connect-wallet" exact>
+            <ConnectWallet  darkTheme={darkTheme} />
           </Route>
           <Route path="*">
             <NoMatch />

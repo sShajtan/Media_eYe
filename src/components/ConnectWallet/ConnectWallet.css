@@ -1,0 +1,217 @@
+.connect_wallet {
+  min-height: 100vh;
+  position: absolute;
+  z-index: 11112;
+  display: flex;
+  width: 100%;
+}
+
+.connect_wallet .goBack_button {
+  padding: 0;
+  color: #000;
+}
+
+.dark .connect_wallet .goBack_button {
+  color: #fff;
+}
+.connect_wallet_left {
+  background: url('../../assets/img/connect_wallet_left.png') no-repeat center;
+  background-size: cover;
+  width: 30%;
+}
+
+.connect_wallet_right {
+  width: 70%;
+  min-height: 100vh;
+  background-color: #e5e5e5;
+  background-image: url('../../assets/img/login_right_bg.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .connect_wallet_right {
+  background-color: #141233;
+}
+
+.connect_wallet_main {
+  max-width: 350px;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.dark .connect_wallet_main {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.connect_wallet_main button {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.connect_wallet_main h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 107.04%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #000;
+  margin: 20px 0;
+}
+
+.dark .connect_wallet_main h2 {
+  color: #fff;
+}
+
+.connect_wallet span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+.dark .connect_wallet span {
+  color: #afafaf;
+}
+
+.connect_wallet button {
+  cursor: pointer;
+}
+
+.connect_wallet .connect_wallet_networks {
+  margin: 20px 0;
+  display: flex;
+}
+
+.connect_wallet .connect_wallet_networks button {
+  max-width: 100px;
+}
+
+.connect_wallet_walletss button {
+  width: 276px;
+  height: 47px;
+}
+.connect_wallet_networks button {
+  width: 88px;
+  height: 32px;
+  margin-right: 20px;
+}
+
+.connect_wallet_networks button:first-child {
+  background: url('../../assets/img/connect-wallet/1.png') no-repeat center;
+  background-size: contain;
+}
+
+.dark .connect_wallet_networks button:first-child {
+  background: url('../../assets/img/connect-wallet/1_dark.png') no-repeat center;
+  background-size: contain;
+}
+
+.connect_wallet_networks button:first-child:hover {
+  background: url('../../assets/img/connect-wallet/1_hover.png') no-repeat
+    center;
+  background-size: contain;
+}
+
+.connect_wallet_networks button:nth-child(2) {
+  background: url('../../assets/img/connect-wallet/3.png') no-repeat center;
+  background-size: contain;
+}
+
+.dark .connect_wallet_networks button:nth-child(2) {
+  background: url('../../assets/img/connect-wallet/2_dark.png') no-repeat center;
+  background-size: contain;
+}
+
+.connect_wallet_networks button:nth-child(2):hover {
+  background: url('../../assets/img/connect-wallet/2_hover.png') no-repeat
+    center;
+  background-size: contain;
+}
+
+.connect_wallet_walletss button:first-child {
+  background: url('../../assets/img/connect-wallet/3.png') no-repeat center;
+  background-size: contain;
+}
+
+.dark .connect_wallet_walletss button:first-child {
+  background: url('../../assets/img/connect-wallet/3_dark.png') no-repeat center;
+  background-size: contain;
+}
+
+.connect_wallet_walletss button:hover:first-child {
+  background: url('../../assets/img/connect-wallet/3_hover.png') no-repeat
+    center;
+  background-size: contain;
+}
+
+.connect_wallet_walletss button:nth-child(2) {
+  background: url('../../assets/img/connect-wallet/4.png') no-repeat center;
+  background-size: contain;
+}
+
+.dark .connect_wallet_walletss button:nth-child(2) {
+  background: url('../../assets/img/connect-wallet/4_dark.png') no-repeat center;
+  background-size: contain;
+}
+
+.connect_wallet_walletss button:hover:nth-child(2) {
+  background: url('../../assets/img/connect-wallet/4_hover.png') no-repeat
+    center;
+  background-size: contain;
+}
+
+.connect_wallet_walletss button:nth-child(3) {
+  background: url('../../assets/img/connect-wallet/5.png') no-repeat center;
+  background-size: contain;
+}
+
+.dark .connect_wallet_walletss button:nth-child(3) {
+  background: url('../../assets/img/connect-wallet/5_dark.png') no-repeat center;
+  background-size: contain;
+}
+
+.connect_wallet_walletss button:hover:nth-child(3) {
+  background: url('../../assets/img/connect-wallet/5_hover.png') no-repeat
+    center;
+  background-size: contain;
+}
+
+@media (max-width: 991.98px) {
+  .connect_wallet_left {
+    display: none;
+  }
+
+  .connect_wallet_right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .connect_wallet_main {
+    max-width: 310px;
+  }
+
+  .connect_wallet_walletss button {
+    width: 235px;
+    height: 47px;
+  }
+}

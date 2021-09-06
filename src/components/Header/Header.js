@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import { updateTheme } from '../../store/app/appSlice';
 import './Header.css';
@@ -113,14 +113,14 @@ const Header = (props) => {
                   </div>
                 </div>
               </div>
-              <button className="ntf_header" onClick={toggleSoonPopup}>
+              <button className="ntf_header"  onClick={toggleSoonPopup}>
                 Create NFT
               </button>
-              {/* <div className="auth">
+               {/* <div className="auth">
                 <NavLink  to="/login" className="login">
                   <span>Log in</span>
                 </NavLink>
-                <NavLink to="/signup" className="signup">
+                <NavLink to="/connect-wallet" className="signup">
                   <span>Sign Up</span>
                 </NavLink> 
               </div> */}
