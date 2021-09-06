@@ -2,8 +2,8 @@ import React from "react";
 import "./MainInfo.css";
 import { Link } from "react-scroll";
 
-const MainInfo = () => {
-
+const MainInfo = (props) => {
+const {  darkTheme } = props;
 
   return (
     <div className="main_info" id="about">
@@ -12,8 +12,7 @@ const MainInfo = () => {
           className="title animate__animated animate__fadeInRight wow"
           data-wow-duration="1.5s"
           data-wow-delay="0.5s"
-          src="img/nft_title.svg"
-          alt="What is an NFT"
+          src={darkTheme ? "img/nft_title_dark.svg" : "img/nft_title.svg" }
         />
         <div className="main_info_main">
           <div className="main_info_left">

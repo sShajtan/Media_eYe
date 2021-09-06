@@ -1,0 +1,227 @@
+.signup_page {
+  min-height: 100vh;
+  position: absolute;
+  z-index: 11112;
+  display: flex;
+  width: 100%;
+}
+
+.signup_page .goBack_button {
+  color: #fff;
+}
+.signup_left {
+  background: url('../../assets/img/signup_left.png') no-repeat center;
+  background-size: cover;
+  width: 30%;
+}
+
+.signup_right {
+  width: 70%;
+  min-height: 100vh;
+  background-color: #141233;
+  background-image: url('../../assets/img/login_right_bg.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+}
+
+.signup_page_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup_page h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 40px 0 20px;
+}
+
+.signup_form {
+  min-width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.signup_form .sign_up_col {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup_form .sign_up_col > div {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.signup_form .sign_up_row_second {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.signup_form .sign_up_row_second div {
+  width: 48%;
+}
+
+.show_password {
+  position: absolute;
+  right: 10px;
+  position: absolute;
+  bottom: 3px;
+  cursor: pointer;
+}
+
+.signup_form div label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.signup_form div input {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #797979;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  padding: 5px 40px 5px 10px;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+}
+
+.sign_up_btn {
+  background: url('../../assets/img/check_faq_bg.png') no-repeat center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #444444;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+  border: none;
+  outline: none;
+  margin: 40px auto 30px;
+  height: 45px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .sign_up_btn {
+  background: url('../../assets/img/check_faq_bg.png') no-repeat center;
+  background-size: contain;
+}
+
+.sign_up_btn {
+  position: relative;
+  z-index: 1;
+}
+
+.sign_up_btn:hover span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.sign_up_btn:hover span {
+  color: #fff;
+}
+
+.sign_up_btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background: url('../../assets/img/check_faq_bg_hover.png') no-repeat center;
+  background-size: contain;
+  transition: 0.4s;
+}
+
+.sign_up_btn:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.dark .sign_up_btn {
+  transition: 0.4s;
+  color: #fff;
+}
+
+.signup_page_main span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.signup_page_main span a {
+  color: #2fe4fb;
+}
+
+.sign_up_soc_links {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sign_up_soc_links button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.sign_up_soc_links button img {
+  width: 32px;
+}
+
+@media (max-width: 991.98px) {
+  .signup_left {
+    display: none;
+  }
+  .signup_right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .signup_right .signup_form {
+    flex-direction: column;
+    min-width: auto;
+  }
+  .signup_form .sign_up_col {
+    width: 100%;
+  }
+
+  .signup_right {
+    padding-bottom: 30px;
+  }
+}

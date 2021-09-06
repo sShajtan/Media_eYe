@@ -17,6 +17,9 @@ import './fonts/neumatic/stylesheet.css';
 import { updateTimerPopup } from './store/app/appSlice';
 import MessagePopup from './components/MessagePopup/MessagePopup';
 import ContentMarketplace from './pages/ContentMarketplace';
+import NftMarketplace from './pages/NftMarketplace';
+import LogIn from './pages/LogIn';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -110,7 +113,20 @@ const App = () => {
           <Route path="/content-marketplace" exact>
             <ContentMarketplace
               closeNftCollapse={closeNftCollapse}
+              darkTheme={darkTheme}
             ></ContentMarketplace>
+          </Route>
+          <Route path="/nft-marketplace" exact>
+          <NftMarketplace
+              closeNftCollapse={closeNftCollapse}
+              darkTheme={darkTheme}
+            ></NftMarketplace>
+          </Route>
+          <Route path="/signup" exact>
+              <SignUp darkTheme={darkTheme} />
+          </Route>
+          <Route path="/login" exact>
+            <LogIn darkTheme={darkTheme} />
           </Route>
           <Route path="*">
             <NoMatch />

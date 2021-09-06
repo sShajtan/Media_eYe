@@ -15,7 +15,7 @@
   font-size: 20px;
   line-height: 103.5%;
   text-align: center;
-  color: #0075FF;
+  color: #0075ff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -36,7 +36,6 @@
   color: #00fff0;
 } */
 
-
 .tokenomics_bg {
   position: absolute;
   width: 200px;
@@ -44,7 +43,7 @@
   bottom: -335px;
   left: 174px;
   background: #f3f3f3;
-  background-image: url("../../assets/img/tok_bg.png");
+  background-image: url('../../assets/img/tok_bg.png');
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 151px;
@@ -57,7 +56,7 @@
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  color: #0075FF;
+  color: #0075ff;
 }
 
 .tokenomics_main {
@@ -66,12 +65,12 @@
   flex-wrap: wrap;
 }
 
-.tokenomics_main_wrapper{ 
-  padding-top: 40px; 
+.tokenomics_main_wrapper {
+  padding-top: 40px;
   background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0px 0px 22px #0057FF;
+  box-shadow: 0px 0px 22px #0057ff;
   -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
   border-radius: 43px;
   padding-right: 10px;
   padding-bottom: 40px;
@@ -114,7 +113,7 @@
 }
 
 .tokenomics .buy_btn {
-  background: url("../../assets/img/learn_more_button_bg.png") no-repeat center;
+  background: url('../../assets/img/learn_more_button_bg.png') no-repeat center;
   background-size: contain;
   font-family: Poppins;
   font-style: normal;
@@ -124,7 +123,9 @@
   color: #ffffff;
   cursor: pointer;
   margin-top: 50px;
-  position: relative;
+  position: absolute;
+  top: -20px;
+  right: 30px;
   width: 140px;
   height: 50px;
   display: flex;
@@ -134,9 +135,15 @@
   outline: none;
 }
 
+.green_1 {
+  margin-bottom: -30px;
+}
 
+.green_3 {
+  margin-top: -30px;
+}
 
-.tokenomics_right_block span i{
+.tokenomics_right_block span i {
   font-style: italic;
 }
 
@@ -144,7 +151,7 @@
   color: #fda4ff;
 }
 .tokenomics_right_block:nth-child(2) span {
-  color: #57a4ff;
+  color: #00ff34;
 }
 
 .tokenomics_right_block:nth-child(3) span {
@@ -152,14 +159,18 @@
 }
 
 .tokenomics_right_block:nth-child(4) span {
-  color: #bd7cde;
+  color: #00ff34;
 }
 
 .tokenomics_right_block:nth-child(5) span {
-  color: #ff9395;
+  color: #bd7cde;
 }
 
 .tokenomics_right_block:nth-child(6) span {
+  color: #ff9395;
+}
+
+.tokenomics_right_block:nth-child(7) span {
   color: #fea555;
 }
 
@@ -176,8 +187,8 @@
 }
 
 .tokenomics .buy_btn::before {
-  content: "";
-  background: url("../../assets/img/signup_button_bg.png") no-repeat center;
+  content: '';
+  background: url('../../assets/img/signup_button_bg.png') no-repeat center;
   background-size: contain;
   position: absolute;
   left: 0;
@@ -208,7 +219,7 @@
 }
 
 .tokenomics_right_block h6::before {
-  content: "\25CF";
+  content: '\25CF';
   font-size: 35px;
   line-height: 35px;
   position: absolute;
@@ -336,8 +347,8 @@
   position: relative;
 }
 
-@media (max-width: 1299.98px){
-  .tokenomics_main_wrapper{
+@media (max-width: 1299.98px) {
+  .tokenomics_main_wrapper {
     margin: 0;
   }
 }
@@ -355,12 +366,17 @@
 }
 
 @media (max-width: 991.98px) {
-
-  .tokenomics_main_wrapper{
+  .tokenomics .buy_btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .tokenomics_main_wrapper {
     background: none;
     box-shadow: none;
     -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
   }
   .tokenomics .title {
     max-width: 90%;
@@ -396,6 +412,14 @@
   }
   .tokenomics_right_wrapper {
     width: 100%;
+  }
+
+  .green_1 {
+    margin-bottom: -20px;
+  }
+
+  .green_3 {
+    margin-top: -20px;
   }
 }
 
