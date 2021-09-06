@@ -19,7 +19,7 @@ const Tokenomics = (props) => {
             <span>Total eYe token supply:</span><br /><br /> &nbsp;1 Billion
           </h4>
           <h5>(FIXED)</h5>
-          <a className="buy_btn" href="https://mediaeyenft.com/pitchdeck/fundraising/" target="_blank" rel="n">Fundraising</a>
+          <a className="buy_btn" href="https://mediaeyenft.com/pitchdeck/whitelist" target="_blank" rel="n">Fundraising</a>
           <div className="tokenomics_main">
             <div className="tokenomics_left">
               <div className="tokenomics_left_wrapper">

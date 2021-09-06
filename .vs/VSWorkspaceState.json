@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
     "\\src\\components",
     "\\src\\components\\Faq"
   ],
-  "SelectedNode": "\\src\\components\\Faq\\Faq.js",
   "PreviewInSolutionExplorer": false
 }
