@@ -3,13 +3,8 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Faq",
-    "\\src\\components\\Footer",
-    "\\src\\components\\Header",
-    "\\src\\components\\Partners",
-    "\\src\\components\\Roadmap",
-    "\\src\\components\\Team",
-    "\\src\\components\\Tokenomics"
+    "\\src\\components\\Faq"
   ],
+  "SelectedNode": "\\src\\components\\Faq\\Faq.js",
   "PreviewInSolutionExplorer": false
 }
