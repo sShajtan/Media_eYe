@@ -1,12 +1,11 @@
-import React, { useState, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { slide as Menu } from "react-burger-menu";
-import {
-  Link,
-} from "react-scroll";
-import { Collapse } from "react-collapse";
-import { updateTheme } from "../../store/app/appSlice";
-import "./Header.css";
+import React, { useState, useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { slide as Menu } from 'react-burger-menu';
+import { Link } from 'react-router-dom';
+import { Collapse } from 'react-collapse';
+import { updateTheme } from '../../store/app/appSlice';
+import './Header.css';
+import SearchIcon from '../Icons/SearchIcon';
 
 const Header = (props) => {
   const { toggleSoonPopup, toggleNftCollapse, showNftCollapse } = props;
@@ -24,14 +23,13 @@ const Header = (props) => {
     setMobileSearch(!mobileSearch);
   };
 
-
   const handleIsOpen = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   const closeMenu = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   return (
     <React.Fragment>
@@ -45,72 +43,58 @@ const Header = (props) => {
             </div>
             <div className="header_left_menu">
               <div>
-                <button onClick={toggleNftCollapse}>MeDIA eYe Marketplace ▾</button>
+                <button onClick={toggleNftCollapse}>
+                  MeDIA eYe Marketplace ▾
+                </button>
                 <div
                   className={
-                    showNftCollapse ? "nft_collapse active" : "nft_collapse"
+                    showNftCollapse ? 'nft_collapse active' : 'nft_collapse'
                   }
                 >
                   <Collapse isOpened={showNftCollapse}>
                     <button onClick={toggleSoonPopup}>NFT Marketplace</button>
-                    <button onClick={toggleSoonPopup}>Content Marketplace</button>
+                    <Link to="/content-marketplace">Content Marketplace</Link>
                     <button onClick={toggleSoonPopup}>Gallery</button>
                   </Collapse>
                 </div>
               </div>
-              <a href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/" target="_blank" rel="noreferrer">
+              <a
+                href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 About
               </a>
-              <a href="https://mediaeyenft.com/blog/" target="_blank" rel="noreferrer">Blog</a>
+              <a
+                href="https://mediaeyenft.com/blog/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Blog
+              </a>
             </div>
             <div
               className={
-                mobileSearch ? "header_search active" : "header_search"
+                mobileSearch ? 'header_search active' : 'header_search'
               }
             >
               <input type="search" />
               <button>
-                <svg
-                  width="29"
-                  height="29"
-                  viewBox="0 0 29 29"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="13.2923"
-                    cy="13.2916"
-                    r="8.45833"
-                    stroke="#555555"
-                    strokeWidth="2"
-                  />
-                  <path
-                    d="M13.291 9.66675C12.815 9.66675 12.3436 9.76051 11.9038 9.94268C11.464 10.1249 11.0644 10.3919 10.7278 10.7285C10.3911 11.0651 10.1241 11.4647 9.94195 11.9045C9.75978 12.3443 9.66602 12.8157 9.66602 13.2917"
-                    stroke="#555555"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M24.166 24.1667L20.541 20.5417"
-                    stroke="#555555"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
+                <SearchIcon />
               </button>
             </div>
             <div className="mobile_search" onClick={toggleMobileSearch}>
               <img
                 alt="mobile_icon"
                 src={
-                  theme ? "img/mobile_search.png" : "img/mobile_search_dark.png"
+                  theme ? 'img/mobile_search.png' : 'img/mobile_search_dark.png'
                 }
               />
             </div>
             <div className="mobile_switch" onClick={toggleTheme}>
               <img
                 alt="toggle_theme_icon"
-                src={theme ? "img/sun_mobile.png" : "img/sun_mobile_dark.png"}
+                src={theme ? 'img/sun_mobile.png' : 'img/sun_mobile_dark.png'}
               />
             </div>
             <div className="header_right_menu">
@@ -136,9 +120,13 @@ const Header = (props) => {
           </div>
         </div>
       </header>
-      <div className={isOpen ? "open" : null}>
-        <Menu onOpen={handleIsOpen}
-          onClose={handleIsOpen} isOpen={isOpen} width={"100%"} >
+      <div className={isOpen ? 'open' : null}>
+        <Menu
+          onOpen={handleIsOpen}
+          onClose={handleIsOpen}
+          isOpen={isOpen}
+          width={'100%'}
+        >
           <button className="menu-item" onClick={toggleSoonPopup}>
             NFT Marketplace
           </button>
@@ -149,13 +137,25 @@ const Header = (props) => {
             Gallery
           </button>
           <button className="menu-item">Creators</button>
-          <button className="menu-item" onClick={toggleNftCollapse}>Investors ▾</button>
+          <button className="menu-item" onClick={toggleNftCollapse}>
+            Investors ▾
+          </button>
           <div className="mobile_investors_collapse">
-            <Collapse isOpened={showNftCollapse} >
-              <a href="https://mediaeyenft.com/pitchdesk/" target="_blank" rel="noreferrer">
+            <Collapse isOpened={showNftCollapse}>
+              <a
+                href="https://mediaeyenft.com/pitchdesk/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Pitchdeck
               </a>
-              <a href="https://mediaeyenft.com/pitchdesk/fundraising/" target="_blank" rel="noreferrer">Fundraising</a>
+              <a
+                href="https://mediaeyenft.com/pitchdesk/fundraising/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Fundraising
+              </a>
             </Collapse>
           </div>
           <a
@@ -170,14 +170,12 @@ const Header = (props) => {
           <a
             className="menu-item"
             href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             About
           </a>
-          <a
-            href="/#team"
-            onClick={closeMenu}
-          >
+          <a href="/#team" onClick={closeMenu}>
             Team
           </a>
           <a className="menu-item" href="https://mediaeyenft.com/blog/">
@@ -188,45 +186,71 @@ const Header = (props) => {
           </a>
           <div className="menu-item">
             <div className="soc_header_mobile">
-              <a href="https://medium.com/@MeDIAeYeNFT" target="_blank" rel="noreferrer">
-                <img alt="soc_icon"
+              <a
+                href="https://medium.com/@MeDIAeYeNFT"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  alt="soc_icon"
                   src={
-                    theme ? "img/footer_soc/1.png" : "img/footer_soc/1-dark.png"
+                    theme ? 'img/footer_soc/1.png' : 'img/footer_soc/1-dark.png'
                   }
                 />
               </a>
-              <a href="https://t.me/MeDIAeYeNFTofficial" target="_blank" rel="noreferrer">
-                <img alt="soc_icon"
+              <a
+                href="https://t.me/MeDIAeYeNFTofficial"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  alt="soc_icon"
                   src={
-                    theme ? "img/footer_soc/2.png" : "img/footer_soc/2-dark.png"
+                    theme ? 'img/footer_soc/2.png' : 'img/footer_soc/2-dark.png'
                   }
                 />
               </a>
-              <a href="https://twitter.com/MeDIAeYeNFT" target="_blank" rel="noreferrer">
-                <img alt="soc_icon"
+              <a
+                href="https://twitter.com/MeDIAeYeNFT"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  alt="soc_icon"
                   src={
-                    theme ? "img/footer_soc/3.png" : "img/footer_soc/3-dark.png"
+                    theme ? 'img/footer_soc/3.png' : 'img/footer_soc/3-dark.png'
                   }
                 />
               </a>
-              <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank" rel="noreferrer">
-                <img alt="soc_icon"
+              <a
+                href="https://vm.tiktok.com/ZMdPtx5uV/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  alt="soc_icon"
                   src={
-                    theme ? "img/footer_soc/4.png" : "img/footer_soc/4-dark.png"
+                    theme ? 'img/footer_soc/4.png' : 'img/footer_soc/4-dark.png'
                   }
                 />
               </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" >
-                <img alt="soc_icon"
+              <a href="https://github.com" target="_blank" rel="noreferrer">
+                <img
+                  alt="soc_icon"
                   src={
-                    theme ? "img/footer_soc/5.png" : "img/footer_soc/5-dark.png"
+                    theme ? 'img/footer_soc/5.png' : 'img/footer_soc/5-dark.png'
                   }
                 />
               </a>
-              <a href="https://www.instagram.com/mediaeyenfts/" target="_blank" rel="noreferrer">
-                <img alt="soc_icon"
+              <a
+                href="https://www.instagram.com/mediaeyenfts/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  alt="soc_icon"
                   src={
-                    theme ? "img/footer_soc/6.png" : "img/footer_soc/6-dark.png"
+                    theme ? 'img/footer_soc/6.png' : 'img/footer_soc/6-dark.png'
                   }
                 />
               </a>
@@ -244,7 +268,7 @@ const Header = (props) => {
           </div>
         </Menu>
       </div>
-    </React.Fragment >
+    </React.Fragment>
   );
 };
 
