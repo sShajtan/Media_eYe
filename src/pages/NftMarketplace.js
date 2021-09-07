@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import ContentMarketplaceHeader from '../components/ContentMarketplace/ContentMarketplaceHeader/NftMarketplaceHeader';
+import ContentMarketplaceHeader from '../components/ContentMarketplace/MarketplaceHeader/NftMarketplaceHeader';
 import MarketplaceMain from '../components/ContentMarketplace/MarketplaceMain/MarketplaceMain';
 import MarketplaceSlider from '../components/ContentMarketplace/MarketplaceSlider/MarketplaceSlider';
 

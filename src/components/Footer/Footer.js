@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-scroll";
-import GithubIcon from "../Icons/GithubIcon";
-import InstagramIcon from "../Icons/InstagramIcon";
-import MediumIcon from "../Icons/MediumIcon";
-import TelegramIcon from "../Icons/TelegramIcon";
-import TiktokIcon from "../Icons/TiktokIcon";
-import TwitterIcon from "../Icons/TwitterIcon";
-import "./Footer.css";
+import React from 'react';
+import { Link } from 'react-scroll';
+import GithubIcon from '../Icons/GithubIcon';
+import InstagramIcon from '../Icons/InstagramIcon';
+import MediumIcon from '../Icons/MediumIcon';
+import TelegramIcon from '../Icons/TelegramIcon';
+import TiktokIcon from '../Icons/TiktokIcon';
+import TwitterIcon from '../Icons/TwitterIcon';
+import './Footer.css';
 
 const Footer = (props) => {
   const { toggleSoonPopup } = props;
@@ -45,7 +45,13 @@ const Footer = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://mediaeyenft.com/blog/" target="_blank" rel="noreferrer">Blog</a>
+                  <a
+                    href="https://mediaeyenft.com/blog/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Blog
+                  </a>
                 </li>
                 <li>
                   <a href="mailto:support@mediaeyenft.com">Contact</a>
@@ -53,17 +59,29 @@ const Footer = (props) => {
               </ul>
               <ul>
                 <li>
-                  <a href="https://mediaeyenft.com/pitchdeck/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://mediaeyenft.com/pitchdeck/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Pitchdeck
                   </a>
                 </li>
                 <li>
-                  <a href="https://mediaeyenft.com/pitchdeck/fundraising/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://mediaeyenft.com/pitchdeck/fundraising/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Fundraising
                   </a>
                 </li>
                 <li>
-                  <a href="https://docs.mediaeyenft.com/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://docs.mediaeyenft.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Litepaper
                   </a>
                 </li>
@@ -71,22 +89,42 @@ const Footer = (props) => {
             </div>
           </div>
           <div className="footer_right">
-            <a href="https://medium.com/@MeDIAeYeNFT" target="_blank" rel="noreferrer">
+            <a
+              href="https://medium.com/@MeDIAeYeNFT"
+              target="_blank"
+              rel="noreferrer"
+            >
               <MediumIcon />
             </a>
-            <a href="https://t.me/MeDIAeYeNFTofficial " target="_blank" rel="noreferrer">
+            <a
+              href="https://t.me/MeDIAeYeNFTofficial "
+              target="_blank"
+              rel="noreferrer"
+            >
               <TelegramIcon />
             </a>
-            <a href="https://twitter.com/MeDIAeYeNFT" target="_blank" rel="noreferrer">
+            <a
+              href="https://twitter.com/MeDIAeYeNFT"
+              target="_blank"
+              rel="noreferrer"
+            >
               <TwitterIcon />
             </a>
-            <a href="https://vm.tiktok.com/ZMdPtx5uV/" target="_blank" rel="noreferrer">
+            <a
+              href="https://vm.tiktok.com/ZMdPtx5uV/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <TiktokIcon />
             </a>
             <button>
               <GithubIcon />
             </button>
-            <a href="https://www.instagram.com/mediaeyenfts/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.instagram.com/mediaeyenfts/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <InstagramIcon />
             </a>
           </div>

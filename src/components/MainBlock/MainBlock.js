@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
-import Slider from "react-slick";
-import WOW from "wowjs";
-import "./MainBlock.css";
+import React, { useState, useRef, useEffect } from 'react';
+import Slider from 'react-slick';
+import WOW from 'wowjs';
+import './MainBlock.css';
 
 const MainBlock = (props) => {
   const { togglePopup } = props;
@@ -25,7 +25,7 @@ const MainBlock = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false,
+    autoplay: false
   };
   var settings2 = {
     infinite: true,
@@ -38,28 +38,26 @@ const MainBlock = (props) => {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
-          arrows: true,
-        },
+          arrows: true
+        }
       },
       {
         breakpoint: 575,
         settings: {
           slidesToShow: 1,
           arrows: true,
-          vertical: true,
-        },
-      },
-    ],
+          vertical: true
+        }
+      }
+    ]
   };
   var settings3 = {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: false,
+    autoplay: false
   };
-
-
 
   return (
     <div className="main_block">
@@ -97,7 +95,12 @@ const MainBlock = (props) => {
               NFTs.
             </h6>
             <div className="main_left_buttons">
-              <a className="learn_more" href="https://mediaeyenft.com/pitchdeck/" target="_blank" rel="noreferrer">
+              <a
+                className="learn_more"
+                href="https://mediaeyenft.com/pitchdeck/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span>Learn More</span>
               </a>
               <button className="sign_up" onClick={togglePopup}>

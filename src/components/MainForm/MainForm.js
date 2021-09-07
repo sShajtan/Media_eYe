@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./MainForm.css";
-import emailjs from "emailjs-com";
+import React, { useState } from 'react';
+import './MainForm.css';
+import emailjs from 'emailjs-com';
 
 const MainForm = (props) => {
   const [email, setEmail] = useState('');
@@ -12,21 +12,21 @@ const MainForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (email !== null && email !== "") {
+    if (email !== null && email !== '') {
       emailjs
         .sendForm(
-          "service_8p76rtc",
-          "template_3pxskgn",
+          'service_8p76rtc',
+          'template_3pxskgn',
           event.target,
-          "user_EJiwvXDAMeoW6oOr4UYrR"
+          'user_EJiwvXDAMeoW6oOr4UYrR'
         )
         .then(
           (result) => {
-            setEmail("");
+            setEmail('');
             toggleMessagePopup(true);
           },
           (error) => {
-            alert("Message not sent");
+            alert('Message not sent');
           }
         );
     }

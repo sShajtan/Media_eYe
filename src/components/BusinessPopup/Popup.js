@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import MessagePopup from "../MessagePopup/MessagePopup";
-import "./Popup.css";
-import CloseIcon from "../Icons/CloseIcon";
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import MessagePopup from '../MessagePopup/MessagePopup';
+import './Popup.css';
+import CloseIcon from '../Icons/CloseIcon';
 
 const Popup = (props) => {
   const { toggleMessagePopup } = props;
@@ -32,24 +32,23 @@ const Popup = (props) => {
     setWebsite(event.target.value);
   };
 
-
   const handleChangeText = (event) => {
     setText(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (email !== null && email !== "") {
+    if (email !== null && email !== '') {
       emailjs
         .sendForm(
-          "service_8p76rtc",
-          "template_1svg3xa",
+          'service_8p76rtc',
+          'template_1svg3xa',
           event.target,
-          "user_EJiwvXDAMeoW6oOr4UYrR"
+          'user_EJiwvXDAMeoW6oOr4UYrR'
         )
         .then(
           (result) => {
-            setEmail("");
+            setEmail('');
             setName('');
             setWebsite('');
             setText('');
@@ -58,26 +57,20 @@ const Popup = (props) => {
             toggleMessagePopup(true);
           },
           (error) => {
-            alert("Message not sent");
+            alert('Message not sent');
           }
         );
     }
   };
 
-
-
   return (
     <React.Fragment>
-      <div className={props.showPopup ? "popup active" : "popup"}>
-        <div
-          className="popup-wrapper partners"
-          onClick={props.togglePopup}
-        >
+      <div className={props.showPopup ? 'popup active' : 'popup'}>
+        <div className="popup-wrapper partners" onClick={props.togglePopup}>
           <div
             className="main-popup"
             onClick={(event) => event.stopPropagation()}
           >
-
             <div className="popup-main">
               <div className="close" onClick={props.togglePopup}>
                 <CloseIcon />
@@ -91,15 +84,17 @@ const Popup = (props) => {
                     required
                     type="email"
                     value={email}
-                    onChange={handleChangeEmail} />
+                    onChange={handleChangeEmail}
+                  />
                 </div>
                 <div>
-                  <label >Name</label>
+                  <label>Name</label>
                   <input
                     name="name"
                     required
                     value={name}
-                    onChange={handleChangeName} />
+                    onChange={handleChangeName}
+                  />
                 </div>
                 <div className="textarea">
                   <label>Website link</label>
@@ -107,16 +102,21 @@ const Popup = (props) => {
                     name="website"
                     required
                     value={website}
-                    onChange={handleChangeWebsite} />
+                    onChange={handleChangeWebsite}
+                  />
                 </div>
                 <div className="textarea">
                   <label>Decscribe your business</label>
                   <textarea
                     name="text"
                     value={text}
-                    onChange={handleChangeText} rows="3" />
+                    onChange={handleChangeText}
+                    rows="3"
+                  />
                 </div>
-                <button type="submit" className="partners_submit">Submit</button>
+                <button type="submit" className="partners_submit">
+                  Submit
+                </button>
               </form>
             </div>
           </div>

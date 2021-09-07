@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import CloseIcon from "../Icons/CloseIcon";
-import MediumIcon from "../Icons/MediumIcon";
-import Telegramicon from "../Icons/TelegramIcon";
-import TwitterIcon from "../Icons/TwitterIcon";
-import MessagePopup from "../MessagePopup/MessagePopup";
-import "./Popup.css";
+import React, { useState } from 'react';
+import CloseIcon from '../Icons/CloseIcon';
+import MediumIcon from '../Icons/MediumIcon';
+import Telegramicon from '../Icons/TelegramIcon';
+import TwitterIcon from '../Icons/TwitterIcon';
+import MessagePopup from '../MessagePopup/MessagePopup';
+import './Popup.css';
 
 const Popup = (props) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -19,7 +19,7 @@ const Popup = (props) => {
 
   return (
     <React.Fragment>
-      <div className={props.showPopup ? "popup active" : "popup"}>
+      <div className={props.showPopup ? 'popup active' : 'popup'}>
         <div
           className="popup-wrapper timer_popup soon_popup"
           onClick={props.togglePopup}

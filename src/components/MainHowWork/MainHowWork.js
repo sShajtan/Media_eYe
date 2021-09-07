@@ -1,6 +1,6 @@
-import React from "react";
-import JoinUs from "../JoinUs/JoinUs";
-import "./MainHowWork.css";
+import React from 'react';
+import JoinUs from '../JoinUs/JoinUs';
+import './MainHowWork.css';
 
 const MainHowWork = (props) => {
   const { togglePartnersPopup, toggleMessagePopup, darktheme } = props;
@@ -10,7 +10,7 @@ const MainHowWork = (props) => {
         className="title animate__animated animate__zoomIn wow"
         data-wow-duration="1s"
         data-wow-delay="0.5s"
-        src={darktheme ? "img/howwork_title_dark.svg" : "img/howwork_title.svg"}
+        src={darktheme ? 'img/howwork_title_dark.svg' : 'img/howwork_title.svg'}
         alt="title"
       />
       <div className="main_howwork_wrapper">
@@ -21,15 +21,15 @@ const MainHowWork = (props) => {
               data-wow-duration="1s"
               data-wow-delay="0.5s"
             >
-            <img src="img/01.png" className="number"  alt="01" />
+              <img src="img/01.png" className="number" alt="01" />
               <img src="img/line_sm.png" className="line_sm" />
               <h3>CREATE</h3>
               <span>
                 Mint and embed digitized content on an NFT token, such as art,
                 text, videos, photos, songs or lines of code. NFTs can also
                 represent a tokenized form of any digitized content, such as
-                artworks, movies, music, branding and more. Discover the unlimited
-                potential of NFTs, become a Creator.
+                artworks, movies, music, branding and more. Discover the
+                unlimited potential of NFTs, become a Creator.
               </span>
             </div>
             <div
@@ -37,14 +37,14 @@ const MainHowWork = (props) => {
               data-wow-duration="1s"
               data-wow-delay="0.5s"
             >
-              <img src="img/02.png" className="number"  alt="01" />
+              <img src="img/02.png" className="number" alt="01" />
               <img src="img/line_sm.png" className="line_sm" />
               <h3>PROMOTE</h3>
               <span>
                 Use the unlimited potential of NFTs to drive your next ad
                 campaign, create brand awareness, distribute content to your
-                clients or mass audiences, create unique experiences for consumers
-                and much more.
+                clients or mass audiences, create unique experiences for
+                consumers and much more.
               </span>
             </div>
             <div
@@ -52,7 +52,7 @@ const MainHowWork = (props) => {
               data-wow-duration="1s"
               data-wow-delay="0.5s"
             >
-              <img src="img/03.png" className="number"  alt="01" />
+              <img src="img/03.png" className="number" alt="01" />
               <img src="img/line_sm.png" className="line_sm" />
               <h3>COLLECT</h3>
               <span>
@@ -65,7 +65,10 @@ const MainHowWork = (props) => {
           </div>
         </div>
       </div>
-      <JoinUs togglePartnersPopup={togglePartnersPopup} toggleMessagePopup={toggleMessagePopup} />
+      <JoinUs
+        togglePartnersPopup={togglePartnersPopup}
+        toggleMessagePopup={toggleMessagePopup}
+      />
     </div>
   );
 };

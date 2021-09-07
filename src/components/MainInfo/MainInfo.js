@@ -1,9 +1,9 @@
-import React from "react";
-import "./MainInfo.css";
-import { Link } from "react-scroll";
+import React from 'react';
+import './MainInfo.css';
+import { Link } from 'react-scroll';
 
 const MainInfo = (props) => {
-const {  darkTheme } = props;
+  const { darkTheme } = props;
 
   return (
     <div className="main_info" id="about">
@@ -12,7 +12,7 @@ const {  darkTheme } = props;
           className="title animate__animated animate__fadeInRight wow"
           data-wow-duration="1.5s"
           data-wow-delay="0.5s"
-          src={darkTheme ? "img/nft_title_dark.svg" : "img/nft_title.svg" }
+          src={darkTheme ? 'img/nft_title_dark.svg' : 'img/nft_title.svg'}
         />
         <div className="main_info_main">
           <div className="main_info_left">
@@ -23,14 +23,19 @@ const {  darkTheme } = props;
               src="img/nft_img.png"
               alt="nft_image"
             />
-            <img className="title" src="img/nft_title.svg" alt="What is an NFT" />
+            <img
+              className="title"
+              src="img/nft_title.svg"
+              alt="What is an NFT"
+            />
           </div>
           <div className="main_info_right">
             <p>
               Non Fungible Tokens (NFTs) have many use cases, an NFT is a unit
               of data stored on a digital ledger, called a blockchain, that
               certifies a digital asset to be unique and therefore not
-              interchangeable.</p>
+              interchangeable.
+            </p>
             <br />
             <div>
               <ul>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import Slider from "react-slick";
-import "./Partners.css";
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import Slider from 'react-slick';
+import './Partners.css';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -56,17 +56,17 @@ const Partners = (props) => {
         breakpoint: 768,
         settings: {
           rows: 3,
-          slidesToShow: 2,
-        },
-      },
-    ],
+          slidesToShow: 2
+        }
+      }
+    ]
   };
 
   useEffect(() => {
     updateWindowDimensions();
-    window.addEventListener("resize", updateWindowDimensions);
+    window.addEventListener('resize', updateWindowDimensions);
     return () => {
-      window.removeEventListener("resize", updateWindowDimensions);
+      window.removeEventListener('resize', updateWindowDimensions);
     };
   });
 
@@ -103,7 +103,7 @@ const Partners = (props) => {
                   <a href="https://filecoin.io/" target="_blank">
                     <img
                       src={
-                        theme ? "img/partners/2-dark.png" : "img/partners/2.png"
+                        theme ? 'img/partners/2-dark.png' : 'img/partners/2.png'
                       }
                     />
                   </a>
@@ -113,9 +113,7 @@ const Partners = (props) => {
                 <div className="partners_slide">
                   <a href="https://twitter.com/squirrel_wallet" target="_blank">
                     <img
-                      src={
-                        theme ? "img/partners/9.png" : "img/partners/9.png"
-                      }
+                      src={theme ? 'img/partners/9.png' : 'img/partners/9.png'}
                     />
                   </a>
                 </div>
@@ -125,7 +123,7 @@ const Partners = (props) => {
                   <a href="https://ramp.network/" target="_blank">
                     <img
                       src={
-                        theme ? "img/partners/6-dark.png" : "img/partners/6.png"
+                        theme ? 'img/partners/6-dark.png' : 'img/partners/6.png'
                       }
                     />
                   </a>
@@ -136,7 +134,7 @@ const Partners = (props) => {
                   <a href="https://www.bigleap.com/" target="_blank">
                     <img
                       src={
-                        theme ? "img/partners/4-dark.png" : "img/partners/4.png"
+                        theme ? 'img/partners/4-dark.png' : 'img/partners/4.png'
                       }
                     />
                   </a>
@@ -149,7 +147,7 @@ const Partners = (props) => {
                 <div className="partners_slide">
                   <a href="https://apeswap.finance/" target="_blank">
                     <img
-                      src={theme ? "img/partners/8.png" : "img/partners/8.png"}
+                      src={theme ? 'img/partners/8.png' : 'img/partners/8.png'}
                     />
                   </a>
                 </div>
@@ -163,7 +161,9 @@ const Partners = (props) => {
                             </div> */}
             </Slider>
           </div>
-          <a className="become_partner" onClick={toggleBusinessPopup} >Become a partner</a>
+          <a className="become_partner" onClick={toggleBusinessPopup}>
+            Become a partner
+          </a>
         </div>
       </div>
       <div className="container">
