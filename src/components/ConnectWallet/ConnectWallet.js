@@ -17,7 +17,7 @@ const ConnectWallet = (props) => {
           <h2>CONNECT YOUR WALLET</h2>
           <span>Change network</span>
           <div className="connect_wallet_networks">
-            <button id="bcs"></button>
+            <button id="bsc"></button>
             <button id="eth"></button>
           </div>
           <div className="connect_wallet_walletss">
