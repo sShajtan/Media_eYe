@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\src",
     "\\src\\components",
-    "\\src\\components\\Faq"
+    "\\src\\components\\Faq",
+    "\\src\\components\\Tokenomics"
   ],
   "PreviewInSolutionExplorer": false
 }
