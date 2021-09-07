@@ -88,7 +88,6 @@ const App = () => {
           toggleMessagePopup={toggleMessagePopup}
         />
         <MessagePopup
-          darkTheme={darkTheme}
           showPopup={showMessagePopup}
           togglePopup={toggleMessagePopup}
         />
@@ -100,7 +99,6 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Main
-              darkTheme={darkTheme}
               toggleSoonPopup={toggleSoonPopup}
               togglePartnersPopup={togglePartnersPopup}
               toggleBusinessPopup={toggleBusinessPopup}
@@ -113,20 +111,18 @@ const App = () => {
           <Route path="/content-marketplace" exact>
             <ContentMarketplace
               closeNftCollapse={closeNftCollapse}
-              darkTheme={darkTheme}
             ></ContentMarketplace>
           </Route>
           <Route path="/nft-marketplace" exact>
-          <NftMarketplace
+            <NftMarketplace
               closeNftCollapse={closeNftCollapse}
-              darkTheme={darkTheme}
             ></NftMarketplace>
           </Route>
           <Route path="/signup" exact>
-              <SignUp darkTheme={darkTheme} />
+            <SignUp />
           </Route>
           <Route path="/login" exact>
-            <LogIn darkTheme={darkTheme} />
+            <LogIn />
           </Route>
           <Route path="*">
             <NoMatch />
