@@ -1,15 +1,16 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Nomatch = () => {
+const Nomatch = (props) => {
+  const { closeNftCollapse } = props;
   let history = useHistory();
 
   return (
-    <div className="no_match">
+    <div className="no_match" onClick={closeNftCollapse}>
       <div className="container">
         <div className="no_match_main">
           <a className="goBack_button" onClick={() => history.goBack()}>
-            <span>&#129120; </span> GoBack
+            <span>&#8592; </span> GoBack
           </a>
           <img src="img/404.png" />
         </div>

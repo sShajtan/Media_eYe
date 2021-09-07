@@ -22,6 +22,7 @@ import NftMarketplace from './pages/NftMarketplace';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import ConnectWallet from './pages/ConnectWallet';
+import Feature from './pages/SelectFeature';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -32,6 +33,7 @@ const App = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
+  const [showWalletCollapse, setShowWalletCollapse] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
     if (timerPopup === false) {
@@ -68,7 +70,14 @@ const App = () => {
 
   const closeNftCollapse = () => {
     setShowNftCollpase(false);
+    setShowWalletCollapse(false);
   };
+
+
+    const toggleWalletCollapse = () => {
+    setShowWalletCollapse(!showWalletCollapse);
+  };
+
 
   return (
     <Router>
@@ -96,7 +105,9 @@ const App = () => {
         <Header
           toggleSoonPopup={toggleSoonPopup}
           toggleNftCollapse={toggleNftCollapse}
+          toggleWalletCollapse= {toggleWalletCollapse}
           showNftCollapse={showNftCollapse}
+          showWalletCollapse={showWalletCollapse}
         />
         <Switch>
           <Route path="/" exact>
@@ -127,13 +138,16 @@ const App = () => {
             <LogIn />
           </Route>
           <Route path="/gallerey" exact>
-            <Gallerey  darkTheme={darkTheme} />
+            <Gallerey closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
           </Route>
           <Route path="/connect-wallet" exact>
-            <ConnectWallet  darkTheme={darkTheme} />
+            <ConnectWallet closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+          </Route>
+          <Route path="/feature" exact>
+            <Feature closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
           </Route>
           <Route path="*">
-            <NoMatch />
+            <NoMatch onClick={closeNftCollapse} />
           </Route>
         </Switch>
         <Footer toggleSoonPopup={toggleSoonPopup} />

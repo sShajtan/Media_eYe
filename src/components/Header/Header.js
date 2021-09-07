@@ -5,12 +5,15 @@ import { Link, NavLink } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import { updateTheme } from '../../store/app/appSlice';
 import './Header.css';
-import SearchIcon from '../Icons/SearchIcon';
+import Item from '../Icons/Item';
+import Edit from '../Icons/Edit'; 
+import SearchIcon from '../Icons/SearchIcon'; 
 
 const Header = (props) => {
-  const { toggleSoonPopup, toggleNftCollapse, showNftCollapse } = props;
+  const { toggleSoonPopup, toggleNftCollapse, showNftCollapse, showWalletCollapse, toggleWalletCollapse } = props;
   const theme = useSelector((state) => state.app.darkTheme);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [mobileSearch, setMobileSearch] = useState(false);
   const wrapperRef = useRef(null);
   const dispatch = useDispatch();
@@ -116,14 +119,68 @@ const Header = (props) => {
               <button className="ntf_header"  onClick={toggleSoonPopup}>
                 Create NFT
               </button>
-               {/* <div className="auth">
-                <NavLink  to="/login" className="login">
-                  <span>Log in</span>
-                </NavLink>
-                <NavLink to="/connect-wallet" className="signup">
-                  <span>Sign Up</span>
-                </NavLink> 
-              </div> */}
+              {/* {isLogin ? 
+                <div className="user_header_menu">
+                  <div>
+                    <img src="img/bag.png" />
+                    <span>1123</span>
+                  </div>
+                  <div>
+                    <img src="img/wallet.png" />
+                    <span>ETH	<i>&#9660;</i></span>
+                  </div>
+                  <div className="header_avatar">
+                    <div className="header_avatar_wrapper" onClick={toggleWalletCollapse}>
+                      <img src="img/avatar.png" />
+                    </div>
+                    <div
+                  className={
+                    showWalletCollapse ? 'wallet_collapse active' : 'wallet_collapse'
+                  }
+                >
+                  <Collapse isOpened={showWalletCollapse}>
+                    <div className="wallet_collapse_main">
+                      <h5>0xfhr4co9f38f...e345</h5>
+                      <div className="wallet_row">
+                          <img src="img/token_1.png" />
+                          <div>
+                            <h6>eYe Balance</h6>
+                            <span>0 eYe</span>
+                          </div>
+                          <button className="buy_eye">Buy eYe</button>
+                      </div>
+                      <div className="wallet_row">
+                          <img src="img/token_2.png" />
+                          <div>
+                            <h6>Balance</h6>
+                            <span>0.037 ETH $119</span>
+                          </div>
+                      </div>
+                      <div className="wallet_row">
+                          <img src="img/token_3.png" />
+                          <div>
+                            <h6>Bidding Balance</h6>
+                            <span>0 wETH</span>
+                          </div>
+                      </div>
+                      <div className="wallet_footer">
+                        <a className=""><Item />&ensp;My items</a>
+                        <a className=""><Edit />&ensp;Edit profile</a></div>
+                    </div>
+                  </Collapse>
+                </div>
+                  </div>
+                </div>  : 
+                <div className="auth">
+                  <NavLink  to="/login" className="login">
+                    <span>Log in</span>
+                  </NavLink>
+                  <NavLink to="/connect-wallet" className="signup">
+                    <span>Sign Up</span>
+                  </NavLink> 
+                </div> 
+              } */}
+                
             </div>
           </div>
         </div>
