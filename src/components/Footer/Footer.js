@@ -21,16 +21,16 @@ const Footer = (props) => {
             <div className="footer_menu">
               <ul>
                 <li>
-                  <button onClick={toggleSoonPopup}>NTF Marketplace</button>
+                  <Link to="/nft-marketplace">NTF Marketplace</Link>
                 </li>
                 <li>
-                  <button onClick={toggleSoonPopup}>Content Marketplace</button>
+                  <Link to="/content-marketplace">Content Marketplace</Link>
                 </li>
                 <li>
-                  <button onClick={toggleSoonPopup}>Gallery</button>
+                  <Link to="/gallerey">Gallery</Link>
                 </li>
                 <li>
-                  <button>Creators</button>
+                  <Link to="/">Creators</Link>
                 </li>
               </ul>
               <ul>

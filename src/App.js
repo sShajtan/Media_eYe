@@ -10,6 +10,7 @@ import PartnersPopup from './components/PartnersPopup/Popup';
 import Footer from './components/Footer/Footer';
 import NoMatch from './pages/NoMatch';
 import Gallerey from './pages/Gallerey';
+import Creators from './pages/Creators';
 import './App.css';
 import './fonts/Poppins/stylesheet.css';
 import './fonts/Rambla/stylesheet.css';
@@ -23,6 +24,7 @@ import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import ConnectWallet from './pages/ConnectWallet';
 import Feature from './pages/SelectFeature';
+import CreatorAccount from './pages/CreatorAccount';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -139,6 +141,12 @@ const App = () => {
           </Route>
           <Route path="/gallerey" exact>
             <Gallerey closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+          </Route>
+          <Route path="/creators" exact>
+            <Creators closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+          </Route>
+          <Route path="/creator-account" exact>
+            <CreatorAccount closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
           </Route>
           <Route path="/connect-wallet" exact>
             <ConnectWallet closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />

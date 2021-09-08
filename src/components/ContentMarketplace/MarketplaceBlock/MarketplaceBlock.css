@@ -4,7 +4,8 @@
   margin: 0 auto;
 }
 
-.marketplace_main_main .marketplace_block_wrapper {
+.marketplace_main_main .marketplace_block_wrapper,
+.creator_account_main_block .marketplace_block_wrapper {
   position: relative;
   max-width: 22%;
   margin: 0 auto 30px;
@@ -177,13 +178,15 @@
 }
 
 @media (max-width: 991.98px) {
-  .marketplace_main_main .marketplace_block_wrapper {
+  .marketplace_main_main .marketplace_block_wrapper,
+  .creator_account_main_block .marketplace_block_wrapper {
     max-width: 28%;
   }
 }
 
 @media (max-width: 767.98px) {
-  .marketplace_main_main .marketplace_block_wrapper {
+  .marketplace_main_main .marketplace_block_wrapper,
+  .creator_account_main_block .marketplace_block_wrapper {
     max-width: 40%;
   }
 }
@@ -191,6 +194,16 @@
 @media (max-width: 575.98px) {
   .marketplace_main_main .marketplace_block_wrapper,
   .marketplace_block_wrapper {
+    max-width: 280px;
+  }
+
+  .creator_account_main_block .marketplace_block_wrapper {
+    max-width: 49%;
+  }
+}
+
+@media (max-width: 389.98px) {
+  .creator_account_main_block .marketplace_block_wrapper {
     max-width: 280px;
   }
 }
