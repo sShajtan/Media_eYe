@@ -300,6 +300,10 @@
   .creator_account_menu_wrapper {
     overflow-x: scroll;
   }
+
+  .creator_account_menu_wrapper::-webkit-scrollbar {
+    width: 0;
+  }
   .creator_account_menu {
     width: -webkit-fit-content;
     width: -moz-fit-content;

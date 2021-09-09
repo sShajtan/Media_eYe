@@ -53,7 +53,7 @@ const NftMarketplaceHeader = (props) => {
                   </button>
                   <button>
                     <Entertaiment />
-                    Entertainment
+                    Gaming
                   </button>
                   <button>
                     <Media />
@@ -80,7 +80,7 @@ const NftMarketplaceHeader = (props) => {
             </div>
             <div className="content_marketplace_header_menu">
               <button className="active">All</button>
-              <button>Entertainment</button>
+              <button>Gaming</button>
               <button>Media</button>
               <button>Art</button>
               <button>Crypto</button>

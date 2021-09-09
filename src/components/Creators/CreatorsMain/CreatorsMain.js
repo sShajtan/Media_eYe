@@ -10,14 +10,14 @@ const CreatorsMain = (props) => {
             <div className="container">
                 {title ? <h4>{title}</h4> : null }
                 <div className="creators_main_main">
-                    <CreatorsBlock />
-                    <CreatorsBlock />
-                    <CreatorsBlock />
-                    <CreatorsBlock />
-                    <CreatorsBlock />
-                    <CreatorsBlock />
-                    <CreatorsBlock />
-                    <CreatorsBlock />
+                    <CreatorsBlock link={'/creator-account'} />
+                    <CreatorsBlock link={'/creator-account'}/>
+                    <CreatorsBlock link={'/creator-account'} />
+                    <CreatorsBlock link={'/creator-account'} />
+                    <CreatorsBlock link={'/creator-account'} />
+                    <CreatorsBlock link={'/creator-account'}/>
+                    <CreatorsBlock link={'/creator-account'} />
+                    <CreatorsBlock link={'/creator-account'}/>
                 </div>
                 {showLoadMore ? <button className="load_more">Load more</button> : null }
                 

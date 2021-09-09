@@ -24,9 +24,6 @@ const Footer = (props) => {
                   <Link to="/nft-marketplace">NTF Marketplace</Link>
                 </li>
                 <li>
-                  <Link to="/content-marketplace">Content Marketplace</Link>
-                </li>
-                <li>
                   <Link to="/gallerey">Gallery</Link>
                 </li>
                 <li>

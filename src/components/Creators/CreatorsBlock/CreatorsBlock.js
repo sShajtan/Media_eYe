@@ -1,9 +1,12 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './CreatorsBlock.css';
 
-const CreatorsBlock = () => {
+const CreatorsBlock = (props) => {
+    const {link} = props;
   return (
             <div className="creator_block_wrapper">
+            <NavLink to={link}>
                 <div className="creator_block">
                     <div className="creator_block_img">
                         <img src="img/creators_img.png" alt="marketplace block img" />
@@ -27,6 +30,7 @@ const CreatorsBlock = () => {
                         </div>
                     </div>
                 </div>
+                </NavLink>
             </div>
   );
 };

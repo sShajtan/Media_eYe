@@ -25,6 +25,7 @@ import SignUp from './pages/SignUp';
 import ConnectWallet from './pages/ConnectWallet';
 import Feature from './pages/SelectFeature';
 import CreatorAccount from './pages/CreatorAccount';
+import Product from './pages/Product';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -153,6 +154,10 @@ const App = () => {
           </Route>
           <Route path="/feature" exact>
             <Feature closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+          </Route>
+          
+          <Route path="/product" exact>
+            <Product closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
           </Route>
           <Route path="*">
             <NoMatch onClick={closeNftCollapse} />
