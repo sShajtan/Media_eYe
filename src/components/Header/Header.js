@@ -118,7 +118,7 @@ const Header = (props) => {
               <button className="ntf_header"  onClick={toggleSoonPopup}>
                 Create NFT
               </button>
-                {isLogin ? 
+                {/* {isLogin ? 
                 <div className="user_header_menu">
                   <div>
                     <img src="img/bag.png" />
@@ -178,7 +178,7 @@ const Header = (props) => {
                     <span>Sign Up</span>
                   </NavLink> 
                 </div> 
-              } 
+              }  */}
                 
             </div>
           </div>
