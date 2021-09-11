@@ -303,7 +303,7 @@ const Team = () => {
                     <img src="img/team/veronica.png" />
                   </div>
                   <div>
-                    <h6>Veronika Sharma</h6>
+                    <h6>Sonali Rawat</h6>
                   </div>
                   <span>Director of Social Media Marketing</span>
                 </div>
