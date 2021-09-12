@@ -145,8 +145,36 @@
     height: 200px;
   }
 
-  .create_product_block button .create_product_image_wrapper,
-  .dark .create_product_block button .create_product_image_wrapper {
+  .create_product_block button img,
+  .dark .create_product_block button img {
+    opacity: 0;
+  }
+
+  .create_product_block button .create_product_image_wrapper {
+    background: url('../../../assets/img/single_mobile_dark.png') no-repeat
+      center;
+    background-size: contain;
+  }
+
+  .create_product_block:nth-child(2) button .create_product_image_wrapper {
+    background: url('../../../assets/img/auction_mobile.png') no-repeat center;
+    background-size: contain;
+  }
+
+  .dark
+    .create_product_block:nth-child(1)
+    button
+    .create_product_image_wrapper {
+    background: url('../../../assets/img/single_mobile.png') no-repeat center;
+    background-size: contain;
+  }
+
+  .dark
+    .create_product_block:nth-child(2)
+    button
+    .create_product_image_wrapper {
+    background: url('../../../assets/img/auction_mobile_dark.png') no-repeat
+      center;
     background-size: contain;
   }
 }
