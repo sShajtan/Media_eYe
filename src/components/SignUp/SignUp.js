@@ -6,13 +6,17 @@ const SignUp = (props) => {
   let history = useHistory();
   return (
     <div className="signup_page">
+    <link
+        href="https://fonts.googleapis.com/css?family=Droid+Sans"
+        rel="stylesheet"
+      ></link>
         <div className="signup_left">
         </div>
         <div className="signup_right">
           <div className="container">
             <div className="signup_page_main">
               <a className="goBack_button" onClick={() => history.goBack()}>
-                <span>&#129120; </span> GoBack
+                <span>	&#8592; </span> GoBack
               </a>
               <h2>SIGN UP</h2>
               <form className="signup_form">

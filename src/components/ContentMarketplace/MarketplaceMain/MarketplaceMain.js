@@ -8,7 +8,7 @@ const ContentMarketplaceMain = (props) => {
     return (
         <div className="marketplace_main">
             <div className="container">
-                <h4>{title}</h4>
+                {title ? <h4>{title}</h4> : null }
                 <div className="marketplace_main_main">
                     <MarketplaceBlock />
                     <MarketplaceBlock />

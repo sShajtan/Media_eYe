@@ -6,7 +6,7 @@ import Media from "../../Icons/Categories/Media";
 import Crypto from "../../Icons/Categories/Crypto";
 import Business from "../../Icons/Categories/Business";
 import Sport from "../../Icons/Categories/Sport";
-import "./ContentMarketplaceHeader.css";
+import "./MarketplaceHeader.css";
 import { Collapse } from "react-collapse";
 import Filter from "../Filter/Filter";
 

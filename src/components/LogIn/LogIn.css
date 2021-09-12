@@ -7,6 +7,10 @@
 }
 
 .login_page .goBack_button {
+  color: #000;
+}
+
+.dark .login_page .goBack_button {
   color: #fff;
 }
 .login_left {
@@ -18,11 +22,15 @@
 .login_right {
   width: 70%;
   min-height: 100vh;
-  background-color: #141233;
+  background-color: #e5e5e5;
   background-image: url('../../assets/img/login_right_bg.png');
   background-repeat: no-repeat;
   background-position: center left;
   background-size: cover;
+}
+
+.dark .login_right {
+  background-color: #141233;
 }
 
 .login_page_main {
@@ -40,8 +48,12 @@
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: #000;
   margin: 40px 0 20px;
+}
+
+.dark .login_page h2 {
+  color: #fff;
 }
 
 .login_form {
@@ -71,8 +83,12 @@
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: #000;
   margin-bottom: 10px;
+}
+
+.dark .login_form div label {
+  color: #fff;
 }
 
 .login_form div input {
@@ -84,8 +100,12 @@
   border-radius: 12px;
   padding: 5px 40px 5px 10px;
   outline: none;
-  color: #fff;
+  color: #000;
   font-size: 18px;
+}
+
+.dark .login_form div input {
+  color: #fff;
 }
 
 .login_form button {
@@ -162,7 +182,15 @@
   line-height: 30px;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: #000;
+}
+
+.login_page_main span {
+  color: #000;
+}
+
+.dark .login_page_main span {
+  color: #fff;
 }
 
 .login_page_main span a {
