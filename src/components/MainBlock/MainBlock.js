@@ -170,10 +170,19 @@ const MainBlock = (props) => {
                   <img src="img/main_slider/1.jpg" alt="slide"></img>
                 </div>
                 <div className="main_slide">
+                  <img src="img/main_slider/5.png" alt="slide"></img>
+                </div>
+                <div className="main_slide">
                   <img src="img/main_slider/2.jpg" alt="slide"></img>
                 </div>
                 <div className="main_slide">
+                  <img src="img/main_slider/6.png" alt="slide"></img>
+                </div>
+                <div className="main_slide">
                   <img src="img/main_slider/3.jpg" alt="slide"></img>
+                </div>
+                <div className="main_slide">
+                  <img src="img/main_slider/7.png" alt="slide"></img>
                 </div>
                 <div className="main_slide">
                   <img src="img/main_slider/4.jpg" alt="slide"></img>
@@ -190,13 +199,31 @@ const MainBlock = (props) => {
                   <div className="main_small_slide">
                     <div>
                       <img src="img/ava.png" alt="avatar" />
-                      <span>Klarens Malluta</span>
+                      <span>Ilostmyhandle</span>
                     </div>
                   </div>
                   <div className="main_small_slide">
                     <div>
                       <img src="img/ava.png" alt="avatar" />
                       <span>Klarens Malluta</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
+                      <span>Ilostmyhandle</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
+                      <span>Klarens Malluta</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
+                      <span>Ilostmyhandle</span>
                     </div>
                   </div>
                   <div className="main_small_slide">
