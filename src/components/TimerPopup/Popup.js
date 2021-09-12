@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import MessagePopup from "../MessagePopup/MessagePopup";
-import "./Popup.css";
-import CloseIcon from "../Icons/CloseIcon";
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import MessagePopup from '../MessagePopup/MessagePopup';
+import './Popup.css';
+import CloseIcon from '../Icons/CloseIcon';
 
 const Popup = (props) => {
   const { toggleMessagePopup } = props;
@@ -23,23 +23,23 @@ const Popup = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (email !== null && email !== "") {
+    if (email !== null && email !== '') {
       emailjs
         .sendForm(
-          "service_8p76rtc",
-          "template_3pxskgn",
+          'service_8p76rtc',
+          'template_3pxskgn',
           event.target,
-          "user_EJiwvXDAMeoW6oOr4UYrR"
+          'user_EJiwvXDAMeoW6oOr4UYrR'
         )
         .then(
           (result) => {
-            setEmail("");
+            setEmail('');
             setShowPopup(false);
             props.togglePopup();
             toggleMessagePopup(true);
           },
           (error) => {
-            alert("Message not sent");
+            alert('Message not sent');
           }
         );
     }
@@ -47,7 +47,7 @@ const Popup = (props) => {
 
   return (
     <React.Fragment>
-      <div className={props.showPopup ? "popup active" : "popup"}>
+      <div className={props.showPopup ? 'popup active' : 'popup'}>
         <div
           className="popup-wrapper timer_popup soon_popup timer"
           onClick={props.togglePopup}

@@ -1,5 +1,5 @@
-import React from "react";
-import "./MainHow.css";
+import React from 'react';
+import './MainHow.css';
 
 const MainHow = (props) => {
   const { toggleSoonPopup, darkTheme } = props;
@@ -9,7 +9,7 @@ const MainHow = (props) => {
         className="title animate__animated animate__fadeInLeft wow"
         data-wow-duration="1.5s"
         data-wow-delay="0.5s"
-        src={darkTheme ? "img/how_title_dark.svg": "img/how_title.svg" }
+        src={darkTheme ? 'img/how_title_dark.svg' : 'img/how_title.svg'}
       />
       <div className="main_how_main_wrapper">
         <div className="container">
@@ -19,16 +19,16 @@ const MainHow = (props) => {
                 className="animate__animated animate__fadeInLeft wow"
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
-                src={darkTheme ? "img/left_nft_dark.svg" : "img/left_nft.svg"}
+                src={darkTheme ? 'img/left_nft_dark.svg' : 'img/left_nft.svg'}
                 alt="nft_image"
               />
             </div>
             <div className="main_how_center">
               <img src="img/color_logo.png" alt="MeDIA eYe NFT Portal logo" />
               <p>
-                MeDIA eYe NFT Portal puts the power of blockchain to work for your
-                next marketing campaign, promotion, rewards program or creating a
-                collectible. <br />
+                MeDIA eYe NFT Portal puts the power of blockchain to work for
+                your next marketing campaign, promotion, rewards program or
+                creating a collectible. <br />
                 <br />
                 Sign up with Google or Facebook.
               </p>
@@ -315,7 +315,7 @@ const MainHow = (props) => {
                 className="animate__animated animate__fadeInRight wow"
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
-                src={darkTheme ? "img/right_nft_dark.svg" : "img/right_nft.svg"}
+                src={darkTheme ? 'img/right_nft_dark.svg' : 'img/right_nft.svg'}
                 alt="nft_image"
               />
             </div>

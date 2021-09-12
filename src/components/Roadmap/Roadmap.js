@@ -1,9 +1,9 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import "./Roadmap.css";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import './Roadmap.css';
 
 const Roadmap = (props) => {
-  const {darktheme } = props;
+  const { darktheme } = props;
   const theme = useSelector((state) => state.app.darkTheme);
   return (
     <div className="roadmap">
@@ -14,7 +14,9 @@ const Roadmap = (props) => {
           className="title animate__animated animate__zoomIn wow"
           data-wow-duration="1s"
           data-wow-delay="0.5s"
-          src={darktheme ? "img/roadmap_title_dark.svg" : "img/roadmap_title.svg"}
+          src={
+            darktheme ? 'img/roadmap_title_dark.svg' : 'img/roadmap_title.svg'
+          }
         />
         <div className="roadmap_main">
           <div className="roadmap_main_block_wrapper active">
@@ -69,7 +71,7 @@ const Roadmap = (props) => {
         <div className="roadmap_mobile">
           <img
             src={
-              theme ? "img/roadmap_mobile_dark.svg" : "img/roadmap_mobile.svg"
+              theme ? 'img/roadmap_mobile_dark.svg' : 'img/roadmap_mobile.svg'
             }
           />
         </div>
