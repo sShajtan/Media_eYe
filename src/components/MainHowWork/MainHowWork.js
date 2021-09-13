@@ -1,16 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import JoinUs from '../JoinUs/JoinUs';
 import './MainHowWork.css';
 
 const MainHowWork = (props) => {
-  const { togglePartnersPopup, toggleMessagePopup, darktheme } = props;
+  const darkTheme = useSelector((state) => state.app.darkTheme);
+  const { togglePartnersPopup, toggleMessagePopup } = props;
   return (
     <div className="main_howwork">
       <img
         className="title animate__animated animate__zoomIn wow"
         data-wow-duration="1s"
         data-wow-delay="0.5s"
-        src={darktheme ? 'img/howwork_title_dark.svg' : 'img/howwork_title.svg'}
+        src={darkTheme ? 'img/howwork_title_dark.svg' : 'img/howwork_title.svg'}
         alt="title"
       />
       <div className="main_howwork_wrapper">

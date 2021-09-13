@@ -9,7 +9,8 @@ import SoonPopup from './components/SoonPopup/Popup';
 import PartnersPopup from './components/PartnersPopup/Popup';
 import Footer from './components/Footer/Footer';
 import NoMatch from './pages/NoMatch';
-import Gallerey from './pages/Gallerey';
+import Gallery from './pages/Gallery';
+import Creators from './pages/Creators';
 import './App.css';
 import './fonts/Poppins/stylesheet.css';
 import './fonts/Rambla/stylesheet.css';
@@ -22,6 +23,12 @@ import NftMarketplace from './pages/NftMarketplace';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import ConnectWallet from './pages/ConnectWallet';
+import Feature from './pages/SelectFeature';
+import CreatorAccount from './pages/CreatorAccount';
+import Product from './pages/Product';
+import ProductAuction from './components/ProductCard/ProductAuction/ProductAuction';
+import CreateProduct from './pages/CreateProduct';
+import CreateSingleProduct from './pages/CreateSingleProduct';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -32,6 +39,7 @@ const App = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
+  const [showWalletCollapse, setShowWalletCollapse] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
     if (timerPopup === false) {
@@ -68,6 +76,11 @@ const App = () => {
 
   const closeNftCollapse = () => {
     setShowNftCollpase(false);
+    setShowWalletCollapse(false);
+  };
+
+  const toggleWalletCollapse = () => {
+    setShowWalletCollapse(!showWalletCollapse);
   };
 
   return (
@@ -96,7 +109,9 @@ const App = () => {
         <Header
           toggleSoonPopup={toggleSoonPopup}
           toggleNftCollapse={toggleNftCollapse}
+          toggleWalletCollapse={toggleWalletCollapse}
           showNftCollapse={showNftCollapse}
+          showWalletCollapse={showWalletCollapse}
         />
         <Switch>
           <Route path="/" exact>
@@ -127,13 +142,34 @@ const App = () => {
             <LogIn />
           </Route>
           <Route path="/gallery" exact>
-            <Gallerey darkTheme={darkTheme} />
+            <Gallery closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/creators" exact>
+            <Creators closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/creator-account" exact>
+            <CreatorAccount closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/connect-wallet" exact>
-            <ConnectWallet darkTheme={darkTheme} />
+            <ConnectWallet closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/feature" exact>
+            <Feature closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/auction-product" exact>
+            <ProductAuction closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/product" exact>
+            <Product closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/create" exact>
+            <CreateProduct closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/create/single" exact>
+            <CreateSingleProduct closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="*">
-            <NoMatch />
+            <NoMatch onClick={closeNftCollapse} />
           </Route>
         </Switch>
         <Footer toggleSoonPopup={toggleSoonPopup} />

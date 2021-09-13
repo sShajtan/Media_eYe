@@ -16,21 +16,18 @@ const Footer = (props) => {
         <div className="footer_main">
           <div className="footer_left">
             <a href="/">
-              <img className="footer_logo" src="img/logo.png" alt="logo" />
+              <img className="footer_logo" src="../img/logo.png" alt="logo" />
             </a>
             <div className="footer_menu">
               <ul>
                 <li>
-                  <button onClick={toggleSoonPopup}>NTF Marketplace</button>
+                  <Link to="/nft-marketplace">NTF Marketplace</Link>
                 </li>
                 <li>
-                  <button onClick={toggleSoonPopup}>Content Marketplace</button>
+                  <Link to="/gallerey">Gallery</Link>
                 </li>
                 <li>
-                  <button onClick={toggleSoonPopup}>Gallery</button>
-                </li>
-                <li>
-                  <button>Creators</button>
+                  <Link to="/">Creators</Link>
                 </li>
               </ul>
               <ul>

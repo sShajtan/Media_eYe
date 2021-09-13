@@ -53,7 +53,7 @@ const ContentMarketplaceHeader = (props) => {
                   </button>
                   <button>
                     <Entertaiment />
-                    Entertainment
+                    Gaming
                   </button>
                   <button>
                     <Media />
@@ -83,7 +83,7 @@ const ContentMarketplaceHeader = (props) => {
                 <span>All</span>
               </button>
               <button>
-                <span>Entertainment</span>
+                <span>Gaming</span>
               </button>
               <button>
                 <span>Media</span>

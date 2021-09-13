@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import './Roadmap.css';
 
 const Roadmap = (props) => {
-  const { darktheme } = props;
-  const theme = useSelector((state) => state.app.darkTheme);
+  const darkTheme = useSelector((state) => state.app.darkTheme);
+
   return (
     <div className="roadmap">
       <div className="roadmap_left_bg"></div>
@@ -15,7 +15,7 @@ const Roadmap = (props) => {
           data-wow-duration="1s"
           data-wow-delay="0.5s"
           src={
-            darktheme ? 'img/roadmap_title_dark.svg' : 'img/roadmap_title.svg'
+            darkTheme ? 'img/roadmap_title_dark.svg' : 'img/roadmap_title.svg'
           }
         />
         <div className="roadmap_main">
@@ -71,7 +71,9 @@ const Roadmap = (props) => {
         <div className="roadmap_mobile">
           <img
             src={
-              theme ? 'img/roadmap_mobile_dark.svg' : 'img/roadmap_mobile.svg'
+              darkTheme
+                ? 'img/roadmap_mobile_dark.svg'
+                : 'img/roadmap_mobile.svg'
             }
           />
         </div>

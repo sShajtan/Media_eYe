@@ -1,8 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './Tokenomics.css';
 
 const Tokenomics = (props) => {
-  const { darktheme } = props;
+  const darkTheme = useSelector((state) => state.app.darkTheme);
   return (
     <div className="tokenomics">
       <div className="container">
@@ -13,7 +14,7 @@ const Tokenomics = (props) => {
           src="img/tokenomics_title.svg"
           alt="Tokenomics"
           src={
-            darktheme
+            darkTheme
               ? 'img/tokenomics_title_dark.svg'
               : 'img/tokenomics_title.svg'
           }

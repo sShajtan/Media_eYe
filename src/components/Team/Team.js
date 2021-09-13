@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import Linkedinprofileicon from '../Icons/LinkedInProfileIcon';
 import './Team.css';
@@ -32,6 +33,7 @@ function SamplePrevArrow(props) {
 }
 
 const Team = () => {
+  const darkTheme = useSelector((state) => state.app.darkTheme);
   const settings = {
     dots: false,
     infinite: true,

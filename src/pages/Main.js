@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Community from '../components/Community/Community';
 import Faq from '../components/Faq/Faq';
 import MainBlock from '../components/MainBlock/MainBlock';
@@ -13,7 +12,6 @@ import MainForm from '../components/MainForm/MainForm';
 import Tokenomics from '../components/Tokenomics/Tokenomics';
 
 const Main = (props) => {
-  const darkTheme = useSelector((state) => state.app.darkTheme);
   const {
     togglePartnersPopup,
     toggleBusinessPopup,
@@ -26,25 +24,23 @@ const Main = (props) => {
   return (
     <React.Fragment>
       <div onClick={closeNftCollapse}>
-        <MainBlock togglePopup={togglePopup} darkTheme={darkTheme} />
-        <MainInfo darkTheme={darkTheme} />
-        <MainHow toggleSoonPopup={toggleSoonPopup} darkTheme={darkTheme} />
+        <MainBlock togglePopup={togglePopup} />
+        <MainInfo />
+        <MainHow toggleSoonPopup={toggleSoonPopup} />
         <MainHowWork
           togglePartnersPopup={togglePartnersPopup}
           toggleMessagePopup={toggleMessagePopup}
-          darkTheme={darkTheme}
         />
-        <Tokenomics darkTheme={darkTheme} />
-        <Roadmap darkTheme={darkTheme} />
-        <Team darkTheme={darkTheme} />
+        <Tokenomics />
+        <Roadmap />
+        <Team />
         <Partners
           toggleBusinessPopup={toggleBusinessPopup}
           toggleMessagePopup={toggleMessagePopup}
-          darkTheme={darkTheme}
         />
-        <Community darkTheme={darkTheme} />
+        <Community />
         <MainForm toggleMessagePopup={toggleMessagePopup} />
-        <Faq darkTheme={darkTheme} />
+        <Faq />
       </div>
     </React.Fragment>
   );
