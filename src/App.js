@@ -126,11 +126,11 @@ const App = () => {
           <Route path="/login" exact>
             <LogIn />
           </Route>
-          <Route path="/gallerey" exact>
-            <Gallerey  darkTheme={darkTheme} />
+          <Route path="/gallery" exact>
+            <Gallerey darkTheme={darkTheme} />
           </Route>
           <Route path="/connect-wallet" exact>
-            <ConnectWallet  darkTheme={darkTheme} />
+            <ConnectWallet darkTheme={darkTheme} />
           </Route>
           <Route path="*">
             <NoMatch />

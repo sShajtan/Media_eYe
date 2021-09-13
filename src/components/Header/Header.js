@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import { updateTheme } from '../../store/app/appSlice';
 import './Header.css';
@@ -10,6 +10,7 @@ import SearchIcon from '../Icons/SearchIcon';
 const Header = (props) => {
   const { toggleSoonPopup, toggleNftCollapse, showNftCollapse } = props;
   const theme = useSelector((state) => state.app.darkTheme);
+  const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
   const [mobileSearch, setMobileSearch] = useState(false);
   const wrapperRef = useRef(null);
@@ -52,8 +53,10 @@ const Header = (props) => {
                   }
                 >
                   <Collapse isOpened={showNftCollapse}>
-                    <button onClick={toggleSoonPopup}>NFT Marketplace</button>
+                    <Link to="/nft-marketplace">NFT Marketplace </Link>
+                    {/* <button onClick={toggleSoonPopup}>NFT Marketplace</button> */}
                     <Link to="/content-marketplace">Content Marketplace</Link>
+                    <Link to="/gallery">Gallery </Link>
                     <button onClick={toggleSoonPopup}>Gallery</button>
                   </Collapse>
                 </div>
@@ -113,10 +116,10 @@ const Header = (props) => {
                   </div>
                 </div>
               </div>
-              <button className="ntf_header"  onClick={toggleSoonPopup}>
+              <button className="ntf_header" onClick={toggleSoonPopup}>
                 Create NFT
               </button>
-               {/* <div className="auth">
+              {/* <div className="auth">
                 <NavLink  to="/login" className="login">
                   <span>Log in</span>
                 </NavLink>
