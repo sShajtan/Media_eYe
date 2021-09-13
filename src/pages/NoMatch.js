@@ -12,7 +12,7 @@ const Nomatch = (props) => {
           <a className="goBack_button" onClick={() => history.goBack()}>
             <span>&#8592; </span> GoBack
           </a>
-          <img src="img/404.png" />
+          <img src="../../../img/404.png" />
         </div>
       </div>
     </div>
