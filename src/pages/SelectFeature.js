@@ -1,17 +1,16 @@
-import React from "react";
-import SelectFeature from "../components/SelectFeature/SelectFeature";
-
+import React from 'react';
+import SelectFeature from '../components/SelectFeature/SelectFeature';
 
 const Feature = (props) => {
-    const { closeNftCollapse, darkTheme } = props;
+  const { closeNftCollapse } = props;
 
-    return (
-        <React.Fragment>
-            <div onClick={closeNftCollapse} className="marketplace">
-                <SelectFeature />
-            </div>
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <div onClick={closeNftCollapse} className="marketplace">
+        <SelectFeature />
+      </div>
+    </React.Fragment>
+  );
 };
 
 export default Feature;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import All from '../../Icons/Categories/All';
 import Entertaiment from '../../Icons/Categories/Entertaiment';
 import Art from '../../Icons/Categories/Art';
@@ -11,13 +12,12 @@ import { Collapse } from 'react-collapse';
 import Filter from '../../ContentMarketplace/Filter/Filter';
 
 const CreatorsHeader = (props) => {
-  const { darkTheme } = props;
-    const [showMobileCategories, setShowMobileCategories] = useState(false);
+  const darkTheme = useSelector((state) => state.app.darkTheme);
+  const [showMobileCategories, setShowMobileCategories] = useState(false);
 
   const toggleMobileCategories = () => {
     setShowMobileCategories(!showMobileCategories);
   };
-
 
   return (
     <div className="content_marketplace_header">
@@ -25,9 +25,7 @@ const CreatorsHeader = (props) => {
         <div className="content_marketplace_header_main">
           <img
             src={
-              darkTheme
-                ? 'img/creator_title_dark.png'
-                : 'img/creator_title.png'
+              darkTheme ? 'img/creator_title_dark.png' : 'img/creator_title.png'
             }
             alt="title"
           />
@@ -90,7 +88,6 @@ const CreatorsHeader = (props) => {
             </div>
             <Filter />
           </div>
-      
         </div>
       </div>
     </div>

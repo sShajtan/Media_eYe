@@ -9,7 +9,7 @@ import SoonPopup from './components/SoonPopup/Popup';
 import PartnersPopup from './components/PartnersPopup/Popup';
 import Footer from './components/Footer/Footer';
 import NoMatch from './pages/NoMatch';
-import Gallerey from './pages/Gallerey';
+import Gallery from './pages/Gallery';
 import Creators from './pages/Creators';
 import './App.css';
 import './fonts/Poppins/stylesheet.css';
@@ -29,6 +29,7 @@ import Product from './pages/Product';
 import ProductAuction from './components/ProductCard/ProductAuction/ProductAuction';
 import CreateProduct from './pages/CreateProduct';
 import CreateSingleProduct from './pages/CreateSingleProduct';
+import Collection from './pages/CreateCollectionProduct';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -79,11 +80,9 @@ const App = () => {
     setShowWalletCollapse(false);
   };
 
-
-    const toggleWalletCollapse = () => {
+  const toggleWalletCollapse = () => {
     setShowWalletCollapse(!showWalletCollapse);
   };
-
 
   return (
     <Router>
@@ -111,7 +110,7 @@ const App = () => {
         <Header
           toggleSoonPopup={toggleSoonPopup}
           toggleNftCollapse={toggleNftCollapse}
-          toggleWalletCollapse= {toggleWalletCollapse}
+          toggleWalletCollapse={toggleWalletCollapse}
           showNftCollapse={showNftCollapse}
           showWalletCollapse={showWalletCollapse}
         />
@@ -143,32 +142,35 @@ const App = () => {
           <Route path="/login" exact>
             <LogIn />
           </Route>
-          <Route path="/gallerey" exact>
-            <Gallerey closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+          <Route path="/gallery" exact>
+            <Gallery closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/creators" exact>
-            <Creators closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+            <Creators closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/creator-account" exact>
-            <CreatorAccount closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+            <CreatorAccount closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/connect-wallet" exact>
-            <ConnectWallet closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+            <ConnectWallet closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/feature" exact>
-            <Feature closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+            <Feature closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/auction-product" exact>
-            <ProductAuction closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+            <ProductAuction closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/product" exact>
-            <Product closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+            <Product closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/create" exact>
-            <CreateProduct closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+            <CreateProduct closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/create/single" exact>
-            <CreateSingleProduct closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+            <CreateSingleProduct closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/create/collection" exact>
+            <Collection closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
           </Route>
           <Route path="*">
             <NoMatch onClick={closeNftCollapse} />

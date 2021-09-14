@@ -1,9 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './ConnectWallet.css';
 import { NavLink, useHistory } from 'react-router-dom';
 
 const ConnectWallet = (props) => {
-  const { darkTheme } = props;
+  const darkTheme = useSelector((state) => state.app.darkTheme);
   let history = useHistory();
 
   return (

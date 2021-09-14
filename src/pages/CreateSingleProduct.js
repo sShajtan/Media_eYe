@@ -1,13 +1,13 @@
 import React from 'react';
 import Single from '../components/CreateProduct/Single/Single';
 
-const CreateSingleProduct= (props) => {
-  const { closeNftCollapse, darkTheme } = props;
+const CreateSingleProduct = (props) => {
+  const { closeNftCollapse } = props;
 
   return (
     <React.Fragment>
       <div onClick={closeNftCollapse}>
-        <Single darkTheme={darkTheme} />
+        <Single />
       </div>
     </React.Fragment>
   );

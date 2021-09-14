@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
 import WOW from 'wowjs';
 import './MainBlock.css';
@@ -11,6 +12,7 @@ const MainBlock = (props) => {
   const slider1 = useRef();
   const slider2 = useRef();
   const slider3 = useRef();
+  const history = useHistory();
 
   useEffect(() => {
     setNav1(slider1.current);
@@ -103,7 +105,10 @@ const MainBlock = (props) => {
               >
                 <span>Learn More</span>
               </a>
-              <button className="sign_up" onClick={togglePopup}>
+              <button
+                className="sign_up"
+                onClick={() => history.push('/signup')}
+              >
                 <span>Sign Up</span>
               </button>
             </div>

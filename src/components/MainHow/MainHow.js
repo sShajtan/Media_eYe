@@ -1,8 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import './MainHow.css';
 
 const MainHow = (props) => {
-  const { toggleSoonPopup, darkTheme } = props;
+  const darkTheme = useSelector((state) => state.app.darkTheme);
+  const history = useHistory();
+  const { toggleSoonPopup } = props;
   return (
     <div className="main_how">
       <img
@@ -329,12 +333,15 @@ const MainHow = (props) => {
               className="main_how_footer_block animate__animated animate__fadeInRight wow"
               data-wow-duration="1s"
               data-wow-delay="0.5s"
-              onClick={toggleSoonPopup}
+              onClick={() => history.push('/content-marketplace')}
             >
               <img src="img/nft/1.png" alt="nft_image" />
               <h5>Content Marketplace</h5>
             </div>
-            <div className="main_how_footer_block" onClick={toggleSoonPopup}>
+            <div
+              className="main_how_footer_block"
+              onClick={() => history.push('/nft-marketplace')}
+            >
               <img src="img/nft/4.png" alt="nft_image" />
               <h5>NFT Marketplace</h5>
             </div>
@@ -342,7 +349,7 @@ const MainHow = (props) => {
               className="main_how_footer_block animate__animated animate__fadeInLeft wow"
               data-wow-duration="1s"
               data-wow-delay="0.5s"
-              onClick={toggleSoonPopup}
+              onClick={() => history.push('/gallery')}
             >
               <img src="img/nft/5.png" alt="nft_image" />
               <h5>Gallery</h5>
@@ -351,7 +358,7 @@ const MainHow = (props) => {
               className="main_how_footer_block animate__animated animate__fadeInTopRight wow"
               data-wow-duration="1s"
               data-wow-delay="1s"
-              onClick={toggleSoonPopup}
+              onClick={() => history.push('/create')}
             >
               <img src="img/nft/2.png" alt="nft_image" />
               <h5>Create NFT</h5>

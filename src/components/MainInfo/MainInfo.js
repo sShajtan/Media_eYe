@@ -1,9 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './MainInfo.css';
 import { Link } from 'react-scroll';
 
 const MainInfo = (props) => {
-  const { darkTheme } = props;
+  const darkTheme = useSelector((state) => state.app.darkTheme);
 
   return (
     <div className="main_info" id="about">

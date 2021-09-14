@@ -1,17 +1,24 @@
 import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import { updateTheme } from '../../store/app/appSlice';
 import './Header.css';
 import Item from '../Icons/Item';
-import Edit from '../Icons/Edit'; 
-import SearchIcon from '../Icons/SearchIcon'; 
+import Edit from '../Icons/Edit';
+import SearchIcon from '../Icons/SearchIcon';
 
 const Header = (props) => {
-  const { toggleSoonPopup, toggleNftCollapse, showNftCollapse, showWalletCollapse, toggleWalletCollapse } = props;
+  const {
+    toggleSoonPopup,
+    toggleNftCollapse,
+    showNftCollapse,
+    showWalletCollapse,
+    toggleWalletCollapse
+  } = props;
   const theme = useSelector((state) => state.app.darkTheme);
+  const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
   const [mobileSearch, setMobileSearch] = useState(false);
@@ -55,7 +62,10 @@ const Header = (props) => {
                   }
                 >
                   <Collapse isOpened={showNftCollapse}>
-                    <button onClick={toggleSoonPopup}>NFT Marketplace</button>
+                    <Link to="/nft-marketplace">NFT Marketplace </Link>
+                    {/* <button onClick={toggleSoonPopup}>NFT Marketplace</button> */}
+                    <Link to="/content-marketplace">Content Marketplace</Link>
+                    <Link to="/gallery">Gallery </Link>
                     <button onClick={toggleSoonPopup}>Gallery</button>
                   </Collapse>
                 </div>
@@ -89,14 +99,18 @@ const Header = (props) => {
               <img
                 alt="mobile_icon"
                 src={
-                  theme ? '../img/mobile_search.png' : '../img/mobile_search_dark.png'
+                  theme
+                    ? '../img/mobile_search.png'
+                    : '../img/mobile_search_dark.png'
                 }
               />
             </div>
             <div className="mobile_switch" onClick={toggleTheme}>
               <img
                 alt="toggle_theme_icon"
-                src={theme ? '../img/sun_mobile.png' : '../img/sun_mobile_dark.png'}
+                src={
+                  theme ? '../img/sun_mobile.png' : '../img/sun_mobile_dark.png'
+                }
               />
             </div>
             <div className="header_right_menu">
@@ -115,10 +129,13 @@ const Header = (props) => {
                   </div>
                 </div>
               </div>
-              <button className="ntf_header"  onClick={toggleSoonPopup}>
+              <button
+                className="ntf_header"
+                onClick={() => history.push('/create')}
+              >
                 Create NFT
               </button>
-               {/* {isLogin ? 
+              {/* {isLogin ? 
                 <div className="user_header_menu">
                   <div>
                     <img src="../img/bag.png" />
@@ -179,7 +196,7 @@ const Header = (props) => {
                   </NavLink> 
                 </div> 
               }  */}
-                
+
             </div>
           </div>
         </div>
@@ -258,7 +275,9 @@ const Header = (props) => {
                 <img
                   alt="soc_icon"
                   src={
-                    theme ? '../img/footer_soc/1.png' : '../img/footer_soc/1-dark.png'
+                    theme
+                      ? '../img/footer_soc/1.png'
+                      : '../img/footer_soc/1-dark.png'
                   }
                 />
               </a>
@@ -270,7 +289,9 @@ const Header = (props) => {
                 <img
                   alt="soc_icon"
                   src={
-                    theme ? '../img/footer_soc/2.png' : '../img/footer_soc/2-dark.png'
+                    theme
+                      ? '../img/footer_soc/2.png'
+                      : '../img/footer_soc/2-dark.png'
                   }
                 />
               </a>
@@ -282,7 +303,9 @@ const Header = (props) => {
                 <img
                   alt="soc_icon"
                   src={
-                    theme ? '../img/footer_soc/3.png' : '../img/footer_soc/3-dark.png'
+                    theme
+                      ? '../img/footer_soc/3.png'
+                      : '../img/footer_soc/3-dark.png'
                   }
                 />
               </a>
@@ -294,7 +317,9 @@ const Header = (props) => {
                 <img
                   alt="soc_icon"
                   src={
-                    theme ? '../img/footer_soc/4.png' : '../img/footer_soc/4-dark.png'
+                    theme
+                      ? '../img/footer_soc/4.png'
+                      : '../img/footer_soc/4-dark.png'
                   }
                 />
               </a>
@@ -302,7 +327,9 @@ const Header = (props) => {
                 <img
                   alt="soc_icon"
                   src={
-                    theme ? '../img/footer_soc/5.png' : '../img/footer_soc/5-dark.png'
+                    theme
+                      ? '../img/footer_soc/5.png'
+                      : '../img/footer_soc/5-dark.png'
                   }
                 />
               </a>
@@ -314,7 +341,9 @@ const Header = (props) => {
                 <img
                   alt="soc_icon"
                   src={
-                    theme ? '../img/footer_soc/6.png' : '../img/footer_soc/6-dark.png'
+                    theme
+                      ? '../img/footer_soc/6.png'
+                      : '../img/footer_soc/6-dark.png'
                   }
                 />
               </a>

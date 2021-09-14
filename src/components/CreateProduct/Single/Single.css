@@ -90,7 +90,8 @@
 
 .product_single_select,
 .choose_network .ethereum,
-.single_product_main .create {
+.single_product_main .create,
+.collection_product .create {
   border: none;
   outline: none;
   cursor: pointer;
@@ -119,7 +120,8 @@
 .choose_network .bsc,
 .choose_network .ethereum,
 .product_single_upload span,
-.single_product_main .create {
+.single_product_main .create,
+.collection_product .create {
   font-size: 16px;
 }
 
@@ -165,7 +167,8 @@
 
 .product_single_select::before,
 .choose_network .ethereum::before,
-.single_product_main .create::before {
+.single_product_main .create::before,
+.collection_product .create::before {
   content: '';
   background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
   background-size: contain;
@@ -182,7 +185,8 @@
 .product_single_upload:hover,
 .choose_network .bsc:hover,
 .choose_network .ethereum:hover,
-.single_product_main .create:hover {
+.single_product_main .create:hover,
+.collection_product .create:hover {
   transition: 0.4s;
   background: transparent;
   color: #141233 !important;
@@ -192,7 +196,8 @@
 .dark .product_single_upload:hover,
 .dark .choose_network .bs:hover,
 .dark .choose_network .ethereum:hover,
-.dark .single_product_main .create:hover {
+.dark .single_product_main .create:hover,
+.dark .collection_product .create:hover {
   transition: 0.4s;
   background: transparent;
   color: #fff !important;
@@ -202,7 +207,8 @@
 .product_single_upload:hover::before,
 .choose_network .bsc:hover::before,
 .choose_network .ethereum::before,
-.single_product_main .create::before {
+.single_product_main .create::before,
+.collection_product .create::before {
   transition: 0.4s;
   opacity: 1;
 }

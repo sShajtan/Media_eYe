@@ -7,6 +7,7 @@ const MarketplaceBlock = () => {
       <img src="img/triangle.png" className="triangle" />
       <div className="marketplace_block">
         <div className="marketplace_block_img">
+          what you
           <img src="img/marketplace_img.png" alt="marketplace block img" />
         </div>
         <div className="marketplace_block_info">

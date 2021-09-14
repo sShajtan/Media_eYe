@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import './MarketplaceHeader.css';
 
 const GallereyHeader = (props) => {
-  const { darkTheme } = props;
+  const darkTheme = useSelector((state) => state.app.darkTheme);
   const [showMobileCategories, setShowMobileCategories] = useState(false);
 
   const toggleMobileCategories = () => {
