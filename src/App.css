@@ -303,3 +303,8 @@ h3 img {
 .dark .goBack_button {
   color: #fff;
 }
+
+.profile {
+  margin-top: 90px;
+  padding: 50px 0;
+}
