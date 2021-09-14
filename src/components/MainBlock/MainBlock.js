@@ -178,19 +178,34 @@ const MainBlock = (props) => {
                   <img src="img/main_slider/5.png" alt="slide"></img>
                 </div>
                 <div className="main_slide">
+                  <img src="img/main_slider/8.png" alt="slide"></img>
+                </div>
+                <div className="main_slide">
                   <img src="img/main_slider/2.jpg" alt="slide"></img>
                 </div>
                 <div className="main_slide">
                   <img src="img/main_slider/6.png" alt="slide"></img>
                 </div>
                 <div className="main_slide">
+                  <img src="img/main_slider/9.png" alt="slide"></img>
+                </div>
+                <div className="main_slide">
                   <img src="img/main_slider/3.jpg" alt="slide"></img>
+                </div>
+                <div className="main_slide">
+                  <img src="img/main_slider/11.png" alt="slide"></img>
                 </div>
                 <div className="main_slide">
                   <img src="img/main_slider/7.png" alt="slide"></img>
                 </div>
                 <div className="main_slide">
+                  <img src="img/main_slider/10.png" alt="slide"></img>
+                </div>
+                <div className="main_slide">
                   <img src="img/main_slider/4.jpg" alt="slide"></img>
+                </div>
+                <div className="main_slide">
+                  <img src="img/main_slider/12.png" alt="slide"></img>
                 </div>
               </Slider>
               <div className="right_small_slider">
@@ -210,13 +225,7 @@ const MainBlock = (props) => {
                   <div className="main_small_slide">
                     <div>
                       <img src="img/ava.png" alt="avatar" />
-                      <span>Klarens Malluta</span>
-                    </div>
-                  </div>
-                  <div className="main_small_slide">
-                    <div>
-                      <img src="img/ava.png" alt="avatar" />
-                      <span>Ilostmyhandle</span>
+                      <span>FORS99</span>
                     </div>
                   </div>
                   <div className="main_small_slide">
@@ -234,7 +243,43 @@ const MainBlock = (props) => {
                   <div className="main_small_slide">
                     <div>
                       <img src="img/ava.png" alt="avatar" />
+                      <span>FORS99</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
                       <span>Klarens Malluta</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
+                      <span>FORS99</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
+                      <span>Ilostmyhandle</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
+                      <span>FORS99</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
+                      <span>Klarens Malluta</span>
+                    </div>
+                  </div>
+                  <div className="main_small_slide">
+                    <div>
+                      <img src="img/ava.png" alt="avatar" />
+                      <span>FORS99</span>
                     </div>
                   </div>
                 </Slider>

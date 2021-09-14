@@ -30,6 +30,7 @@ import ProductAuction from './components/ProductCard/ProductAuction/ProductAucti
 import CreateProduct from './pages/CreateProduct';
 import CreateSingleProduct from './pages/CreateSingleProduct';
 import Collection from './pages/CreateCollectionProduct';
+import Profile from './pages/Profile';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -171,6 +172,9 @@ const App = () => {
           </Route>
           <Route path="/create/collection" exact>
             <Collection closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
+          </Route>
+          <Route path="/profile" exact>
+            <Profile closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="*">
             <NoMatch onClick={closeNftCollapse} />
