@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src",
     "\\src\\components",
     "\\src\\components\\Faq",
-    "\\src\\components\\Roadmap",
     "\\src\\components\\Tokenomics"
   ],
   "PreviewInSolutionExplorer": false
