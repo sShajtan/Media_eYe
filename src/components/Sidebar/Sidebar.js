@@ -7,6 +7,7 @@ import './Sidebar.css';
 const Sidebar = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
   const [fixSidebar, setFixSidebar] = useState(true);
+  const [activeBtn, setActiveBtn] = useState('1');
 
 
   const handleScrollMen = (e) => {
@@ -44,7 +45,7 @@ const Sidebar = (props) => {
             <NavLink to="/profile/settings" exact className="mobile_profile_btn" >
                 Settings
             </NavLink>
-            <NavLink to="/profile/support" exact className="mobile_profile_btn" >
+            <NavLink to="/profile/support" exact className="mobile_profile_btn" autoFocus={true} >
                 Support
             </NavLink>
           </div>
