@@ -35,6 +35,7 @@ import ProfileWallet from './pages/ProfileWallet';
 import ProfileSettings from './pages/ProfileSettings';
 import ProfileSupport from './pages/ProfileSupport';
 import ProfileSubscription from './pages/ProfileSubscription';
+import Canvas from './pages/Canvas';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
