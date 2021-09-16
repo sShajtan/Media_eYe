@@ -31,6 +31,7 @@ import CreateProduct from './pages/CreateProduct';
 import CreateSingleProduct from './pages/CreateSingleProduct';
 import Collection from './pages/CreateCollectionProduct';
 import Profile from './pages/Profile';
+import Canvas from './pages/Canvas';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -175,6 +176,9 @@ const App = () => {
           </Route>
           <Route path="/profile" exact>
             <Profile closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/theOne/canvas" exact>
+            <Canvas closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="*">
             <NoMatch onClick={closeNftCollapse} />
