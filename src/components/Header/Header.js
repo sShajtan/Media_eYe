@@ -62,10 +62,9 @@ const Header = (props) => {
                   }
                 >
                   <Collapse isOpened={showNftCollapse}>
-                    <Link to="/nft-marketplace">NFT Marketplace </Link>
-                    {/* <button onClick={toggleSoonPopup}>NFT Marketplace</button> */}
-                    <Link to="/content-marketplace">Content Marketplace</Link>
-                    <Link to="/gallery">Gallery </Link>
+                    {/* <Link to="/nft-marketplace">NFT Marketplace </Link> */}
+                     <button onClick={toggleSoonPopup}>NFT Marketplace</button>
+                    {/* <Link to="/gallery">Gallery </Link> */}
                     <button onClick={toggleSoonPopup}>Gallery</button>
                   </Collapse>
                 </div>

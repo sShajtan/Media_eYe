@@ -31,6 +31,10 @@ import CreateProduct from './pages/CreateProduct';
 import CreateSingleProduct from './pages/CreateSingleProduct';
 import Collection from './pages/CreateCollectionProduct';
 import Profile from './pages/Profile';
+import ProfileWallet from './pages/ProfileWallet';
+import ProfileSettings from './pages/ProfileSettings';
+import ProfileSupport from './pages/ProfileSupport';
+import ProfileSubscription from './pages/ProfileSubscription';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -173,7 +177,19 @@ const App = () => {
           <Route path="/create/collection" exact>
             <Collection closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
           </Route>
-          <Route path="/profile" exact>
+          <Route path="/profile/wallet" exact>
+            <ProfileWallet closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/profile/settings" exact>
+            <ProfileSettings closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/profile/support" exact>
+            <ProfileSupport closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/profile/subscription" exact>
+            <ProfileSubscription closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/profile" exact >
             <Profile closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="*">

@@ -1,11 +1,343 @@
+.sidebar_wrapper {
+  width: 320px;
+  min-width: 320px;
+  margin-right: 20px;
+}
+
 .sidebar {
-  max-width: 25%;
-  background: rgba(255, 255, 255, 0.02);
+  width: 320px;
+  min-width: 320px;
+  background: rgba(255, 255, 255, 0.63);
+  border: 1px solid #797979;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  padding: 0 15px;
+  min-height: 520px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+}
+
+.sidebar.fix {
+  bottom: 275px;
+}
+
+.dark .sidebar {
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid #797979;
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  border-radius: 12px;
-  padding: 0 20px;
-  min-height: 80vh;
+}
+
+.profile_btn {
+  width: 100%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  height: 48px;
+}
+
+.dark .profile_btn {
+  color: #fff;
+}
+
+.sidebar_links a {
+  margin-bottom: 20px;
+}
+
+.profile_main_btn {
+  background: url('../../assets/img/profile_button.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.profile_main_btn.active,
+.profile_main_btn:hover {
+  background: url('../../assets/img/profile_button_active.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_main_btn {
+  background: url('../../assets/img/profile_button_dark.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_main_btn.active,
+.dark .profile_main_btn:hover {
+  background: url('../../assets/img/profile_button_dark_active.png') no-repeat
+    center;
+  background-size: 99% 99%;
+}
+
+.profile_wallet {
+  background: url('../../assets/img/wallet_button.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.profile_wallet.active,
+.profile_wallet:hover {
+  background: url('../../assets/img/wallet_button_active.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_wallet {
+  background: url('../../assets/img/wallet_button_dark.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_wallet.active,
+.dark .profile_wallet:hover {
+  background: url('../../assets/img/wallet_button_dark_active.png') no-repeat
+    center;
+  background-size: 99% 99%;
+}
+
+.profile_subscription {
+  background: url('../../assets/img/sub_button.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.profile_subscription.active,
+.profile_subscription:hover {
+  background: url('../../assets/img/sub_button_active.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_subscription {
+  background: url('../../assets/img/sub_button_dark.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_subscription.active,
+.dark .profile_subscription:hover {
+  background: url('../../assets/img/sub_button_dark_active.png') no-repeat
+    center;
+  background-size: 99% 99%;
+}
+
+.profile_settings {
+  background: url('../../assets/img/setings_button.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.profile_settings.active,
+.profile_settings:hover {
+  background: url('../../assets/img/setings_button_active.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_settings {
+  background: url('../../assets/img/setings_button_dark.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_settings.active,
+.dark .profile_settings:hover {
+  background: url('../../assets/img/setings_button_dark_active.png') no-repeat
+    center;
+  background-size: 99% 99%;
+}
+
+.profile_support {
+  background: url('../../assets/img/support_button.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.profile_support.active,
+.profile_support:hover {
+  background: url('../../assets/img/support_button_active.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_support {
+  background: url('../../assets/img/support_button_dark.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.dark .profile_support.active,
+.dark .profile_support:hover {
+  background: url('../../assets/img/support_button_dark_active.png') no-repeat
+    center;
+  background-size: 99% 99%;
+}
+
+.sidebar_avatar {
+  height: 90px;
+  background: url('../../assets/img/sidebar_avatar_border.png') no-repeat center;
+  background-size: 99% 99%;
+  padding: 10px;
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.dark .sidebar_avatar {
+  background: url('../../assets/img/sidebar_avatar_border_dark.png') no-repeat
+    center;
+  background-size: 99% 99%;
+}
+
+.sidebar_avatar_img_wrapper {
+  height: 100%;
+}
+
+.sidebar_avatar img {
+  height: 100%;
+  display: block;
+}
+
+.sidebar_avatar h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  align-items: center;
+  color: #000;
+}
+
+.dark .sidebar_avatar h4 {
+  color: #fff;
+}
+
+.download_sidebar input {
+  display: none;
+}
+
+.download_sidebar label {
+  position: absolute;
+  z-index: 1;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  left: 25%;
+  bottom: 5%;
+  cursor: pointer;
+}
+
+.dark .download_sidebar label {
+  color: #fff;
+}
+
+.mobile_sidebar_links {
+  display: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 70px;
+  max-width: 750px;
+  overflow: auto;
+  align-items: center;
+}
+.mobile_sidebar_links_wrapper {
+  overflow-x: scroll;
+  position: relative;
+  margin: 0 -15px;
+}
+
+.mobile_sidebar_links_wrapper::-webkit-scrollbar {
+  width: 0 !important;
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+.mobile_profile_btn {
+  background: url('../../assets/img/btn_content_menu.png') no-repeat center;
+  background-size: 100% 100%;
+  border: none;
+  outline: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #141233;
+  padding: 10px;
+  min-width: 120px;
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s;
+  height: 41px;
+}
+
+.mobile_profile_btn.active {
+  background: url('../../assets/img/mobile_profile_active.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.mobile_profile_btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/img/mobile_profile_active_before.png') no-repeat
+    center;
+  background-size: 100% 100%;
+  margin-left: 5px;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.4s;
+  pointer-events: none;
+}
+
+.mobile_profile_btn.active::before {
+  opacity: 1;
+  margin-top: -5px;
+}
+
+.dark .mobile_profile_btn {
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar_links {
+    display: none;
+  }
+
+  .sidebar,
+  .sidebar.fix {
+    position: relative;
+    bottom: auto;
+  }
+
+  .sidebar_wrapper {
+    width: auto;
+  }
+  .sidebar,
+  .dark .sidebar {
+    border: none;
+    background: transparent;
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+  }
+  .sidebar_avatar {
+    max-width: 300px;
+  }
+  .mobile_sidebar_links {
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 70px;
+  }
+}
+
+@media (max-width: 767.98px) {
 }

@@ -1,0 +1,134 @@
+.profile_support_page {
+  background: rgba(255, 255, 255, 0.63);
+  border: 1px solid #797979;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+}
+
+.dark .profile_support_page {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #797979;
+}
+
+.profile_support_page h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000;
+}
+
+.dark .profile_support_page h2 {
+  color: #fff;
+}
+
+.profile_support_main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  justify-content: space-between;
+}
+
+.profile_support_topic,
+.profile_support_subject {
+  width: 45%;
+}
+
+.profile_support_description {
+  width: 100%;
+}
+
+.profile_support_main div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.profile_support_main div label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+  margin: 10px 0;
+}
+
+.dark .profile_support_main div label {
+  color: #fff;
+}
+
+.profile_support_main div input,
+.profile_support_main div textarea {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #525252;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 12px;
+
+  outline: none;
+  padding: 10px 7px;
+}
+
+.dark .profile_support_main div input,
+.dark .profile_support_main div textarea {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 12px;
+}
+
+.create_wallet {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.chat {
+  background: none;
+  border: none;
+  outline: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.chat img {
+  width: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .profile_support_topic,
+  .profile_support_subject {
+    width: 100%;
+  }
+  .profile_support_main {
+    padding: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .profile_support_page {
+    padding: 10px;
+  }
+  .profile_support_main div {
+    margin-top: 10px;
+  }
+  .profile_support_page {
+    margin-bottom: 60px;
+  }
+  .chat {
+    bottom: -70px;
+  }
+}
