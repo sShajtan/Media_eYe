@@ -1,0 +1,145 @@
+.profile_main {
+  background: rgba(255, 255, 255, 0.63);
+  border: 1px solid #797979;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 30px;
+}
+
+.dark .profile_main {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #797979;
+}
+
+.profile_main_inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.profile_main_inputs div {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.profile_main h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000;
+}
+
+.dark .profile_main h2 {
+  color: #fff;
+}
+
+.profile_main_inputs div label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.dark .profile_main_inputs div label {
+  color: #fff;
+}
+
+.profile_main_inputs div input {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #525252;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 12px;
+  outline: none;
+  padding: 7px 10px;
+}
+
+.dark .profile_main_inputs div input {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #ffffff;
+  color: #fff;
+}
+
+.save {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+  background: url('../../assets/img/signup_button_bg.png') no-repeat center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s;
+  width: 145px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 0;
+}
+
+.dark .save {
+  color: #fff;
+}
+
+.save::before {
+  content: '';
+  background: url('../../assets/img/learn_more_button_bg.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.save:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .save:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.save:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.save span {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+  .profile_main_inputs div {
+    width: 100%;
+  }
+}

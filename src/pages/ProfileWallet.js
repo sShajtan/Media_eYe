@@ -1,9 +1,10 @@
 import React from 'react';
-import ProfileMain from '../components/ProfileMain/ProfileMain';
+import { Profiler } from 'react';
+import ProfileWalletMain from '../components/ProfileWallet/ProfileWallet';
 import Sidebar from '../components/Sidebar/Sidebar';
 
 
-const Profile = (props) => {
+const ProfileWallet = (props) => {
   const { closeNftCollapse } = props;
 
   return (
@@ -12,7 +13,7 @@ const Profile = (props) => {
         <div className="container">
           <div className="main_profile">
             <Sidebar />
-            <ProfileMain />
+            <ProfileWalletMain />
           </div>
         </div>
       </div>
@@ -20,4 +21,4 @@ const Profile = (props) => {
   );
 };
 
-export default Profile;
+export default ProfileWallet;
