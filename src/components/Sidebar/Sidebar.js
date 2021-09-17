@@ -1,13 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
+var ReactDOM = require('react-dom');
 
 const Sidebar = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
   const [fixSidebar, setFixSidebar] = useState(true);
-  const [activeBtn, setActiveBtn] = useState('1');
+  const mobileLinks = useRef(null);
+
+  const focus = () => {
+    console.log(mobileLinks.current.children);
+    const element = ReactDOM.findDOMNode(mobileLinks.current).getElementsByClassName('active');
+    console.log(element[0].focus())
+  };
 
 
   const handleScrollMen = (e) => {
@@ -16,15 +23,14 @@ const Sidebar = (props) => {
       document.body.clientHeight-120
     ) {
       setFixSidebar(false);
-      console.log(fixSidebar)
     } else {
       setFixSidebar(true);
-      console.log(fixSidebar)
     }
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScrollMen);
+    focus()
   });
   
 
@@ -32,7 +38,7 @@ const Sidebar = (props) => {
     <div className="sidebar_wrapper ">
     <div className={fixSidebar ? "sidebar" : "sidebar fix"}>
       <div className="mobile_sidebar_links_wrapper">
-        <div className="mobile_sidebar_links">
+        <div className="mobile_sidebar_links" ref={mobileLinks}>
             <NavLink to="/profile" exact className="mobile_profile_btn" >
                 Profile
             </NavLink>
@@ -45,7 +51,7 @@ const Sidebar = (props) => {
             <NavLink to="/profile/settings" exact className="mobile_profile_btn" >
                 Settings
             </NavLink>
-            <NavLink to="/profile/support" exact className="mobile_profile_btn" autoFocus={true} >
+            <NavLink to="/profile/support" exact className="mobile_profile_btn" >
                 Support
             </NavLink>
           </div>
