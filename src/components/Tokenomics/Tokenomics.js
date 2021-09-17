@@ -28,7 +28,7 @@ const Tokenomics = (props) => {
           <h5>(FIXED)</h5>
           <a
             className="buy_btn"
-            href="https://mediaeyenft.com/pitchdeck/fundraising/"
+            href="https://mediaeyenft.com/pitchdeck/whitelist"
             target="_blank"
             rel="n"
           >

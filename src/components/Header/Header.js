@@ -231,7 +231,7 @@ const Header = (props) => {
                 Pitchdeck
               </a>
               <a
-                href="https://mediaeyenft.com/pitchdesk/fundraising/"
+                href="https://mediaeyenft.com/pitchdeck/whitelist"
                 target="_blank"
                 rel="noreferrer"
               >
