@@ -130,7 +130,8 @@ const Header = (props) => {
               </div>
               <button
                 className="ntf_header"
-                onClick={() => history.push('/create')}
+                // onClick={() => history.push('/create')}
+                onClick={toggleSoonPopup}
               >
                 Create NFT
               </button>
