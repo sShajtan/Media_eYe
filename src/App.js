@@ -36,6 +36,7 @@ import ProfileSettings from './pages/ProfileSettings';
 import ProfileSupport from './pages/ProfileSupport';
 import ProfileSubscription from './pages/ProfileSubscription';
 import Canvas from './pages/Canvas';
+import Basket from './pages/Bsaket';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -192,6 +193,9 @@ const App = () => {
           </Route>
           <Route path="/profile" exact >
             <Profile closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/basket" exact >
+            <Basket closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/theOne/canvas" exact>
             <Canvas closeNftCollapse={closeNftCollapse} />

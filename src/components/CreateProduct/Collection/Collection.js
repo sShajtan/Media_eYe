@@ -46,17 +46,17 @@ const Collection = (props) => {
                     <div className="collection_logo_img collection_block collection_block_img">
                         <h5>Logo image</h5>
                         <span>This image will also be used for nsvigation. 350 x 350 recommended.</span>
-                        <label><input type="file" ection_block /></label>
+                        <label><input type="file" /></label>
                     </div>
                     <div className="collection_fratured_img collection_block collection_block_img">
                         <h5>Logo image</h5>
                         <span>This image will also be used for nsvigation. 350 x 350 recommended.</span>
-                        <label><input type="file" ection_block /></label>
+                        <label><input type="file"/></label>
                     </div>
                     <div className="collection_banner_img collection_block collection_block_img">
                         <h5>Logo image</h5>
                         <span>This image will also be used for nsvigation. 350 x 350 recommended.</span>
-                        <label><input type="file" ection_block /></label>
+                        <label><input type="file" /></label>
                     </div>
                     <div className="collection_block">
                         <label>Name</label>
