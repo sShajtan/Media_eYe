@@ -5,7 +5,7 @@ import WOW from 'wowjs';
 import './MainBlock.css';
 
 const MainBlock = (props) => {
-  const { togglePopup } = props;
+  const { togglePopup, toggleSoonPopup, } = props;
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   const [nav3, setNav3] = useState(null);
@@ -13,7 +13,6 @@ const MainBlock = (props) => {
   const slider2 = useRef();
   const slider3 = useRef();
   const history = useHistory();
-  const { toggleSoonPopup } = props;
 
   useEffect(() => {
     setNav1(slider1.current);
