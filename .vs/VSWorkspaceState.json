@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
+    "\\src",
     "\\src\\components",
-    "\\src\\components\\Faq",
+    "\\src\\components\\Header",
+    "\\src\\components\\MainBlock",
+    "\\src\\components\\MainHow",
+    "\\src\\components\\SoonPopup",
     "\\src\\components\\Tokenomics"
   ],
   "PreviewInSolutionExplorer": false

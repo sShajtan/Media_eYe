@@ -41,42 +41,7 @@ const Tokenomics = (props) => {
                   className="animate__animated animate__fadeInLeft wow"
                   data-wow-duration="1s"
                   data-wow-delay="0.5s"
-                  src="img/tokenomics/1.svg"
-                  alt="tokenomics"
-                />
-                <img
-                  className="animate__animated animate__fadeInLeft wow green_1"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                  src="img/tokenomics/2_1.svg"
-                  alt="tokenomics"
-                />
-                <img
-                  className="animate__animated animate__fadeInLeft wow green_2"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                  src="img/tokenomics/2_2.svg"
-                  alt="tokenomics"
-                />
-                <img
-                  className="animate__animated animate__fadeInLeft wow green_3"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                  src="img/tokenomics/2_3.svg"
-                  alt="tokenomics"
-                />
-                <img
-                  className="animate__animated animate__fadeInLeft wow"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                  src="img/tokenomics/5.svg"
-                  alt="tokenomics"
-                />
-                <img
-                  className="animate__animated animate__fadeInLeft wow"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                  src="img/tokenomics/6.svg"
+                  src="img/tokenomics/tokenomics.svg"
                   alt="tokenomics"
                 />
               </div>
