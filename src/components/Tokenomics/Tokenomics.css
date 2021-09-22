@@ -15,7 +15,7 @@
   font-size: 20px;
   line-height: 103.5%;
   text-align: center;
-  color: #0075ff;
+  color: #27F2FF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -27,7 +27,7 @@
   font-size: 20px;
   line-height: 22px;
   text-align: center;
-  color: rgba(97, 0, 255, 0.85);
+  color: #27F2FF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -56,7 +56,7 @@
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  color: #0075ff;
+  color: #27F2FF;
 }
 
 .tokenomics_main {
@@ -139,19 +139,16 @@
   margin-bottom: -30px;
 }
 
-.green_3 {
-  margin-top: -30px;
-}
-
 .tokenomics_right_block span i {
   font-style: italic;
+  font-weight: 400;
 }
 
 .tokenomics_right_block:first-child span {
   color: #fda4ff;
 }
 .tokenomics_right_block:nth-child(2) span {
-  color: #00ff34;
+  color: #27F2FF;
 }
 
 .tokenomics_right_block:nth-child(3) span {
@@ -159,15 +156,15 @@
 }
 
 .tokenomics_right_block:nth-child(4) span {
-  color: #00ff34;
+  color: #BD7CDE;
 }
 
 .tokenomics_right_block:nth-child(5) span {
-  color: #bd7cde;
+  color: #FF9395;
 }
 
 .tokenomics_right_block:nth-child(6) span {
-  color: #ff9395;
+  color: #FEA555;
 }
 
 .tokenomics_right_block:nth-child(7) span {

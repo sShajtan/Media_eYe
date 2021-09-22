@@ -13,6 +13,7 @@ const MainBlock = (props) => {
   const slider2 = useRef();
   const slider3 = useRef();
   const history = useHistory();
+  const { toggleSoonPopup } = props;
 
   useEffect(() => {
     setNav1(slider1.current);
@@ -107,7 +108,7 @@ const MainBlock = (props) => {
               </a>
               <button
                 className="sign_up"
-                onClick={() => history.push('/signup')}
+                onClick={toggleSoonPopup}
               >
                 <span>Sign Up</span>
               </button>
