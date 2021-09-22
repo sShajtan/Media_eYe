@@ -600,7 +600,7 @@ div.menu-item .soc_header_mobile {
 
   .mobile_switch {
     display: block;
-    /* margin-right: 70px; */
+    margin-right: 70px;
   }
   .mobile_search {
     display: block;
