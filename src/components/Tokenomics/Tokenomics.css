@@ -362,6 +362,7 @@
   }
   .tokenomics_left_wrapper {
       margin: 90px auto;
+      display: contents;
   }
   .tokenomics_right_block span {
     width: 200px;
@@ -413,6 +414,11 @@
     width: 100%;
   }
 
+    img.animate__.animate__fadeInLeft.wow.animated {
+        margin-top: -13%;
+        padding: 8%;
+    }
+
   .green_1 {
     margin: 0px;
   }
@@ -463,6 +469,17 @@
   .tokenomics .mobile_icons {
     display: none;
   }
+    img.animate__.animate__fadeInLeft.wow.animated {
+        margin-top: -7%;
+        padding: 6%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    img.animate__.animate__fadeInLeft.wow.animated {
+        margin-top: -35px;
+        padding: 15%;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -509,6 +526,37 @@
   }
 }
 
+@media (max-width: 540px) {
+    img.animate__.animate__fadeInLeft.wow.animated {
+        margin-top: -19%;
+        padding: 16%;
+    }
+    .tokenomics_right_block:nth-child(5) span {
+        margin-top: 24px;
+    }
+    .tokenomics_right_block:nth-child(6) span {
+        margin-top: 38px;
+    }
+}
+
+@media (max-width: 375px) {
+    .tokenomics_right_block:first-child span {
+        margin-top: 26px;
+    }
+    .tokenomics_right_block:nth-child(2) span {
+        margin-top: 15px;
+    }
+    .tokenomics_right_block:nth-child(3) span {
+        margin-top: 6px;
+    }
+    .tokenomics_right_block:nth-child(5) span {
+        margin-top: 6px;
+    }
+    .tokenomics_right_block:nth-child(6) span {
+        margin-top: 15px;
+    }
+}
+
 @media (max-width: 369.98px) {
   .tokenomics_right_block span {
     padding-right: 5px;
@@ -520,8 +568,74 @@
   .tokenomics_right_wrapper {
     width: 45%;
   }
+    .animate__fadeInLeft {
+        margin-top: -4%;
+}
+    img.animate__.animate__fadeInLeft.wow.animated {
+        margin-top: -10px;
+        padding: 2%;
+    }
+    .tokenomics_right_block:nth-child(5) span {
+        margin-top: 25px;
+    }
+    .tokenomics_right_block:nth-child(6) span {
+        margin-top: 47px;
+    }
+    }
+
+@media (max-width: 360px) {
+    .tokenomics_right_block:first-child span {
+        margin-top: -5px;
+    }
+
+    .tokenomics_right_block:nth-child(2) span {
+        margin-top: -7px;
+    }
+    .tokenomics_right_block:nth-child(4) span {
+        margin-top: 5px;
+    }
 }
 
-img.animate__.animate__fadeInLeft.wow.animated {
-    margin-top: -20px;
+@media (max-width: 320px) {
+    img.animate__.animate__fadeInLeft.wow.animated {
+        margin-top: -10px;
+        padding: 2%;
+    }
+    .tokenomics_right_block:first-child span {
+        margin-top: 20px;
+    }
+
+    .tokenomics_right_block:nth-child(4) span {
+        margin-top: 3px;
+    }
+
+    .tokenomics_right_block:nth-child(5) span {
+        margin-top: 12px;
+    }
+
+    .tokenomics_right_block:nth-child(6) span {
+        margin-top: 21px;
+    }
+}
+
+@media (max-width: 280px) {
+    img.animate__.animate__fadeInLeft.wow.animated {
+        margin-top: 24px;
+        padding: 2%;
+    }
+    .tokenomics_right_block:first-child span {
+        margin-top: 54px;
+    }
+    .tokenomics_right_block:nth-child(2) span {
+        margin-top: 34px;
+    }
+    .tokenomics_right_block:nth-child(3) span {
+        margin-top: 15px;
+    }
+    .tokenomics_right_block:nth-child(5) span {
+        margin-top: 0px;
+    }
+    .tokenomics_right_block:nth-child(6) span {
+        margin-top: -13px;
+    }
 }
