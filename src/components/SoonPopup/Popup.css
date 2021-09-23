@@ -27,7 +27,7 @@
   height: 100vh;
   transition: 0.7s;
   overflow: hidden;
-  background: url("/src/assets/img/popup-bg.png") no-repeat center;
+  background: url('/src/assets/img/popup-bg.png') no-repeat center;
   background-size: cover;
 }
 .popup-wrapper.timer_popup .main-popup {
@@ -40,7 +40,7 @@
 }
 
 .popup-wrapper.soon_popup .main-popup {
-  background: url("../../assets/img/soon_popup_bg.png") no-repeat center;
+  background: url('../../assets/img/soon_popup_bg.png') no-repeat center;
   background-size: contain;
   border: none;
   height: 404px;
@@ -48,7 +48,7 @@
 }
 
 .dark .popup-wrapper.soon_popup .main-popup {
-  background: url("../../assets/img/soon_popup_bg_dark.png") no-repeat center;
+  background: url('../../assets/img/soon_popup_bg_dark.png') no-repeat center;
   background-size: contain;
   border: none;
   overflow: auto;
@@ -167,7 +167,7 @@
   outline: none;
   cursor: pointer;
   transition: 0.4s;
-  background: url("../../assets/img/learn_more_button_bg.png") no-repeat center;
+  background: url('../../assets/img/learn_more_button_bg.png') no-repeat center;
   background-size: contain;
   font-family: Poppins;
   font-style: normal;
@@ -199,8 +199,8 @@
 }
 
 .popup-wrapper.timer_popup form button::before {
-  content: "";
-  background: url("../../assets/img/signup_button_bg.png") no-repeat center;
+  content: '';
+  background: url('../../assets/img/signup_button_bg.png') no-repeat center;
   background-size: contain;
   position: absolute;
   left: 0;
@@ -231,7 +231,7 @@
 }
 
 .tokenomics_right_block h6::before {
-  content: "\25CF";
+  content: '\25CF';
   font-size: 35px;
   line-height: 35px;
   position: absolute;
@@ -336,7 +336,7 @@
   .popup-wrapper.timer_popup.soon_popup .close {
     right: 10%;
     top: 50%;
-    transform: translateY(-60px);
+    transform: translateY(-70px);
   }
 }
 

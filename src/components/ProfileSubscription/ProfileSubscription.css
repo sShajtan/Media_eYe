@@ -1,0 +1,445 @@
+.profile_sub_page {
+  background: rgba(255, 255, 255, 0.63);
+  border: 1px solid #797979;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  width: 100%;
+  padding: 30px 30px 0 30px;
+  max-width: 900px;
+}
+
+.dark .profile_sub_page {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #797979;
+}
+
+.profile_sub_page h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000;
+}
+
+.dark .profile_sub_page h2 {
+  color: #fff;
+}
+
+.profile_sub_slide {
+  text-align: center;
+  padding: 25px;
+  height: 450px;
+}
+.profile_sub_slide_1 {
+  background: url('../../assets/img/sub_1_slide.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.profile_sub_slide_1 .sub_button {
+  margin-top: 50px;
+}
+.profile_sub_slide_2 .sub_button {
+  margin-top: 0;
+}
+.profile_sub_slide_3 .sub_button {
+  margin-top: 50px;
+}
+
+.profile_sub_slide_1 h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+  margin: 20px 0 10px 0;
+}
+
+.profile_sub_slide_2 {
+  background: url('../../assets/img/sub_2_slide.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.profile_sub_slide_2 h4,
+.profile_sub_slide_3 h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin: 10px 0 0 0;
+}
+
+.profile_sub_slide span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.profile_sub_slide p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.profile_sub_slide_1 p {
+  color: #000;
+}
+
+.profile_sub_slide_3 {
+  background: url('../../assets/img/sub_3_slide.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.sub_button {
+  background: url('../../assets/img/subcribe_feature.png') no-repeat center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+  border: none;
+  outline: none;
+  margin: 20px auto 20px;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .sub_button {
+  background: url('../../assets/img/subcribe_feature.png') no-repeat center;
+  background-size: contain;
+}
+
+.sub_button {
+  position: relative;
+  z-index: 1;
+}
+
+.sub_button span {
+  font-size: 16px;
+}
+
+.sub_button:hover span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.sub_button:hover span {
+  color: #fff;
+}
+
+.sub_button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background: url('../../assets/img/subcribe_feature_hover.png') no-repeat
+    center;
+  background-size: contain;
+  transition: 0.4s;
+}
+
+.sub_button:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.dark .sub_button button {
+  transition: 0.4s;
+  color: #fff;
+}
+
+.profile_sub_page .slick-next {
+  background: url('../../assets/img/next-arrow.png') no-repeat center;
+  background-position: cover;
+  transition: 0.4s;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  right: -4%;
+}
+
+.profile_sub_page .slick-next:hover {
+  background: url('../../assets/img/next-arrow.png') no-repeat center;
+  transition: 0.4s;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  margin-top: -5px;
+  z-index: 1;
+}
+.profile_sub_page .slick-prev {
+  background: url('../../assets/img/prev-arrow.png') no-repeat center;
+  background-position: cover;
+  transition: 0.4s;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  left: -4%;
+}
+
+.profile_sub_page .slick-prev:hover {
+  background: url('../../assets/img/prev-arrow.png') no-repeat;
+  background-size: cover;
+  margin-top: -5px;
+  transition: 0.4s;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.profile_sub_page .slick-next::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: url('../../assets/img/next-arrow-hover.png') no-repeat center;
+  display: block;
+  background-size: cover;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.profile_sub_page .slick-prev::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: url('../../assets/img/prev-arrow-hover.png') no-repeat center;
+  display: block;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.profile_sub_page .slick-next:hover::before,
+.profile_sub_page .slick-prev:hover::before {
+  opacity: 0.8;
+  transition: 0.4s;
+  top: 8px;
+  left: 3px;
+}
+.profile_sub_page .slick-next span,
+.profile_sub_page .slick-prev span {
+  position: relative;
+  z-index: 3;
+  font-size: 24px;
+  color: #797979;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transition: 0.4s;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.profile_sub_page .slick-next:hover span,
+.profile_sub_page .slick-prev:hover span {
+  position: relative;
+  z-index: 3;
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 47%;
+  left: 20%;
+  transition: 0.4s;
+}
+
+.dark .profile_sub_page .slick-next span,
+.dark .profile_sub_page .slick-prev span {
+  color: #fff;
+}
+
+body .slick-next:focus,
+.profile_sub_page .slick-next:hover {
+  background: url('../../assets/img/next-arrow.png') no-repeat center;
+  background-size: cover;
+}
+
+body .slick-prev:focus,
+.profile_sub_page .slick-prev:hover {
+  background: url('../../assets/img/prev-arrow.png') no-repeat center;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  .profile_sub_slide p {
+    font-size: 12px;
+  }
+
+  .profile_sub_page .slick-next:hover,
+  .profile_sub_page .slick-prev:hover {
+    background: transparent;
+    height: 38px;
+    color: #797979;
+  }
+  .profile_sub_page .slick-next:hover span,
+  .profile_sub_page .slick-prev:hover span {
+    color: #797979;
+  }
+
+  .profile_sub_page .slick-next,
+  .profile_sub_page .slick-prev {
+    top: 105%;
+  }
+  .profile_sub_page .slick-prev {
+    left: 23px;
+  }
+  .profile_sub_page .slick-next {
+    right: 23px;
+  }
+  .profile_sub_page .slick-dots li button:before {
+    font-size: 10px;
+  }
+  .dark .profile_sub_page .slick-dots li button:before {
+    font-size: 10px;
+    color: #fff;
+    opacity: 0.7;
+  }
+  .dark .profile_sub_page .slick-dots {
+    /* border: 2px solid #fff; */
+  }
+
+  .profile_sub_page .slick-dots li.slick-active button:before {
+    color: #5032ea;
+    font-size: 14px;
+  }
+
+  .dark .profile_sub_page .slick-dots li.slick-active button:before {
+    color: #fff;
+    font-size: 14px;
+    opacity: 1;
+  }
+  .profile_sub_page .slick-dots {
+    border: 2px solid #797979;
+    position: absolute;
+    display: block;
+    width: 214px;
+    margin: 0 auto;
+    height: 38px;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px 0px 5px 0px;
+  }
+  .profile_sub_page .slick-next,
+  .profile_sub_page .slick-prev {
+    background: none;
+    top: 110%;
+    height: 38px;
+  }
+  .profile_sub_page .slick-next:hover,
+  .profile_sub_page .slick-prev:hover {
+    margin-top: 0;
+  }
+  .profile_sub_page .slick-next {
+    right: 50%;
+    border: 2px solid #797979;
+    transform: translateX(362%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .profile_sub_page .slick-prev {
+    left: 50%;
+    transform: translateX(-362%);
+    border: 2px solid #797979;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .dark .profile_sub_page .slick-next,
+  .dark .profile_sub_page .slick-prev,
+  .dark .profile_sub_page .slick-dots {
+    color: #fff;
+    border-color: #fff;
+  }
+  .profile_sub_page .slick-next::before,
+  .profile_sub_page .slick-prev::before {
+    content: none;
+  }
+  body .slick-next:focus,
+  body .slick-next:hover {
+    background: none;
+  }
+  .profile_sub_page .slick-next span,
+  .profile_sub_page .slick-prev span {
+    color: #797979;
+  }
+
+  .dark .profile_sub_page .slick-next span,
+  .dark .profile_sub_page .slick-prev span {
+    color: #fff;
+  }
+  .profile_sub_page {
+    padding: 30px 30px 100px;
+  }
+  .profile_sub_slide {
+    padding: 30px;
+  }
+  .profile_sub_slide p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .profile_sub_slide {
+    height: 550px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .profile_sub_slide {
+    height: 450px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .profile_sub_slide {
+    max-width: 320px !important;
+    margin: 0 auto;
+  }
+
+  .profile_sub_slide p {
+    font-size: 12px;
+  }
+
+  .profile_sub_page {
+    background: none;
+    border: none;
+  }
+
+  .dark .profile_sub_page {
+    background: none;
+    border: none;
+  }
+}

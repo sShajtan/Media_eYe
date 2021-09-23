@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, NavLink } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import { updateTheme } from '../../store/app/appSlice';
 import './Header.css';
@@ -62,11 +62,8 @@ const Header = (props) => {
                   }
                 >
                   <Collapse isOpened={showNftCollapse}>
-                    <Link to="/nft-marketplace">NFT Marketplace </Link>
-                    {/* <button onClick={toggleSoonPopup}>NFT Marketplace</button> */}
-                    <Link to="/content-marketplace">Content Marketplace</Link>
-                    <Link to="/gallery">Gallery </Link>
-                    <button onClick={toggleSoonPopup}>Gallery</button>
+                  <Link to="/nft-marketplace">NFT Marketplace </Link> 
+                   <Link to="/gallery">Gallery </Link> 
                   </Collapse>
                 </div>
               </div>
@@ -131,11 +128,12 @@ const Header = (props) => {
               </div>
               <button
                 className="ntf_header"
+                // onClick={() => history.push('/create')}
                 onClick={toggleSoonPopup}
               >
                 Create NFT
               </button>
-              {/* {isLogin ? 
+               {isLogin ? 
                 <div className="user_header_menu">
                   <div>
                     <img src="../img/bag.png" />
@@ -195,7 +193,7 @@ const Header = (props) => {
                     <span>Sign Up</span>
                   </NavLink> 
                 </div> 
-              }  */}
+              } 
 
             </div>
           </div>
@@ -231,7 +229,7 @@ const Header = (props) => {
                 Pitchdeck
               </a>
               <a
-                href="https://mediaeyenft.com/pitchdesk/fundraising/"
+                href="https://mediaeyenft.com/pitchdeck/whitelist"
                 target="_blank"
                 rel="noreferrer"
               >

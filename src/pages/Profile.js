@@ -10,8 +10,10 @@ const Profile = (props) => {
     <React.Fragment>
       <div onClick={closeNftCollapse} className="profile">
         <div className="container">
+          <div className="main_profile">
             <Sidebar />
             <ProfileMain />
+          </div>
         </div>
       </div>
     </React.Fragment>
