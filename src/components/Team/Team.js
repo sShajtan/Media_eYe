@@ -75,6 +75,7 @@ const Team = () => {
         data-wow-duration="1s"
         data-wow-delay="0.5s"
         src="img/team_title.svg"
+        alt="Team"
       />
       <div className="team_wrapper">
         <div className="container">
