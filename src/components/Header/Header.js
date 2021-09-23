@@ -220,9 +220,6 @@ const Header = (props) => {
             NFT Marketplace
           </button>
           <button className="menu-item" onClick={toggleSoonPopup}>
-            Content Marketplace
-          </button>
-          <button className="menu-item" onClick={toggleSoonPopup}>
             Gallery
           </button>
           <button className="menu-item">Creators</button>
