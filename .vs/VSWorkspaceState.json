@@ -3,9 +3,6 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Header",
-    "\\src\\components\\MainBlock",
-    "\\src\\components\\MainHow",
     "\\src\\components\\SignUp",
     "\\src\\components\\SoonPopup",
     "\\src\\components\\Tokenomics"
