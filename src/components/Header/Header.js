@@ -232,7 +232,7 @@ const Header = (props) => {
           <div className="mobile_investors_collapse">
             <Collapse isOpened={showNftCollapse}>
               <a
-                href="https://mediaeyenft.com/pitchdesk/"
+                href="https://mediaeyenft.com/pitchdeck/"
                 target="_blank"
                 rel="noreferrer"
               >

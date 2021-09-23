@@ -20,28 +20,25 @@ const Tokenomics = (props) => {
           }
         />
         <div className="tokenomics_main_wrapper">
-          <h4>
-            <span>Total eYe token supply:</span>
-            <br />
-            <br /> &nbsp;1 Billion
-          </h4>
-          <h5>(FIXED)</h5>
-          <a
+          <div className="fundraising">
+            <div className="first background">
+            </div>
+            <a
             className="buy_btn"
             href="https://mediaeyenft.com/pitchdeck/whitelist"
             target="_blank"
             rel="n"
-          >
+            >
             Fundraising
-          </a>
-          <div className="tokenomics_main">
+            </a>
+          </div>          <div className="tokenomics_main">
             <div className="tokenomics_left">
               <div className="tokenomics_left_wrapper">
                 <img
                   className="animate__animated animate__fadeInLeft wow"
                   data-wow-duration="1s"
                   data-wow-delay="0.5s"
-                  src="img/tokenomics/tokenomics.svg"
+                  src="img/tokenomics/tokenomics.png"
                   alt="tokenomics"
                 />
               </div>
