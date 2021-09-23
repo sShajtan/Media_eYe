@@ -82,7 +82,6 @@
 
 .tokenomics_left {
   width: 50%;
-  padding-right: 50px;
 }
 
 .tokenomics_right {
@@ -505,9 +504,6 @@
   .tokenomics .buy_btn {
     margin-top: 20px;
   }
-  .tokenomics_left_wrapper {
-    margin-top: 30px;
-  }
   .tokenomics_right {
     margin-top: 330px;
   }
@@ -524,4 +520,8 @@
   .tokenomics_right_wrapper {
     width: 45%;
   }
+}
+
+img.animate__.animate__fadeInLeft.wow.animated {
+    margin-top: -20px;
 }
