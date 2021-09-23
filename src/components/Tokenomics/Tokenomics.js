@@ -150,7 +150,7 @@ const Tokenomics = (props) => {
                     data-wow-duration="1s"
                     data-wow-delay="0.5s"
                   >
-                    20m eYe <i> ($0.02 per eYe token) </i>
+                    20m eYe <i> ($0.015 per eYe token) </i>
                   </span>
                 </div>
                 <div className="tokenomics_right_block">
