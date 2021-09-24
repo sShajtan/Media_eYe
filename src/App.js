@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Main from './pages/Main';
 import Header from './components/Header/Header';
 import TimerPopup from './components/TimerPopup/Popup';
+import RegisterPopup from './components/RegisterPopup/Popup';
 import BusinessPopup from './components/BusinessPopup/Popup';
 import SoonPopup from './components/SoonPopup/Popup';
 import PartnersPopup from './components/PartnersPopup/Popup';
@@ -16,7 +17,7 @@ import './fonts/Poppins/stylesheet.css';
 import './fonts/Rambla/stylesheet.css';
 import './fonts/Roboto/stylesheet.css';
 import './fonts/neumatic/stylesheet.css';
-import { updateTimerPopup } from './store/app/appSlice';
+import { updateTimerPopup, updateRegisterPopup } from './store/app/appSlice';
 import MessagePopup from './components/MessagePopup/MessagePopup';
 import ContentMarketplace from './pages/ContentMarketplace';
 import NftMarketplace from './pages/NftMarketplace';
@@ -41,22 +42,34 @@ import Basket from './pages/Bsaket';
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
   const timerPopup = useSelector((state) => state.app.timerPopup);
+  const registerPopup = useSelector((state) => state.app.registerPopup);
   const [showSoonPopup, setShowSoonPopup] = useState(false);
   const [showBusinessPopup, setShowBusinessPopup] = useState(false);
   const [showPartnersPopup, setShowPartnersPopup] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [showRegisterPopup, setShowRegisterPopup] = useState(false);
   const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
   const [showWalletCollapse, setShowWalletCollapse] = useState(false);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    if (timerPopup === false) {
+    if (timerPopup === false && showRegisterPopup === true) {
       dispatch(updateTimerPopup());
       setTimeout(() => {
         setShowPopup(true);
-      }, 10000);
+      }, 14000);
     }
   });
+
+  useEffect(()=>{
+    if (registerPopup === false) {
+      dispatch(updateRegisterPopup());
+      setTimeout(() => {
+        setShowRegisterPopup(true);
+      }, 7000);
+    }
+  })
 
   const toggleSoonPopup = () => {
     setShowSoonPopup(!showSoonPopup);
@@ -72,6 +85,10 @@ const App = () => {
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
+  };
+
+   const toggleRegisterPopup = () => {
+    setShowRegisterPopup(!showRegisterPopup);
   };
 
   const toggleNftCollapse = () => {
@@ -104,6 +121,10 @@ const App = () => {
           showPopup={showPopup}
           togglePopup={togglePopup}
           toggleMessagePopup={toggleMessagePopup}
+        />
+        <RegisterPopup 
+          showPopup={showRegisterPopup}
+          togglePopup={toggleRegisterPopup}
         />
         <BusinessPopup
           showPopup={showBusinessPopup}

@@ -600,7 +600,7 @@ div.menu-item .soc_header_mobile {
 
   .mobile_switch {
     display: block;
-    margin-right: 70px;
+    /* margin-right: 70px; */
   }
   .mobile_search {
     display: block;
@@ -641,6 +641,7 @@ div.menu-item .soc_header_mobile {
   .dark .header_search {
     background: linear-gradient(355.29deg, #171133 0.12%, #201748 96.01%);
   }
+
   .bm-burger-button {
     display: block;
   }

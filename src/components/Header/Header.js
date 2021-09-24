@@ -61,7 +61,7 @@ const Header = (props) => {
                     showNftCollapse ? 'nft_collapse active' : 'nft_collapse'
                   }
                 >
-                  <button
+                  {/* <button
                     onClick={toggleSoonPopup}
                   >
                   NFT Marketplace
@@ -70,11 +70,11 @@ const Header = (props) => {
                     onClick={toggleSoonPopup}
                   >
                   Gallery
-                  </button>
-                  {/*<Collapse isOpened={showNftCollapse}>
+                  </button> */}
+                  <Collapse isOpened={showNftCollapse}>
                   <Link to="/nft-marketplace">NFT Marketplace </Link> 
                    <Link to="/gallery">Gallery </Link> 
-                  </Collapse>*/}
+                  </Collapse>
                 </div>
               </div>
               <a
@@ -138,12 +138,12 @@ const Header = (props) => {
               </div>
               <button
                 className="ntf_header"
-                // onClick={() => history.push('/create')}
+                 onClick={() => history.push('/create')}
                 onClick={toggleSoonPopup}
               >
                 Create NFT
               </button>
-               {/*{isLogin ? 
+               {isLogin ? 
                 <div className="user_header_menu">
                   <div>
                     <img src="../img/bag.png" />
@@ -203,7 +203,7 @@ const Header = (props) => {
                     <span>Sign Up</span>
                   </NavLink> 
                 </div> 
-              }*/} 
+              }
 
             </div>
           </div>
