@@ -1,0 +1,18 @@
+.basket {
+  min-height: 80vh;
+  margin-top: 90px;
+  padding: 50px 0;
+}
+
+.basket .goBack_button {
+  padding-top: 0;
+}
+
+.basket_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket_header > div:first-child {
+  display: flex;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, NavLink } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import { useWeb3React } from '@web3-react/core';
 import { isAuth } from '../../utils/auth';
@@ -136,79 +136,89 @@ const Header = (props) => {
               </div>
               <button
                 className="ntf_header"
-                onClick={() => history.push('/create')}
+                // onClick={() => history.push('/create')}
+                onClick={toggleSoonPopup}
               >
                 Create NFT
               </button>
               {isLogin ? (
-                <div className="user_header_menu">
-                  <div onClick={() => history.push('/basket')}>
-                    <img src="../img/bag.png" />
-                    <span>1123</span>
-                  </div>
-                  <div>
-                    <img src="../img/wallet.png" />
-                    <span>
-                      ETH <i>&#9660;</i>
-                    </span>
-                  </div>
-                  <div className="header_avatar">
-                    <div
-                      className="header_avatar_wrapper"
-                      onClick={toggleWalletCollapse}
-                    >
-                      <img src="../img/avatar.png" />
+                !account ? (
+                  <button
+                    className="ntf_header"
+                    onClick={() => history.push('/connect-wallet')}
+                  >
+                    Connect Wallet
+                  </button>
+                ) : (
+                  <div className="user_header_menu">
+                    <div onClick={() => history.push('/basket')}>
+                      <img src="../img/bag.png" />
+                      <span>1123</span>
                     </div>
-                    <div
-                      className={
-                        showWalletCollapse
-                          ? 'wallet_collapse active'
-                          : 'wallet_collapse'
-                      }
-                    >
-                      <Collapse isOpened={showWalletCollapse}>
-                        <div className="wallet_collapse_main">
-                          <h5>{account && account}</h5>
-                          <div className="wallet_row">
-                            <img src="../img/token_1.png" />
-                            <div>
-                              <h6>eYe Balance</h6>
-                              <span>0 eYe</span>
+                    <div>
+                      <img src="../img/wallet.png" />
+                      <span>
+                        ETH <i>&#9660;</i>
+                      </span>
+                    </div>
+                    <div className="header_avatar">
+                      <div
+                        className="header_avatar_wrapper"
+                        onClick={toggleWalletCollapse}
+                      >
+                        <img src="../img/avatar.png" />
+                      </div>
+                      <div
+                        className={
+                          showWalletCollapse
+                            ? 'wallet_collapse active'
+                            : 'wallet_collapse'
+                        }
+                      >
+                        <Collapse isOpened={showWalletCollapse}>
+                          <div className="wallet_collapse_main">
+                            <h5>{account && account}</h5>
+                            <div className="wallet_row">
+                              <img src="../img/token_1.png" />
+                              <div>
+                                <h6>eYe Balance</h6>
+                                <span>0 eYe</span>
+                              </div>
+                              <button className="buy_eye">Buy eYe</button>
                             </div>
-                            <button className="buy_eye">Buy eYe</button>
-                          </div>
-                          <div className="wallet_row">
-                            <img src="../img/token_2.png" />
-                            <div>
-                              <h6>Balance</h6>
-                              <span>0.037 ETH $119</span>
+                            <div className="wallet_row">
+                              <img src="../img/token_2.png" />
+                              <div>
+                                <h6>Balance</h6>
+                                <span>0.037 ETH $119</span>
+                              </div>
+                            </div>
+                            <div className="wallet_row">
+                              <img src="../img/token_3.png" />
+                              <div>
+                                <h6>Bidding Balance</h6>
+                                <span>0 wETH</span>
+                              </div>
+                            </div>
+                            <div className="wallet_footer">
+                              <a className="">
+                                <Item />
+                                &ensp;My items
+                              </a>
+                              <a
+                                className=""
+                                onClick={() => history.push('/profile')}
+                              >
+                                <Edit />
+                                &ensp;Edit profile
+                              </a>
                             </div>
                           </div>
-                          <div className="wallet_row">
-                            <img src="../img/token_3.png" />
-                            <div>
-                              <h6>Bidding Balance</h6>
-                              <span>0 wETH</span>
-                            </div>
-                          </div>
-                          <div className="wallet_footer">
-                            <a className="">
-                              <Item />
-                              &ensp;My items
-                            </a>
-                            <a
-                              className=""
-                              onClick={() => history.push('/profile')}
-                            >
-                              <Edit />
-                              &ensp;Edit profile
-                            </a>
-                          </div>
-                        </div>
-                      </Collapse>
+                        </Collapse>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )
               ) : (
                 <div className="auth">
                   <Link to="/login" className="login">
@@ -234,9 +244,6 @@ const Header = (props) => {
             NFT Marketplace
           </button>
           <button className="menu-item" onClick={toggleSoonPopup}>
-            Content Marketplace
-          </button>
-          <button className="menu-item" onClick={toggleSoonPopup}>
             Gallery
           </button>
           <button className="menu-item">Creators</button>
@@ -246,14 +253,14 @@ const Header = (props) => {
           <div className="mobile_investors_collapse">
             <Collapse isOpened={showNftCollapse}>
               <a
-                href="https://mediaeyenft.com/pitchdesk/"
+                href="https://mediaeyenft.com/pitchdeck/"
                 target="_blank"
                 rel="noreferrer"
               >
                 Pitchdeck
               </a>
               <a
-                href="https://mediaeyenft.com/pitchdesk/fundraising/"
+                href="https://mediaeyenft.com/pitchdeck/whitelist"
                 target="_blank"
                 rel="noreferrer"
               >

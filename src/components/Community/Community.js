@@ -14,6 +14,7 @@ const Community = () => {
           className="title  animate__animated animate__fadeIn wow"
           data-wow-duration="1s"
           data-wow-delay="0.5s"
+          alt="Join the Community"
         />
         <div className="community_main">
           <a

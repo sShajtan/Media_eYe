@@ -33,13 +33,8 @@ import ProfileSettings from './pages/ProfileSettings';
 import ProfileSupport from './pages/ProfileSupport';
 import ProfileSubscription from './pages/ProfileSubscription';
 import Canvas from './pages/Canvas';
-import PublicRoute from './components/PublicRoute';
-import PrivateRoute from './components/PrivateRoute';
+import Basket from './pages/Bsaket';
 import { getLibrary } from './utils/web3';
-import './fonts/Poppins/stylesheet.css';
-import './fonts/Rambla/stylesheet.css';
-import './fonts/Roboto/stylesheet.css';
-import './fonts/neumatic/stylesheet.css';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -126,7 +121,7 @@ const App = () => {
             showWalletCollapse={showWalletCollapse}
           />
           <Switch>
-            <PublicRoute restricted={false} path="/" exact>
+            <Route path="/" exact>
               <Main
                 toggleSoonPopup={toggleSoonPopup}
                 togglePartnersPopup={togglePartnersPopup}
@@ -136,77 +131,80 @@ const App = () => {
                 toggleNftCollapse={toggleNftCollapse}
                 closeNftCollapse={closeNftCollapse}
               />
-            </PublicRoute>
-            <PublicRoute path="/content-marketplace" exact>
+            </Route>
+            <Route path="/content-marketplace" exact>
               <ContentMarketplace
                 closeNftCollapse={closeNftCollapse}
               ></ContentMarketplace>
-            </PublicRoute>
-            <PublicRoute path="/nft-marketplace" exact>
+            </Route>
+            <Route path="/nft-marketplace" exact>
               <NftMarketplace
                 closeNftCollapse={closeNftCollapse}
               ></NftMarketplace>
-            </PublicRoute>
-            <PublicRoute path="/signup" exact>
+            </Route>
+            <Route path="/signup" exact>
               <SignUp />
-            </PublicRoute>
-            <PublicRoute path="/login" exact>
+            </Route>
+            <Route path="/login" exact>
               <LogIn />
-            </PublicRoute>
-            <PublicRoute path="/gallery" exact>
+            </Route>
+            <Route path="/gallery" exact>
               <Gallery closeNftCollapse={closeNftCollapse} />
-            </PublicRoute>
-            <PublicRoute path="/creators" exact>
+            </Route>
+            <Route path="/creators" exact>
               <Creators closeNftCollapse={closeNftCollapse} />
-            </PublicRoute>
-            <PublicRoute path="/creator-account" exact>
+            </Route>
+            <Route path="/creator-account" exact>
               <CreatorAccount closeNftCollapse={closeNftCollapse} />
-            </PublicRoute>
-            <PublicRoute path="/connect-wallet" exact>
+            </Route>
+            <Route path="/connect-wallet" exact>
               <ConnectWallet closeNftCollapse={closeNftCollapse} />
-            </PublicRoute>
-            <PublicRoute path="/feature" exact>
+            </Route>
+            <Route path="/feature" exact>
               <Feature closeNftCollapse={closeNftCollapse} />
-            </PublicRoute>
-            <PublicRoute path="/auction-product" exact>
+            </Route>
+            <Route path="/auction-product" exact>
               <ProductAuction closeNftCollapse={closeNftCollapse} />
-            </PublicRoute>
-            <PublicRoute path="/product" exact>
+            </Route>
+            <Route path="/product" exact>
               <Product closeNftCollapse={closeNftCollapse} />
-            </PublicRoute>
-            <PrivateRoute path="/create" exact>
+            </Route>
+            <Route path="/create" exact>
               <CreateProduct closeNftCollapse={closeNftCollapse} />
-            </PrivateRoute>
-            <PrivateRoute path="/create/single" exact>
+            </Route>
+            <Route path="/create/single" exact>
               <CreateSingleProduct closeNftCollapse={closeNftCollapse} />
-            </PrivateRoute>
-            <PrivateRoute path="/create/collection" exact>
+            </Route>
+            <Route path="/create/collection" exact>
               <Collection
                 closeNftCollapse={closeNftCollapse}
                 darkTheme={darkTheme}
               />
-            </PrivateRoute>
-            <PrivateRoute path="/profile/wallet" exact>
+            </Route>
+            <Route path="/profile/wallet" exact>
               <ProfileWallet closeNftCollapse={closeNftCollapse} />
-            </PrivateRoute>
-            <PrivateRoute path="/profile/settings" exact>
+            </Route>
+            <Route path="/profile/settings" exact>
               <ProfileSettings closeNftCollapse={closeNftCollapse} />
-            </PrivateRoute>
-            <PrivateRoute path="/profile/support" exact>
+            </Route>
+            <Route path="/profile/support" exact>
               <ProfileSupport closeNftCollapse={closeNftCollapse} />
-            </PrivateRoute>
-            <PrivateRoute path="/profile/subscription" exact>
+            </Route>
+            <Route path="/profile/subscription" exact>
               <ProfileSubscription closeNftCollapse={closeNftCollapse} />
-            </PrivateRoute>
-            <PrivateRoute path="/profile" exact>
+            </Route>
+            <Route path="/profile" exact>
               <Profile closeNftCollapse={closeNftCollapse} />
-            </PrivateRoute>
-            <PublicRoute path="/theOne/canvas" exact>
+            </Route>
+            <Route path="/basket" exact>
+              <Basket closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/theOne/canvas" exact>
               <Canvas closeNftCollapse={closeNftCollapse} />
-            </PublicRoute>
-            <PublicRoute path="*">
+            </Route>
+            <Route path="*">
               <NoMatch onClick={closeNftCollapse} />
-            </PublicRoute>
+            </Route>
           </Switch>
           <Footer toggleSoonPopup={toggleSoonPopup} />
         </div>

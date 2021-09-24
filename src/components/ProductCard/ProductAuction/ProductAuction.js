@@ -1,36 +1,26 @@
 import React, { useState } from 'react';
 import './ProductAuction.css';
 import { Collapse } from 'react-collapse';
-import MarketplaceBlock from '../../ContentMarketplace/MarketplaceBlock/MarketplaceBlock';
+import Switch from 'react-switch';
 
 const ProductAuction = (props) => {
   const [showFooterProducts, setShowFooterProducts] = useState(false);
+  const [checked, setChecked] = useState(false);
+
   return (
-    <div className="product">
+    <div className="product product_auction">
       <div className="container">
         <div className="product_main">
           <div className="product_left">
             <div className="product_image">
-              <img src="img/product.png" alt="slide"></img>
+              <img src="img/product_auction.png"></img>
             </div>
-            <svg
-              width="100%"
-              className="product_border"
-              viewBox="0 0 558 669"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M45.6569 10L12.5451 40.7271V268.107L19.3099 273.911V307.711L14.6813 312.15H6.13636V327.172H4.00011V658L521.684 657.659L549.455 630.004V574.695L543.402 568.55V452.811H558V668.242H0.439697V0.44046H558V418.67L548.387 410.818V310.443H539.13L535.214 307.37V231.918L549.099 218.603V108.327L538.062 96.7186H524.176L433.386 10H45.6569Z"
-                fill="#141233"
-              />
-            </svg>
           </div>
           <div className="product_right">
             <h2>Product ID</h2>
             <div className="product_header">
               <span>
-                <img src="img/star.png" />
+                <img src="img/Star.svg" />
                 Proprietary
               </span>
               <span>
@@ -51,17 +41,46 @@ const ProductAuction = (props) => {
               </p>
             </div>
             <div className="product_avtor">
-              <div class="creator_block_info">
-                <div class="creator_block_info_main">
-                  <div class="creator_block_info_img">
-                    <img src="img/avatar.png" />
+              <div className="creator_block_info_wrapper">
+                <div className="creator_block_info_header">
+                  {' '}
+                  <img src="img/checked.svg" />
+                  Owner:{' '}
+                </div>
+                <div className="creator_block_info">
+                  <div className="creator_block_info_main">
+                    <div className="creator_block_info_img">
+                      <img src="img/avatar.png" />
+                    </div>
+                    <div className="creator_block_info_text">
+                      <h6>Artist_Title</h6>
+                      <div>
+                        <span>
+                          <img src="img/heart.svg" alt="heart" /> 1,2 k
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="creator_block_info_text">
-                    <h6>Artist_Title</h6>
-                    <div>
-                      <span>
-                        <img src="img/heart.svg" alt="heart" /> 1,2 k
-                      </span>
+                </div>
+              </div>
+              <div className="creator_block_info_wrapper">
+                <div className="creator_block_info_header">
+                  {' '}
+                  <img src="img/Star.svg" />
+                  Creator:
+                </div>
+                <div className="creator_block_info">
+                  <div className="creator_block_info_main">
+                    <div className="creator_block_info_img">
+                      <img src="img/avatar.png" />
+                    </div>
+                    <div className="creator_block_info_text">
+                      <h6>Artist_Title</h6>
+                      <div>
+                        <span>
+                          <img src="img/heart.svg" alt="heart" /> 1,2 k
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -82,18 +101,305 @@ const ProductAuction = (props) => {
               </div>
               <div className="product_price_buttons">
                 <button className="buy_now">Buy Now</button>{' '}
+                <button className="buy_now">Place a Bid</button>{' '}
                 <button className="add_to_basket">Add to basket</button>
+              </div>
+            </div>
+            <div className="bet_limit">
+              <h6>Set bet limit</h6>
+              <div className={checked ? 'cheked_block' : null}>
+                <input placeholder="$/ETH" type="number" />
+                <Switch
+                  checkedIcon={false}
+                  uncheckedIcon={false}
+                  onChange={() => {
+                    setChecked(!checked);
+                  }}
+                  checked={checked}
+                  height={20}
+                  width={40}
+                />
               </div>
             </div>
           </div>
         </div>
+
         <div className="product_auction_main">
           <div className="product_auction_left">
             <h5>Details</h5>
-            <div className="product_auction_details"></div>
+            <div className="product_auction_details">
+              <div className="product_auction_details_row">
+                <span>Auction ID</span>
+                <span>5224</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>NFT Token Type</span>
+                <span>1155</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>Label</span>
+                <span>Lorem</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>Seller address</span>
+                <span className="adress">1c2e11...6f13d</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>NFT address</span>
+                <span>Lorem</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>NFT Token ID</span>
+                <span>12345...</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>Num tokens to auction</span>
+                <span>1</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>Start time</span>
+                <span>August 12, 2021 6:55PM</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>End time</span>
+                <span>August 20, 2021 6:55PM</span>
+              </div>
+              <div className="product_auction_details_row">
+                <span>The number of tokens created</span>
+                <span>10</span>
+              </div>
+            </div>
           </div>
-          <div className="product_auction_right"></div>
+          <div className="product_auction_right">
+            <h5>Initial listing prices</h5>
+
+            <div className="initial_listing_price_block_header">
+              <div>Unit Price</div>
+              <div>USD Unit Price</div>
+              <div>Quantity</div>
+              <div>Expiration</div>
+              <div>From</div>
+            </div>
+            <div className="initial_listing_price_content">
+              <div className="initial_listing_price_block">
+                <div>
+                  <strong>6,3</strong> ETH
+                </div>
+                <div>$17 746,34</div>
+                <div>1</div>
+                <div>
+                  <button>Buy</button>
+                </div>
+                <div>
+                  <hr noshade />
+                </div>
+                <div>
+                  <a>ipano</a>
+                </div>
+              </div>
+              <div className="initial_listing_price_block">
+                <div>
+                  <strong>6,3</strong> ETH
+                </div>
+                <div>$17 746,34</div>
+                <div>1</div>
+                <div>
+                  <button>Buy</button>
+                </div>
+                <div>
+                  <hr noshade />
+                </div>
+                <div>
+                  <a>ipano</a>
+                </div>
+              </div>
+              <div className="initial_listing_price_block">
+                <div>
+                  <strong>6,3</strong> ETH
+                </div>
+                <div>$17 746,34</div>
+                <div>1</div>
+                <div>
+                  <button>Buy</button>
+                </div>
+                <div>
+                  <hr noshade />
+                </div>
+                <div>
+                  <a>ipano</a>
+                </div>
+              </div>
+              <div className="initial_listing_price_block">
+                <div>
+                  <strong>6,3</strong> ETH
+                </div>
+                <div>$17 746,34</div>
+                <div>1</div>
+                <div>
+                  <button>Buy</button>
+                </div>
+                <div>
+                  <hr noshade />
+                </div>
+                <div>
+                  <a>ipano</a>
+                </div>
+              </div>
+              <div className="initial_listing_price_block">
+                <div>
+                  <strong>6,3</strong> ETH
+                </div>
+                <div>$17 746,34</div>
+                <div>1</div>
+                <div>
+                  <button>Buy</button>
+                </div>
+                <div>
+                  <hr noshade />
+                </div>
+                <div>
+                  <a>ipano</a>
+                </div>
+              </div>
+              <div className="initial_listing_price_block">
+                <div>
+                  <strong>6,3</strong> ETH
+                </div>
+                <div>$17 746,34</div>
+                <div>1</div>
+                <div>
+                  <button>Buy</button>
+                </div>
+                <div>
+                  <hr noshade />
+                </div>
+                <div>
+                  <a>ipano</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <h5>Bids</h5>
+        <div className="product_auction_bids">
+          <div className="product_auction_bids_header">
+            <div>Auction ID</div>
+            <div>Num tokens to bid</div>
+            <div>Payment method</div>
+            <div>Price per token</div>
+            <div>Timestamp</div>
+            <div>Address of bidden</div>
+          </div>
+
+          <div className="initial_listing_bids_content">
+            <div className="product_auction_bids_block">
+              <div>5224</div>
+              <div>1</div>
+              <div>lorem</div>
+              <div>10 000</div>
+              <div>5 days ago</div>
+              <div>
+                <a>1c2e11...6f13d</a>
+              </div>
+            </div>
+            <div className="product_auction_bids_block">
+              <div>5224</div>
+              <div>1</div>
+              <div>lorem</div>
+              <div>10 000</div>
+              <div>5 days ago</div>
+              <div>
+                <a>1c2e11...6f13d</a>
+              </div>
+            </div>
+            <div className="product_auction_bids_block">
+              <div>5224</div>
+              <div>1</div>
+              <div>lorem</div>
+              <div>10 000</div>
+              <div>5 days ago</div>
+              <div>
+                <a>1c2e11...6f13d</a>
+              </div>
+            </div>
+            <div className="product_auction_bids_block">
+              <div>5224</div>
+              <div>1</div>
+              <div>lorem</div>
+              <div>10 000</div>
+              <div>5 days ago</div>
+              <div>
+                <a>1c2e11...6f13d</a>
+              </div>
+            </div>
+            <div className="product_auction_bids_block">
+              <div>5224</div>
+              <div>1</div>
+              <div>lorem</div>
+              <div>10 000</div>
+              <div>5 days ago</div>
+              <div>
+                <a>1c2e11...6f13d</a>
+              </div>
+            </div>
+            <div className="product_auction_bids_block">
+              <div>5224</div>
+              <div>1</div>
+              <div>lorem</div>
+              <div>10 000</div>
+              <div>5 days ago</div>
+              <div>
+                <a>1c2e11...6f13d</a>
+              </div>
+            </div>
+          </div>
+          {/* <Collapse isOpened={showFooterProducts}>
+                      <div className="product_auction_bids_block">
+                  <div>5224</div>
+                  <div>1</div>
+                  <div>lorem</div>
+                  <div>10 000</div>
+                  <div>5 days ago</div>
+                  <div><a>1c2e11...6f13d</a></div>
+              </div>
+              <div className="product_auction_bids_block">
+                  <div>5224</div>
+                  <div>1</div>
+                  <div>lorem</div>
+                  <div>10 000</div>
+                  <div>5 days ago</div>
+                  <div><a>1c2e11...6f13d</a></div>
+              </div>
+              <div className="product_auction_bids_block">
+                  <div>5224</div>
+                  <div>1</div>
+                  <div>lorem</div>
+                  <div>10 000</div>
+                  <div>5 days ago</div>
+                  <div><a>1c2e11...6f13d</a></div>
+              </div>
+              <div className="product_auction_bids_block">
+                  <div>5224</div>
+                  <div>1</div>
+                  <div>lorem</div>
+                  <div>10 000</div>
+                  <div>5 days ago</div>
+                  <div><a>1c2e11...6f13d</a></div>
+              </div>
+              </Collapse>
+          
+              <div onClick={() => setShowFooterProducts(!showFooterProducts)} className="product_footer_button">
+                <span>Other products</span>
+                    <strong className={showFooterProducts ? "active" : null}>{">"}</strong>
+              </div> */}
+        </div>
+      </div>
+      <div className="product_auction_main">
+        <div className="product_auction_left">
+          <h5>Details</h5>
+          <div className="product_auction_details"></div>
+        </div>
+        <div className="product_auction_right"></div>
       </div>
     </div>
   );

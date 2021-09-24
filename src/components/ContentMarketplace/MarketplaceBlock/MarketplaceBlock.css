@@ -80,12 +80,21 @@
   border-radius: 10px;
 }
 
+.marketplace_block_img_wrapper {
+  overflow: hidden;
+}
 .dark .marketplace_block_img {
   background: #282550;
 }
 
 .marketplace_block_img img {
   border-radius: 10px;
+  transition: 0.4s;
+}
+
+.marketplace_block_img img:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
 }
 
 .marketplace_block_info {

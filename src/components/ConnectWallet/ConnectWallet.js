@@ -11,7 +11,6 @@ const ConnectWallet = (props) => {
   let history = useHistory();
 
   const onConnectMetaMask = () => {
-    alert('123');
     activate(injectedConnector);
   };
 

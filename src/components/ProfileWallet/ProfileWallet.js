@@ -16,7 +16,7 @@ const ProfileWallet = (props) => {
     <div className="profile_wallet_page">
       <div className="profile_wallet_page_header">
         <h2>Wallet</h2>
-        <a>My crypto wallet address</a>
+        <a>{account && account}</a>
       </div>
       <h6>Account balance</h6>
       <div className="profile_wallet_page_main">

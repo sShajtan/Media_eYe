@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\SignUp",
+    "\\src\\components\\SoonPopup",
+    "\\src\\components\\Tokenomics"
   ],
   "PreviewInSolutionExplorer": false
 }
