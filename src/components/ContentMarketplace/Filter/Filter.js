@@ -124,7 +124,7 @@ const Filter = (props) => {
                   <div className="price_filter_range">
                     <input placeholder="min" /> to <input placeholder="max" />
                   </div>
-                  <input type="button" className="applay" value="Applay" />
+                  <input type="button" className="apply" value="Apply" />
                 </div>
               </Collapse>
             </li>

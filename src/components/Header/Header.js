@@ -1,8 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
 import { Link, useHistory } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
+import { useWeb3React } from '@web3-react/core';
+import { isAuth } from '../../utils/auth';
 import { updateTheme } from '../../store/app/appSlice';
 import './Header.css';
 import Item from '../Icons/Item';
@@ -17,14 +19,18 @@ const Header = (props) => {
     showWalletCollapse,
     toggleWalletCollapse
   } = props;
+  const { chainId, account, activate, deactivate } = useWeb3React();
   const theme = useSelector((state) => state.app.darkTheme);
+  const user = useSelector((state) => state.app.user);
   const history = useHistory();
+  const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(isAuth());
   const [mobileSearch, setMobileSearch] = useState(false);
   const wrapperRef = useRef(null);
-  const dispatch = useDispatch();
-
+  useEffect(() => {
+    setIsLogin(user?.token ? true : false);
+  }, [user]);
   const toggleTheme = () => {
     dispatch(updateTheme());
   };
@@ -62,10 +68,10 @@ const Header = (props) => {
                   }
                 >
                   <Collapse isOpened={showNftCollapse}>
-                    {/* <Link to="/nft-marketplace">NFT Marketplace </Link> */}
-                     <button onClick={toggleSoonPopup}>NFT Marketplace</button>
-                    {/* <Link to="/gallery">Gallery </Link> */}
-                    <button onClick={toggleSoonPopup}>Gallery</button>
+                    <Link to="/nft-marketplace">NFT Marketplace </Link>
+                    {/* <button onClick={toggleSoonPopup}>NFT Marketplace</button> */}
+                    <Link to="/gallery">Gallery </Link>
+                    {/* <button onClick={toggleSoonPopup}>Gallery</button> */}
                   </Collapse>
                 </div>
               </div>
@@ -134,68 +140,85 @@ const Header = (props) => {
               >
                 Create NFT
               </button>
-              {/* {isLogin ? 
+              {isLogin ? (
                 <div className="user_header_menu">
-                  <div>
+                  <div onClick={() => history.push('/basket')}>
                     <img src="../img/bag.png" />
                     <span>1123</span>
                   </div>
                   <div>
                     <img src="../img/wallet.png" />
-                    <span>ETH	<i>&#9660;</i></span>
+                    <span>
+                      ETH <i>&#9660;</i>
+                    </span>
                   </div>
                   <div className="header_avatar">
-                    <div className="header_avatar_wrapper" onClick={toggleWalletCollapse}>
+                    <div
+                      className="header_avatar_wrapper"
+                      onClick={toggleWalletCollapse}
+                    >
                       <img src="../img/avatar.png" />
                     </div>
                     <div
-                  className={
-                    showWalletCollapse ? 'wallet_collapse active' : 'wallet_collapse'
-                  }
-                >
-                  <Collapse isOpened={showWalletCollapse}>
-                    <div className="wallet_collapse_main">
-                      <h5>0xfhr4co9f38f...e345</h5>
-                      <div className="wallet_row">
-                          <img src="../img/token_1.png" />
-                          <div>
-                            <h6>eYe Balance</h6>
-                            <span>0 eYe</span>
+                      className={
+                        showWalletCollapse
+                          ? 'wallet_collapse active'
+                          : 'wallet_collapse'
+                      }
+                    >
+                      <Collapse isOpened={showWalletCollapse}>
+                        <div className="wallet_collapse_main">
+                          <h5>{account && account}</h5>
+                          <div className="wallet_row">
+                            <img src="../img/token_1.png" />
+                            <div>
+                              <h6>eYe Balance</h6>
+                              <span>0 eYe</span>
+                            </div>
+                            <button className="buy_eye">Buy eYe</button>
                           </div>
-                          <button className="buy_eye">Buy eYe</button>
-                      </div>
-                      <div className="wallet_row">
-                          <img src="../img/token_2.png" />
-                          <div>
-                            <h6>Balance</h6>
-                            <span>0.037 ETH $119</span>
+                          <div className="wallet_row">
+                            <img src="../img/token_2.png" />
+                            <div>
+                              <h6>Balance</h6>
+                              <span>0.037 ETH $119</span>
+                            </div>
                           </div>
-                      </div>
-                      <div className="wallet_row">
-                          <img src="../img/token_3.png" />
-                          <div>
-                            <h6>Bidding Balance</h6>
-                            <span>0 wETH</span>
+                          <div className="wallet_row">
+                            <img src="../img/token_3.png" />
+                            <div>
+                              <h6>Bidding Balance</h6>
+                              <span>0 wETH</span>
+                            </div>
                           </div>
-                      </div>
-                      <div className="wallet_footer">
-                        <a className=""><Item />&ensp;My items</a>
-                        <a className=""><Edit />&ensp;Edit profile</a></div>
+                          <div className="wallet_footer">
+                            <a className="">
+                              <Item />
+                              &ensp;My items
+                            </a>
+                            <a
+                              className=""
+                              onClick={() => history.push('/profile')}
+                            >
+                              <Edit />
+                              &ensp;Edit profile
+                            </a>
+                          </div>
+                        </div>
+                      </Collapse>
                     </div>
-                  </Collapse>
-                </div>
                   </div>
-                </div>  : 
+                </div>
+              ) : (
                 <div className="auth">
-                  <NavLink  to="/login" className="login">
+                  <Link to="/login" className="login">
                     <span>Log in</span>
-                  </NavLink>
-                  <NavLink to="/connect-wallet" className="signup">
+                  </Link>
+                  <Link to="/signup" className="signup">
                     <span>Sign Up</span>
-                  </NavLink> 
-                </div> 
-              }  */}
-
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>

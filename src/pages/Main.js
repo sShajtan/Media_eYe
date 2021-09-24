@@ -24,7 +24,10 @@ const Main = (props) => {
   return (
     <React.Fragment>
       <div onClick={closeNftCollapse}>
-        <MainBlock togglePopup={togglePopup} toggleSoonPopup={toggleSoonPopup} />
+        <MainBlock
+          togglePopup={togglePopup}
+          toggleSoonPopup={toggleSoonPopup}
+        />
         <MainInfo />
         <MainHow toggleSoonPopup={toggleSoonPopup} />
         <MainHowWork

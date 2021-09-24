@@ -1,7 +1,7 @@
 import React from 'react';
 import CollectionComponent from '../components/CreateProduct/Collection/Collection';
 
-const Collection= (props) => {
+const Collection = (props) => {
   const { closeNftCollapse, darkTheme } = props;
 
   return (

@@ -1,12 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   darkTheme: true,
-  timerPopup: false
+  timerPopup: false,
+  user: {
+    token: '',
+    user: {}
+  }
 };
 
 export const appSlice = createSlice({
-  name: "app",
+  name: 'app',
   initialState,
   reducers: {
     updateTheme: (state) => {
@@ -24,10 +28,15 @@ export const appSlice = createSlice({
       // immutable state based off those changes
       state.timerPopup = true;
     },
-  },
+
+    updateLoggedInUser: (state, action) => {
+      state.user.token = action.payload;
+    }
+  }
 });
 
 // Action creators are generated for each case reducer function
-export const { updateTheme, updateTimerPopup } = appSlice.actions;
+export const { updateTheme, updateTimerPopup, updateLoggedInUser } =
+  appSlice.actions;
 
 export default appSlice.reducer;

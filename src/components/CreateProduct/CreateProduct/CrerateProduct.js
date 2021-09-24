@@ -3,11 +3,10 @@ import { useSelector } from 'react-redux';
 import { NavLink, useHistory } from 'react-router-dom';
 import './CrerateProduct.css';
 
-
 const CrerateProduct = (props) => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
   let history = useHistory();
-  
+
   return (
     <div className="create_product">
       <div className="container">
@@ -34,17 +33,19 @@ const CrerateProduct = (props) => {
             </NavLink>
           </div>
           <div className="create_product_block">
-          <NavLink to="/create/collection">
-            <button>
-              <div className="create_product_image_wrapper">
-                <img
-                  src={
-                    darkTheme ? 'img/collection_dark.svg' : 'img/collection.svg'
-                  }
-                />
-              </div>
-              Collection
-            </button>
+            <NavLink to="/create/collection">
+              <button>
+                <div className="create_product_image_wrapper">
+                  <img
+                    src={
+                      darkTheme
+                        ? 'img/collection_dark.svg'
+                        : 'img/collection.svg'
+                    }
+                  />
+                </div>
+                Collection
+              </button>
             </NavLink>
           </div>
         </div>
