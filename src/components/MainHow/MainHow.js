@@ -336,14 +336,14 @@ const MainHow = (props) => {
               onClick={() => history.push('/content-marketplace')}
             >
               <img src="img/nft/1.png" alt="nft_image" />
-              <h5>Content Marketplace</h5>
+              <h5>NFT Marketplace</h5>
             </div>
             <div
               className="main_how_footer_block"
               onClick={() => history.push('/nft-marketplace')}
             >
               <img src="img/nft/4.png" alt="nft_image" />
-              <h5>NFT Marketplace</h5>
+              <h5>NFT Gallery</h5>
             </div>
             <div
               className="main_how_footer_block animate__animated animate__fadeInLeft wow"
@@ -352,7 +352,7 @@ const MainHow = (props) => {
               onClick={() => history.push('/gallery')}
             >
               <img src="img/nft/5.png" alt="nft_image" />
-              <h5>Gallery</h5>
+              <h5>Create Collection</h5>
             </div>
             <div
               className="main_how_footer_block animate__animated animate__fadeInTopRight wow"
