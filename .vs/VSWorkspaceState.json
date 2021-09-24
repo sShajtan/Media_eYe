@@ -3,9 +3,11 @@
     "",
     "\\src",
     "\\src\\components",
+    "\\src\\components\\Header",
     "\\src\\components\\SignUp",
     "\\src\\components\\SoonPopup",
-    "\\src\\components\\Tokenomics"
+    "\\src\\components\\Tokenomics",
+    "\\src\\pages"
   ],
   "PreviewInSolutionExplorer": false
 }
