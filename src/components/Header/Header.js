@@ -67,27 +67,11 @@ const Header = (props) => {
                     showNftCollapse ? 'nft_collapse active' : 'nft_collapse'
                   }
                 >
-<<<<<<< HEAD
-                  {/* <button
-                    onClick={toggleSoonPopup}
-                  >
-                  NFT Marketplace
-                  </button>
-                  <button
-                    onClick={toggleSoonPopup}
-                  >
-                  Gallery
-                  </button> */}
-                  <Collapse isOpened={showNftCollapse}>
-                  <Link to="/nft-marketplace">NFT Marketplace </Link> 
-                   <Link to="/gallery">Gallery </Link> 
-=======
                   <Collapse isOpened={showNftCollapse}>
                     <Link to="/nft-marketplace">NFT Marketplace </Link>
                     {/* <button onClick={toggleSoonPopup}>NFT Marketplace</button> */}
                     <Link to="/gallery">Gallery </Link>
                     {/* <button onClick={toggleSoonPopup}>Gallery</button> */}
->>>>>>> master
                   </Collapse>
                 </div>
               </div>
@@ -157,21 +141,6 @@ const Header = (props) => {
               >
                 Create NFT
               </button>
-<<<<<<< HEAD
-               {isLogin ? 
-                <div className="user_header_menu">
-                  <div>
-                    <img src="../img/bag.png" />
-                    <span>1123</span>
-                  </div>
-                  <div>
-                    <img src="../img/wallet.png" />
-                    <span>ETH	<i>&#9660;</i></span>
-                  </div>
-                  <div className="header_avatar">
-                    <div className="header_avatar_wrapper" onClick={toggleWalletCollapse}>
-                      <img src="../img/avatar.png" />
-=======
               {isLogin ? (
                 !account ? (
                   <button
@@ -185,7 +154,6 @@ const Header = (props) => {
                     <div onClick={() => history.push('/basket')}>
                       <img src="../img/bag.png" />
                       <span>1123</span>
->>>>>>> master
                     </div>
                     <div>
                       <img src="../img/wallet.png" />
@@ -258,16 +226,9 @@ const Header = (props) => {
                   </Link>
                   <Link to="/signup" className="signup">
                     <span>Sign Up</span>
-<<<<<<< HEAD
-                  </NavLink> 
-                </div> 
-              }
-
-=======
                   </Link>
                 </div>
               )}
->>>>>>> master
             </div>
           </div>
         </div>
