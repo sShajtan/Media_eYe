@@ -1,13 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   darkTheme: true,
   timerPopup: false,
   registerPopup: false,
+  user: {
+    token: '',
+    user: {}
+  }
 };
 
 export const appSlice = createSlice({
-  name: "app",
+  name: 'app',
   initialState,
   reducers: {
     updateTheme: (state) => {
@@ -25,18 +29,21 @@ export const appSlice = createSlice({
       // immutable state based off those changes
       state.timerPopup = true;
     },
-
     updateRegisterPopup: (state) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       state.registerPopup = true;
+    },
+    updateLoggedInUser: (state, action) => {
+      state.user.token = action.payload;
     }
-  },
+  }
 });
 
 // Action creators are generated for each case reducer function
-export const { updateTheme, updateTimerPopup, updateRegisterPopup } = appSlice.actions;
+export const { updateTheme, updateTimerPopup, updateLoggedInUser,  updateRegisterPopup } =
+  appSlice.actions;
 
 export default appSlice.reducer;

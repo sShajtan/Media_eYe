@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductMain from '../components/ProductCard/Product/Product'
+import ProductMain from '../components/ProductCard/Product/Product';
 
 const AuctionProduct = (props) => {
   const { closeNftCollapse } = props;

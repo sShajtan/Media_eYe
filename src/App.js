@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Web3ReactProvider } from '@web3-react/core';
 import { useSelector, useDispatch } from 'react-redux';
 import Main from './pages/Main';
 import Header from './components/Header/Header';
@@ -38,6 +39,7 @@ import ProfileSupport from './pages/ProfileSupport';
 import ProfileSubscription from './pages/ProfileSubscription';
 import Canvas from './pages/Canvas';
 import Basket from './pages/Bsaket';
+import { getLibrary } from './utils/web3';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -110,123 +112,128 @@ const App = () => {
 
   return (
     <Router>
-      <div className={darkTheme ? 'App dark' : 'App'}>
-        <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
-        <PartnersPopup
-          showPopup={showPartnersPopup}
-          togglePopup={togglePartnersPopup}
-          toggleMessagePopup={toggleMessagePopup}
-        />
-        <TimerPopup
-          showPopup={showPopup}
-          togglePopup={togglePopup}
-          toggleMessagePopup={toggleMessagePopup}
-        />
-        <RegisterPopup 
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <div className={darkTheme ? 'App dark' : 'App'}>
+          <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
+          <PartnersPopup
+            showPopup={showPartnersPopup}
+            togglePopup={togglePartnersPopup}
+            toggleMessagePopup={toggleMessagePopup}
+          />
+          <TimerPopup
+            showPopup={showPopup}
+            togglePopup={togglePopup}
+            toggleMessagePopup={toggleMessagePopup}
+          />
+            <RegisterPopup 
           showPopup={showRegisterPopup}
           togglePopup={toggleRegisterPopup}
         />
-        <BusinessPopup
-          showPopup={showBusinessPopup}
-          togglePopup={toggleBusinessPopup}
-          toggleMessagePopup={toggleMessagePopup}
-        />
-        <MessagePopup
-          showPopup={showMessagePopup}
-          togglePopup={toggleMessagePopup}
-        />
-        <Header
-          toggleSoonPopup={toggleSoonPopup}
-          toggleNftCollapse={toggleNftCollapse}
-          toggleWalletCollapse={toggleWalletCollapse}
-          showNftCollapse={showNftCollapse}
-          showWalletCollapse={showWalletCollapse}
-        />
-        <Switch>
-          <Route path="/" exact>
-            <Main
-              toggleSoonPopup={toggleSoonPopup}
-              togglePartnersPopup={togglePartnersPopup}
-              toggleBusinessPopup={toggleBusinessPopup}
-              togglePopup={togglePopup}
-              toggleMessagePopup={toggleMessagePopup}
-              toggleNftCollapse={toggleNftCollapse}
-              closeNftCollapse={closeNftCollapse}
-            />
-          </Route>
-          <Route path="/content-marketplace" exact>
-            <ContentMarketplace
-              closeNftCollapse={closeNftCollapse}
-            ></ContentMarketplace>
-          </Route>
-          <Route path="/nft-marketplace" exact>
-            <NftMarketplace
-              closeNftCollapse={closeNftCollapse}
-            ></NftMarketplace>
-          </Route>
-          <Route path="/signup" exact>
-            <SignUp />
-          </Route>
-          <Route path="/login" exact>
-            <LogIn />
-          </Route>
-          <Route path="/gallery" exact>
-            <Gallery closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/creators" exact>
-            <Creators closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/creator-account" exact>
-            <CreatorAccount closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/connect-wallet" exact>
-            <ConnectWallet closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/feature" exact>
-            <Feature closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/auction-product" exact>
-            <ProductAuction closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/product" exact>
-            <Product closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/create" exact>
-            <CreateProduct closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/create/single" exact>
-            <CreateSingleProduct closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/create/collection" exact>
-            <Collection closeNftCollapse={closeNftCollapse} darkTheme={darkTheme} />
-          </Route>
-          <Route path="/profile/wallet" exact>
-            <ProfileWallet closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/profile/settings" exact>
-            <ProfileSettings closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/profile/support" exact>
-            <ProfileSupport closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/profile/subscription" exact>
-            <ProfileSubscription closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/profile" exact >
-            <Profile closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/basket" exact >
-            <Basket closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/theOne/canvas" exact>
-            <Canvas closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="*">
-            <NoMatch onClick={closeNftCollapse} />
-          </Route>
-        </Switch>
-        <Footer toggleSoonPopup={toggleSoonPopup} />
-      </div>
+          <BusinessPopup
+            showPopup={showBusinessPopup}
+            togglePopup={toggleBusinessPopup}
+            toggleMessagePopup={toggleMessagePopup}
+          />
+          <MessagePopup
+            showPopup={showMessagePopup}
+            togglePopup={toggleMessagePopup}
+          />
+          <Header
+            toggleSoonPopup={toggleSoonPopup}
+            toggleNftCollapse={toggleNftCollapse}
+            toggleWalletCollapse={toggleWalletCollapse}
+            showNftCollapse={showNftCollapse}
+            showWalletCollapse={showWalletCollapse}
+          />
+          <Switch>
+            <Route path="/" exact>
+              <Main
+                toggleSoonPopup={toggleSoonPopup}
+                togglePartnersPopup={togglePartnersPopup}
+                toggleBusinessPopup={toggleBusinessPopup}
+                togglePopup={togglePopup}
+                toggleMessagePopup={toggleMessagePopup}
+                toggleNftCollapse={toggleNftCollapse}
+                closeNftCollapse={closeNftCollapse}
+              />
+            </Route>
+            <Route path="/content-marketplace" exact>
+              <ContentMarketplace
+                closeNftCollapse={closeNftCollapse}
+              ></ContentMarketplace>
+            </Route>
+            <Route path="/nft-marketplace" exact>
+              <NftMarketplace
+                closeNftCollapse={closeNftCollapse}
+              ></NftMarketplace>
+            </Route>
+            <Route path="/signup" exact>
+              <SignUp />
+            </Route>
+            <Route path="/login" exact>
+              <LogIn />
+            </Route>
+            <Route path="/gallery" exact>
+              <Gallery closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/creators" exact>
+              <Creators closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/creator-account" exact>
+              <CreatorAccount closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/connect-wallet" exact>
+              <ConnectWallet closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/feature" exact>
+              <Feature closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/auction-product" exact>
+              <ProductAuction closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/product" exact>
+              <Product closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/create" exact>
+              <CreateProduct closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/create/single" exact>
+              <CreateSingleProduct closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/create/collection" exact>
+              <Collection
+                closeNftCollapse={closeNftCollapse}
+                darkTheme={darkTheme}
+              />
+            </Route>
+            <Route path="/profile/wallet" exact>
+              <ProfileWallet closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/profile/settings" exact>
+              <ProfileSettings closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/profile/support" exact>
+              <ProfileSupport closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/profile/subscription" exact>
+              <ProfileSubscription closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/profile" exact>
+              <Profile closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/basket" exact>
+              <Basket closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/theOne/canvas" exact>
+              <Canvas closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="*">
+              <NoMatch onClick={closeNftCollapse} />
+            </Route>
+          </Switch>
+          <Footer toggleSoonPopup={toggleSoonPopup} />
+        </div>
+      </Web3ReactProvider>
     </Router>
   );
 };

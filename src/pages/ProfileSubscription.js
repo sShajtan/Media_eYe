@@ -3,7 +3,6 @@ import { Profiler } from 'react';
 import ProfileSubscriptionMain from '../components/ProfileSubscription/ProfileSubscription';
 import Sidebar from '../components/Sidebar/Sidebar';
 
-
 const ProfileSubscription = (props) => {
   const { closeNftCollapse } = props;
 

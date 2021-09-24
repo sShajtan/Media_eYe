@@ -3,7 +3,6 @@ import { Profiler } from 'react';
 import ProfileWalletMain from '../components/ProfileWallet/ProfileWallet';
 import Sidebar from '../components/Sidebar/Sidebar';
 
-
 const ProfileWallet = (props) => {
   const { closeNftCollapse } = props;
 

@@ -1,11 +1,18 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useWeb3React } from '@web3-react/core';
+import { injectedConnector } from '../../connectors';
 import './ConnectWallet.css';
 import { NavLink, useHistory } from 'react-router-dom';
 
 const ConnectWallet = (props) => {
+  const { chainId, account, activate, deactivate } = useWeb3React();
   const darkTheme = useSelector((state) => state.app.darkTheme);
   let history = useHistory();
+
+  const onConnectMetaMask = () => {
+    activate(injectedConnector);
+  };
 
   return (
     <div className="connect_wallet">
@@ -22,7 +29,7 @@ const ConnectWallet = (props) => {
             <button id="eth"></button>
           </div>
           <div className="connect_wallet_walletss">
-            <button id="MetaMask"></button>
+            <button id="MetaMask" onClick={onConnectMetaMask}></button>
             <button id="Binance"></button>
             <button id="Trust"></button>
           </div>
