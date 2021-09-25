@@ -221,12 +221,12 @@ const Header = (props) => {
                 )
               ) : (
                 <div className="auth">
-                  <Link to="/login" className="login">
+                  {/*<Link to="/login" className="login">
                     <span>Log in</span>
                   </Link>
                   <Link to="/signup" className="signup">
                     <span>Sign Up</span>
-                  </Link>
+                  </Link>*/}
                 </div>
               )}
             </div>
