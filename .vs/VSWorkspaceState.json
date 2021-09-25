@@ -4,10 +4,8 @@
     "\\src",
     "\\src\\components",
     "\\src\\components\\Header",
-    "\\src\\components\\SignUp",
-    "\\src\\components\\SoonPopup",
-    "\\src\\components\\Tokenomics",
-    "\\src\\pages"
+    "\\src\\components\\MainHow",
+    "\\src\\components\\Tokenomics"
   ],
   "PreviewInSolutionExplorer": false
 }
