@@ -7,7 +7,9 @@ const CreatorAccount = (props) => {
     <div className="creator_account">
       <div className="container">
         <div className="creator_account_main">
-          <img src="img/creator_account.png" />
+        <div className="creator_accout_img_wrapper">
+            <img src="img/creator_account.png" />
+        </div>
           <div className="creator_account_main_header">
             <div className="creator_account_avatar">
               <img src="img/creator_account_avatar.png" />

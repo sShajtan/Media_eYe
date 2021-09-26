@@ -109,6 +109,17 @@
   right: -301px;
 } */
 
+.filter_block ul li .filter_title button {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.dark .filter_block ul li .filter_title button {
+  color: #fff;
+}
+
 .filter_block ul li .filter_title {
   display: flex;
   justify-content: space-between;
@@ -207,7 +218,7 @@
   outline: none;
 }
 
-.price_filter .apply {
+.price_filter .applay {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid #797979;
   -webkit-backdrop-filter: blur(16px);
@@ -446,7 +457,7 @@
 }
 
 @media (max-width: 767.98px) {
-  .filter_button {
+  .filter .filter_button {
     border: none;
     outline: none;
     font-family: Poppins;
@@ -479,24 +490,30 @@
     background: #fff;
   }
 
-  .filter_button:hover {
+  .filter .filter_button:hover {
     background: #fff;
     color: #141233;
   }
-  .dark .filter_button {
+  .dark .filter .filter_button {
     background: #282550;
     color: #fff;
   }
 
-  .filter_block,
+  .filter .filter_block,
   .content_marketplace_header_menu_mobile .categories_filter {
     width: 90%;
     margin: 0 auto;
   }
 
-  .filter_block ul {
+  .filter .filter_block ul {
     position: relative;
     border: none;
+  }
+  .creator_account_filter .header_search {
+    padding-left: 0;
+  }
+  .account_collection .filter_block ul {
+    min-width: 200px;
   }
   .filter_block ul li {
     width: auto;
@@ -506,21 +523,21 @@
     content: none;
   }
 
-  .filter_button.open {
+  .filter .filter_button.open {
     color: #141233;
     background: #fff;
   }
 
-  .filter_button:hover svg path {
+  .filter .filter_button:hover svg path {
     fill: #000;
   }
 
-  .dark .filter_button.open {
+  .dark .filter .filter_button.open {
     background: #282550;
     color: #fff;
   }
 
-  .filter_block ul {
+  .filter .filter_block ul {
     background: #fff;
     padding-bottom: 20px;
     border-top-left-radius: 0;
@@ -528,10 +545,10 @@
     margin-top: -5px;
   }
 
-  .dark .filter_block ul {
+  .dark .filter .filter_block ul {
     background: #282550;
   }
-  .filter_block ul li {
+  .filter .filter_block ul li {
     padding: 0 30px;
     border: none;
   }
@@ -581,7 +598,7 @@
   .price_filter_range {
     margin: 20px 0;
   }
-  .price_filter .apply {
+  .price_filter .applay {
     margin: 0;
   }
   .collections_filter,
@@ -593,8 +610,8 @@
 @media (max-width: 399.98px) {
   .filter_block,
   .content_marketplace_header_menu_mobile .categories_filter,
-  .filter_button {
-    width: 100%;
+  .filter .filter_button {
+    width: 90%;
     margin: 0 auto;
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import GithubIcon from '../Icons/GithubIcon';
 import InstagramIcon from '../Icons/InstagramIcon';
@@ -21,13 +22,13 @@ const Footer = (props) => {
             <div className="footer_menu">
               <ul>
                 <li>
-                  <Link to="/nft-marketplace">NTF Marketplace</Link>
+                  <NavLink to="/nft-marketplace">NTF Marketplace</NavLink>
                 </li>
                 <li>
-                  <Link to="/gallerey">Gallery</Link>
+                  <NavLink to="/gallerey">Gallery</NavLink>
                 </li>
                 <li>
-                  <Link to="/">Creators</Link>
+                  <NavLink to="/creators">Creators</NavLink> 
                 </li>
               </ul>
               <ul>

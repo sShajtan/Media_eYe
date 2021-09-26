@@ -155,7 +155,7 @@ const Header = (props) => {
                       <img src="../img/bag.png" />
                       <span>1123</span>
                     </div>
-                    <div>
+                    <div >
                       <img src="../img/wallet.png" />
                       <span>
                         ETH <i>&#9660;</i>
@@ -201,9 +201,9 @@ const Header = (props) => {
                               </div>
                             </div>
                             <div className="wallet_footer">
-                              <a className="">
+                              <a className="" onClick={() => history.push('/account/minted-nft')}>
                                 <Item />
-                                &ensp;My items
+                                &ensp;My Profile
                               </a>
                               <a
                                 className=""

@@ -1,7 +1,7 @@
 .marketplace_block_wrapper {
   position: relative;
   max-width: 85%;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .marketplace_main_main .marketplace_block_wrapper,
@@ -13,16 +13,18 @@
 }
 
 .marketplace_block {
-  background: url('../../../assets/img/block_border.png') no-repeat center;
-  background-size: 99% 99%;
+  background: url('../../../assets/img/marketplace_border.png') no-repeat center;
+  background-size: 100% 100%;
+  border: none;
   padding: 10px;
   position: relative;
+  margin: 10px 0;
 }
 
-/* .marketplace_block:hover {
-  background: url('../../../assets/img/block_border_hover.png') no-repeat center;
-  background-size: 103% 103%;
-} */
+.marketplace_block:hover {
+  box-shadow: 0px 0px 12px 0px rgba(0, 26, 255, 1);
+  border-radius: 18px;
+}
 
 .marketplace_block_img {
   padding: 8px;
@@ -135,6 +137,27 @@
   font-size: 16px;
   line-height: 16px;
   color: #0075ff;
+}
+
+.collection_block_wrapper .marketplace_block_img {
+  background: url('../../../assets/img/collection_block_border.png') no-repeat
+    center;
+  background-size: 99% 99%;
+  padding-top: 15px;
+}
+
+.collection_block_wrapper .marketplace_block_info {
+  position: relative;
+}
+
+.collection_block_wrapper .marketplace_block_info img.status {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.collection_block_wrapper .marketplace_block_info h6 {
+  max-width: 90%;
 }
 
 @media (max-width: 991.98px) {

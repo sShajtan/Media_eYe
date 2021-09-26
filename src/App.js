@@ -40,6 +40,12 @@ import ProfileSubscription from './pages/ProfileSubscription';
 import Canvas from './pages/Canvas';
 import Basket from './pages/Bsaket';
 import { getLibrary } from './utils/web3';
+import CreatorAccountCollections from './pages/CreatorAccountCollections';
+import AccountMainted from './pages/AccountMainted';
+import AccountPurchased from './pages/AccountPurchased';
+import AccountFavorites from './pages/AccountFavorites';
+import AccountCampaign from './pages/AccountCampaign';
+import AccountCurrently from './pages/AccountCurrently'; 
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -60,7 +66,7 @@ const App = () => {
       dispatch(updateTimerPopup());
       setTimeout(() => {
         setShowPopup(true);
-      }, 14000);
+      }, 140000000);
     }
   });
 
@@ -69,7 +75,7 @@ const App = () => {
       dispatch(updateRegisterPopup());
       setTimeout(() => {
         setShowRegisterPopup(true);
-      }, 7000);
+      }, 70000000);
     }
   })
 
@@ -224,6 +230,24 @@ const App = () => {
             <Route path="/basket" exact>
               <Basket closeNftCollapse={closeNftCollapse} />
             </Route>
+             <Route path="/account/collections" exact>
+            <CreatorAccountCollections closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/account/minted-nft" exact>
+            <AccountMainted closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/account/purchased" exact>
+            <AccountPurchased closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/account/campaign" exact>
+            <AccountCampaign closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/account/favorites" exact>
+            <AccountFavorites closeNftCollapse={closeNftCollapse} />
+          </Route>
+          <Route path="/account/currently" exact>
+            <AccountCurrently closeNftCollapse={closeNftCollapse} />
+          </Route>
             <Route path="/theOne/canvas" exact>
               <Canvas closeNftCollapse={closeNftCollapse} />
             </Route>

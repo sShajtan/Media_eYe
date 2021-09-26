@@ -47,7 +47,7 @@ const Filter = (props) => {
   };
 
   return (
-    <div className="filter_wrapper">
+    <div className="filter_wrapper filter">
       <button
         className={showFilter ? 'filter_button open' : 'filter_button'}
         onClick={toggleFilter}
@@ -124,7 +124,7 @@ const Filter = (props) => {
                   <div className="price_filter_range">
                     <input placeholder="min" /> to <input placeholder="max" />
                   </div>
-                  <input type="button" className="apply" value="Apply" />
+                  <input type="button" className="applay" value="Applay" />
                 </div>
               </Collapse>
             </li>
