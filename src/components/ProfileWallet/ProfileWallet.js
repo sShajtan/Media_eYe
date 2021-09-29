@@ -8,6 +8,9 @@ import './ProfileWallet.css';
 const ProfileWallet = (props) => {
   const { chainId, account, activate, deactivate } = useWeb3React();
   const theme = useSelector((state) => state.app.darkTheme);
+  console.log({
+    REACT_APP_RAMP_PRIVATE_KEY: process.env.REACT_APP_RAMP_PRIVATE_KEY
+  });
 
   const onConnectMetaMask = () => {
     activate(injectedConnector);
@@ -16,6 +19,7 @@ const ProfileWallet = (props) => {
   const onConnectRamp = () => {
     new RampInstantSDK({
       hostAppName: 'Maker DAO',
+      hostApiKey: process.env.REACT_APP_RAMP_PRIVATE_KEY,
       hostLogoUrl:
         'https://cdn-images-1.medium.com/max/2600/1*nqtMwugX7TtpcS-5c3lRjw.png'
     }).show();
@@ -80,14 +84,14 @@ const ProfileWallet = (props) => {
         </div>
         <h6>Fund your account wallet with Credit Card or Crypto</h6>
         <div>
-          <button className="create_wallet_onramper wallet_btn">
+          <button
+            className="create_wallet_onramper wallet_btn"
+            onClick={onConnectRamp}
+          >
             OnRamper
           </button>
-          <button className="create_wallet_binance wallet_btn">Binance</button>
-          <button className="create_wallet_moonpay wallet_btn">MoonPay</button>
-          <button className="create_wallet_crypto  wallet_btn">
-            Crypto.com
-          </button>
+          <button className="create_wallet_ramp wallet_btn">Ramp</button>
+          <button className="create_wallet_moonpay wallet_btn">Paypal</button>
         </div>
       </div>
     </div>
