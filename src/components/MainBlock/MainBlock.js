@@ -107,8 +107,7 @@ const MainBlock = (props) => {
               </a>
               <button
                 className="sign_up"
-                // onClick={() => history.push('/signup')}
-                onClick={toggleSoonPopup}
+                onClick={() => history.push('/signup')}
               >
                 <span>Sign Up</span>
               </button>
