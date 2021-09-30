@@ -1,36 +1,48 @@
 .marketplace_block_wrapper {
   position: relative;
   max-width: 85%;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.marketplace_block_hover {
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s;
+  width: 98%;
+  height: 92%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 12px 0px rgb(0 26 255);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 4px;
 }
 
 .marketplace_main_main .marketplace_block_wrapper,
 .creator_account_main_block .marketplace_block_wrapper,
-.product_footer_products .marketplace_block_wrapper {
+.product_footer_products .marketplace_block_wrapper,
+.collection_product .marketplace_block_wrapper {
   position: relative;
   max-width: 22%;
   margin: 0 auto 30px;
 }
 
-.marketplace_block_wrapper input::-webkit-outer-spin-button,
-.marketplace_block_wrapper input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-.marketplace_block {
-  background: url('../../../assets/img/marketplace_border.png') no-repeat center;
+.collection_product .marketplace_block {
+  background: url('../../../assets/img/block_border.png') no-repeat center;
   background-size: 99% 99%;
-  border: none;
   padding: 10px;
   position: relative;
-  margin: 10px 0;
 }
 
-.marketplace_block:hover {
+.collection_product .marketplace_block:hover {
   background: url('../../../assets/img/block_border_hover.png') no-repeat center;
   background-size: 99% 99%;
+}
+
+.collection_product .marketplace_block_wrapper:hover .marketplace_block_hover {
+  opacity: 1;
+  transition: 0.4s;
 }
 
 .marketplace_block_img {
@@ -41,7 +53,6 @@
 
 .marketplace_block_img_wrapper {
   overflow: hidden;
-  border-radius: 10px;
 }
 .dark .marketplace_block_img {
   background: #282550;
@@ -57,7 +68,93 @@
   transition: 0.4s;
 }
 
+.marketplace_block_info .on_sale_in_checkbox {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0;
+  padding: 0 3px;
+  align-items: baseline;
+}
+
+.marketplace_block_info
+  .on_sale_in_checkbox
+  input[type='checkbox']
+  + label
+  > span {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.marketplace_block_info
+  .on_sale_in_checkbox
+  input[type='checkbox']:checked
+  + label
+  > span {
+  border: 2px solid #0075ff;
+}
+
+.marketplace_block_info
+  .on_sale_in_checkbox
+  input[type='checkbox']:checked
+  + label
+  > span:before {
+  content: '';
+  color: #0075ff;
+  font-weight: 900;
+  font-size: 25px;
+  width: 90%;
+  height: 90%;
+  background: url('../../../assets/img/check_arrow.png') no-repeat center;
+  background-size: contain;
+}
+
+.collection_product
+  .on_sale_in_checkbox
+  input[type='checkbox']:checked
+  + label
+  > span {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.collection_product .marketplace_block_info h6 {
+  margin-left: 5px;
+}
+
+.collection_product .marketplace_block_info div div {
+  display: flex;
+}
+
+.collection_product .marketplace_block_info div div label {
+  font-size: 14px;
+  color: #898989;
+  margin-left: 5px;
+}
+
+.collection_product .marketplace_block_info div div input {
+  width: 70px;
+  min-width: 50px;
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 3px;
+  margin: 5px 10px;
+}
+
+.collection_product .marketplace_block_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collection_product .on_sale_in_checkbox input[type='checkbox'] + label > span {
+  margin: 0;
+}
+
+.collection_product .on_sale_in_checkbox input[type='checkbox'] + label {
+  margin: 0;
+}
+
 .marketplace_block_info {
+  min-height: 60px;
   background: #fff;
   padding: 7px;
   border-radius: 10px;
@@ -145,27 +242,6 @@
   font-size: 16px;
   line-height: 16px;
   color: #0075ff;
-}
-
-.collection_block_wrapper .marketplace_block_img {
-  background: url('../../../assets/img/collection_block_border.png') no-repeat
-    center;
-  background-size: 99% 99%;
-  padding-top: 15px;
-}
-
-.collection_block_wrapper .marketplace_block_info {
-  position: relative;
-}
-
-.collection_block_wrapper .marketplace_block_info img.status {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-
-.collection_block_wrapper .marketplace_block_info h6 {
-  max-width: 90%;
 }
 
 @media (max-width: 991.98px) {

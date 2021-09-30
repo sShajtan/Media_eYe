@@ -288,7 +288,7 @@ const ProductAuction = (props) => {
             <div>Payment method</div>
             <div>Price per token</div>
             <div>Timestamp</div>
-            <div>Address of bidden</div>
+            <div>Address of bidder</div>
           </div>
 
           <div className="initial_listing_bids_content">
@@ -394,13 +394,13 @@ const ProductAuction = (props) => {
               </div> */}
         </div>
       </div>
-      <div className="product_auction_main">
+      {/* <div className="product_auction_main">
         <div className="product_auction_left">
           <h5>Details</h5>
           <div className="product_auction_details"></div>
         </div>
         <div className="product_auction_right"></div>
-      </div>
+      </div> */}
     </div>
   );
 };
