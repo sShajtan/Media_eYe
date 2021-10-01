@@ -18,10 +18,9 @@ const ProfileWallet = (props) => {
 
   const onConnectRamp = () => {
     new RampInstantSDK({
-      hostAppName: 'Maker DAO',
+      hostAppName: 'MeDIA EYE',
       hostApiKey: process.env.REACT_APP_RAMP_PRIVATE_KEY,
-      hostLogoUrl:
-        'https://cdn-images-1.medium.com/max/2600/1*nqtMwugX7TtpcS-5c3lRjw.png'
+      hostLogoUrl: 'https://media-eye.web.app/img/logo.png'
     }).show();
   };
 
