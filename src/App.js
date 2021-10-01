@@ -233,7 +233,7 @@ const App = () => {
              <Route path="/account/collections" exact>
             <CreatorAccountCollections closeNftCollapse={closeNftCollapse} />
           </Route>
-          <Route path="/account/minted-nft" exact>
+          <Route path="/account/minted" exact>
             <AccountMainted closeNftCollapse={closeNftCollapse} />
           </Route>
           <Route path="/account/purchased" exact>

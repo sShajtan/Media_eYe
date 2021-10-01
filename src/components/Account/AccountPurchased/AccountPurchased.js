@@ -48,7 +48,7 @@ const AccountPurchased = (props) => {
                     </div>
                     <div className="creator_account_menu_wrapper">
                         <div className="creator_account_menu" ref={Links} >
-                            <NavLink exact to="/account/minted-nft">
+                            <NavLink exact to="/account/minted">
                                 Minted NFT
                             </NavLink>
                             <NavLink exact to="/account/purchased">

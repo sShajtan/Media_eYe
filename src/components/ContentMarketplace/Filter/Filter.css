@@ -326,6 +326,7 @@
   height: 0;
   width: 0;
   position: absolute;
+  opacity: 0;
 }
 
 .on_sale_in_checkbox input[type='checkbox'] + label {
