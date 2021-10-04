@@ -1,0 +1,72 @@
+.account_content .creator_account_filter_center div {
+  color: #313139;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+.account_content .creator_account_filter_center {
+  display: flex;
+  justify-content: space-between;
+}
+
+.account_content .creator_account_filter_center div img {
+  width: 21px;
+}
+
+.dark .account_content .creator_account_filter_center div {
+  color: #fff;
+}
+
+.account_content .creator_account_filter > div {
+  min-width: 20%;
+}
+.account_content .creator_account_filter > .grid_filter {
+  justify-content: end;
+}
+
+.account_content .creator_account_filter_center div.active:first-child > span {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #14ffc7;
+  background-image: linear-gradient(180deg, #14ffc7 0%, #00c2ff 100%);
+}
+
+.account_content .creator_account_filter_center div.active:nth-child(2) > span {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #fcfa59;
+  background-image: linear-gradient(180deg, #fcfa59 0%, #fc7cfb 100%);
+}
+
+.account_content .creator_account_filter_center div.active:nth-child(3) > span {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #cd01f8;
+  background-image: linear-gradient(180deg, #cd01f8 0%, #ec010c 100%);
+}
+
+@media (max-width: 575.98px) {
+  .account_content .creator_account_filter_center div img {
+    max-width: 14px;
+  }
+
+  .account_content .creator_account_filter_center div {
+    font-size: 13px;
+    margin: 0 4px;
+    line-height: 13px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .account_content .creator_account_filter_center div img {
+    max-width: 12px;
+  }
+
+  .account_content .creator_account_filter_center div {
+    font-size: 11px;
+    margin: 0 4px;
+    line-height: 11px;
+  }
+}

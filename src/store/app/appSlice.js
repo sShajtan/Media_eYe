@@ -4,6 +4,7 @@ const initialState = {
   darkTheme: true,
   timerPopup: false,
   registerPopup: false,
+  activeTab: 'owner',
   user: {
     token: '',
     user: {}
@@ -29,6 +30,13 @@ export const appSlice = createSlice({
       // immutable state based off those changes
       state.timerPopup = true;
     },
+    updateActiveTab: (state, action) => {
+      // Redux Toolkit allows us to write "mutating" logic in reducers. It
+      // doesn't actually mutate the state because it uses the Immer library,
+      // which detects changes to a "draft state" and produces a brand new
+      // immutable state based off those changes
+      state.activeTab = action.payload;
+    },
     updateRegisterPopup: (state) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
@@ -43,7 +51,7 @@ export const appSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { updateTheme, updateTimerPopup, updateLoggedInUser,  updateRegisterPopup } =
+export const { updateTheme, updateTimerPopup, updateLoggedInUser, updateActiveTab,  updateRegisterPopup } =
   appSlice.actions;
 
 export default appSlice.reducer;

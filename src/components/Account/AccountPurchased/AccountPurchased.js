@@ -1,26 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import "./AccountPurchased.css";
 import SearchIcon from '../../Icons/SearchIcon';
-import { NavLink } from "react-router-dom";
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import MarketplaceBlock from '../../ContentMarketplace/MarketplaceBlock/MarketplaceBlock';
+import AccountMenu from '../AccountMenu/AccountMenu';
 
 
-var ReactDOM = require('react-dom');
 
-
-const AccountPurchased = (props) => {
-
-  const Links = useRef(null);
-
-  const focus = () => {
-    const element = ReactDOM.findDOMNode(Links.current).getElementsByClassName('active');
-    element[0].focus();
-  };
-
-    useEffect(() => {
-        focus();
-     });
+const AccountPurchased = () => {
     
     return (
         <div className="creator_account account_collection">
@@ -46,28 +33,7 @@ const AccountPurchased = (props) => {
                         </div>
                         
                     </div>
-                    <div className="creator_account_menu_wrapper">
-                        <div className="creator_account_menu" ref={Links} >
-                            <NavLink exact to="/account/minted">
-                                Minted NFT
-                            </NavLink>
-                            <NavLink exact to="/account/purchased">
-                                NFTs Purchased
-                            </NavLink>
-                            <NavLink exact to="/account/currently">
-                                Owned NFTs
-                            </NavLink>
-                            <NavLink exact to="/account/campaign">
-                                Campaign
-                            </NavLink>
-                            <NavLink exact to="/account/favorites">
-                                Favorites
-                            </NavLink>
-                            <NavLink exact to="/account/collections">
-                                Collections
-                            </NavLink>
-                        </div>
-                    </div>
+                    <AccountMenu />
                     <div className="creator_account_filter">
                         <div></div>
                         <div className="header_search" >

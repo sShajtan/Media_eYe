@@ -1,0 +1,110 @@
+.marketplace_block_wrapper.content_block .marketplace_block {
+  background: url('../../../assets/img/content_block_border.png') no-repeat
+    center;
+  background-size: 99% 99%;
+}
+
+.marketplace_block_wrapper.content_block.waiting .marketplace_block {
+  background: url('../../../assets/img/content_block_border_waiting.png')
+    no-repeat center;
+  background-size: 99% 99%;
+}
+
+.marketplace_block_wrapper.content_block.not_approved .marketplace_block {
+  background: url('../../../assets/img/content_block_border_not_approved.png')
+    no-repeat center;
+  background-size: 99% 99%;
+}
+
+.marketplace_block_wrapper.content_block .marketplace_block h6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marketplace_block_wrapper.content_block
+  .marketplace_block
+  .marketplace_block_footer {
+  justify-content: end;
+  width: 100%;
+}
+
+.mint {
+  border: none;
+  background: none;
+  outline: none;
+  margin-top: -15px;
+}
+
+.mint {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+  background: url('../../../assets/img/learn_more_button_bg.png') no-repeat
+    center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s;
+  width: 80px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mint::before {
+  content: '';
+  background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.marketplace_block_info .status {
+  width: 21px;
+  height: auto;
+}
+
+.mint:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .mint:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.mint:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+@media (max-width: 575.98px) {
+  .two_rows .marketplace_block_wrapper.content_block .marketplace_block .mint {
+    margin-top: 5px;
+  }
+
+  .two_rows .marketplace_block_info h6 img {
+    max-width: 18px;
+  }
+  .two_rows.creator_account_main_block
+    .marketplace_block_wrapper.content_block {
+    margin: 0;
+  }
+}

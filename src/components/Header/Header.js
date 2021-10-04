@@ -54,7 +54,7 @@ const Header = (props) => {
           <div className="header_main" ref={wrapperRef}>
             <div className="header_logo">
               <a href="/">
-                <img src="../img/logo.png" alt="logo" />
+                <img src="../../../img/logo.png" alt="logo" />
               </a>
             </div>
             <div className="header_left_menu">
@@ -105,8 +105,8 @@ const Header = (props) => {
                 alt="mobile_icon"
                 src={
                   theme
-                    ? '../img/mobile_search.png'
-                    : '../img/mobile_search_dark.png'
+                    ? '../../../img/mobile_search.png'
+                    : '../../../img/mobile_search_dark.png'
                 }
               />
             </div>
@@ -114,7 +114,7 @@ const Header = (props) => {
               <img
                 alt="toggle_theme_icon"
                 src={
-                  theme ? '../img/sun_mobile.png' : '../img/sun_mobile_dark.png'
+                  theme ? '../../../img/sun_mobile.png' : '../../../img/sun_mobile_dark.png'
                 }
               />
             </div>
@@ -151,11 +151,11 @@ const Header = (props) => {
                 ) : (
                   <div className="user_header_menu">
                     <div onClick={() => history.push('/basket')}>
-                      <img src="../img/bag.png" />
+                      <img src="../../../img/bag.png" />
                       <span>1123</span>
                     </div>
                     <div>
-                      <img src="../img/wallet.png" />
+                      <img src="../../../img/wallet.png" />
                       <span>
                         ETH <i>&#9660;</i>
                       </span>
@@ -165,7 +165,7 @@ const Header = (props) => {
                         className="header_avatar_wrapper"
                         onClick={toggleWalletCollapse}
                       >
-                        <img src="../img/avatar.png" />
+                        <img src="../../../img/avatar.png" />
                       </div>
                       <div
                         className={
@@ -178,7 +178,7 @@ const Header = (props) => {
                           <div className="wallet_collapse_main">
                             <h5>{account && account}</h5>
                             <div className="wallet_row">
-                              <img src="../img/token_1.png" />
+                              <img src="../../../img/token_1.png" />
                               <div>
                                 <h6>eYe Balance</h6>
                                 <span>0 eYe</span>
@@ -186,14 +186,14 @@ const Header = (props) => {
                               <button className="buy_eye">Buy eYe</button>
                             </div>
                             <div className="wallet_row">
-                              <img src="../img/token_2.png" />
+                              <img src="../../../img/token_2.png" />
                               <div>
                                 <h6>Balance</h6>
                                 <span>0.037 ETH $119</span>
                               </div>
                             </div>
                             <div className="wallet_row">
-                              <img src="../img/token_3.png" />
+                              <img src="../../../img/token_3.png" />
                               <div>
                                 <h6>Bidding Balance</h6>
                                 <span>0 wETH</span>
@@ -309,8 +309,8 @@ const Header = (props) => {
                   alt="soc_icon"
                   src={
                     theme
-                      ? '../img/footer_soc/1.png'
-                      : '../img/footer_soc/1-dark.png'
+                      ? '../../../img/footer_soc/1.png'
+                      : '../../../img/footer_soc/1-dark.png'
                   }
                 />
               </a>
@@ -323,8 +323,8 @@ const Header = (props) => {
                   alt="soc_icon"
                   src={
                     theme
-                      ? '../img/footer_soc/2.png'
-                      : '../img/footer_soc/2-dark.png'
+                      ? '../../../img/footer_soc/2.png'
+                      : '../../../img/footer_soc/2-dark.png'
                   }
                 />
               </a>
@@ -337,8 +337,8 @@ const Header = (props) => {
                   alt="soc_icon"
                   src={
                     theme
-                      ? '../img/footer_soc/3.png'
-                      : '../img/footer_soc/3-dark.png'
+                      ? '../../../img/footer_soc/3.png'
+                      : '../../../img/footer_soc/3-dark.png'
                   }
                 />
               </a>
@@ -351,8 +351,8 @@ const Header = (props) => {
                   alt="soc_icon"
                   src={
                     theme
-                      ? '../img/footer_soc/4.png'
-                      : '../img/footer_soc/4-dark.png'
+                      ? '../../../img/footer_soc/4.png'
+                      : '../../../img/footer_soc/4-dark.png'
                   }
                 />
               </a>
@@ -361,8 +361,8 @@ const Header = (props) => {
                   alt="soc_icon"
                   src={
                     theme
-                      ? '../img/footer_soc/5.png'
-                      : '../img/footer_soc/5-dark.png'
+                      ? '../../../img/footer_soc/5.png'
+                      : '../../../img/footer_soc/5-dark.png'
                   }
                 />
               </a>
@@ -375,8 +375,8 @@ const Header = (props) => {
                   alt="soc_icon"
                   src={
                     theme
-                      ? '../img/footer_soc/6.png'
-                      : '../img/footer_soc/6-dark.png'
+                      ? '../../../img/footer_soc/6.png'
+                      : '../../../img/footer_soc/6-dark.png'
                   }
                 />
               </a>

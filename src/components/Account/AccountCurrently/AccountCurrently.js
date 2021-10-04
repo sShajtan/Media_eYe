@@ -1,26 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import "./AccountCurrently.css";
 import SearchIcon from '../../Icons/SearchIcon';
-import { NavLink } from "react-router-dom";
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import MarketplaceBlock from '../../ContentMarketplace/MarketplaceBlock/MarketplaceBlock';
-
-
-var ReactDOM = require('react-dom');
+import AccountMenu from '../AccountMenu/AccountMenu';
 
 
 const AccountCurrently = (props) => {
 
-  const Links = useRef(null);
-
-  const focus = () => {
-    const element = ReactDOM.findDOMNode(Links.current).getElementsByClassName('active');
-    element[0].focus();
-  };
-
-    useEffect(() => {
-        focus();
-     });
     
     return (
         <div className="creator_account account_collection">
@@ -31,10 +18,10 @@ const AccountCurrently = (props) => {
                         <button className="account_img_edit"><img src="../img/pen.png" /></button>
                    </div>
                     <div className="creator_account_main_header">
+                    <h6>Business eYe Level 1</h6>
                         <div className="creator_account_avatar">
                             <img src="../img/creator_account_avatar.png" />    
                         </div>
-                        <h6><span>Feature:</span>Business eYe Level 1</h6>
                         <div className="creator_account_info">
                             <span><img src="../img/heart.svg" alt="heart" />&nbsp;123 k</span>
                             <h4>Username</h4>
@@ -46,28 +33,7 @@ const AccountCurrently = (props) => {
                         </div>
                         
                     </div>
-                    <div className="creator_account_menu_wrapper">
-                        <div className="creator_account_menu" ref={Links} >
-                            <NavLink exact to="/account/minted">
-                                Minted NFT
-                            </NavLink>
-                            <NavLink exact to="/account/purchased">
-                                NFTs Purchased
-                            </NavLink>
-                            <NavLink exact to="/account/currently">
-                                Owned NFTs
-                            </NavLink>
-                            <NavLink exact to="/account/campaign">
-                                Campaign
-                            </NavLink>
-                            <NavLink exact to="/account/favorites">
-                                Favorites
-                            </NavLink>
-                            <NavLink exact to="/account/collections">
-                                Collections
-                            </NavLink>
-                        </div>
-                    </div>
+                    <AccountMenu />
                     <div className="creator_account_filter">
                         <div></div>
                         <div className="header_search" >

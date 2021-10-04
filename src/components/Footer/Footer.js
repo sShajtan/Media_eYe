@@ -17,7 +17,7 @@ const Footer = (props) => {
         <div className="footer_main">
           <div className="footer_left">
             <a href="/">
-              <img className="footer_logo" src="../img/logo.png" alt="logo" />
+              <img className="footer_logo" src="../../../img/logo.png" alt="logo" />
             </a>
             <div className="footer_menu">
               <ul>

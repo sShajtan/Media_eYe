@@ -1,0 +1,189 @@
+.marketplace_block_wrapper {
+  position: relative;
+  max-width: 85%;
+  margin: 20px auto;
+}
+
+.marketplace_main_main .marketplace_block_wrapper,
+.creator_account_main_block .marketplace_block_wrapper,
+.product_footer_products .marketplace_block_wrapper {
+  position: relative;
+  max-width: 22%;
+  margin: 0 auto 30px;
+}
+
+.marketplace_block {
+  background: url('../../../assets/img/block_border.png') no-repeat center;
+  background-size: 99% 99%;
+  padding: 10px;
+  position: relative;
+}
+
+/* .marketplace_block:hover {
+  background: url('../../../assets/img/block_border_hover.png') no-repeat center;
+  background-size: 103% 103%;
+} */
+
+.marketplace_block_img {
+  padding: 8px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.marketplace_block_img_wrapper {
+  overflow: hidden;
+}
+.dark .marketplace_block_img {
+  background: #282550;
+}
+
+.marketplace_block_img img {
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.marketplace_block_img img:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+.marketplace_block_info {
+  background: #fff;
+  padding: 7px;
+  border-radius: 10px;
+  margin-top: 10px;
+  -webkit-clip-path: polygon(
+    0% 0%,
+    /* верхняя левая */ 0% 0%,
+    /* верхняя левая */ 100% 0%,
+    /* верхняя правая */ 100% 0%,
+    /* верхняя правая */ 100% 87%,
+    /* нижняя правая */ 96% 100%,
+    /* нижняя правая */ 0% 100%,
+    /* нижняя левая */ 0 100% /* нижняя левая */
+  );
+  clip-path: polygon(
+    0% 0%,
+    /* верхняя левая */ 0% 0%,
+    /* верхняя левая */ 100% 0%,
+    /* верхняя правая */ 100% 0%,
+    /* верхняя правая */ 100% 87%,
+    /* нижняя правая */ 96% 100%,
+    /* нижняя правая */ 0% 100%,
+    /* нижняя левая */ 0 100% /* нижняя левая */
+  );
+}
+
+.dark .marketplace_block_info {
+  background: #282550;
+}
+
+.marketplace_block_info h6 {
+  margin: 0;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #000;
+}
+
+.dark .marketplace_block_info h6 {
+  color: #fff;
+}
+
+.single_collection .marketplace_block_info h6 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single_collection .marketplace_block_info h6 span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #7c7c7c;
+}
+
+.marketplace_block_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.marketplace_block_footer span {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #000;
+}
+
+.dark .marketplace_block_footer span {
+  color: #ffffff;
+}
+
+.dark .marketplace_block_footer span:nth-child(2) {
+  color: #0075ff;
+}
+
+.marketplace_block_info a {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #0075ff;
+  cursor: pointer;
+  margin: 5px 0;
+  display: block;
+}
+
+.marketplace_block_footer .count {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #0075ff;
+}
+
+.dark .single_collection .marketplace_block_footer .count {
+  color: #0075ff !important;
+}
+@media (max-width: 991.98px) {
+  .marketplace_main_main .marketplace_block_wrapper,
+  .creator_account_main_block .marketplace_block_wrapper,
+  .product_footer_products .marketplace_block_wrapper {
+    max-width: 28%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .marketplace_main_main .marketplace_block_wrapper,
+  .creator_account_main_block .marketplace_block_wrapper,
+  .product_footer_products .marketplace_block_wrapper {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .marketplace_main_main .marketplace_block_wrapper,
+  .marketplace_block_wrapper {
+    max-width: 280px;
+  }
+
+  .creator_account_main_block .marketplace_block_wrapper,
+  .product_footer_products .marketplace_block_wrapper {
+    max-width: 49%;
+  }
+}
+
+@media (max-width: 389.98px) {
+  .creator_account_main_block .marketplace_block_wrapper,
+  .product_footer_products .marketplace_block_wrapper {
+    max-width: 280px;
+  }
+}

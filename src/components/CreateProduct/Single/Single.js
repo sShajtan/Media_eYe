@@ -12,7 +12,7 @@ const Single = (props) => {
     <div className="single_product">
       <div className="container">
         <a className="goBack_button" onClick={() => history.goBack()}>
-          <span>&#8592; </span> GoBack
+          <span>&#8592; </span> Go Back
         </a>
         <h3>Create your NFT Product</h3>
         <a className="tutorial">Tutorial &#5125;</a>
