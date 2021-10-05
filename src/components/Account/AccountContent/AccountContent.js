@@ -1,14 +1,16 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import "./AccountContent.css";
 import SearchIcon from '../../Icons/SearchIcon';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import ContentBlock from '../ContentBlock/ContentBlock';
 import AccountMenu from '../AccountMenu/AccountMenu';
+import Popup from '../MintNftPopup/Popup';
 
 
 var ReactDOM = require('react-dom');
 
+  
 
 const AccountContent = (props) => {
     const theme = useSelector((state) => state.app.darkTheme);
@@ -16,11 +18,18 @@ const AccountContent = (props) => {
     const [activeTab, setActiveTab] = useState('approved');
     const [grid, setGrid] = useState('1');
     const [copyWallet, setCopyWallet] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
+
+    const togglePopup = () => {
+        setShowPopup(!showPopup);
+    };
 
     
     return (
         <div className="creator_account account_collection account_content">
+        <Popup showPopup={showPopup}
+            togglePopup={togglePopup} />
             <div className="container">
                 <div className="creator_account_main">
                    <div className="img_line">
@@ -81,22 +90,22 @@ const AccountContent = (props) => {
                         
                     </div>
                     {activeTab === "approved" ? <div className={grid == '2' ? "creator_account_main_block two_rows" : "creator_account_main_block one_row"}>
-                        <ContentBlock status="approved" />
-                        <ContentBlock status="approved" />
-                        <ContentBlock status="approved" />
-                        <ContentBlock status="approved" />
+                        <ContentBlock status="approved" togglePopup={togglePopup} />
+                        <ContentBlock status="approved" togglePopup={togglePopup}/>
+                        <ContentBlock status="approved" togglePopup={togglePopup}/>
+                        <ContentBlock status="approved" togglePopup={togglePopup}/>
                     </div> : null }
                     {activeTab === "waiting" ? <div className={grid == '2' ? "creator_account_main_block two_rows" : "creator_account_main_block one_row"}>
-                        <ContentBlock status="waiting" />
-                        <ContentBlock status="waiting" />
-                        <ContentBlock status="waiting" />
-                        <ContentBlock status="waiting" />
+                        <ContentBlock status="waiting" togglePopup={togglePopup}/>
+                        <ContentBlock status="waiting" togglePopup={togglePopup}/>
+                        <ContentBlock status="waiting" togglePopup={togglePopup}/>
+                        <ContentBlock status="waiting" togglePopup={togglePopup}/>
                     </div> : null }
                     {activeTab === "not_approved" ? <div className={grid == '2' ? "creator_account_main_block two_rows" : "creator_account_main_block one_row"}>
-                        <ContentBlock status="not_approved" />
-                        <ContentBlock status="not_approved" />
-                        <ContentBlock status="not_approved" />
-                        <ContentBlock status="not_approved" />
+                        <ContentBlock status="not_approved" togglePopup={togglePopup}/>
+                        <ContentBlock status="not_approved" togglePopup={togglePopup}/>
+                        <ContentBlock status="not_approved" togglePopup={togglePopup}/>
+                        <ContentBlock status="not_approved" togglePopup={togglePopup}/>
                     </div> : null }
                     
                     <button className="load_more">Load More</button>

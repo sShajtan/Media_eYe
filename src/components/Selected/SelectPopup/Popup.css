@@ -1,0 +1,347 @@
+.selected_popup {
+  overflow: auto !important;
+}
+.selected_popup .main_add_popup {
+  max-width: 500px;
+}
+
+.selected_popup .slick-next {
+  background: url('../../../assets/img/next-arrow.png') no-repeat center;
+  background-position: cover;
+  transition: 0.4s;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  right: -4%;
+}
+
+.selected_popup .slick-next:hover {
+  background: url('../../../assets/img/next-arrow.png') no-repeat center;
+  transition: 0.4s;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  margin-top: -5px;
+  z-index: 1;
+}
+.selected_popup .slick-prev {
+  background: url('../../../assets/img/prev-arrow.png') no-repeat center;
+  background-position: cover;
+  transition: 0.4s;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  left: -4%;
+}
+
+.selected_popup .slick-prev:hover {
+  background: url('../../../assets/img/prev-arrow.png') no-repeat;
+  background-size: cover;
+  margin-top: -5px;
+  transition: 0.4s;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.selected_popup .slick-next::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: url('../../../assets/img/next-arrow-hover.png') no-repeat center;
+  display: block;
+  background-size: cover;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.selected_popup .slick-prev::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: url('../../../assets/img/prev-arrow-hover.png') no-repeat center;
+  display: block;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.selected_popup .slick-next:hover::before,
+.selected_popup .slick-prev:hover::before {
+  opacity: 0.8;
+  transition: 0.4s;
+  top: 8px;
+  left: 3px;
+}
+.selected_popup .slick-next span,
+.selected_popup .slick-prev span {
+  position: relative;
+  z-index: 3;
+  font-size: 24px;
+  color: #797979;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transition: 0.4s;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.selected_popup .slick-next:hover span,
+.selected_popup .slick-prev:hover span {
+  position: relative;
+  z-index: 3;
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 47%;
+  left: 20%;
+  transition: 0.4s;
+}
+
+.dark .selected_popup .slick-next span,
+.dark .selected_popup .slick-prev span {
+  color: #fff;
+}
+
+body .slick-next:focus,
+.selected_popup .slick-next:hover {
+  background: url('../../../assets/img/next-arrow.png') no-repeat center;
+  background-size: cover;
+}
+
+body .slick-prev:focus,
+.selected_popup .slick-prev:hover {
+  background: url('../../../assets/img/prev-arrow.png') no-repeat center;
+  background-size: cover;
+}
+
+.selected_popup_slider {
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.selected_popup_img {
+  background: #ffffff;
+  padding: 10px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.dark .selected_popup_img {
+  background: #282550;
+}
+
+.selected_popup_img_wrapper img {
+  border-radius: 10px;
+}
+
+.selected_popup h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 103.5%;
+  color: #313139;
+  margin: 0 0 30px 0;
+}
+
+.dark .selected_popup h3 {
+  color: #ebebeb;
+}
+
+.selected_popup_payment {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  background-color: #282550;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.selected_popup_payment button {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.selected_popup .crypto_pay_btn {
+  background-color: #ebebeb;
+  border-radius: 12px;
+  border: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.selected_popup .crypto_pay_btn {
+  background-color: #ebebeb;
+}
+
+.selected_popup .crypto_pay_btn span {
+  background: linear-gradient(
+    90deg,
+    #00fff0 -11.83%,
+    #063dff 46.29%,
+    #9206ff 107.6%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.selected_popup .paypal_pay_btn {
+  background: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ebebeb;
+}
+
+.selected_popup_pay_block .selected_block_price_main {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.selected_popup_pay_block h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #313139;
+  margin: 0;
+}
+
+.dark .selected_popup_pay_block h6 {
+  color: #ebebeb;
+}
+
+.selected_popup_footer {
+  border-top: 1px solid #797979;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.selected_popup_footer_block {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selected_popup_footer_block span:first-child {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #7c7c7c;
+}
+
+.selected_popup_footer_block span:nth-child(2) {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #313139;
+}
+
+.dark .selected_popup_footer_block span:nth-child(2) {
+  color: #ffffff;
+}
+
+.selected_popup .buy_btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+  background: url('../../../assets/img/learn_more_button_bg.png') no-repeat
+    center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s;
+  width: 120px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 0;
+}
+
+.selected_popup .buy_btn::before {
+  content: '';
+  background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.selected_popup .buy_btn:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .selected_popup .buy_btn:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.selected_popup .buy_btn:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+@media (max-width: 575.98px) {
+  .selected_popup_slider {
+    max-width: 250px;
+  }
+
+  .selected_popup .crypto_pay_btn,
+  .selected_popup .paypal_pay_btn {
+    font-size: 15px;
+  }
+
+  .selected_popup h3 {
+    font-size: 28px;
+    line-height: 103.5%;
+    margin: 30px 0 30px 20px;
+  }
+}

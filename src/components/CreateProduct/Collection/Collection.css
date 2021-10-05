@@ -799,7 +799,7 @@ div[class*='-menu'] div {
   .collection_product .collection_block div > span {
     max-width: 100%;
   }
-  .dark .collection_product .__react_component_tooltip {
+  .collection_product .__react_component_tooltip {
     max-width: 90%;
     left: 5% !important;
   }

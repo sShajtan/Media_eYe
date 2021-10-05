@@ -115,6 +115,19 @@
   background-size: 100% 100%;
 }
 
+.view_collection_links {
+  margin: 60px auto 40px 50%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #0057ff;
+  text-decoration: underline;
+  display: block;
+  text-align: center;
+}
+
 @media (max-width: 991.98px) {
   .create_product_block {
     width: 340px;
@@ -135,6 +148,9 @@
 }
 
 @media (max-width: 575.98px) {
+  .view_collection_links {
+    margin: 40px auto 60px auto;
+  }
   .create_product_block button .create_product_image_wrapper {
     width: 100px;
     height: 110px;

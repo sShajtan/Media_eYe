@@ -48,7 +48,7 @@ const Links = useRef(null);
                             <a className="goBack_button" onClick={() => history.goBack()}>
                                 <span>&#8592; </span> Go Back
                             </a>
-                            <button onClick={() => history.push("/create/collection", { fromPopup: true })}><span>Create Collection</span></button>
+                            <button onClick={() => history.push("/create/collection")}><span>Create Collection</span></button>
                         </div>
                         <div className="creator_account_avatar">
                             <img src="../../../img/creator_account_avatar.png" />    

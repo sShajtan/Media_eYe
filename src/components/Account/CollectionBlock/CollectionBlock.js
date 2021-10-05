@@ -10,7 +10,7 @@ const CollectionBlock = (props) => {
   return (
     <div className="marketplace_block_wrapper collection_block_wrapper">
       
-      <div className="marketplace_block"onClick={() => history.push("/account/collections/collection")}>
+      <div className="marketplace_block" onClick={() => history.push("/account/collections/collection")}>
         <div className="marketplace_block_img">
         <div className="marketplace_block_img_wrapper ">
           <img src="../../img/05china05.png" alt="marketplace block img" />

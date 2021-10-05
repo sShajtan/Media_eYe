@@ -36,8 +36,8 @@ const AccountCollections = (props) => {
             <div className="container">
                 <div className="creator_account_main">
                    <div className="img_line">
-                        <img src="../img/creator_account.png" />
-                        <button className="account_img_edit"><img src="../img/pen.png" /></button>
+                        <img src="../../img/creator_account.png" />
+                        <button className="account_img_edit"><img src="../../img/pen.png" /></button>
                    </div>
                     <div className="creator_account_main_header">
                         <div className="collection_left_block">
@@ -45,7 +45,7 @@ const AccountCollections = (props) => {
                             <button><span>Subscription</span></button>
                         </div>
                         <div className="creator_account_avatar">
-                            <img src="../img/creator_account_avatar.png" />    
+                            <img src="../../img/creator_account_avatar.png" />    
                         </div>
                         <div className="collection_right_block">
                             <button><span>Put on Marketplace</span></button>
@@ -53,13 +53,13 @@ const AccountCollections = (props) => {
                         <h6 className="mobile_level">Business eYe Level 1</h6>
                         <div className="creator_account_info">
                             <div>
-                                <span><img src="../img/heart.svg" alt="heart" />&nbsp;123 k</span>
-                                <span><img src="../img/men.svg" alt="heart" />&nbsp;55 k</span>
+                                <span><img src="../../img/heart.svg" alt="heart" />&nbsp;123 k</span>
+                                <span><img src="../../img/men.svg" alt="heart" />&nbsp;55 k</span>
                             </div>
                             <h4>Username</h4>
-                            <div className="account_wallet" value="0x9276999999999999912aediv">0x9276...12aediv<div className="copy_block"><button className="copy_btn" onClick={() => {navigator.clipboard.writeText(wallet); setCopyWallet(true)}}><img src="../img/copy.png" /></button>{copyWallet ? "Copied!" : null}</div></div>
+                            <div className="account_wallet" value="0x9276999999999999912aediv">0x9276...12aediv<div className="copy_block"><button className="copy_btn" onClick={() => {navigator.clipboard.writeText(wallet); setCopyWallet(true)}}><img src="../../img/copy.png" /></button>{copyWallet ? "Copied!" : null}</div></div>
                             <div className="account_balance">
-                                <img src="../img/token_1.png" />
+                                <img src="../../img/token_1.png" />
                                 Balance: 123345 eYe ($1234) 
                             </div>
                             <button className="create_collection create_collection_mobile" onClick={() => history.push("/create/collection", { fromPopup: true })}>Create Collection</button>

@@ -10,6 +10,7 @@ import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import { useHistory } from 'react-router-dom';
 import Down from '../../Icons/down';
 import CollectionSingleBlock from '../CollectionSingleBlock/CollectionSingleBlock';
+import Popup from '../AddPopup/Popup';
 
 const animatedComponents = makeAnimated();
 
@@ -30,10 +31,16 @@ const SingleCollection = (props) => {
     const [grid, setGrid] = useState('1');
     const [showEditblock, setShowEditblock] = useState(false);
     const [activeMinters, setActiveMinters] = useState([]);
+    const [showPopup, setShowPopup] = useState(false);
     const [valueSelect, setValueSelect] = useState(null);
     const activeTab = useSelector((state) => state.app.activeTab);
     const Links = useRef(null);
     let history = useHistory();
+
+
+    const togglePopup = () => {
+        setShowPopup(!showPopup);
+    };
 
 const handleChangMinters = (e) => {
     if(e[0] === undefined){
@@ -71,6 +78,8 @@ const handleChangMinters = (e) => {
     
     return (
         <div className="creator_account account_collection single_collection">
+        <Popup showPopup={showPopup}
+            togglePopup={togglePopup} />
             <div className="container">
                 <div className="creator_account_main">
                    <div className="img_line">
@@ -162,7 +171,7 @@ const handleChangMinters = (e) => {
                             </button>
                         </div>
                         <div className="add_block_colletion">
-                             <button className="create_collection">Add Item</button>
+                             <button className="create_collection" onClick={() => {setShowPopup(true)}}>Add Item</button>
                              {activeTab === "minter" ? null: <div>
                                 <h6>Add Minter</h6>
                                 <div className="collection_block_content_minters">
