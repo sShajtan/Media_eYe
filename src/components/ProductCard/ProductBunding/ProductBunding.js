@@ -224,10 +224,6 @@ const ProductBunding = (props) => {
                 </div>
               </div>
             </div>
-            <div className="product_part_collection">
-              Part of Collection <span>1 [Title]</span> collection
-            </div>
-            
             <div className="product_price">
               <div className="product_price_block">
                 <div>
