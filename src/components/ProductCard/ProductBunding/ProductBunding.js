@@ -1,14 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useSelector} from 'react-redux';
-import './Product.css';
+import './ProductBunding.css';
 import { Collapse } from 'react-collapse';
-import MarketplaceBlock from '../../ContentMarketplace/MarketplaceBlock/MarketplaceBlock';
+import Slider from 'react-slick';
+import Down from '../../Icons/down';
 import Popup from '../../Selected/SelectPopup/Popup';
 
 
-const Product = (props) => {
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  const [showDropdown, setShowDropdown] = useState(false);
+  return (
+    <button
+      onClick={onClick}
+      className="bunding_arrow_left"
+    >
+      <span><Down /></span>
+    </button>
+  );
+}
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      className="bunding_arrow_right"
+    >
+      <span><Down /></span>
+    </button>
+  );
+}
+
+const ProductBunding = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
   const [showFooterProducts, setShowFooterProducts] = useState(false);
+  const [nav1, setNav1] = useState(null);
+  const [nav2, setNav2] = useState(null);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const slider1 = useRef();
+  const slider2 = useRef();
   const [showDropdownCharity, setShowDropdownCharity] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
     const [showPopupBid, setShowPopupBid] = useState(false);
@@ -21,15 +53,99 @@ const Product = (props) => {
         setShowPopupBid(!showPopupBid);
     };
 
+  useEffect(() => {
+    setNav2(slider2.current)
+  }, []);
+
+
+   useEffect(() => {
+    setNav1(slider1.current)
+  }, []);
+
+
+
+  const images = [
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+];
+  const settings = {
+    asNavFor: nav2,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: false,
+  };
+
+  const settings2 = {
+    asNavFor: nav1,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
+    swipeToSlide: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+    ],
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+  };
 
   return (
-    <div className="product">
+    <div className="product product_bunding">
     <Popup showPopup={showPopup} togglePopup={togglePopup} />
+     <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
       <div className="container">
         <div className="product_main">
           <div className="product_left">
-            <div className="product_image">
-              <img src="img/product_auction.png"></img>
+            <Slider {...settings} asNavFor={nav2} ref={slider => (slider1.current = slider)}>
+              {images.map((img) => (
+                <div className="product_image">
+                  <img src={img.src} />
+                </div>
+              ))}    
+            </Slider>
+            <div className="prodcut_bunding_small_slider">
+              <Slider
+                {...settings2}
+                  ref={slider => (slider2.current = slider)}
+                >
+                {images.map((img) => (
+                    <div className="prodcut_bunding_small_slide">
+                      <img src={img.src} />
+                    </div>
+                  ))} 
+              </Slider>
             </div>
           </div>
           <div className="product_right">
@@ -142,129 +258,31 @@ const Product = (props) => {
                 <button className="add_to_basket">Add to Favorites</button>
               </div>
             </div>
+            <div className="product_bunding_collapse" onClick={()=>{setShowDropdown(!showDropdown)}}>
+              <span>{images.length} Items</span> <span className={showDropdown ? "active" : null} ><Down /></span>
+            </div>
+            <Collapse isOpened={showDropdown}>
+                <div className="product_bunding_collapse_main">
+                    {images.map((img) => (
+                      <div className="prodcut_bunding_collapse_block">
+                        
+                        <div>
+                          <img src={img.src} />
+                          <div>
+                            <h6>Card_Name</h6>
+                            <span>Card #4444</span>
+                          </div>
+                        </div>
+                        <span>1x</span>
+                      </div>
+                    ))} 
+                </div>
+            </Collapse>
           </div>
         </div>
-                <div className="product_auction_main">
-          <div className="product_auction_left">
-            <h5>Details</h5>
-            <div className="product_auction_details">
-              <div className="product_auction_details_row">
-                <span>NFT Token Type</span>
-                <span>5224</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>Label</span>
-                <span>Lorem</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>Seller address</span>
-                <span className="adress">1c2e11...6f13d</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>NFT address</span>
-                <span>Lorem</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>NFT Token ID</span>
-                <span>12345...</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>The number of tokens created</span>
-                <span>10</span>
-              </div>
-            </div>
-          </div>
-          <div className="product_auction_right">
-            <h5>Trading History</h5>
-
-            <div className="initial_listing_price_block_header_product">
-              <div>Event</div>
-              <div>Price</div>
-              <div>From</div>
-              <div>To</div>
-              <div>Data</div>
-            </div>
-            <div className="initial_listing_price_content_product">
-              <div className="initial_listing_price_block_product">
-                <div>
-                    Offer
                 </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
-                <div>
-                  
-                </div>
-                <div>an hour ago</div>
-              </div>
-              <div className="initial_listing_price_block_product">
-                <div>
-                    Offer
-                </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
-                <div>
-                  
-                </div>
-                <div>an hour ago</div>
-              </div>
-              <div className="initial_listing_price_block_product">
-                <div>
-                    Offer
-                </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
-                <div>
-                  
-                </div>
-                <div>an hour ago</div>
-              </div>
-              <div className="initial_listing_price_block_product">
-                <div>
-                    Offer
-                </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
-                <div>
-                  
-                </div>
-                <div>an hour ago</div>
-              </div>
-              <div className="initial_listing_price_block_product">
-                <div>
-                    Offer
-                </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
-                <div>
-                  
-                </div>
-                <div>an hour ago</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="product_footer">
-          <div
-            onClick={() => setShowFooterProducts(!showFooterProducts)}
-            className="product_footer_button"
-          >
-            <span>Other products</span>
-            <strong className={showFooterProducts ? 'active' : null}>
-              {'>'}
-            </strong>
-          </div>
-          <Collapse isOpened={showFooterProducts}>
-            <div className="product_footer_products">
-              <MarketplaceBlock />
-              <MarketplaceBlock />
-              <MarketplaceBlock />
-              <MarketplaceBlock />
-            </div>
-          </Collapse>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Product;
+export default ProductBunding;

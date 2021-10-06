@@ -125,6 +125,11 @@
   font-size: 16px;
 }
 
+.single_product_main .create {
+  width: 165px;
+  height: 48px;
+}
+
 .product_single_upload,
 .choose_network .bsc {
   border: none;
@@ -316,6 +321,9 @@
 .product_single_mainform div.type,
 .product_single_mainform div.category {
   width: 48%;
+}
+.product_single_mainform div.name {
+  margin-bottom: 20px;
 }
 
 .put_on_block h4 {

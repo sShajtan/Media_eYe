@@ -49,6 +49,8 @@ import SingleCollection from './components/Account/SingleCollection/SingleCollec
 import SingleCreator from './components/Account/SingleCreator/SingleCreator';
 import AccountContent from './pages/AccountContent';
 import Selected from './components/Selected/Selected';
+import ProductBunding from './pages/ProductBunding';
+import ProductBundingAuction from './pages/ProductBundingAuction';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -197,11 +199,17 @@ const App = () => {
             <Route path="/feature" exact>
               <Feature closeNftCollapse={closeNftCollapse} />
             </Route>
-            <Route path="/auction-product" exact>
+            <Route path="/product-auction" exact>
               <ProductAuction closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="/product" exact>
               <Product closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/product-bunding" exact>
+              <ProductBunding closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/product-bunding-auction" exact>
+              <ProductBundingAuction closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="/create" exact>
               <CreateProduct closeNftCollapse={closeNftCollapse} />

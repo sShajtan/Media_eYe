@@ -1,17 +1,51 @@
-import React, { useState } from 'react';
-import Timer from 'react-compound-timer';
-import './ProductAuction.css';
+import React, { useState, useRef, useEffect } from 'react';
 import { useSelector} from 'react-redux';
-import Switch from 'react-switch';
+import './ProductBundingAuction.css';
+import { Collapse } from 'react-collapse';
+import Slider from 'react-slick';
+import Down from '../../Icons/down';
+import Timer from 'react-compound-timer';
 import Popup from '../../Selected/SelectPopup/Popup';
 import PopupBid from '../../Selected/SelectPopupBid/Popup';
 
-const ProductAuction = (props) => {
+
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  const [showDropdown, setShowDropdown] = useState(false);
+  return (
+    <button
+      onClick={onClick}
+      className="bunding_arrow_left"
+    >
+      <span><Down /></span>
+    </button>
+  );
+}
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      className="bunding_arrow_right"
+    >
+      <span><Down /></span>
+    </button>
+  );
+}
+
+const ProductBundingAuction = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
   const [showFooterProducts, setShowFooterProducts] = useState(false);
-  const [checked, setChecked] = useState(false);
-    const [showPopup, setShowPopup] = useState(false);
-    const [showPopupBid, setShowPopupBid] = useState(false);
+  const [nav1, setNav1] = useState(null);
+  const [nav2, setNav2] = useState(null);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const slider1 = useRef();
+  const slider2 = useRef();
+  const [showDropdownCharity, setShowDropdownCharity] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [showPopupBid, setShowPopupBid] = useState(false);
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
@@ -21,15 +55,100 @@ const ProductAuction = (props) => {
         setShowPopupBid(!showPopupBid);
     };
 
+  useEffect(() => {
+    setNav2(slider2.current)
+  }, []);
+
+
+   useEffect(() => {
+    setNav1(slider1.current)
+  }, []);
+
+
+
+  const images = [
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+  { src: "img/product_auction.png" },
+];
+  const settings = {
+    asNavFor: nav2,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: false,
+  };
+
+  const settings2 = {
+    asNavFor: nav1,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
+    swipeToSlide: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+    ],
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+  };
+
   return (
-    <div className="product product_auction">
+    <div className="product product_bunding">
     <Popup showPopup={showPopup} togglePopup={togglePopup} />
     <PopupBid showPopup={showPopupBid} togglePopupBid={togglePopupBid} />
+     <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
       <div className="container">
         <div className="product_main">
           <div className="product_left">
-            <div className="product_image">
-              <img src="img/product_auction.png"></img>
+            <Slider {...settings} asNavFor={nav2} ref={slider => (slider1.current = slider)}>
+              {images.map((img) => (
+                <div className="product_image">
+                  <img src={img.src} />
+                </div>
+              ))}    
+            </Slider>
+            <div className="prodcut_bunding_small_slider">
+              <Slider
+                {...settings2}
+                  ref={slider => (slider2.current = slider)}
+                >
+                {images.map((img) => (
+                    <div className="prodcut_bunding_small_slide">
+                      <img src={img.src} />
+                    </div>
+                  ))} 
+              </Slider>
             </div>
           </div>
           <div className="product_right">
@@ -72,10 +191,10 @@ const ProductAuction = (props) => {
                       <h6>Artist_Title</h6>
                       <div>
                         <span>
-                          <img src="img/heart.svg" alt="heart" /> 1,2 k
+                          <img src="img/heart.svg" alt="heart" />{' '}1,2 k
                         </span>
                         <span>
-                          <img src="img/men.svg" alt="heart" /> 555
+                          <img src="img/men.svg" alt="heart" />{' '}555
                         </span>
                       </div>
                     </div>
@@ -108,7 +227,10 @@ const ProductAuction = (props) => {
                 </div>
               </div>
             </div>
-            <div className="auction_timer_main">
+            <div className="product_part_collection">
+              Part of Collection <span>1 [Title]</span> collection
+            </div>
+                        <div className="auction_timer_main">
                 <h4>Auction ends in</h4>
                 <div className="auction_timer">
                 <Timer
@@ -145,179 +267,27 @@ const ProductAuction = (props) => {
                 <button className="add_to_basket">Add to Favorites</button>
               </div>
             </div>
-            <div className="bet_limit">
-              <h6>Set bet limit&nbsp;<img src="../../img/question.png" /></h6>
-              <div className={checked ? 'cheked_block' : null}>
-                <input placeholder="$/ETH" type="number" />
-                <Switch
-                  checkedIcon={false}
-                  uncheckedIcon={false}
-                  onChange={() => {
-                    setChecked(!checked);
-                  }}
-                  checked={checked}
-                  height={20}
-                  width={40}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="product_auction_main">
-          <div className="product_auction_left">
-            <h5>Details</h5>
-            <div className="product_auction_details">
-              <div className="product_auction_details_row">
-                <span>Auction ID</span>
-                <span>5224</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>NFT Token Type</span>
-                <span>1155</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>Label</span>
-                <span>Lorem</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>Seller address</span>
-                <span className="adress">1c2e11...6f13d</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>NFT address</span>
-                <span>Lorem</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>NFT Token ID</span>
-                <span>12345...</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>Num tokens to auction</span>
-                <span>1</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>Start time</span>
-                <span>August 12, 2021 6:55PM</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>End time</span>
-                <span>August 20, 2021 6:55PM</span>
-              </div>
-              <div className="product_auction_details_row">
-                <span>The number of tokens created</span>
-                <span>10</span>
-              </div>
+            <div className="product_bunding_collapse" onClick={()=>{setShowDropdown(!showDropdown)}}>
+              <span>{images.length} Items</span> <span className={showDropdown ? "active" : null} ><Down /></span>
             </div>
-          </div>
-          <div className="product_auction_right">
-            <h5>Initial listing prices</h5>
-
-            <div className="initial_listing_price_block_header">
-              <div>Unit Price</div>
-              <div>USD Unit Price</div>
-              <div>Quantity</div>
-              <div>Expiration</div>
-              <div>From</div>
-            </div>
-            <div className="initial_listing_price_content">
-              <div className="initial_listing_price_block">
-                <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
+            <Collapse isOpened={showDropdown}>
+                <div className="product_bunding_collapse_main">
+                    {images.map((img) => (
+                      <div className="prodcut_bunding_collapse_block">
+                        
+                        <div>
+                          <img src={img.src} />
+                          <div>
+                            <h6>Card_Name</h6>
+                            <span>Card #4444</span>
+                          </div>
+                        </div>
+                        <span>1x</span>
+                      </div>
+                    ))} 
                 </div>
-                <div>$17 746,34</div>
-                <div>1</div>
-                <div>
-                  <button>Buy</button>
-                </div>
-                <div>
-                  <hr noshade />
-                </div>
-                <div>
-                  <a>ipano</a>
-                </div>
-              </div>
-              <div className="initial_listing_price_block">
-                <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
-                </div>
-                <div>$17 746,34</div>
-                <div>1</div>
-                <div>
-                  <button>Buy</button>
-                </div>
-                <div>
-                  <hr noshade />
-                </div>
-                <div>
-                  <a>ipano</a>
-                </div>
-              </div>
-              <div className="initial_listing_price_block">
-                <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
-                </div>
-                <div>$17 746,34</div>
-                <div>1</div>
-                <div>
-                  <button>Buy</button>
-                </div>
-                <div>
-                  <hr noshade />
-                </div>
-                <div>
-                  <a>ipano</a>
-                </div>
-              </div>
-              <div className="initial_listing_price_block">
-                <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
-                </div>
-                <div>$17 746,34</div>
-                <div>1</div>
-                <div>
-                  <button>Buy</button>
-                </div>
-                <div>
-                  <hr noshade />
-                </div>
-                <div>
-                  <a>ipano</a>
-                </div>
-              </div>
-              <div className="initial_listing_price_block">
-                <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
-                </div>
-                <div>$17 746,34</div>
-                <div>1</div>
-                <div>
-                  <button>Buy</button>
-                </div>
-                <div>
-                  <hr noshade />
-                </div>
-                <div>
-                  <a>ipano</a>
-                </div>
-              </div>
-              <div className="initial_listing_price_block">
-                <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
-                </div>
-                <div>$17 746,34</div>
-                <div>1</div>
-                <div>
-                  <button>Buy</button>
-                </div>
-                <div>
-                  <hr noshade />
-                </div>
-                <div>
-                  <a>ipano</a>
-                </div>
-              </div>
-            </div>
+            </Collapse>
           </div>
         </div>
         <h5>Bids</h5>
@@ -433,16 +403,11 @@ const ProductAuction = (props) => {
                     <strong className={showFooterProducts ? "active" : null}>{">"}</strong>
               </div> */}
         </div>
+
+      
       </div>
-      {/* <div className="product_auction_main">
-        <div className="product_auction_left">
-          <h5>Details</h5>
-          <div className="product_auction_details"></div>
-        </div>
-        <div className="product_auction_right"></div>
-      </div> */}
     </div>
   );
 };
 
-export default ProductAuction;
+export default ProductBundingAuction;

@@ -4,7 +4,7 @@
   background-size: contain;
 }
 
-.product_auction .product_image {
+.product_image {
   position: relative;
   padding: 0;
   width: -webkit-fit-content;
@@ -13,7 +13,7 @@
   margin: 0 auto;
 }
 
-.product_auction .product_image::before {
+.product_image::before {
   content: '';
   position: absolute;
   border: 15px solid transparent;
@@ -21,7 +21,7 @@
   border-left: 15px solid #e9f1ff;
 }
 
-.product_auction .product_image::after {
+.product_image::after {
   content: '';
   position: absolute;
   right: 0;
@@ -31,13 +31,13 @@
   border-right: 15px solid #e9f1ff;
 }
 
-.dark .product_auction .product_image::before {
+.dark .product_image::before {
   border: 15px solid transparent;
   border-top: 15px solid #141233;
   border-left: 15px solid #141233;
 }
 
-.dark .product_auction .product_image::after {
+.dark .product_image::after {
   border: 15px solid transparent;
   border-bottom: 15px solid #141233;
   border-right: 15px solid #141233;
@@ -69,12 +69,12 @@
   font-size: 16px;
 } */
 
-.product_auction .buy_now {
+.product .buy_now {
   font-size: 14px;
   width: 120px;
 }
 
-.product_auction .product_price div span {
+.product_price div span {
   font-size: 22px;
 }
 .bet_limit h6 {
@@ -85,6 +85,8 @@
   font-size: 18px;
   line-height: 103.5%;
   color: #000aff;
+  display: flex;
+  align-items: center;
 }
 
 .bet_limit h6 {
@@ -146,7 +148,7 @@
   padding: 10px;
 }
 
-.product_auction h5 {
+.product h5 {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -156,7 +158,7 @@
   margin: 20px 0;
 }
 
-.dark .product_auction h5 {
+.dark .product h5 {
   color: #ffffff;
 }
 
@@ -215,7 +217,8 @@
   color: #00e0ff;
 }
 
-.initial_listing_price_block {
+.initial_listing_price_block,
+.initial_listing_price_block_product {
   background: rgba(255, 255, 255, 0.63);
   border: 1px solid #797979;
   box-sizing: border-box;
@@ -230,7 +233,8 @@
   align-items: center;
 }
 
-.dark .initial_listing_price_block {
+.dark .initial_listing_price_block,
+.dark .initial_listing_price_block_product {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid #797979;
   box-sizing: border-box;
@@ -252,7 +256,8 @@
   border-bottom: 1px solid #fff;
 }
 
-.initial_listing_price_block div {
+.initial_listing_price_block div,
+.initial_listing_price_block_product div {
   font-family: Poppins;
   font-style: normal;
   font-weight: 300;
@@ -262,7 +267,8 @@
   text-align: center;
 }
 
-.dark .initial_listing_price_block div {
+.dark .initial_listing_price_block div,
+.dark .initial_listing_price_block_product div {
   color: #fff;
 }
 
@@ -271,9 +277,7 @@
   outline: none;
   cursor: pointer;
   transition: 0.4s;
-  background: url('../../../assets/img/learn_more_button_bg.png') no-repeat
-    center;
-  background-size: contain;
+  background: none;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -288,19 +292,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #000aff;
 }
 
-.initial_listing_price_block button::before {
-  content: '';
-  background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
-  background-size: contain;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.4s;
+.dark .initial_listing_price_block button {
+  color: #00e0ff;
 }
 
 .initial_listing_price_block button:hover {
@@ -320,19 +316,20 @@
   opacity: 1;
 }
 
-.initial_listing_price_block_header {
+.initial_listing_price_block_header,
+.initial_listing_price_block_header_product {
   display: flex;
 }
 
-.initial_listing_price_block_header div {
+.initial_listing_price_block_header div,
+.initial_listing_price_block_header_product div {
   color: #000;
-  background: url('../../../assets/img/bids_border_bg.png') no-repeat center;
-  background-size: 99% 99%;
   padding: 10px;
   white-space: nowrap;
 }
 
-.dark .initial_listing_price_block_header div {
+.dark .initial_listing_price_block_header div,
+.dark .initial_listing_price_block_header_product div {
   color: #fff;
 }
 
@@ -354,6 +351,8 @@
 
 .initial_listing_price_block div:nth-child(1) {
   width: 70px;
+  display: flex;
+  align-items: center;
 }
 .initial_listing_price_block div:nth-child(2) {
   width: 95px;
@@ -382,8 +381,6 @@
   align-items: center;
   justify-content: center;
   color: #000;
-  background: url('../../../assets/img/bids_border_bg.png') no-repeat center;
-  background-size: 80% 80%;
 }
 
 .product_auction_bids_header div:first-child {
@@ -490,7 +487,7 @@
   overflow-x: hidden;
 }
 
-.product_auction .creator_block_info {
+.product .creator_block_info {
   margin-right: 30px;
 }
 
@@ -550,8 +547,62 @@
 
 .creator_block_info_wrapper:hover .creator_block_info_header {
   transition: 0.4s;
-  color: rgba(0, 255, 255, 1);
+  color: #000aff;
 }
+
+.dark .creator_block_info_wrapper:hover .creator_block_info_header {
+  transition: 0.4s;
+  color: #00e0ff;
+}
+
+.bet_limit img {
+  max-width: 25px;
+}
+
+.auction_timer_main h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #313139;
+  margin-top: 20px;
+}
+
+.dark .auction_timer_main h4 {
+  color: #797979;
+}
+
+.auction_timer {
+  display: flex;
+}
+
+.auction_timer div {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #313139;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.auction_timer div span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #797979;
+}
+
+.dark .auction_timer div {
+  color: #ebebeb;
+}
+
 @media (max-width: 1199.98px) {
   .initial_listing_price_block_header div:nth-child(4) {
     margin-left: 115px;
@@ -612,7 +663,9 @@
   }
 
   .initial_listing_price_block_header,
-  .initial_listing_price_block {
+  .initial_listing_price_block,
+  .initial_listing_price_block_header_product,
+  .initial_listing_price_block_product {
     width: 720px;
   }
 
@@ -667,7 +720,25 @@
   .product_price {
     padding: 5px;
   }
-  .product_auction .product_price div strong {
+  .product_price div strong {
     margin: 0 15px 0 0;
+  }
+
+  .product_price div span {
+    font-size: 16px;
+  }
+  .product_price div:nth-child(2) span {
+    font-size: 16px;
+  }
+  .product_price div strong {
+    font-size: 16px;
+    margin-right: 5px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .product_auction .buy_now {
+    font-size: 13px;
   }
 }

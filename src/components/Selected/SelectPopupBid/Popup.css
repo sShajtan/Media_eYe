@@ -1,0 +1,59 @@
+.selected_popup_pay_block_second {
+  margin-top: 10px;
+}
+
+.selected_popup_bid {
+  margin: 15px 0;
+  position: relative;
+}
+
+.selected_popup_bid input {
+  border: 1px solid #797979;
+  outline: none;
+  width: 100%;
+  padding: 7px 10px;
+  background-color: #282550;
+  border-radius: 10px;
+  color: #ebebeb;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.selected_popup_bid label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #313139;
+}
+
+.selected_popup_bid label {
+  color: #313139;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.dark .selected_popup_bid label {
+  color: #ebebeb;
+}
+
+.selected_popup_bid_dropdown {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 60%;
+}
+
+.selected_popup_bid_dropdown .selected_block_price_dropdown {
+  margin-left: 0;
+  color: #ebebeb;
+}
+
+.selected_popup_bid_dropdown .selected_block_price_dropdown svg path {
+  fill: #ebebeb;
+}

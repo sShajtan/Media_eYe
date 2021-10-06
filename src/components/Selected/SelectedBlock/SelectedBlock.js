@@ -6,7 +6,7 @@ import { Collapse } from 'react-collapse';
 import { Button } from 'react-scroll';
 
 const SelectedBlock = (props) => { 
-const {auction, inCollection, bundle, charity, togglePopup} = props;
+const {auction, inCollection, bundle, charity, togglePopup, togglePopupBid} = props;
 const theme = useSelector((state) => state.app.darkTheme);
 const [showDropdown, setShowDropdown] = useState(false);
 const [showDropdownCharity, setShowDropdownCharity] = useState(false);
@@ -56,7 +56,7 @@ const [showDropdownCharity, setShowDropdownCharity] = useState(false);
                 {props.auction ? <div>
                     <h6>Current bid price</h6>
                     <div className="selected_block_price_main">
-                        <span>0.053</span>
+                        <span>0.053 ETH</span>
                     </div>
                 </div> : null }
             </div>
@@ -74,7 +74,7 @@ const [showDropdownCharity, setShowDropdownCharity] = useState(false);
             </div>
             
         </div> : null}</div>
-                {props.auction ? <button className="selected_btn_bid">Place a Bid</button> : null }
+                {props.auction ? <button className="selected_btn_bid" onClick={togglePopupBid}>Place a Bid</button> : null }
             </div>
         </div>
         <div className="selected_block_close">

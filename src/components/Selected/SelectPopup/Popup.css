@@ -329,6 +329,60 @@ body .slick-prev:focus,
   opacity: 1;
 }
 
+.selected_popup .ReactCollapse--collapse {
+  transition: none !important;
+}
+
+.popup_charity {
+  display: inline-flex;
+  position: relative;
+  margin-top: 10px;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #313139;
+}
+
+.dark .popup_charity {
+  color: #ebebeb;
+}
+
+.popup_charity img {
+  margin-right: 5px;
+}
+.selected_block_price_dropdown_question {
+  margin-left: 10px;
+}
+.selected_block_price_dropdown_question img {
+  width: 25px;
+}
+
+.selected_block_price_dropdown_question > div {
+  position: absolute;
+}
+
+.selected_block_price_dropdown_main.dropdown_question {
+  padding: 10px;
+  color: #313139;
+  border: 1px solid #0075ff;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 8px;
+}
+
+.dark .selected_block_price_dropdown_main.dropdown_question {
+  color: #ebebeb;
+  border: 1px solid #0075ff;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 8px;
+}
+
 @media (max-width: 575.98px) {
   .selected_popup_slider {
     max-width: 250px;

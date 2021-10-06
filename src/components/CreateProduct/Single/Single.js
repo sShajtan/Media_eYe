@@ -28,21 +28,20 @@ const Single = (props) => {
                 <button className="product_single_select">
                   <span>Upload Your Content</span>
                 </button>
-                <h4>Have already minted nft</h4>
+                <h4>Have already approved content</h4>
                 <button className="product_single_upload">
                   <span>Browse</span>
                 </button>
             </div>
           </div>
           <div className="product_single_mainform">
-            <div className="content_id">
+            {/* <div className="content_id">
               <label>Content ID</label>
               <input value="#88523" />
-            </div>
+            </div> */}
             <div className="name">
               <label>Name</label>
               <input />
-              <span>Choose a name for your store.</span>
             </div>
             <div className="url">
               <label>Embed your URL link</label>
@@ -72,7 +71,7 @@ const Single = (props) => {
               Please allow up to 24 hours for moderation of your content
             </span>
             <button className="create">
-              <span>Create</span>
+              <span>Create Content</span>
             </button>
         </div>
       </div>
