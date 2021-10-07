@@ -2,7 +2,7 @@ import React from 'react';
 import './ContentBlock.css';
 
 const ContentBlock = (props) => {
-  const { status } = props;
+  const { status, togglePopup } = props;
 
   const statusShow = () => {
     if (status === 'approved') {
@@ -30,7 +30,9 @@ const ContentBlock = (props) => {
           <a>@user123</a>
           <div className="marketplace_block_footer">
             {status === 'approved' ? (
-              <button className="mint">Mint</button>
+              <button className="mint" onClick={props.togglePopup}>
+                Mint
+              </button>
             ) : null}
           </div>
         </div>

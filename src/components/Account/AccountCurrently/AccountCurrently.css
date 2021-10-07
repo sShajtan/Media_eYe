@@ -675,6 +675,8 @@
 
   .creator_account_menu_wrapper::-webkit-scrollbar {
     width: 0;
+    opacity: 0;
+    height: 0;
   }
   .creator_account_menu {
     width: -webkit-fit-content;

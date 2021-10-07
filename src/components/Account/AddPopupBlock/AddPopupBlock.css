@@ -1,0 +1,13 @@
+.add_popup_block {
+  max-width: 23%;
+  margin: 0;
+}
+
+.add_popup_block .marketplace_block_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add_popup_block .on_sale_in_checkbox input[type='checkbox'] + label > span {
+  margin: 0;
+}

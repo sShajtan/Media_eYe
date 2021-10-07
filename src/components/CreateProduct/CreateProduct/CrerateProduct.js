@@ -15,8 +15,7 @@ const CrerateProduct = (props) => {
         </a>
         <h3>Create collectible</h3>
         <span>
-          Choose “Single” if you want your collectible to be one of a kind or
-          “Collection” if you want to sell one collectible multiple times
+          Choose “Single” if you want your collectible to be one of a kind or “Collection” if you want to sell one collectible multiple times
         </span>
         <div className="create_product_main">
           <div className="create_product_block">
@@ -25,7 +24,7 @@ const CrerateProduct = (props) => {
                 {' '}
                 <div className="create_product_image_wrapper">
                   <img
-                    src={darkTheme ? 'img/single_dark.svg' : 'img/single.svg'}
+                    src={darkTheme ? '../img/single_dark.svg' : '../img/single.svg'}
                   />
                 </div>
                 Single
@@ -39,16 +38,17 @@ const CrerateProduct = (props) => {
                   <img
                     src={
                       darkTheme
-                        ? 'img/collection_dark.svg'
-                        : 'img/collection.svg'
+                        ? '../img/collection_dark.svg'
+                        : '../img/collection.svg'
                     }
                   />
                 </div>
                 Collection
               </button>
-            </NavLink>
+            </NavLink> 
           </div>
         </div>
+        <a className="view_collection_links" onClick={() => history.push("/account/collections")}>View Collections</a>
       </div>
     </div>
   );

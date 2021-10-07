@@ -5,6 +5,7 @@ import SearchIcon from '../../Icons/SearchIcon';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import ContentBlock from '../ContentBlock/ContentBlock';
 import AccountMenu from '../AccountMenu/AccountMenu';
+import Popup from '../MintNftPopup/Popup';
 
 var ReactDOM = require('react-dom');
 

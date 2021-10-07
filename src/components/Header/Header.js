@@ -150,16 +150,11 @@ const Header = (props) => {
                   </button>
                 ) : (
                   <div className="user_header_menu">
-                    <div onClick={() => history.push('/basket')}>
-                      <img src="../../../img/bag.png" />
+                    <div onClick={() => history.push('/selected')}>
+                      <img src="../../../img/b_start.png" />
                       <span>1123</span>
                     </div>
-                    <div>
-                      <img src="../../../img/wallet.png" />
-                      <span>
-                        ETH <i>&#9660;</i>
-                      </span>
-                    </div>
+                    
                     <div className="header_avatar">
                       <div
                         className="header_avatar_wrapper"
@@ -221,16 +216,22 @@ const Header = (props) => {
                         </Collapse>
                       </div>
                     </div>
+                    <div className="network">
+                      Network &nbsp;
+                      <span>
+                        ETH <i>&#9660;</i>
+                      </span>
+                    </div>
                   </div>
                 )
               ) : (
                 <div className="auth">
-                  {/*<Link to="/login" className="login">
+                  <Link to="/login" className="login">
                     <span>Log in</span>
                   </Link>
                   <Link to="/signup" className="signup">
                     <span>Sign Up</span>
-                  </Link>*/}
+                  </Link>*
                 </div>
               )}
             </div>
