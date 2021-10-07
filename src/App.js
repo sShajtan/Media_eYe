@@ -45,7 +45,7 @@ import AccountMainted from './pages/AccountMainted';
 import AccountPurchased from './pages/AccountPurchased';
 import AccountFavorites from './pages/AccountFavorites';
 import AccountCampaign from './pages/AccountCampaign';
-import AccountCurrently from './pages/AccountCurrently'; 
+import AccountCurrently from './pages/AccountCurrently';
 import SingleCollection from './components/Account/SingleCollection/SingleCollection';
 import SingleCreator from './components/Account/SingleCreator/SingleCreator';
 import AccountContent from './pages/AccountContent';
@@ -73,14 +73,14 @@ const App = () => {
     }
   });
 
-  useEffect(()=>{
+  useEffect(() => {
     if (registerPopup === false) {
       dispatch(updateRegisterPopup());
       setTimeout(() => {
         setShowRegisterPopup(true);
       }, 70000000);
     }
-  })
+  });
 
   const toggleSoonPopup = () => {
     setShowSoonPopup(!showSoonPopup);
@@ -98,7 +98,7 @@ const App = () => {
     setShowPopup(!showPopup);
   };
 
-   const toggleRegisterPopup = () => {
+  const toggleRegisterPopup = () => {
     setShowRegisterPopup(!showRegisterPopup);
   };
 
@@ -134,10 +134,10 @@ const App = () => {
             togglePopup={togglePopup}
             toggleMessagePopup={toggleMessagePopup}
           />
-            <RegisterPopup 
-          showPopup={showRegisterPopup}
-          togglePopup={toggleRegisterPopup}
-        />
+          <RegisterPopup
+            showPopup={showRegisterPopup}
+            togglePopup={toggleRegisterPopup}
+          />
           <BusinessPopup
             showPopup={showBusinessPopup}
             togglePopup={toggleBusinessPopup}
@@ -233,33 +233,33 @@ const App = () => {
             <Route path="/basket" exact>
               <Basket closeNftCollapse={closeNftCollapse} />
             </Route>
-             <Route path="/account/collections" exact>
-            <CreatorAccountCollections closeNftCollapse={closeNftCollapse} />
-          </Route>
-           <Route path="/account/collections/collection" exact>
-            <SingleCollection closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/account/collections/creator/" exact>
-            <SingleCreator closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/account/minted" exact>
-            <AccountMainted closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/account/purchased" exact>
-            <AccountPurchased closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/account/campaign" exact>
-            <AccountCampaign closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/account/favorites" exact>
-            <AccountFavorites closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/account/currently" exact>
-            <AccountCurrently closeNftCollapse={closeNftCollapse} />
-          </Route>
-          <Route path="/account/content" exact>
-            <AccountContent closeNftCollapse={closeNftCollapse} />
-          </Route>
+            <Route path="/account/collections" exact>
+              <CreatorAccountCollections closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/collections/collection" exact>
+              <SingleCollection closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/collections/creator/" exact>
+              <SingleCreator closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/minted" exact>
+              <AccountMainted closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/purchased" exact>
+              <AccountPurchased closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/campaign" exact>
+              <AccountCampaign closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/favorites" exact>
+              <AccountFavorites closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/currently" exact>
+              <AccountCurrently closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/content" exact>
+              <AccountContent closeNftCollapse={closeNftCollapse} />
+            </Route>
             <Route path="/theOne/canvas" exact>
               <Canvas closeNftCollapse={closeNftCollapse} />
             </Route>
