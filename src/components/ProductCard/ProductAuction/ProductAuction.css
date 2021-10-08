@@ -701,6 +701,9 @@
 }
 
 @media (max-width: 575.98px) {
+  .add_to_basket {
+    width: 100px;
+  }
   .creator_block_info_wrapper:first-child {
     margin-bottom: 20px;
   }
@@ -735,10 +738,24 @@
     margin-right: 5px;
     width: 40px;
   }
+  .product .buy_now {
+    margin: 0;
+  }
+  .product .buy_now {
+    width: 100px;
+  }
 }
 
 @media (max-width: 374.98px) {
   .product_auction .buy_now {
     font-size: 13px;
+  }
+
+  .product .buy_now {
+    width: 90px;
+  }
+
+  .add_to_basket {
+    width: 84px;
   }
 }

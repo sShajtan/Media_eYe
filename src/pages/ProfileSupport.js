@@ -1,7 +1,7 @@
 import React from 'react';
 import { Profiler } from 'react';
-import ProfileSupportMain from '../components/ProfileSupport/ProfileSupport';
-import Sidebar from '../components/Sidebar/Sidebar';
+import ProfileSupportMain from '../components/Profile/ProfileSupport/ProfileSupport';
+import Sidebar from '../components/Profile/Sidebar/Sidebar';
 
 const ProfileSupport = (props) => {
   const { closeNftCollapse } = props;

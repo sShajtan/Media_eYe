@@ -1,9 +1,12 @@
-import React from 'react';
-import ProfileMain from '../components/ProfileMain/ProfileMain';
-import Sidebar from '../components/Sidebar/Sidebar';
+import React, { useState } from 'react';
+import ProfileMain from '../components/Profile/ProfileMain/ProfileMain';
+import Sidebar from '../components/Profile/Sidebar/Sidebar';
+
 
 const Profile = (props) => {
   const { closeNftCollapse } = props;
+
+
 
   return (
     <React.Fragment>

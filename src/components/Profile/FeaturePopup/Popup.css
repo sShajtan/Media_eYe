@@ -1,0 +1,101 @@
+.main_feature_popup.main_add_popup {
+  max-width: 800px;
+}
+
+.main_feature_popup .subscribe_term h6,
+.main_feature_popup .feature_payments_token h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #313139;
+  margin: 20px 0 10px;
+}
+
+.dark .main_feature_popup .subscribe_term h6,
+.dark .main_feature_popup .feature_payments_token h6 {
+  color: #ebebeb;
+}
+
+.main_feature_popup .subscribe_term .marketplace_block_info {
+  background: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #313139;
+}
+
+.dark .main_feature_popup .subscribe_term .marketplace_block_info {
+  color: #ffffff;
+}
+
+.main_feature_popup
+  .subscribe_term
+  .marketplace_block_info
+  .on_sale_in_checkbox {
+  margin-left: 10px;
+}
+
+.main_feature_popup .subscribe_term > div {
+  display: flex;
+}
+
+.feature_payments_token .collection_block_buttons {
+  display: flex;
+}
+
+.feature_payments_token .collection_block_buttons h6 {
+  margin: 0;
+}
+
+.feature_payments_token .collection_block_buttons span {
+  color: #7c7c7c;
+}
+
+.feature_payments_token .collection_block_buttons .active span {
+  color: #ebebeb;
+}
+
+.feature_payments_token p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #0075ff;
+}
+.feature_popup_footer {
+  margin: 30px 0 10px;
+}
+
+@media (max-width: 575.98px) {
+  .feature_payments_token .collection_block_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .main_feature_popup.main_add_popup {
+    max-width: 98%;
+  }
+
+  .collection_block_buttons button {
+    margin: 10px 0;
+  }
+
+  .main_feature_popup .subscribe_term .marketplace_block_info {
+    font-size: 15px;
+  }
+
+  .main_feature_popup .collection_block_buttons button {
+    width: 120px;
+  }
+  .selected_popup .main_feature_popup h3 {
+    margin-left: 0;
+  }
+}

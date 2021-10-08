@@ -93,7 +93,7 @@ const Popup = (props) => {
                       <Slider {...settings}>
                         <div className="selected_popup_img_wrapper">
                           <div className="selected_popup_img">
-                            <img src="img/05.png" />
+                            <img src="../../img/05.png" />
                           </div>
                         </div>
                      

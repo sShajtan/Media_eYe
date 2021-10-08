@@ -11,14 +11,9 @@ const Product = (props) => {
   const [showFooterProducts, setShowFooterProducts] = useState(false);
   const [showDropdownCharity, setShowDropdownCharity] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-    const [showPopupBid, setShowPopupBid] = useState(false);
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
-    };
-
-    const togglePopupBid = () => {
-        setShowPopupBid(!showPopupBid);
     };
 
 
@@ -34,14 +29,11 @@ const Product = (props) => {
           </div>
           <div className="product_right">
             <h2>Product ID</h2>
+            <div className="product_subtitle">NFT ID: 125815</div>
             <div className="product_header">
               <span>
-                <img src="img/Star.svg" />
-                Proprietary
-              </span>
-              <span>
                 <img src="img/heart.png" />
-                1,2 k favorite
+                1,2 k likes
               </span>
               <span>
                 Share: <img src="img/tw.png" /> <img src="img/facebook.png" />
@@ -139,7 +131,7 @@ const Product = (props) => {
                       </div>
                     </div>
                 </div>
-                <button className="add_to_basket">Add to Favorites</button>
+                <button className="add_to_basket"><img src="../../img/Star.svg" />Add to Favorites</button>
               </div>
             </div>
           </div>

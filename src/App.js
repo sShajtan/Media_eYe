@@ -51,6 +51,7 @@ import AccountContent from './pages/AccountContent';
 import Selected from './components/Selected/Selected';
 import ProductBunding from './pages/ProductBunding';
 import ProductBundingAuction from './pages/ProductBundingAuction';
+import CreatorCollection from './components/Creators/CreatorCollection/CreatorCollection';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -192,6 +193,9 @@ const App = () => {
             </Route>
             <Route path="/creator-account" exact>
               <CreatorAccount closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/creator/collections" exact>
+              <CreatorCollection closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="/connect-wallet" exact>
               <ConnectWallet closeNftCollapse={closeNftCollapse} />

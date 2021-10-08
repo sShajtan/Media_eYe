@@ -1,0 +1,39 @@
+.creator_account_main_header .creator_account_title {
+  position: relative;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 20px 0;
+  background: linear-gradient(
+    90deg,
+    #00fff0 -11.83%,
+    #063dff 46.29%,
+    #9206ff 107.6%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .creator_account_main_header .creator_account_title {
+    font-size: 16px;
+    top: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .creator_account_main_header .creator_account_title {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .creator_account_main_header .creator_account_title {
+    font-size: 10px;
+  }
+}

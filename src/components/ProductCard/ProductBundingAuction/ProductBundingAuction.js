@@ -153,14 +153,11 @@ const ProductBundingAuction = (props) => {
           </div>
           <div className="product_right">
             <h2>Product ID</h2>
+            <div className="product_subtitle">NFT ID: 125815</div>
             <div className="product_header">
               <span>
-                <img src="img/Star.svg" />
-                Proprietary
-              </span>
-              <span>
                 <img src="img/heart.png" />
-                1,2 k favorite
+                1,2 k likes
               </span>
               <span>
                 Share: <img src="img/tw.png" /> <img src="img/facebook.png" />
@@ -227,9 +224,7 @@ const ProductBundingAuction = (props) => {
                 </div>
               </div>
             </div>
-            <div className="product_part_collection">
-              Part of Collection <span>1 [Title]</span> collection
-            </div>
+
                         <div className="auction_timer_main">
                 <h4>Auction ends in</h4>
                 <div className="auction_timer">
@@ -264,7 +259,7 @@ const ProductBundingAuction = (props) => {
               <div className="product_price_buttons">
                 <button className="buy_now" onClick={togglePopup}>Buy Now</button>{' '}
                 <button className="buy_now" onClick={togglePopupBid}>Place a Bid</button>{' '}
-                <button className="add_to_basket">Add to Favorites</button>
+                <button className="add_to_basket"><img src="../../img/Star.svg" />Add to Favorites</button>
               </div>
             </div>
 

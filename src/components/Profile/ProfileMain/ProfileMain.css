@@ -80,7 +80,7 @@
   outline: none;
   cursor: pointer;
   transition: 0.4s;
-  background: url('../../assets/img/signup_button_bg.png') no-repeat center;
+  background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
   background-size: contain;
   font-family: Poppins;
   font-style: normal;
@@ -105,7 +105,8 @@
 
 .save::before {
   content: '';
-  background: url('../../assets/img/learn_more_button_bg.png') no-repeat center;
+  background: url('../../../assets/img/learn_more_button_bg.png') no-repeat
+    center;
   background-size: contain;
   position: absolute;
   left: 0;

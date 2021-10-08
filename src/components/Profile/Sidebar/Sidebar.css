@@ -55,123 +55,131 @@
 }
 
 .profile_main_btn {
-  background: url('../../assets/img/profile_button.png') no-repeat center;
+  background: url('../../../assets/img/profile_button.png') no-repeat center;
   background-size: 99% 99%;
 }
 
 .profile_main_btn.active,
 .profile_main_btn:hover {
-  background: url('../../assets/img/profile_button_active.png') no-repeat center;
+  background: url('../../../assets/img/profile_button_active.png') no-repeat
+    center;
   background-size: 99% 99%;
 }
 
 .dark .profile_main_btn {
-  background: url('../../assets/img/profile_button_dark.png') no-repeat center;
+  background: url('../../../assets/img/profile_button_dark.png') no-repeat
+    center;
   background-size: 99% 99%;
 }
 
 .dark .profile_main_btn.active,
 .dark .profile_main_btn:hover {
-  background: url('../../assets/img/profile_button_dark_active.png') no-repeat
-    center;
+  background: url('../../../assets/img/profile_button_dark_active.png')
+    no-repeat center;
   background-size: 99% 99%;
 }
 
 .profile_wallet {
-  background: url('../../assets/img/wallet_button.png') no-repeat center;
+  background: url('../../../assets/img/wallet_button.png') no-repeat center;
   background-size: 99% 99%;
 }
 
 .profile_wallet.active,
 .profile_wallet:hover {
-  background: url('../../assets/img/wallet_button_active.png') no-repeat center;
+  background: url('../../../assets/img/wallet_button_active.png') no-repeat
+    center;
   background-size: 99% 99%;
 }
 
 .dark .profile_wallet {
-  background: url('../../assets/img/wallet_button_dark.png') no-repeat center;
+  background: url('../../../assets/img/wallet_button_dark.png') no-repeat center;
   background-size: 99% 99%;
 }
 
 .dark .profile_wallet.active,
 .dark .profile_wallet:hover {
-  background: url('../../assets/img/wallet_button_dark_active.png') no-repeat
+  background: url('../../../assets/img/wallet_button_dark_active.png') no-repeat
     center;
   background-size: 99% 99%;
 }
 
 .profile_subscription {
-  background: url('../../assets/img/sub_button.png') no-repeat center;
+  background: url('../../../assets/img/sub_button.png') no-repeat center;
   background-size: 99% 99%;
 }
 
 .profile_subscription.active,
 .profile_subscription:hover {
-  background: url('../../assets/img/sub_button_active.png') no-repeat center;
+  background: url('../../../assets/img/sub_button_active.png') no-repeat center;
   background-size: 99% 99%;
 }
 
 .dark .profile_subscription {
-  background: url('../../assets/img/sub_button_dark.png') no-repeat center;
+  background: url('../../../assets/img/sub_button_dark.png') no-repeat center;
   background-size: 99% 99%;
 }
 
 .dark .profile_subscription.active,
 .dark .profile_subscription:hover {
-  background: url('../../assets/img/sub_button_dark_active.png') no-repeat
+  background: url('../../../assets/img/sub_button_dark_active.png') no-repeat
     center;
   background-size: 99% 99%;
 }
 
 .profile_settings {
-  background: url('../../assets/img/setings_button.png') no-repeat center;
+  background: url('../../../assets/img/setings_button.png') no-repeat center;
   background-size: 99% 99%;
 }
 
 .profile_settings.active,
 .profile_settings:hover {
-  background: url('../../assets/img/setings_button_active.png') no-repeat center;
+  background: url('../../../assets/img/setings_button_active.png') no-repeat
+    center;
   background-size: 99% 99%;
 }
 
 .dark .profile_settings {
-  background: url('../../assets/img/setings_button_dark.png') no-repeat center;
+  background: url('../../../assets/img/setings_button_dark.png') no-repeat
+    center;
   background-size: 99% 99%;
 }
 
 .dark .profile_settings.active,
 .dark .profile_settings:hover {
-  background: url('../../assets/img/setings_button_dark_active.png') no-repeat
-    center;
+  background: url('../../../assets/img/setings_button_dark_active.png')
+    no-repeat center;
   background-size: 99% 99%;
 }
 
 .profile_support {
-  background: url('../../assets/img/support_button.png') no-repeat center;
+  background: url('../../../assets/img/support_button.png') no-repeat center;
   background-size: 99% 99%;
 }
 
 .profile_support.active,
 .profile_support:hover {
-  background: url('../../assets/img/support_button_active.png') no-repeat center;
+  background: url('../../../assets/img/support_button_active.png') no-repeat
+    center;
   background-size: 99% 99%;
 }
 
 .dark .profile_support {
-  background: url('../../assets/img/support_button_dark.png') no-repeat center;
+  background: url('../../../assets/img/support_button_dark.png') no-repeat
+    center;
   background-size: 99% 99%;
 }
 
 .dark .profile_support.active,
 .dark .profile_support:hover {
-  background: url('../../assets/img/support_button_dark_active.png') no-repeat
-    center;
+  background: url('../../../assets/img/support_button_dark_active.png')
+    no-repeat center;
   background-size: 99% 99%;
 }
 
 .sidebar_avatar {
   height: 90px;
-  background: url('../../assets/img/sidebar_avatar_border.png') no-repeat center;
+  background: url('../../../assets/img/sidebar_avatar_border.png') no-repeat
+    center;
   background-size: 99% 99%;
   padding: 10px;
   margin: 40px 0;
@@ -182,8 +190,8 @@
 }
 
 .dark .sidebar_avatar {
-  background: url('../../assets/img/sidebar_avatar_border_dark.png') no-repeat
-    center;
+  background: url('../../../assets/img/sidebar_avatar_border_dark.png')
+    no-repeat center;
   background-size: 99% 99%;
 }
 
@@ -253,7 +261,7 @@
 }
 
 .mobile_profile_btn {
-  background: url('../../assets/img/btn_content_menu.png') no-repeat center;
+  background: url('../../../assets/img/btn_content_menu.png') no-repeat center;
   background-size: 100% 100%;
   border: none;
   outline: none;
@@ -277,7 +285,8 @@
 }
 
 .mobile_profile_btn.active {
-  background: url('../../assets/img/mobile_profile_active.png') no-repeat center;
+  background: url('../../../assets/img/mobile_profile_active.png') no-repeat
+    center;
   background-size: 99% 99%;
 }
 
@@ -286,8 +295,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('../../assets/img/mobile_profile_active_before.png') no-repeat
-    center;
+  background: url('../../../assets/img/mobile_profile_active_before.png')
+    no-repeat center;
   background-size: 100% 100%;
   margin-left: 5px;
   z-index: 1;
