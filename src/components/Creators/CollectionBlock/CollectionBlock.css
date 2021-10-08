@@ -1,7 +1,7 @@
 .marketplace_block_wrapper {
   position: relative;
   max-width: 85%;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .marketplace_main_main .marketplace_block_wrapper,
@@ -12,17 +12,27 @@
   margin: 0 auto 30px;
 }
 
-.marketplace_block {
-  background: url('../../../assets/img/block_border.png') no-repeat center;
-  background-size: 99% 99%;
-  padding: 10px;
-  position: relative;
+.marketplace_block_wrapper input::-webkit-outer-spin-button,
+.marketplace_block_wrapper input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-/* .marketplace_block:hover {
+.marketplace_block {
+  background: url('../../../assets/img/marketplace_border.png') no-repeat center;
+  background-size: 99% 99%;
+  border: none;
+  padding: 10px;
+  position: relative;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.marketplace_block:hover {
   background: url('../../../assets/img/block_border_hover.png') no-repeat center;
-  background-size: 103% 103%;
-} */
+  background-size: 99% 99%;
+}
 
 .marketplace_block_img {
   padding: 8px;
@@ -32,46 +42,20 @@
 
 .marketplace_block_img_wrapper {
   overflow: hidden;
+  border-radius: 10px;
 }
 .dark .marketplace_block_img {
-  background-color: #282550;
+  background: #282550;
 }
 
 .marketplace_block_img img {
-  border-radius: 10px;
+  border-radius: 0;
   transition: 0.4s;
 }
 
 .marketplace_block_img img:hover {
   transform: scale(1.1);
   transition: 0.4s;
-}
-
-.marketplace_block_info {
-  background: #fff;
-  padding: 7px;
-  border-radius: 10px;
-  margin-top: 10px;
-  -webkit-clip-path: polygon(
-    0% 0%,
-    /* верхняя левая */ 0% 0%,
-    /* верхняя левая */ 100% 0%,
-    /* верхняя правая */ 100% 0%,
-    /* верхняя правая */ 100% 87%,
-    /* нижняя правая */ 96% 100%,
-    /* нижняя правая */ 0% 100%,
-    /* нижняя левая */ 0 100% /* нижняя левая */
-  );
-  clip-path: polygon(
-    0% 0%,
-    /* верхняя левая */ 0% 0%,
-    /* верхняя левая */ 100% 0%,
-    /* верхняя правая */ 100% 0%,
-    /* верхняя правая */ 100% 87%,
-    /* нижняя правая */ 96% 100%,
-    /* нижняя правая */ 0% 100%,
-    /* нижняя левая */ 0 100% /* нижняя левая */
-  );
 }
 
 .dark .marketplace_block_info {
@@ -92,25 +76,16 @@
   color: #fff;
 }
 
-.single_collection .marketplace_block_info h6 {
+.dark .account_collection .marketplace_block_footer span:nth-child(2) {
+  color: #7e7e7e;
+}
+
+.creator_account_main .marketplace_block_footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.single_collection .marketplace_block_info h6 span {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  color: #7c7c7c;
-}
-
-.single_collection .marketplace_block_footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.marketplace_block_footer span {
+.collection_block_wrapper .marketplace_block_footer span {
   display: flex;
   align-items: center;
   font-family: Roboto;
@@ -118,18 +93,15 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 14px;
-  color: #000;
+  color: #656565;
+  margin: 0 5px;
 }
 
-.single_collection .dark .marketplace_block_footer span {
-  color: #ffffff;
+.dark .collection_block_wrapper .marketplace_block_footer span {
+  color: #7e7e7e;
 }
 
-.single_collection .dark .marketplace_block_footer span:nth-child(2) {
-  color: #0075ff;
-}
-
-.marketplace_block_info a {
+.marketplace_block_info > span {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -139,6 +111,8 @@
   cursor: pointer;
   margin: 5px 0;
   display: block;
+  text-align: center;
+  margin: 10px 0 5px;
 }
 
 .marketplace_block_footer .count {
@@ -150,9 +124,51 @@
   color: #0075ff;
 }
 
-.dark .single_collection .marketplace_block_footer .count {
-  color: #0075ff !important;
+.collection_block_wrapper .marketplace_block_img {
+  background: url('../../../assets/img/collection_block_border.png') no-repeat
+    center;
+  background-size: 99% 99%;
+  padding-top: 10px;
 }
+
+.collection_block_wrapper .marketplace_block_info {
+  position: relative;
+  background: none !important;
+  margin-top: 0;
+}
+
+.collection_block_wrapper .marketplace_block_info img.status {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.collection_block_wrapper .marketplace_block_info h6 {
+  text-align: center;
+}
+
+.collection_block_ava {
+  background: url('../../../assets/img/colection_ava.png') no-repeat center;
+  background-size: 99% 99%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  margin: -30px auto 0;
+}
+
+.dark .collection_block_ava {
+  background: url('../../../assets/img/colection_ava_dark.png') no-repeat center;
+  background-size: 99% 99%;
+}
+
+.collection_block_ava img {
+  max-width: 50px;
+}
+
 @media (max-width: 991.98px) {
   .marketplace_main_main .marketplace_block_wrapper,
   .creator_account_main_block .marketplace_block_wrapper,

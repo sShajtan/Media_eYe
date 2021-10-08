@@ -1,7 +1,7 @@
 import React from 'react';
 import { Profiler } from 'react';
-import ProfileWalletMain from '../components/ProfileWallet/ProfileWallet';
-import Sidebar from '../components/Sidebar/Sidebar';
+import ProfileWalletMain from '../components/Profile/ProfileWallet/ProfileWallet';
+import Sidebar from '../components/Profile/Sidebar/Sidebar';
 
 const ProfileWallet = (props) => {
   const { closeNftCollapse } = props;

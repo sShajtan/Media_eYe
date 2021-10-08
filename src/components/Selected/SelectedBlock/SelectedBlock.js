@@ -14,7 +14,7 @@ const [showDropdownCharity, setShowDropdownCharity] = useState(false);
   return (
     <div className="selected_block">
         <div className="selected_block_img_wrapper">
-            <img className="selected_block_img" src="img/05.png" />
+            <img className="..selected_block_img" src="../../img/05.png" />
         </div>
         <div className="selected_block_main_info">
             <div>

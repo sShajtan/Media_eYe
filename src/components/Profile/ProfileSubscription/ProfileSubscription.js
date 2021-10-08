@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import './ProfileSubscription.css';
 import Slider from 'react-slick';
+import { useSelector } from 'react-redux';
+
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, onClick} = props;
   return (
     <button
       type="button"
@@ -32,52 +33,17 @@ function SamplePrevArrow(props) {
 }
 
 const ProfileSubscription = (props) => {
+  const {togglePopup } = props;
   const theme = useSelector((state) => state.app.darkTheme);
 
-  var settings1 = {
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: false,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          arrows: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-          arrows: true,
-          dots: true
-        }
-      }
-    ]
-  };
+
+
 
   return (
     <div className="profile_sub_page">
-      <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
       <h2>Subscription</h2>
+       
       <div className="profile_sub_page_main">
-        <Slider {...settings1}>
           <div>
             <div className="profile_sub_slide profile_sub_slide_1">
               <h4>My eYe</h4>
@@ -92,8 +58,11 @@ const ProfileSubscription = (props) => {
                 30-day cycle
               </p>
               <button className="sub_button">
-                <span>Subscribe</span>
+                <span>Free</span>
               </button>
+            </div> 
+            <div className="profile_sub_slide_footer">
+                Current Feature: <span>03.10.2021</span>
             </div>
           </div>
           <div>
@@ -110,7 +79,7 @@ const ProfileSubscription = (props) => {
                 Users can launch NFT campaigns and whitelist up to 10 addresses
                 to be able to mint them
               </p>
-              <button className="sub_button">
+              <button className="sub_button" onClick={togglePopup}>
                 <span>Subscribe</span>
               </button>
             </div>
@@ -128,12 +97,11 @@ const ProfileSubscription = (props) => {
                 Users can launch NFT campaigns and whitelist an unlimited amount
                 of addresses to be able to receive them
               </p>
-              <button className="sub_button">
+              <button className="sub_button" onClick={togglePopup}>
                 <span>Subscribe</span>
               </button>
             </div>
           </div>
-        </Slider>
       </div>
     </div>
   );

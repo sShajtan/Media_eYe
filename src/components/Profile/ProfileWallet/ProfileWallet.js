@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useWeb3React } from '@web3-react/core';
 import { RampInstantSDK } from '@ramp-network/ramp-instant-sdk';
-import { injectedConnector } from '../../connectors';
+import { injectedConnector } from '../../../connectors';
 import './ProfileWallet.css';
-
+ 
 const ProfileWallet = (props) => {
   const { chainId, account, activate, deactivate } = useWeb3React();
   const theme = useSelector((state) => state.app.darkTheme);

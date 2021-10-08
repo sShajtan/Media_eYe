@@ -80,12 +80,13 @@
   color: #7e7e7e;
 }
 
-.marketplace_block_footer {
+.creator_account.account_collection.single_collection
+  .marketplace_block_footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.marketplace_block_footer span {
+.collection_block_wrapper .marketplace_block_footer span {
   display: flex;
   align-items: center;
   font-family: Roboto;
@@ -97,7 +98,7 @@
   margin: 0 5px;
 }
 
-.dark .marketplace_block_footer span {
+.dark .collection_block_wrapper .marketplace_block_footer span {
   color: #7e7e7e;
 }
 

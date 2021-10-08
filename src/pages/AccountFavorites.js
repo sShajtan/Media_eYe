@@ -1,5 +1,5 @@
 import React from 'react';
-import AccountPurchasedMain  from '../components/Account/AccountPurchased/AccountPurchased';
+import AccountFavoriteMain  from '../components/Account/AccountFavorite/AccountFavorite';
 
 const AccountPurchased = (props) => {
    const { closeNftCollapse } = props;
@@ -7,7 +7,7 @@ const AccountPurchased = (props) => {
   return (
     <React.Fragment>
       <div onClick={closeNftCollapse} className="marketplace">
-        <AccountPurchasedMain />
+        <AccountFavoriteMain />
       </div>
     </React.Fragment>
   );
