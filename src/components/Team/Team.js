@@ -328,7 +328,7 @@ const Team = () => {
                   </div>
                   <span>
                     Co-Founder, Senior Solidity Developer and Smart Contracts
-                    Architrct
+                    Architect
                   </span>
                 </div>
               </div>
