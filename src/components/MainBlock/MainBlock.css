@@ -445,7 +445,7 @@
   text-shadow: 0px 0px 5px #ffffff;
 }
 
-.register_open_block button:nth-child(2) {
+.register_open_block a:nth-child(2) {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -603,7 +603,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  .register_open_block button:nth-child(2) {
+  .register_open_block a:nth-child(2) {
     padding: 10px 20px;
     margin-top: 20px;
   }

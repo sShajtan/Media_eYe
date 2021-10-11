@@ -81,7 +81,7 @@ const MainBlock = (props) => {
 
       <div className="register_open_block">
         <h3>MeDIA eYe Public Presale Round Open</h3>{' '}
-        <button onClick={() => history.push('/signup')}>Register</button>
+        <a href="https://mediaeyenft.com/pitchdeck/whitelist/">Register</a>
       </div>
 
       <div className="container">

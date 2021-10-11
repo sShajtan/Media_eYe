@@ -247,14 +247,11 @@ const Team = () => {
                   <span>Senior UI/UX Designer</span>
                 </div>
               </div>
-              {/* <div className="team_slide_wrapper">
+              <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/chong.png" />
-                    <a
-                      href="https://www.linkedin.com/in/roy-chong-0914/"
-                      target="_blank"
-                    >
+                    <img src="img/team/egg.png" />
+                    <a target="_blank">
                       <svg
                         width="28"
                         height="28"
@@ -283,11 +280,11 @@ const Team = () => {
                     </a>
                   </div>
                   <div>
-                    <h6>Roy Chong</h6>
+                    <h6>Egg Dev</h6>
                   </div>
-                  <span>Senior Blockchain & Web Developer</span>
+                  <span>Lead Full Stack Developer Blockchain Expert</span>
                 </div>
-              </div>*/}
+              </div>
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
@@ -511,7 +508,7 @@ const Team = () => {
                   <span>Front-end Developer</span>
                 </div>
               </div>
-              <div className="team_slide_wrapper">
+              {/* <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
                     <img src="img/team/mask.png" />
@@ -520,7 +517,7 @@ const Team = () => {
                     <h6>New Member</h6>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
