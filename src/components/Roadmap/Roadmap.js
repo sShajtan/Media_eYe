@@ -43,7 +43,7 @@ const Roadmap = (props) => {
             </div>
             <span>Development of MeDIA eYe platform and testing.</span>
           </div>
-          <div className="roadmap_main_block_wrapper">
+          <div className="roadmap_main_block_wrapper active">
             <span>
               Private Sale/Presale and IDO fundraising. Platform launch (Beta).
             </span>

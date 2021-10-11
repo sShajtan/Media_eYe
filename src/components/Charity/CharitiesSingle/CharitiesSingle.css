@@ -1,0 +1,234 @@
+.charities_single {
+  padding-top: 90px;
+}
+
+.charities_single .charities_back {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 103.5%;
+  color: rgba(49, 49, 57, 1);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.charities_single .charities_back svg {
+  transform: rotate(90deg);
+  margin-right: 10px;
+}
+
+.dark .charities_single .charities_back svg path {
+  fill: #ffffff;
+}
+.dark .charities_single .charities_back {
+  color: #ffffff;
+}
+
+.charities_single_main {
+  padding: 50px 0;
+}
+
+.charities_single_header {
+  display: flex;
+  margin-top: 40px;
+}
+
+.charities_single_header_left {
+  max-width: 35%;
+  padding: 0 20px 20px 0;
+}
+
+.charities_single_header_img_wrapper {
+  background: url('../../../assets/img/block_border.png') no-repeat center;
+  background-size: 100% 100%;
+  padding: 15px;
+}
+
+.charities_single_header_img_wrapper img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.charities_single_header .charities_single_header_right h5 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 103.5%;
+  color: #313131;
+  margin: 0;
+}
+
+.dark .charities_single_header .charities_single_header_right h5 {
+  color: #ebebeb;
+}
+
+.charities_single_header .charities_single_header_right p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #313131;
+}
+
+.dark .charities_single_header .charities_single_header_right p {
+  color: #ebebeb;
+}
+
+.charities_single_header_footer h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  color: #313131;
+  margin: 10px 0;
+}
+
+.dark .charities_single_header_footer h6 {
+  color: #ebebeb;
+}
+
+.charities_single_header_donate {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+  background: url('../../../assets/img/learn_more_button_bg.png') no-repeat
+    center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.charities_single_header_donate::before {
+  content: '';
+  background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.charities_single_header_donate:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .charities_single_header_donate:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.charities_single_header_donate:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.charities_single_header_footer span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  color: #0075ff;
+}
+
+.charities_single_header_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.charities_single_text {
+  margin-top: 50px;
+}
+
+.charities_single_text h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 103.5%;
+  color: #313131;
+  margin-bottom: 20px;
+}
+
+.dark .charities_single_text h3 {
+  color: #ebebeb;
+}
+
+.charities_single_text p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #313131;
+}
+
+.dark .charities_single_text p {
+  color: #ebebeb;
+}
+
+.charities_single_text_info {
+  margin: 30px 0;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #313131;
+}
+
+.dark .charities_single_text_info {
+  color: #ebebeb;
+}
+
+.charities_single_text_info span {
+  color: #0075ff;
+}
+
+.charities_single .slick-dots li {
+  width: 15px;
+}
+
+@media (max-width: 767.98px) {
+  .charities_single_header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .charities_single_header_left {
+    max-width: 100%;
+    padding: 0;
+  }
+  .charities_single_header_right {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+  }
+}

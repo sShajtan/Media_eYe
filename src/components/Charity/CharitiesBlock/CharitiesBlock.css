@@ -1,0 +1,183 @@
+.charities_block {
+  padding: 20px;
+  border-radius: 15px;
+  background: #ffffff;
+  border: 1px solid #313139;
+  display: flex;
+  max-width: 550px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.dark .charities_block {
+  background: #282550;
+  border: 1px solid #ffffff;
+}
+
+.charities_block_img_wrapper {
+  background: url('../../../assets/img/block_border.png') no-repeat center;
+  background-size: 100% 100%;
+  padding: 10px;
+}
+
+.charities_block_img_wrapper img {
+  border-radius: 10px;
+  max-width: 200px;
+}
+
+.charities_block_left {
+  width: 50%;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.charities_block_right {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.charities_block_text h5 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 34px;
+  color: #313139;
+  margin: 0;
+}
+
+.dark .charities_block_text h5 {
+  color: #ffffff;
+}
+
+.charities_block_text p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #313139;
+}
+
+.dark .charities_block_text p {
+  color: #ebebeb;
+}
+
+.charities_block_footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.charities_block_footer h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #313139;
+  margin: 0;
+}
+
+.dark .charities_block_footer h6 {
+  color: #ebebeb;
+}
+
+.charities_block_donate {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+  background: url('../../../assets/img/learn_more_button_bg.png') no-repeat
+    center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.charities_block_donate::before {
+  content: '';
+  background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.charities_block_donate:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .charities_block_donate:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.charities_block_donate:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.charities_block_footer span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #0075ff;
+}
+
+@media (max-width: 1199.98px) {
+  .charities_block {
+    max-width: 470px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .charities_block {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .charities_block {
+    flex-direction: column;
+    width: 90%;
+  }
+  .charities_block_right {
+    padding-left: 0;
+  }
+  .charities_block_left {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}

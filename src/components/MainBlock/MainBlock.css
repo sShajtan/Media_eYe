@@ -5,7 +5,7 @@
   overflow-x: hidden;
   padding-top: 130px;
   padding-bottom: 40px;
-  background: url("../../assets/img/mian_bg_gradient.png") no-repeat left top;
+  background: url('../../assets/img/mian_bg_gradient.png') no-repeat left top;
   background-size: contain;
 }
 .main_block_main_left {
@@ -161,13 +161,13 @@
 }
 .right_small_slider .slick-next::before,
 .left_slider .slick-next::before {
-  content: "\2794" !important;
+  content: '\2794' !important;
   font-size: 32px;
   line-height: 12px;
 }
 
 .right_small_slider .slick-prev::before {
-  content: "\2794" !important;
+  content: '\2794' !important;
   font-size: 32px;
   line-height: 20px;
 }
@@ -240,7 +240,7 @@
 }
 
 .main_left_buttons .learn_more {
-  background: url("../../assets/img/learn_more_button_bg.png") no-repeat center;
+  background: url('../../assets/img/learn_more_button_bg.png') no-repeat center;
   background-size: contain;
   font-family: Poppins;
   font-style: normal;
@@ -274,8 +274,8 @@
 }
 
 .main_left_buttons .learn_more::before {
-  content: "";
-  background: url("../../assets/img/signup_button_bg.png") no-repeat center;
+  content: '';
+  background: url('../../assets/img/signup_button_bg.png') no-repeat center;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -292,7 +292,7 @@
 }
 
 .main_left_buttons .sign_up {
-  background: url("../../assets/img/signup_button_bg.png") no-repeat center;
+  background: url('../../assets/img/signup_button_bg.png') no-repeat center;
   background-size: contain;
   font-family: Poppins;
   font-style: normal;
@@ -324,13 +324,13 @@
 }
 
 .main_left_buttons .sign_up::before {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
   position: absolute;
-  background: url("../../assets/img/learn_more_button_bg.png") no-repeat center;
+  background: url('../../assets/img/learn_more_button_bg.png') no-repeat center;
   background-size: contain;
   transition: 0.4s;
   opacity: 0;
@@ -413,6 +413,55 @@
   z-index: 1;
 }
 
+.register_open_block {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  position: relative;
+  background: rgba(233, 241, 255, 1);
+}
+
+.dark .register_open_block {
+  background: #292560;
+}
+
+.register_open_block h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 43px;
+  color: #17133b;
+  text-shadow: 0px 0px 5px #17133b;
+}
+
+.dark .register_open_block h3 {
+  color: #ffffff;
+  text-shadow: 0px 0px 5px #ffffff;
+}
+
+.register_open_block button:nth-child(2) {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background: linear-gradient(90.12deg, #6a37fd -10.07%, #9e2993 116.16%);
+  border: 1px solid #797979;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  padding: 10px 30px;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
 @media (max-width: 1199.98px) {
   .main_block_slide h4 {
     font-size: 18px;
@@ -435,7 +484,7 @@
   .main_left_buttons {
     display: flex;
     justify-content: space-around;
-}
+  }
   .main_info_right p {
     margin-top: 40px;
   }
@@ -533,6 +582,11 @@
   .left_slide div {
     padding-right: 70px;
   }
+
+  .register_open_block {
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -543,8 +597,19 @@
   .left_slider {
     margin-top: 500px;
   }
+  .register_open_block h3 {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .register_open_block button:nth-child(2) {
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
 
-  .main_left_buttons .sign_up, .main_left_buttons .learn_more{
+  .main_left_buttons .sign_up,
+  .main_left_buttons .learn_more {
     width: 130px;
   }
 
@@ -626,5 +691,11 @@
   }
   .main_left_buttons .learn_more {
     margin: 0;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .register_open_block h3 {
+    font-size: 16px;
   }
 }

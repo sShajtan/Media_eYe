@@ -1,0 +1,46 @@
+.charities_popup .collection_block.collection_block_img label {
+  display: block;
+  background: rgba(255, 255, 255, 0.02);
+  background-image: url('../../../assets/img/collection_img.png');
+  background-size: 81px 81px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px dashed #797979;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 12px;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.charities_popup .collection_block.collection_block_img h5 {
+  margin: 10px 0;
+}
+
+.charities_popup .charity_block_input input,
+.charities_popup .charity_block_input textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.charities_popup .charity_block_input {
+  margin-top: 30px;
+}
+
+.charities_popup_footer p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #0075ff;
+}
+
+.charities_popup_footer {
+  margin: 20px 0;
+  text-align: center;
+}

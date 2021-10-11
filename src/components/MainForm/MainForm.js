@@ -38,9 +38,7 @@ const MainForm = (props) => {
         className="main_form_main wow animate__animated animate__fadeIn"
         data-wow-delay="1s"
       >
-        <h2>
-          Sign up here to receive the latest news and updates of our projects!
-        </h2>
+        <h2>Sign up to recieve the latest news and updates!</h2>
         <form onSubmit={handleSubmit}>
           <input
             name="email"

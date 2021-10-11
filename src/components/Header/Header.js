@@ -114,7 +114,9 @@ const Header = (props) => {
               <img
                 alt="toggle_theme_icon"
                 src={
-                  theme ? '../../../img/sun_mobile.png' : '../../../img/sun_mobile_dark.png'
+                  theme
+                    ? '../../../img/sun_mobile.png'
+                    : '../../../img/sun_mobile_dark.png'
                 }
               />
             </div>
@@ -154,7 +156,7 @@ const Header = (props) => {
                       <img src="../../../img/b_start.png" />
                       <span>1123</span>
                     </div>
-                    
+
                     <div className="header_avatar">
                       <div
                         className="header_avatar_wrapper"
@@ -231,7 +233,8 @@ const Header = (props) => {
                   </Link>
                   <Link to="/signup" className="signup">
                     <span>Sign Up</span>
-                  </Link>*
+                  </Link>
+                  *
                 </div>
               )}
             </div>

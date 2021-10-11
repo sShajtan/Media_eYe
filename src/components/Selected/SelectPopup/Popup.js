@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Popup.css';
+import '../../Account/AddPopup/Popup.css';
 import CloseIcon from '../../Icons/CloseIcon';
 import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
@@ -83,7 +84,7 @@ const Popup = (props) => {
             onClick={(event) => event.stopPropagation()}
           >
             <div className="container">
-              <div className="main_add_popup">
+              <div className="main_add_popup selected_popup">
               <div className="close" onClick={props.togglePopup}>
                 <CloseIcon />
               </div>

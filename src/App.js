@@ -52,38 +52,24 @@ import Selected from './components/Selected/Selected';
 import ProductBunding from './pages/ProductBunding';
 import ProductBundingAuction from './pages/ProductBundingAuction';
 import CreatorCollection from './components/Creators/CreatorCollection/CreatorCollection';
+import Charities from './pages/Charities';
+import CharitiesSingle from './pages/CharitiesSingle';
+import CharitiesPopup from './components/Charity/CharitiesPopup/Popup';
+import PutOnMarketplace from './pages/PutOnMarketplace';
+import CharitiesPlace from './pages/CharitiesPlace';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
-  const timerPopup = useSelector((state) => state.app.timerPopup);
-  const registerPopup = useSelector((state) => state.app.registerPopup);
   const [showSoonPopup, setShowSoonPopup] = useState(false);
   const [showBusinessPopup, setShowBusinessPopup] = useState(false);
   const [showPartnersPopup, setShowPartnersPopup] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [showCharitiesPopup, setShowCharitiesPopup] = useState(false);
   const [showRegisterPopup, setShowRegisterPopup] = useState(false);
   const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
   const [showWalletCollapse, setShowWalletCollapse] = useState(false);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (timerPopup === false && showRegisterPopup === true) {
-      dispatch(updateTimerPopup());
-      setTimeout(() => {
-        setShowPopup(true);
-      }, 140000000);
-    }
-  });
-
-  useEffect(() => {
-    if (registerPopup === false) {
-      dispatch(updateRegisterPopup());
-      setTimeout(() => {
-        setShowRegisterPopup(true);
-      }, 70000000);
-    }
-  });
 
   const toggleSoonPopup = () => {
     setShowSoonPopup(!showSoonPopup);
@@ -118,6 +104,10 @@ const App = () => {
     setShowWalletCollapse(false);
   };
 
+  const toggleCharitiesPopup = () => {
+    setShowCharitiesPopup(!showCharitiesPopup);
+  };
+
   const toggleWalletCollapse = () => {
     setShowWalletCollapse(!showWalletCollapse);
   };
@@ -149,6 +139,10 @@ const App = () => {
           <MessagePopup
             showPopup={showMessagePopup}
             togglePopup={toggleMessagePopup}
+          />
+          <CharitiesPopup
+            showPopup={showCharitiesPopup}
+            togglePopup={toggleCharitiesPopup}
           />
           <Header
             toggleSoonPopup={toggleSoonPopup}
@@ -271,6 +265,33 @@ const App = () => {
             </Route>
             <Route path="/account/content" exact>
               <AccountContent closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/put-on-marketplace" exact>
+              <PutOnMarketplace closeNftCollapse={closeNftCollapse} />
+            </Route>
+            {/* <Route path="/home" exact>
+              <Home closeNftCollapse={closeNftCollapse} />
+            </Route> */}
+            <Route path="/charity-place" exact>
+              <CharitiesPlace
+                closeNftCollapse={closeNftCollapse}
+                showPopup={showCharitiesPopup}
+                togglePopup={toggleCharitiesPopup}
+              />
+            </Route>
+            <Route path="/charities" exact>
+              <Charities
+                closeNftCollapse={closeNftCollapse}
+                showPopup={showCharitiesPopup}
+                togglePopup={toggleCharitiesPopup}
+              />
+            </Route>
+            <Route path="/charities/single" exact>
+              <CharitiesSingle
+                closeNftCollapse={closeNftCollapse}
+                showPopup={showCharitiesPopup}
+                togglePopup={toggleCharitiesPopup}
+              />
             </Route>
             <Route path="/theOne/canvas" exact>
               <Canvas closeNftCollapse={closeNftCollapse} />

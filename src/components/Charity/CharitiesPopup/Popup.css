@@ -1,0 +1,135 @@
+.charities_popup .collection_block_buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.charities_popup .main_add_popup {
+  max-width: 800px;
+}
+
+.charities_popup h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 103.5%;
+  color: #313131;
+  margin: 10px 0;
+}
+
+.dark .charities_popup h6 {
+  color: #ebebeb;
+}
+
+.charities_popup span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 103.5%;
+  color: #7c7c7c;
+}
+
+.charities_popup button span {
+  color: #313131;
+}
+
+.charities_popup button.active span {
+  color: #ebebeb;
+}
+
+.dark .charities_popup button span {
+  color: #ebebeb;
+}
+
+.charities_popup .selected_popup_bid_dropdown {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.charities_popup .selected_popup_bid {
+  margin-top: 40px;
+}
+
+.charities_popup .selected_popup_bid span {
+  margin-top: 20px;
+  display: block;
+}
+
+.charities_donation_amount {
+  position: relative;
+  display: inline-block;
+}
+
+.charities_donation_amount span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.charities_donation_amount input {
+  border: 1px solid #797979;
+  outline: none;
+  padding: 7px 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: #313131;
+}
+
+.dark .charities_donation_amount input {
+  color: #ebebeb;
+}
+
+.charities_popup .selected_popup_bid input {
+  background-color: transparent;
+  color: #313139;
+}
+
+.dark .charities_popup .selected_popup_bid input {
+  color: #ebebeb;
+}
+
+.charities_popup h5 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #313139;
+}
+
+.dark .charities_popup h5 {
+  color: #ebebeb;
+}
+
+.charities_popup .selected_block_price_dropdown svg path {
+  fill: #7c7c7c;
+}
+
+@media (max-width: 991.98px) {
+  .charities_popup .collection_block_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .charities_popup .collection_block_buttons button {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .charities_popup .selected_popup h3 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .charities_popup.selected_popup h3 {
+    margin: 30px 0 !important;
+  }
+}

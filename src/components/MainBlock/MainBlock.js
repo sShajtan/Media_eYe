@@ -78,6 +78,12 @@ const MainBlock = (props) => {
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
+
+      <div className="register_open_block">
+        <h3>MeDIA eYe Public Presale Round Open</h3>{' '}
+        <button onClick={() => history.push('/signup')}>Register</button>
+      </div>
+
       <div className="container">
         <div className="main_block_main">
           <div className="main_block_main_left">

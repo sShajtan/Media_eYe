@@ -1,0 +1,409 @@
+@import url(https://allfont.ru/allfont.css?fonts=furore);
+
+.home-page {
+  padding: 130px 0 0px;
+
+  .container {
+    max-width: 1534px;
+    padding: 0 32px;
+  }
+}
+
+.marketplace .slick-prev, .marketplace .slick-next {
+  width: 53px;
+  height: 52px;
+}
+
+.marketplace .slick-next {
+  right: -6%;
+}
+
+.marketplace .slick-prev {
+  left: -6%;
+}
+
+.marketplace .home-banners .slick-next {
+  right: -4%;
+}
+
+.marketplace .home-banners .slick-prev {
+  left: -4%;
+}
+
+
+.home-banners {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 85px;
+
+  .home-banners-item {
+    margin: 39px 20px 0;
+  }
+
+  .slick-slide {
+    //max-width: 271px;
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1470px;
+    position: relative;
+    left: -10px;
+  }
+
+}
+
+.home-page-create {
+  width: -webkit-fill-available;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 103px 86px 82px;
+  border-radius: 20px;
+  position: relative;
+  margin-right: 15px;
+  border: 1px solid #9DCAFF;
+
+  &__title {
+    font-family: 'Furore', arial;
+    font-weight: normal;
+    font-size: 47px;
+    line-height: 54px;
+    color: #FFFFFF;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    right: 0;
+  }
+
+  .load_more {
+    margin: 40px 0 0;
+  }
+}
+
+.home-page-head {
+  display: flex;
+  justify-content: space-between;
+
+  .home-banners-item {
+    min-width: 414px;
+    height: 390px;
+  }
+}
+
+.home-head-banners {
+  .slick-track {
+    display: flex;
+
+    max-width: 414px;
+  }
+
+  .slick-dots {
+    bottom: 35px;
+    z-index: 2;
+
+    li {
+      width: 98px;
+      height: 4px;
+      background: #ffffff;
+      margin: 0 13px;
+
+      &.slick-active {
+        background: #0085FF;
+      }
+    }
+
+    li button:before {
+      opacity: 0 !important;
+    }
+  }
+
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 103.5%;
+  color: #FFFFFF;
+  margin: 59px auto 0;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+  display: flex;
+  max-width: 1402px;
+
+  span {
+    margin-left: 15px;
+
+  }
+
+  img {
+    margin-left: 13px;
+  }
+
+  &.subtitle_white {
+    color: #313139;
+  }
+}
+
+.marketplace_block {
+  margin-top: 35px;
+}
+
+.gradient-txt {
+  background: linear-gradient(180deg, #79A8FF 0%, #D516FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.sellers-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 245px;
+
+  .creator_block_info {
+    width: 225px;
+  }
+}
+
+.sellers-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.collection-slider.sellers-slider {
+
+  .slick-track {
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+.marketplace_main {
+  margin-top: 0;
+  padding-bottom: 95px;
+
+  .marketplace_block {
+    margin-top: 0;
+  }
+
+  .marketplace_block_wrapper {
+    margin: 0 auto 15px;
+  }
+}
+
+.load_more {
+  margin: 70px auto 0;
+}
+
+.collection-slider {
+  max-width: 1300px;
+  margin: 0 auto 0px;
+
+  &.collection {
+    margin-bottom: -30px;
+  }
+
+  .marketplace_block_wrapper {
+    max-width: 94%;
+  }
+
+  &.marketplace-slider {
+    margin-top: -40px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .sellers-column .creator_block_info {
+    width: 246px;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+
+@media (max-width: 992px) {
+
+  .mobile-hidden {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .home-page {
+    padding: 160px 0 0;
+  }
+  .home-page-head {
+    flex-direction: column;
+
+  }
+  .home-head-banners {
+    margin: 28px auto 0;
+
+    .slick-dots {
+      width: 100%;
+      bottom: 25px;
+    }
+  }
+  .marketplace .slick-next {
+    right: -2%;
+  }
+  .marketplace .slick-prev {
+    left: -2%;
+  }
+  .marketplace .home-banners .slick-prev, .marketplace .home-banners .slick-next {
+    display: none;
+  }
+
+  .home-page-create {
+    padding: 41px 25px 125px;
+    margin-right: 0;
+    overflow: hidden;
+
+    &__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .load_more {
+      margin-top: 24px;
+    }
+
+    &__img {
+      max-height: 220px;
+      right: -50px;
+    }
+  }
+  .home-banners-item {
+    width: 140px;
+    height: 140px;
+  }
+  .home-banners {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 35px;
+
+    .home-banners-item {
+      width: 144px;
+      min-width: 144px;
+      height: 141px;
+      margin: 20px 6px;
+
+      &__title {
+        display: none;
+      }
+    }
+  }
+  .collection-slider.collection {
+    margin-bottom: 130px;
+  }
+  .home-banners .slick-track {
+    left: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-page {
+    .slick-next {
+      right: 5px;
+      z-index: 2;
+    }
+
+    .slick-prev {
+      left: 5px;
+      z-index: 2;
+    }
+  }
+  .home-head-banners {
+    margin-bottom: 0;
+
+    .slick-dots {
+      border: none;
+      top: inherit;
+
+      li button:before {
+        color: transparent !important;
+      }
+    }
+  }
+  .home-head-banners + .subtitle {
+    margin-top: 35px;
+  }
+  .subtitle {
+    margin-top: 100px;
+    font-size: 24px;
+  }
+
+  .content_marketplace_header_menu_mobile {
+    margin-bottom: 20px;
+  }
+
+  .event-item {
+    margin: 35px auto 0;
+    width: min-content;
+  }
+  .subtitle_collection {
+    margin-top: 0px;
+  }
+
+  .collection-slider .marketplace_block_wrapper {
+    max-width: 280px;
+  }
+  .categories_mobile_button, .filter .filter_button {
+    font-size: 24px;
+    padding: 23px 30px;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 470px) {
+  .home-page {
+    .container {
+      padding: 0 20px;
+    }
+  }
+  .home-head-banners {
+    .slick-track {
+      max-width: 280px;
+    }
+
+    .home-banners-item {
+      min-width: 280px;
+      height: 280px;
+    }
+
+    .slick-dots {
+      bottom: 20px;
+      z-index: 2;
+
+      li {
+        width: 40px;
+        height: 4px;
+      }
+    }
+  }
+
+  .event-item__img {
+    min-width: inherit;
+    height: auto;
+  }
+}
+
+.events {
+  margin-bottom: 105px;
+}

@@ -21,7 +21,7 @@ const Sidebar = (props) => {
   const handleScrollMen = (e) => {
     if (
       window.innerHeight + window.scrollY >
-      document.body.clientHeight - 120
+      document.body.clientHeight - 40
     ) {
       setFixSidebar(false);
     } else {

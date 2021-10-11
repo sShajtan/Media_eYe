@@ -1,0 +1,139 @@
+.charities_place {
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+.charities_place_header {
+  display: flex;
+  margin: 30px -30px 0;
+}
+
+.charities_place_main {
+  margin-top: 20px;
+}
+
+.charities_place_header div:first-child {
+  padding-right: 10px;
+}
+
+.charities_place_header div:nth-child(2) {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.charities_place_header div img {
+  border-radius: 10px;
+}
+
+.charities_place_header div:nth-child(2) img {
+  border: 1px solid #fff;
+}
+
+.charities_place_nfts_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -30px;
+}
+
+.charities_place h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 103.5%;
+  color: #313131;
+  margin: 0;
+}
+
+.dark .charities_place h4 {
+  color: #ffffff;
+}
+
+.charities_place_creators {
+  margin-top: 30px;
+}
+.charities_place_creators_header {
+  margin: 40px -30px 20px;
+}
+
+.charities_place_creators_main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.charities_place .charities_single_block_wrapper {
+  margin: 0 auto;
+}
+
+.charities_place .slick-dots li {
+  width: 15px;
+}
+
+.charities_place_header div:first-child img:nth-child(2) {
+  display: none;
+}
+
+.charities_place_header div:first-child img:nth-child(1) {
+  display: block;
+}
+
+.charities_place .charities_single_block_wrapper {
+  max-width: 260px;
+  margin-bottom: 20px;
+}
+
+.charities_place .marketplace_block {
+  margin: 0;
+}
+@media (max-width: 1199.98px) {
+  .charities_place_nfts_header {
+    margin: 0 auto;
+  }
+  .charities_place_header {
+    margin: 30px auto 0;
+  }
+  .charities_place_creators_header {
+    margin: 40px auto 20px;
+  }
+  .charities_place .charities_single_block_wrapper {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .charities_place_header div:first-child img:nth-child(2) {
+    display: block;
+  }
+  .charities_place_header div:first-child img:nth-child(1) {
+    display: none;
+  }
+  .charities_place_header {
+    flex-wrap: wrap;
+  }
+
+  .charities_place_header div:first-child,
+  .charities_place_header div:nth-child(2) {
+    width: 100%;
+    padding: 0;
+  }
+
+  .charities_place_header div:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  .charities_place_header div img {
+    width: 100%;
+  }
+  .charities_place_creators {
+    margin-top: 120px;
+  }
+
+  .charities_place .filter_block ul {
+    width: 200px;
+  }
+  .charities_place h4 {
+    font-size: 24px;
+  }
+}

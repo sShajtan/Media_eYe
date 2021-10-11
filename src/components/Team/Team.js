@@ -247,7 +247,7 @@ const Team = () => {
                   <span>Senior UI/UX Designer</span>
                 </div>
               </div>
-              <div className="team_slide_wrapper">
+              {/* <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
                     <img src="img/team/chong.png" />
@@ -287,7 +287,7 @@ const Team = () => {
                   </div>
                   <span>Senior Blockchain & Web Developer</span>
                 </div>
-              </div>
+              </div>*/}
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
@@ -332,7 +332,7 @@ const Team = () => {
                   </span>
                 </div>
               </div>
-              <div className="team_slide_wrapper">
+              {/*<div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
                     <img src="img/team/gupta.png" />
@@ -373,7 +373,7 @@ const Team = () => {
                   <span>Finance and Economic Planning</span>
                 </div>
               </div>
-              {/* <div className="team_slide_wrapper">
+               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
                     <img src="img/team/asangaliev.png" />

@@ -10,8 +10,8 @@ const ProductAuction = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
   const [showFooterProducts, setShowFooterProducts] = useState(false);
   const [checked, setChecked] = useState(false);
-    const [showPopup, setShowPopup] = useState(false);
-    const [showPopupBid, setShowPopupBid] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [showPopupBid, setShowPopupBid] = useState(false);
 
     const togglePopup = () => {
         setShowPopup(!showPopup);

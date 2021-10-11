@@ -4,6 +4,7 @@ import Down from '../../Icons/down';
 import './SelectedBlock.css';
 import { Collapse } from 'react-collapse';
 import { Button } from 'react-scroll';
+import Timer from 'react-compound-timer';
 
 const SelectedBlock = (props) => { 
 const {auction, inCollection, bundle, charity, togglePopup, togglePopupBid} = props;
@@ -27,7 +28,18 @@ const [showDropdownCharity, setShowDropdownCharity] = useState(false);
             <div className="selected_block_timer_wrapper">
                 {props.bundle ? <h6>Bundle of 5</h6> : null}
                 {props.auction ? <div className="selected_block_timer">
-                    <span>04:24:46</span>left <img src="../../img/fire.png" />
+                    <span><Timer
+                    initialTime={550000000}
+                    direction="backward"
+                >
+                    {() => (
+                        <React.Fragment>
+                          <Timer.Hours />: 
+                          <Timer.Minutes />: 
+                          <Timer.Seconds />
+                        </React.Fragment>
+                    )}
+                </Timer></span>left <img src="../../img/fire.png" />
                 </div> : null }
             </div>
         </div>

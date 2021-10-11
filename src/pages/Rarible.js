@@ -1,16 +1,15 @@
 import React from 'react';
-import BasketMain from '../components/Basket/Basket';
 
 
-const Basket = (props) => {
+const Rarible = (props) => {
   const { closeNftCollapse } = props;
   return (
     <React.Fragment>
       <div onClick={closeNftCollapse} className="marketplace">
-        <BasketMain />
+        <div></div>
       </div>
     </React.Fragment>
   );
 };
 
-export default Basket;
+export default Rarible;
