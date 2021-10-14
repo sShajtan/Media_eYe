@@ -9,7 +9,6 @@ const Community = () => {
     <div className="community">
       <div className="container">
         <img
-          alt="title"
           src="img/community_title.png"
           className="title  animate__animated animate__fadeIn wow"
           data-wow-duration="1s"

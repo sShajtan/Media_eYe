@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
-import { Link, useHistory, NavLink } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import { useWeb3React } from '@web3-react/core';
 import { isAuth } from '../../utils/auth';
@@ -153,7 +153,7 @@ const Header = (props) => {
                 ) : (
                   <div className="user_header_menu">
                     <div onClick={() => history.push('/selected')}>
-                      <img src="../../../img/b_start.png" />
+                      <img src="../../../img/b_start.png" alt="star" />
                       <span>1123</span>
                     </div>
 
@@ -162,7 +162,7 @@ const Header = (props) => {
                         className="header_avatar_wrapper"
                         onClick={toggleWalletCollapse}
                       >
-                        <img src="../../../img/avatar.png" />
+                        <img src="../../../img/avatar.png" alt="avatar" />
                       </div>
                       <div
                         className={
@@ -175,7 +175,7 @@ const Header = (props) => {
                           <div className="wallet_collapse_main">
                             <h5>{account && account}</h5>
                             <div className="wallet_row">
-                              <img src="../../../img/token_1.png" />
+                              <img src="../../../img/token_1.png" alt="token" />
                               <div>
                                 <h6>eYe Balance</h6>
                                 <span>0 eYe</span>
@@ -183,36 +183,28 @@ const Header = (props) => {
                               <button className="buy_eye">Buy eYe</button>
                             </div>
                             <div className="wallet_row">
-                              <img src="../../../img/token_2.png" />
+                              <img src="../../../img/token_2.png" alt="token" />
                               <div>
                                 <h6>Balance</h6>
                                 <span>0.037 ETH $119</span>
                               </div>
                             </div>
                             <div className="wallet_row">
-                              <img src="../../../img/token_3.png" />
+                              <img src="../../../img/token_3.png" alt="token" />
                               <div>
                                 <h6>Bidding Balance</h6>
                                 <span>0 wETH</span>
                               </div>
                             </div>
                             <div className="wallet_footer">
-                              <a
-                                className=""
-                                onClick={() =>
-                                  history.push('/account/minted-nft')
-                                }
-                              >
+                              <NavLink className="" to="/account/minted-nft">
                                 <Item />
                                 &ensp;My Profile
-                              </a>
-                              <a
-                                className=""
-                                onClick={() => history.push('/profile')}
-                              >
+                              </NavLink>
+                              <NavLink className="" to="/profile">
                                 <Edit />
                                 &ensp;Edit profile
-                              </a>
+                              </NavLink>
                             </div>
                           </div>
                         </Collapse>

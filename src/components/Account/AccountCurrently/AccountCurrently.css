@@ -424,12 +424,12 @@
 .mobile_level {
   display: none;
 }
-.filter_button {
+.creator_account .filter_button {
   background: none;
 }
 
-.filter_button.open,
-.filter_button:hover {
+.creator_account .filter_button.open,
+.creator_account .filter_button:hover {
   background: none;
 }
 
@@ -771,6 +771,12 @@
     .marketplace_block_wrapper.collection_block_wrapper {
     width: 48%;
     margin-bottom: 0;
+  }
+
+  .one_row.creator_account_main_block
+    .marketplace_block_wrapper.collection_block_wrapper {
+    max-width: 88%;
+    width: auto;
   }
 
   .two_rows .marketplace_block {

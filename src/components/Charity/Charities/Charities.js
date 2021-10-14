@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CharitiesBlock from '../CharitiesBlock/CharitiesBlock';
 import Popup from '../CharitiesPopupRegister/Popup';
 import './Charities.css';
@@ -16,11 +16,14 @@ const Charities = (props) => {
       <Popup showPopup={showPopup} togglePopup={toggleCharitiesPopup} />
       <div className="container">
         <div className="charities_header">
-          <img src="../../img/charities_header.png" />
-          <img src="../../img/charities_header_mobile.png" />
-          <a className="charities_registration" onClick={toggleCharitiesPopup}>
+          <img src="../../img/charities_header.png" alt="banner" />
+          <img src="../../img/charities_header_mobile.png" alt="banner" />
+          <button
+            className="charities_registration"
+            onClick={toggleCharitiesPopup}
+          >
             Registration
-          </a>
+          </button>
         </div>
         <h4>Charities</h4>
         <div className="charities_main">

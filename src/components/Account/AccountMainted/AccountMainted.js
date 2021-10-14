@@ -1,18 +1,15 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './AccountMainted.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import SearchIcon from '../../Icons/SearchIcon';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import AccountMenu from '../AccountMenu/AccountMenu';
-import { useHistory } from 'react-router-dom';
 import MintedBlock from '../MintedBlock/MintedBlock';
 
 const AccountMainted = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
-  const [wallet, setWallet] = useState('9999999999999999999999999999999');
+  const [wallet] = useState('9999999999999999999999999999999');
   // const [activeTab, setActiveTab] = useState('owner');
-  const dispatch = useDispatch();
-  const activeTab = useSelector((state) => state.app.activeTab);
   const [grid, setGrid] = useState('1');
   const [copyWallet, setCopyWallet] = useState(false);
 
@@ -24,16 +21,14 @@ const AccountMainted = (props) => {
     }
   });
 
-  let history = useHistory();
-
   return (
     <div className="creator_account account_collection single_collection account_minted">
       <div className="container">
         <div className="creator_account_main">
           <div className="img_line">
-            <img src="../img/creator_account.png" />
+            <img src="../img/creator_account.png" alt="line" />
             <button className="account_img_edit">
-              <img src="../img/pen.png" />
+              <img src="../img/pen.png" alt="edit" />
             </button>
           </div>
           <div className="creator_account_main_header">
@@ -44,7 +39,7 @@ const AccountMainted = (props) => {
               </button>
             </div>
             <div className="creator_account_avatar">
-              <img src="../img/creator_account_avatar.png" />
+              <img src="../img/creator_account_avatar.png" alt="avatar" />
             </div>
             <div className="collection_right_block">
               <button>
@@ -59,7 +54,7 @@ const AccountMainted = (props) => {
                   &nbsp;123 k
                 </span>
                 <span>
-                  <img src="../img/men.svg" alt="heart" />
+                  <img src="../img/men.svg" alt="men" />
                   &nbsp;55 k
                 </span>
               </div>
@@ -77,13 +72,13 @@ const AccountMainted = (props) => {
                       setCopyWallet(true);
                     }}
                   >
-                    <img src="../img/copy.png" />
+                    <img src="../img/copy.png" alt="copy" />
                   </button>
                   {copyWallet ? 'Copied!' : null}
                 </div>
               </div>
               <div className="account_balance">
-                <img src="../img/token_1.png" />
+                <img src="../img/token_1.png" alt="token" />
                 Balance: 123345 eYe ($1234)
               </div>
             </div>
@@ -102,19 +97,21 @@ const AccountMainted = (props) => {
                 <button className="2rows" onClick={() => setGrid('2')}>
                   <img
                     src={
-                      grid == '2'
+                      grid === '2'
                         ? '../../img/2rows-active.png'
                         : '../../img/2rows_' + theme + '.png'
                     }
+                    alt="two rows"
                   />
                 </button>
                 <button className="1rows" onClick={() => setGrid('1')}>
                   <img
                     src={
-                      grid == '1'
+                      grid === '1'
                         ? '../../img/1rows_active.png'
                         : '../../img/1rows_' + theme + '.png'
                     }
+                    alt="one rows"
                   />
                 </button>
               </div>
@@ -123,7 +120,7 @@ const AccountMainted = (props) => {
           </div>
           <div
             className={
-              grid == '2'
+              grid === '2'
                 ? 'creator_account_main_block two_rows'
                 : 'creator_account_main_block one_row'
             }

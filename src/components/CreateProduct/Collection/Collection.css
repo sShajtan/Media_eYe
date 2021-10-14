@@ -7,6 +7,9 @@
 .collection_product .goBack_button {
   padding-top: 0;
   color: #313139;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .dark .collection_product .goBack_button {

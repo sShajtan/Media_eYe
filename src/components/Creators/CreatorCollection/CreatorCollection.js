@@ -8,19 +8,25 @@ const CreatorCollection = (props) => {
     <div className="creator_account">
       <div className="container">
         <div className="creator_account_main">
-        <div className="img_line">
-            <img src="../../img/creator_account.png" />
-        </div>
+          <div className="img_line">
+            <img src="../../img/creator_account.png" alt="line" />
+          </div>
           <div className="creator_account_main_header">
             <div className="creator_account_avatar">
-              <img src="../../img/creator_account_avatar.png" />
+              <img src="../../img/creator_account_avatar.png" alt="avatar" />
             </div>
             <h6 className="creator_account_title">Business eYe Level 1</h6>
             <div className="creator_account_info">
-                            <div>
-                                <span><img src="../../img/heart.svg" alt="heart" />&nbsp;123 k</span>
-                                <span><img src="../../img/men.svg" alt="heart" />&nbsp;55 k</span>
-                            </div>
+              <div>
+                <span>
+                  <img src="../../img/heart.svg" alt="heart" />
+                  &nbsp;123 k
+                </span>
+                <span>
+                  <img src="../../img/men.svg" alt="heart" />
+                  &nbsp;55 k
+                </span>
+              </div>
               <h4>Username</h4>
               <div className="account_wallet">0x9276...12ae</div>
               <div className="account_info">

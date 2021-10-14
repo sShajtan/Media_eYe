@@ -24,7 +24,7 @@ const MainHowWork = (props) => {
               data-wow-delay="0.5s"
             >
               <img src="img/01.png" className="number" alt="01" />
-              <img src="img/line_sm.png" className="line_sm" />
+              <img src="img/line_sm.png" className="line_sm" alt="line" />
               <h3>CREATE</h3>
               <span>
                 Mint and embed digitized content on an NFT token, such as art,
@@ -40,7 +40,7 @@ const MainHowWork = (props) => {
               data-wow-delay="0.5s"
             >
               <img src="img/02.png" className="number" alt="01" />
-              <img src="img/line_sm.png" className="line_sm" />
+              <img src="img/line_sm.png" className="line_sm" alt="line" />
               <h3>PROMOTE</h3>
               <span>
                 Use the unlimited potential of NFTs to drive your next ad
@@ -55,7 +55,7 @@ const MainHowWork = (props) => {
               data-wow-delay="0.5s"
             >
               <img src="img/03.png" className="number" alt="01" />
-              <img src="img/line_sm.png" className="line_sm" />
+              <img src="img/line_sm.png" className="line_sm" alt="line" />
               <h3>COLLECT</h3>
               <span>
                 As NFTs grow rapidly as a new medium for collectors to store

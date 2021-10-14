@@ -3,7 +3,6 @@ import './CollectionBlock.css';
 import { useHistory } from 'react-router-dom';
 
 const CollectionBlock = (props) => {
-  const { status } = props;
   let history = useHistory();
 
   return (
@@ -14,11 +13,11 @@ const CollectionBlock = (props) => {
       >
         <div className="marketplace_block_img">
           <div className="marketplace_block_img_wrapper ">
-            <img src="../../img/05china05.png" alt="marketplace block img" />
+            <img src="../../img/05china05.png" alt="marketplace block" />
           </div>
         </div>
         <div className="collection_block_ava">
-          <img src="../../img/creator_account_avatar.png" />
+          <img src="../../img/creator_account_avatar.png" alt="avatar" />
         </div>
         <div className="marketplace_block_info">
           <h6>Collection 1 [Title]</h6>

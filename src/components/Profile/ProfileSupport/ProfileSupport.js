@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import './ProfileSupport.css';
 
 const ProfileSupport = (props) => {
-  const theme = useSelector((state) => state.app.darkTheme);
-
   return (
     <div className="profile_support_page">
       <h2>Account Support</h2>
@@ -26,7 +23,7 @@ const ProfileSupport = (props) => {
         <span>Send to support</span>
       </button>
       <button className="chat">
-        <img src="../../img/chat.png" />
+        <img src="../../img/chat.png" alt="chat_btn" />
       </button>
     </div>
   );

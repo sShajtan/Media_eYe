@@ -1,47 +1,47 @@
 import React, { useState } from 'react';
 import Timer from 'react-compound-timer';
 import './ProductAuction.css';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import Switch from 'react-switch';
 import Popup from '../../Selected/SelectPopup/Popup';
 import PopupBid from '../../Selected/SelectPopupBid/Popup';
 
 const ProductAuction = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
-  const [showFooterProducts, setShowFooterProducts] = useState(false);
   const [checked, setChecked] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showPopupBid, setShowPopupBid] = useState(false);
 
-    const togglePopup = () => {
-        setShowPopup(!showPopup);
-    };
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
 
-    const togglePopupBid = () => {
-        setShowPopupBid(!showPopupBid);
-    };
+  const togglePopupBid = () => {
+    setShowPopupBid(!showPopupBid);
+  };
 
   return (
     <div className="product product_auction">
-    <Popup showPopup={showPopup} togglePopup={togglePopup} />
-    <PopupBid showPopup={showPopupBid} togglePopupBid={togglePopupBid} />
+      <Popup showPopup={showPopup} togglePopup={togglePopup} />
+      <PopupBid showPopup={showPopupBid} togglePopupBid={togglePopupBid} />
       <div className="container">
         <div className="product_main">
           <div className="product_left">
             <div className="product_image">
-              <img src="img/product_auction.png"></img>
+              <img src="img/product_auction.png" alt="product" />
             </div>
           </div>
           <div className="product_right">
             <h2>Product ID</h2>
             <div className="product_subtitle">NFT ID: 125815</div>
-           <div className="product_header">
+            <div className="product_header">
               <span>
-                <img src="img/heart.png" />
+                <img src="img/heart.png" alt="heart" />
                 1,2 k likes
               </span>
               <span>
-                Share: <img src="img/tw.png" /> <img src="img/facebook.png" />
+                Share: <img src="img/tw.png" alt="twitter" />{' '}
+                <img src="img/facebook.png" alt="facebook" />
               </span>
             </div>
             <div className="product_description">
@@ -57,13 +57,13 @@ const ProductAuction = (props) => {
               <div className="creator_block_info_wrapper">
                 <div className="creator_block_info_header">
                   {' '}
-                  <img src="img/checked.svg" />
+                  <img src="img/checked.svg" alt="checked" />
                   Owner:{' '}
                 </div>
                 <div className="creator_block_info">
                   <div className="creator_block_info_main">
                     <div className="creator_block_info_img">
-                      <img src="img/avatar.png" />
+                      <img src="img/avatar.png" alt="avatar" />
                     </div>
                     <div className="creator_block_info_text">
                       <h6>Artist_Title</h6>
@@ -82,13 +82,13 @@ const ProductAuction = (props) => {
               <div className="creator_block_info_wrapper">
                 <div className="creator_block_info_header">
                   {' '}
-                  <img src="img/Star.svg" />
+                  <img src="img/Star.svg" alt="star" />
                   Creator:
                 </div>
                 <div className="creator_block_info">
                   <div className="creator_block_info_main">
                     <div className="creator_block_info_img">
-                      <img src="img/avatar.png" />
+                      <img src="img/avatar.png" alt="avatar" />
                     </div>
                     <div className="creator_block_info_text">
                       <h6>Artist_Title</h6>
@@ -106,22 +106,29 @@ const ProductAuction = (props) => {
               </div>
             </div>
             <div className="auction_timer_main">
-                <h4>Auction ends in</h4>
-                <div className="auction_timer">
-                <Timer
-                    initialTime={550000000}
-                    direction="backward"
-                >
-                    {() => (
-                        <React.Fragment>
-                            <div><Timer.Days /> <span>Days</span> </div>
-                            <div><Timer.Hours /> <span> Hours</span> </div>
-                           <div> <Timer.Minutes /> <span> Minutes</span> </div>
-                           <div> <Timer.Seconds /> <span> Seconds</span> </div>
-                        </React.Fragment>
-                    )}
+              <h4>Auction ends in</h4>
+              <div className="auction_timer">
+                <Timer initialTime={550000000} direction="backward">
+                  {() => (
+                    <React.Fragment>
+                      <div>
+                        <Timer.Days /> <span>Days</span>{' '}
+                      </div>
+                      <div>
+                        <Timer.Hours /> <span> Hours</span>{' '}
+                      </div>
+                      <div>
+                        {' '}
+                        <Timer.Minutes /> <span> Minutes</span>{' '}
+                      </div>
+                      <div>
+                        {' '}
+                        <Timer.Seconds /> <span> Seconds</span>{' '}
+                      </div>
+                    </React.Fragment>
+                  )}
                 </Timer>
-                </div>
+              </div>
             </div>
             <div className="product_price">
               <div className="product_price_block">
@@ -137,13 +144,23 @@ const ProductAuction = (props) => {
                 </div>
               </div>
               <div className="product_price_buttons">
-                <button className="buy_now" onClick={togglePopup}>Buy Now</button>{' '}
-                <button className="buy_now" onClick={togglePopupBid}>Place a Bid</button>{' '}
-                <button className="add_to_basket"><img src="../../img/Star.svg" />Add to Favorites</button>
+                <button className="buy_now" onClick={togglePopup}>
+                  Buy Now
+                </button>{' '}
+                <button className="buy_now" onClick={togglePopupBid}>
+                  Place a Bid
+                </button>{' '}
+                <button className="add_to_basket">
+                  <img src="../../img/Star.svg" alt="star" />
+                  Add to Favorites
+                </button>
               </div>
             </div>
             <div className="bet_limit">
-              <h6>Set bet limit&nbsp;<img src="../../img/question.png" /></h6>
+              <h6>
+                Set bet limit&nbsp;
+                <img src="../../img/question.png" alt="question" />
+              </h6>
               <div className={checked ? 'cheked_block' : null}>
                 <input placeholder="$/ETH" type="number" />
                 <Switch
@@ -220,7 +237,15 @@ const ProductAuction = (props) => {
             <div className="initial_listing_price_content">
               <div className="initial_listing_price_block">
                 <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
                 <div>$17 746,34</div>
                 <div>1</div>
@@ -228,15 +253,23 @@ const ProductAuction = (props) => {
                   <button>Buy</button>
                 </div>
                 <div>
-                  <hr noshade />
+                  <hr noshade="true" />
                 </div>
                 <div>
-                  <a>ipano</a>
+                  <a href="/">ipano</a>
                 </div>
               </div>
               <div className="initial_listing_price_block">
                 <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
                 <div>$17 746,34</div>
                 <div>1</div>
@@ -244,15 +277,23 @@ const ProductAuction = (props) => {
                   <button>Buy</button>
                 </div>
                 <div>
-                  <hr noshade />
+                  <hr noshade="true" />
                 </div>
                 <div>
-                  <a>ipano</a>
+                  <a href="/">ipano</a>
                 </div>
               </div>
               <div className="initial_listing_price_block">
                 <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
                 <div>$17 746,34</div>
                 <div>1</div>
@@ -260,15 +301,23 @@ const ProductAuction = (props) => {
                   <button>Buy</button>
                 </div>
                 <div>
-                  <hr noshade />
+                  <hr noshade="true" />
                 </div>
                 <div>
-                  <a>ipano</a>
+                  <a href="/">ipano</a>
                 </div>
               </div>
               <div className="initial_listing_price_block">
                 <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
                 <div>$17 746,34</div>
                 <div>1</div>
@@ -276,15 +325,23 @@ const ProductAuction = (props) => {
                   <button>Buy</button>
                 </div>
                 <div>
-                  <hr noshade />
+                  <hr noshade="true" />
                 </div>
                 <div>
-                  <a>ipano</a>
+                  <a href="/">ipano</a>
                 </div>
               </div>
               <div className="initial_listing_price_block">
                 <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
                 <div>$17 746,34</div>
                 <div>1</div>
@@ -292,15 +349,23 @@ const ProductAuction = (props) => {
                   <button>Buy</button>
                 </div>
                 <div>
-                  <hr noshade />
+                  <hr noshade="true" />
                 </div>
                 <div>
-                  <a>ipano</a>
+                  <a href="/">ipano</a>
                 </div>
               </div>
               <div className="initial_listing_price_block">
                 <div>
-                  <img src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
                 <div>$17 746,34</div>
                 <div>1</div>
@@ -308,10 +373,10 @@ const ProductAuction = (props) => {
                   <button>Buy</button>
                 </div>
                 <div>
-                  <hr noshade />
+                  <hr noshade="true" />
                 </div>
                 <div>
-                  <a>ipano</a>
+                  <a href="/">ipano</a>
                 </div>
               </div>
             </div>
@@ -336,7 +401,7 @@ const ProductAuction = (props) => {
               <div>10 000</div>
               <div>5 days ago</div>
               <div>
-                <a>1c2e11...6f13d</a>
+                <a href="/">1c2e11...6f13d</a>
               </div>
             </div>
             <div className="product_auction_bids_block">
@@ -346,7 +411,7 @@ const ProductAuction = (props) => {
               <div>10 000</div>
               <div>5 days ago</div>
               <div>
-                <a>1c2e11...6f13d</a>
+                <a href="/">1c2e11...6f13d</a>
               </div>
             </div>
             <div className="product_auction_bids_block">
@@ -356,7 +421,7 @@ const ProductAuction = (props) => {
               <div>10 000</div>
               <div>5 days ago</div>
               <div>
-                <a>1c2e11...6f13d</a>
+                <a href="/">1c2e11...6f13d</a>
               </div>
             </div>
             <div className="product_auction_bids_block">
@@ -366,7 +431,7 @@ const ProductAuction = (props) => {
               <div>10 000</div>
               <div>5 days ago</div>
               <div>
-                <a>1c2e11...6f13d</a>
+                <a href="/">1c2e11...6f13d</a>
               </div>
             </div>
             <div className="product_auction_bids_block">
@@ -376,7 +441,7 @@ const ProductAuction = (props) => {
               <div>10 000</div>
               <div>5 days ago</div>
               <div>
-                <a>1c2e11...6f13d</a>
+                <a href="/">1c2e11...6f13d</a>
               </div>
             </div>
             <div className="product_auction_bids_block">
@@ -386,7 +451,7 @@ const ProductAuction = (props) => {
               <div>10 000</div>
               <div>5 days ago</div>
               <div>
-                <a>1c2e11...6f13d</a>
+                <a href="/">1c2e11...6f13d</a>
               </div>
             </div>
           </div>

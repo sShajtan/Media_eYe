@@ -17,6 +17,7 @@ const Roadmap = (props) => {
           src={
             darkTheme ? 'img/roadmap_title_dark.svg' : 'img/roadmap_title.svg'
           }
+          alt="title"
         />
         <div className="roadmap_main">
           <div className="roadmap_main_block_wrapper active">
@@ -75,6 +76,7 @@ const Roadmap = (props) => {
                 ? 'img/roadmap_mobile_dark.svg'
                 : 'img/roadmap_mobile.svg'
             }
+            alt="roadmap"
           />
         </div>
       </div>

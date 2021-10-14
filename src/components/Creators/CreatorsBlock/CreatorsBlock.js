@@ -15,7 +15,7 @@ const CreatorsBlock = (props) => {
         <div className="creator_block_info">
           <div className="creator_block_info_main">
             <div className="creator_block_info_img">
-              <img src="img/avatar.png" />
+              <img src="img/avatar.png" alt="avatar" />
             </div>
             <div className="creator_block_info_text">
               <h6>Artist_Title</h6>

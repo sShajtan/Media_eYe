@@ -1,17 +1,14 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import './AccountContent.css';
 import SearchIcon from '../../Icons/SearchIcon';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import ContentBlock from '../ContentBlock/ContentBlock';
 import AccountMenu from '../AccountMenu/AccountMenu';
-import Popup from '../MintNftPopup/Popup';
-
-var ReactDOM = require('react-dom');
 
 const AccountContent = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
-  const [wallet, setWallet] = useState('9999999999999999999999999999999');
+  const [wallet] = useState('9999999999999999999999999999999');
   const [activeTab, setActiveTab] = useState('approved');
   const [grid, setGrid] = useState('1');
   const [copyWallet, setCopyWallet] = useState(false);
@@ -21,9 +18,9 @@ const AccountContent = (props) => {
       <div className="container">
         <div className="creator_account_main">
           <div className="img_line">
-            <img src="../img/creator_account.png" />
+            <img src="../img/creator_account.png" alt="line" />
             <button className="account_img_edit">
-              <img src="../img/pen.png" />
+              <img src="../img/pen.png" alt="edit" />
             </button>
           </div>
           <div className="creator_account_main_header">
@@ -34,7 +31,7 @@ const AccountContent = (props) => {
               </button>
             </div>
             <div className="creator_account_avatar">
-              <img src="../img/creator_account_avatar.png" />
+              <img src="../img/creator_account_avatar.png" alt="avatar" />
             </div>
             <div className="collection_right_block">
               <button>
@@ -49,7 +46,7 @@ const AccountContent = (props) => {
                   &nbsp;123 k
                 </span>
                 <span>
-                  <img src="../img/men.svg" alt="heart" />
+                  <img src="../img/men.svg" alt="men" />
                   &nbsp;55 k
                 </span>
               </div>
@@ -67,13 +64,13 @@ const AccountContent = (props) => {
                       setCopyWallet(true);
                     }}
                   >
-                    <img src="../img/copy.png" />
+                    <img src="../img/copy.png" alt="copy" />
                   </button>
                   {copyWallet ? 'Copied!' : null}
                 </div>
               </div>
               <div className="account_balance">
-                <img src="../img/token_1.png" />
+                <img src="../img/token_1.png" alt="token" />
                 Balance: 123345 eYe ($1234)
               </div>
             </div>
@@ -102,6 +99,7 @@ const AccountContent = (props) => {
                       ? '../../../img/approved_dark.png'
                       : '../../../img/approved.png'
                   }
+                  alt="aproved"
                 />
               </div>
               <div
@@ -119,6 +117,7 @@ const AccountContent = (props) => {
                       ? '../../../img/waiting_dark.png'
                       : '../../../img/waiting.png'
                   }
+                  alt="waiting"
                 />
               </div>
               <div
@@ -136,6 +135,7 @@ const AccountContent = (props) => {
                       ? '../../../img/not_approved_dark.png'
                       : '../../../img/not_approved.png'
                   }
+                  alt="not_approved"
                 />
               </div>
             </div>
@@ -144,19 +144,21 @@ const AccountContent = (props) => {
                 <button className="2rows" onClick={() => setGrid('2')}>
                   <img
                     src={
-                      grid == '2'
+                      grid === '2'
                         ? '../../img/2rows-active.png'
                         : '../../img/2rows_' + theme + '.png'
                     }
+                    alt="two rows"
                   />
                 </button>
                 <button className="1rows" onClick={() => setGrid('1')}>
                   <img
                     src={
-                      grid == '1'
+                      grid === '1'
                         ? '../../img/1rows_active.png'
                         : '../../img/1rows_' + theme + '.png'
                     }
+                    alt="one row"
                   />
                 </button>
               </div>
@@ -166,7 +168,7 @@ const AccountContent = (props) => {
           {activeTab === 'approved' ? (
             <div
               className={
-                grid == '2'
+                grid === '2'
                   ? 'creator_account_main_block two_rows'
                   : 'creator_account_main_block one_row'
               }
@@ -180,7 +182,7 @@ const AccountContent = (props) => {
           {activeTab === 'waiting' ? (
             <div
               className={
-                grid == '2'
+                grid === '2'
                   ? 'creator_account_main_block two_rows'
                   : 'creator_account_main_block one_row'
               }
@@ -194,7 +196,7 @@ const AccountContent = (props) => {
           {activeTab === 'not_approved' ? (
             <div
               className={
-                grid == '2'
+                grid === '2'
                   ? 'creator_account_main_block two_rows'
                   : 'creator_account_main_block one_row'
               }

@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
-import { Profiler } from 'react';
 import ProfileSubscriptionMain from '../components/Profile/ProfileSubscription/ProfileSubscription';
 import Sidebar from '../components/Profile/Sidebar/Sidebar';
-import { useSelector } from 'react-redux';
 import Popup from '../components/Profile/FeaturePopup/Popup';
-
-
 
 const ProfileSubscription = (props) => {
   const { closeNftCollapse } = props;
-    const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
-    const togglePopup = () => {
-        setShowPopup(!showPopup);
-    };
-
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
 
   return (
     <React.Fragment>

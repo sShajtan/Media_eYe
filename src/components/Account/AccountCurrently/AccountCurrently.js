@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import './AccountCurrently.css';
 import SearchIcon from '../../Icons/SearchIcon';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
@@ -11,15 +11,15 @@ const AccountCurrently = (props) => {
       <div className="container">
         <div className="creator_account_main">
           <div className="img_line">
-            <img src="../img/creator_account.png" />
+            <img src="../img/creator_account.png" alt="line" />
             <button className="account_img_edit">
-              <img src="../img/pen.png" />
+              <img src="../img/pen.png" alt="edit" />
             </button>
           </div>
           <div className="creator_account_main_header">
             <h6>Business eYe Level 1</h6>
             <div className="creator_account_avatar">
-              <img src="../img/creator_account_avatar.png" />
+              <img src="../img/creator_account_avatar.png" alt="avatar" />
             </div>
             <div className="creator_account_info">
               <span>
@@ -29,7 +29,7 @@ const AccountCurrently = (props) => {
               <h4>Username</h4>
               <div className="account_wallet">0x9276...12ae</div>
               <div className="account_balance">
-                <img src="../img/token_1.png" />
+                <img src="../img/token_1.png" alt="token" />
                 Balance: 123345 eYe ($1234)
               </div>
             </div>

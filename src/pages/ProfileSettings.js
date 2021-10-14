@@ -1,5 +1,4 @@
 import React from 'react';
-import { Profiler } from 'react';
 import ProfileSettingsMain from '../components/Profile/ProfileSettings/ProfileSettings';
 import Sidebar from '../components/Profile/Sidebar/Sidebar';
 

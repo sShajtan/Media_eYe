@@ -1,5 +1,6 @@
 .charities_single {
   padding-top: 90px;
+  padding-bottom: 70px;
 }
 
 .charities_single .charities_back {
@@ -12,6 +13,9 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .charities_single .charities_back svg {

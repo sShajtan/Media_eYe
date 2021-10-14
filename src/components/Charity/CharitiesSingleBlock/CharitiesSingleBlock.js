@@ -16,7 +16,7 @@ const CharitiesSingleBlock = (props) => {
           <div className="marketplace_block_img_wrapper ">
             <img
               src="../../../img/marketplace_img.png"
-              alt="marketplace block img"
+              alt="marketplace block"
             />
             {isAuction ? (
               <div className="selected_block_timer">
@@ -31,7 +31,7 @@ const CharitiesSingleBlock = (props) => {
                     )}
                   </Timer>
                 </span>
-                left <img src="../../img/fire.png" />
+                left <img src="../../img/fire.png" alt="auction" />
               </div>
             ) : null}
           </div>
@@ -40,11 +40,11 @@ const CharitiesSingleBlock = (props) => {
           <h6>
             Demo Title, Demo Title{' '}
             <span className="charities_percent_block">
-              <img src="../../img/heart_hand.png" />
+              <img src="../../img/heart_hand.png" alt="charities" />
               50%
             </span>
           </h6>
-          <a>@user123</a>
+          <a href="/">@user123</a>
           <div className="marketplace_block_footer">
             <span>
               <img src="../../../img/heart.svg" alt="heart" />

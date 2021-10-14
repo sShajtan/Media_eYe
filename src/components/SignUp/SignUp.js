@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import './SignUp.css';
 
@@ -14,9 +14,9 @@ const SignUp = (props) => {
       <div className="signup_right">
         <div className="container">
           <div className="signup_page_main">
-            <a className="goBack_button" onClick={() => history.goBack()}>
+            <button className="goBack_button" onClick={() => history.goBack()}>
               <span> &#8592; </span> GoBack
-            </a>
+            </button>
             <h2>SIGN UP</h2>
             <form className="signup_form">
               <div className="sign_up_col">
@@ -59,10 +59,10 @@ const SignUp = (props) => {
             </button>
             <div className="sign_up_soc_links">
               <button>
-                <img src="img/google_soc.png" />
+                <img src="img/google_soc.png" alt="google" />
               </button>
               <button>
-                <img src="img/facebook_soc.png" />
+                <img src="img/facebook_soc.png" alt="facebook" />
               </button>
             </div>
             <span>

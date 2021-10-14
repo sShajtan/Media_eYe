@@ -126,6 +126,9 @@
   text-decoration: underline;
   display: block;
   text-align: center;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 @media (max-width: 991.98px) {

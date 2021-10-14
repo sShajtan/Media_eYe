@@ -10,7 +10,7 @@ const MintedBlock = (props) => {
           <div className="marketplace_block_img_wrapper ">
             <img
               src="../../../img/marketplace_img.png"
-              alt="marketplace block img"
+              alt="marketplace block"
             />
           </div>
         </div>
@@ -18,7 +18,7 @@ const MintedBlock = (props) => {
           <h6>
             Demo Title, Demo Title <span>{count}</span>
           </h6>
-          <a>@user123</a>
+          <a href="/@user123">@user123</a>
           <div className="marketplace_block_footer"></div>
         </div>
       </div>

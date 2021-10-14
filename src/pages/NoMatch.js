@@ -9,10 +9,10 @@ const Nomatch = (props) => {
     <div className="no_match" onClick={closeNftCollapse}>
       <div className="container">
         <div className="no_match_main">
-          <a className="goBack_button" onClick={() => history.goBack()}>
+          <button className="goBack_button" onClick={() => history.goBack()}>
             <span>&#8592; </span> GoBack
-          </a>
-          <img src="../../../img/404.png" />
+          </button>
+          <img src="../../../img/404.png" alt="404" />
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import Slider from "react-slick";
-import "./Partners.css";
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import Slider from 'react-slick';
+import './Partners.css';
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -19,7 +19,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -37,14 +37,13 @@ const Partners = (props) => {
   const { toggleBusinessPopup } = props;
   const theme = useSelector((state) => state.app.darkTheme);
   const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState();
 
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    rows: 2,
+    rows: 3,
     slidesPerRow: 1,
     arrows: true,
     autoplay: true,
@@ -55,24 +54,23 @@ const Partners = (props) => {
       {
         breakpoint: 768,
         settings: {
-          rows: 3,
-          slidesToShow: 2,
-        },
-      },
-    ],
+          rows: 4,
+          slidesToShow: 2
+        }
+      }
+    ]
   };
 
   useEffect(() => {
     updateWindowDimensions();
-    window.addEventListener("resize", updateWindowDimensions);
+    window.addEventListener('resize', updateWindowDimensions);
     return () => {
-      window.removeEventListener("resize", updateWindowDimensions);
+      window.removeEventListener('resize', updateWindowDimensions);
     };
   });
 
   const updateWindowDimensions = () => {
     setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
   };
 
   return (
@@ -94,30 +92,43 @@ const Partners = (props) => {
             <Slider {...settings}>
               <div className="partners_slide_wrapper">
                 <div className="partners_slide">
-                  <a href="https://quai-invest.net/" target="_blank">
+                  <a
+                    href="https://quai-invest.net/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img src="img/partners/1.png" alt="QUAI Invest" />
                   </a>
                 </div>
               </div>
               <div className="partners_slide_wrapper">
                 <div className="partners_slide">
-                  <a href="https://filecoin.io/" target="_blank">
+                  <a
+                    href="https://filecoin.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img
                       src={
-                        theme ? "img/partners/2-dark.png" : "img/partners/2.png"
+                        theme ? 'img/partners/2-dark.png' : 'img/partners/2.png'
                       }
                       alt="Filecoin"
                     />
                   </a>
                 </div>
               </div>
+              {width > 768 ? (
+                <div className="partners_slide_wrapper empty"></div>
+              ) : null}
               <div className="partners_slide_wrapper">
                 <div className="partners_slide">
-                  <a href="https://twitter.com/squirrel_wallet" target="_blank">
+                  <a
+                    href="https://twitter.com/squirrel_wallet"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img
-                      src={
-                        theme ? "img/partners/9.png" : "img/partners/9.png"
-                      }
+                      src={theme ? 'img/partners/9.png' : 'img/partners/9.png'}
                       alt="Mogul Productions"
                     />
                   </a>
@@ -125,10 +136,14 @@ const Partners = (props) => {
               </div>
               <div className="partners_slide_wrapper">
                 <div className="partners_slide">
-                  <a href="https://ramp.network/" target="_blank">
+                  <a
+                    href="https://ramp.network/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img
                       src={
-                        theme ? "img/partners/6-dark.png" : "img/partners/6.png"
+                        theme ? 'img/partners/6-dark.png' : 'img/partners/6.png'
                       }
                       alt="Ramp"
                     />
@@ -137,10 +152,30 @@ const Partners = (props) => {
               </div>
               <div className="partners_slide_wrapper">
                 <div className="partners_slide">
-                  <a href="https://www.bigleap.com/" target="_blank">
+                  <a
+                    href="https://www.rampdefi.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img
                       src={
-                        theme ? "img/partners/4-dark.png" : "img/partners/4.png"
+                        theme ? 'img/partners/7-dark.png' : 'img/partners/7.png'
+                      }
+                      alt="moralis"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div className="partners_slide_wrapper">
+                <div className="partners_slide">
+                  <a
+                    href="https://www.bigleap.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={
+                        theme ? 'img/partners/4-dark.png' : 'img/partners/4.png'
                       }
                       alt="Big Leap"
                     />
@@ -148,28 +183,28 @@ const Partners = (props) => {
                 </div>
               </div>
 
-              {/* {this.state.width > 768 ? <div className="partners_slide_wrapper empty"></div> : null} */}
-
               <div className="partners_slide_wrapper">
                 <div className="partners_slide">
-                  <a href="https://apeswap.finance/" target="_blank">
+                  <a
+                    href="https://apeswap.finance/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img
-                      src={theme ? "img/partners/8.png" : "img/partners/8.png"}
+                      src={theme ? 'img/partners/8.png' : 'img/partners/8.png'}
                       alt="ApeSwap"
                     />
                   </a>
                 </div>
               </div>
-              {/* <div className="partners_slide_wrapper">
-                                <div className="partners_slide">
-                                    <a href="https://www.rampdefi.com/" target="_blank">
-                                        <img src={theme ? "img/partners/7-dark.png" : "img/partners/7.png"} />
-                                    </a>
-                                </div>
-                            </div> */}
+              {width > 768 ? (
+                <div className="partners_slide_wrapper empty"></div>
+              ) : null}
             </Slider>
           </div>
-          <a className="become_partner" onClick={toggleBusinessPopup} >Become a partner</a>
+          <button className="become_partner" onClick={toggleBusinessPopup}>
+            Become a partner
+          </button>
         </div>
       </div>
       <div className="container">

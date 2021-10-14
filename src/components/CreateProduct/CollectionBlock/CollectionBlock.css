@@ -76,28 +76,16 @@
   align-items: baseline;
 }
 
-.marketplace_block_info
-  .on_sale_in_checkbox
-  input[type='checkbox']
-  + label
-  > span {
+.on_sale_in_checkbox input[type='checkbox'] + label > span {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.marketplace_block_info
-  .on_sale_in_checkbox
-  input[type='checkbox']:checked
-  + label
-  > span {
+.on_sale_in_checkbox input[type='checkbox']:checked + label > span {
   border: 2px solid #0075ff;
 }
 
-.marketplace_block_info
-  .on_sale_in_checkbox
-  input[type='checkbox']:checked
-  + label
-  > span:before {
+.on_sale_in_checkbox input[type='checkbox']:checked + label > span:before {
   content: '';
   color: #0075ff;
   font-weight: 900;
@@ -108,11 +96,7 @@
   background-size: contain;
 }
 
-.collection_product
-  .on_sale_in_checkbox
-  input[type='checkbox']:checked
-  + label
-  > span {
+.on_sale_in_checkbox input[type='checkbox']:checked + label > span {
   -webkit-animation: none;
   animation: none;
 }

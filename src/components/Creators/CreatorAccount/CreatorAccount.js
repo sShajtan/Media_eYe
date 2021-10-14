@@ -7,12 +7,12 @@ const CreatorAccount = (props) => {
     <div className="creator_account">
       <div className="container">
         <div className="creator_account_main">
-        <div className="creator_accout_img_wrapper">
-            <img src="../../img/creator_account.png" />
-        </div>
+          <div className="creator_accout_img_wrapper">
+            <img src="../../img/creator_account.png" alt="line" />
+          </div>
           <div className="creator_account_main_header">
             <div className="creator_account_avatar">
-              <img src="../../img/creator_account_avatar.png" />
+              <img src="../../img/creator_account_avatar.png" alt="avatar" />
             </div>
             <h6>Business eYe Level 1</h6>
             <div className="creator_account_info">
@@ -23,7 +23,7 @@ const CreatorAccount = (props) => {
               <h4>Username</h4>
               <div className="account_wallet">0x9276...12ae</div>
               <div className="account_balance">
-                <img src="../../img/token_1.png" />
+                <img src="../../img/token_1.png" alt="token" />
                 Balance: 123345 eYe ($1234)
               </div>
               <div className="account_info">

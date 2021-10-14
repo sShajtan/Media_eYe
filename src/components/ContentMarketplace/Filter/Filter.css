@@ -24,13 +24,13 @@
   transition: 0.4s;
 }
 
-.filter_button.open,
+/* .filter_button.open,
 .filter_button:hover {
   transition: 0.4s;
   background: url('../../../assets/img/filter_hover.png') no-repeat center;
   background-size: 100% 100%;
   color: #fff;
-}
+} */
 
 /* .filter_button::before {
   content: '';
@@ -128,6 +128,7 @@
   padding: 10px;
   cursor: pointer;
   transition: 0.4s;
+  font-size: 20px;
 }
 
 .filter_block ul li .filter_title.open {
@@ -136,12 +137,11 @@
 }
 
 .filter_block ul li .filter_title span:nth-child(2) {
-  transform: rotate(90deg);
   transition: 0.4s;
 }
 
 .filter_block ul li .filter_title.open span:nth-child(2) {
-  transform: rotate(270deg);
+  transform: rotate(90deg);
   transition: 0.4s;
 }
 .filter_fields {
@@ -234,6 +234,16 @@
 .collections_filter {
   padding: 10px;
   position: relative;
+}
+
+.collections_filter_main > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 10px;
+}
+
+.collections_filter_main > div:nth-child(2) span {
+  color: rgba(174, 173, 173, 1);
 }
 
 .collections_filter input {
@@ -396,6 +406,26 @@
   color: #fff;
 }
 
+.applay_filter {
+  background: #4867c8;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 10px;
+  padding: 9px 25px;
+  margin: 30px auto;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 @-webkit-keyframes shrink-bounce {
   0% {
     transform: scale(1);
@@ -530,9 +560,9 @@
     background: #fff;
   }
 
-  .filter .filter_button:hover svg path {
+  /* .filter .filter_button:hover svg path {
     fill: #000;
-  }
+  } */
 
   .dark .filter .filter_button.open {
     background: #282550;
@@ -588,6 +618,9 @@
     border-bottom: none;
     padding: 0 0 10px;
   }
+  .content_marketplace_header_menu_mobile .categories_filter button img {
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -596,6 +629,7 @@
   }
   .price_filter select {
     margin: 0 auto;
+    width: 100%;
   }
   .price_filter_range {
     margin: 20px 0;

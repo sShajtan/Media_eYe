@@ -1,11 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
-import Linkedinprofileicon from '../Icons/LinkedInProfileIcon';
 import './Team.css';
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -19,7 +17,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -33,7 +31,6 @@ function SamplePrevArrow(props) {
 }
 
 const Team = () => {
-  const darkTheme = useSelector((state) => state.app.darkTheme);
   const settings = {
     dots: false,
     infinite: true,
@@ -84,10 +81,11 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/yampolskiy.png" />
+                    <img src="img/team/yampolskiy.png" alt="Victor Yampolsky" />
                     <a
                       href="https://www.linkedin.com/in/victor-y-76333b9b/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         width="28"
@@ -109,8 +107,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -125,10 +123,11 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/stefan.png" />
+                    <img src="img/team/stefan.png" alt="Stefan Arsenijevic" />
                     <a
                       href="https://www.linkedin.com/in/stefan-arsenijevic-73ab54111/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         width="28"
@@ -150,8 +149,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -168,10 +167,11 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/anda.png" />
+                    <img src="img/team/anda.png" alt="Felipe De Anda" />
                     <a
                       href="https://www.linkedin.com/in/felipe-de-anda-0769ba1bb/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         width="28"
@@ -193,8 +193,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -209,10 +209,14 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/shaitanov.png" />
+                    <img
+                      src="img/team/shaitanov.png"
+                      alt="Anatolii Shaitanov"
+                    />
                     <a
                       href="https://www.linkedin.com/in/anatolii-shaitanov-788a6819b/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         width="28"
@@ -234,8 +238,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -250,34 +254,7 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/egg.png" />
-                    <a target="_blank">
-                      <svg
-                        width="28"
-                        height="28"
-                        viewBox="0 0 28 28"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z"
-                          fill="url(#paint0_linear)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear"
-                            x1="13.9996"
-                            y1="2"
-                            x2="13.9996"
-                            y2="26.5"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </a>
+                    <img src="img/team/egg.png" alt="Egg Dev" />
                   </div>
                   <div>
                     <h6>Egg Dev</h6>
@@ -288,10 +265,11 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/commons.png" />
+                    <img src="img/team/commons.png" alt="Jeffrey Commons" />
                     <a
                       href="https://www.linkedin.com/in/jcommons"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         width="28"
@@ -313,8 +291,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -357,8 +335,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -378,8 +356,8 @@ const Team = () => {
 <path d="M7.2345 26.5H2.15513V10.1427H7.2345V26.5ZM4.69175 7.9115C3.06775 7.9115 1.75 6.56575 1.75 4.94175C1.75 4.16155 2.05993 3.4133 2.61162 2.86162C3.1633 2.30993 3.91155 2 4.69175 2C5.47195 2 6.2202 2.30993 6.77188 2.86162C7.32357 3.4133 7.6335 4.16155 7.6335 4.94175C7.6335 6.56575 6.31575 7.9115 4.69175 7.9115ZM26.2448 26.5H21.1768V18.5375C21.1768 16.6396 21.1383 14.2063 18.536 14.2063C15.8953 14.2063 15.4901 16.2677 15.4901 18.401V26.5H10.416V10.1427H15.2871V12.374H15.358C16.0361 11.0886 17.6925 9.73238 20.1635 9.73238C25.3041 9.73238 26.2491 13.1178 26.2491 17.5146V26.5H26.2448Z" fill="url(#paint0_linear)"/>
 <defs>
 <linearGradient id="paint0_linear" x1="13.9996" y1="2" x2="13.9996" y2="26.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#35B5FC"/>
-<stop offset="1" stop-color="#4E37EA"/>
+<stop stopColor="#35B5FC"/>
+<stop offset="1" stopColor="#4E37EA"/>
 </linearGradient>
 </defs>
 </svg>
@@ -396,10 +374,11 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/newman.png" />
+                    <img src="img/team/newman.png" alt="Shimon Newman" />
                     <a
                       href="https://www.linkedin.com/in/shimon-newman-671928153/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         width="28"
@@ -421,8 +400,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -437,7 +416,7 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/shill.png" />
+                    <img src="img/team/shill.png" alt="Veronika Sharma" />
                   </div>
                   <div>
                     <h6>King Shill</h6>
@@ -448,7 +427,7 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/veronica.png" />
+                    <img src="img/team/veronica.png" alt="Veronika Sharma" />
                   </div>
                   <div>
                     <h6>Veronika Sharma</h6>
@@ -459,10 +438,11 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/erica.png" />
+                    <img src="img/team/erica.png" alt="Ericka Schwan" />
                     <a
                       href="https://www.linkedin.com/in/erickaschwan/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         width="28"
@@ -484,8 +464,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -500,7 +480,7 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/ruslan.png" />
+                    <img src="img/team/ruslan.png" alt="Ruslan Gavriljuk" />
                   </div>
                   <div>
                     <h6>Ruslan Gavriljuk</h6>
@@ -521,10 +501,11 @@ const Team = () => {
               <div className="team_slide_wrapper">
                 <div className="team_slide">
                   <div className="team_slide_img">
-                    <img src="img/team/roma.png" />
+                    <img src="img/team/roma.png" alt="Roman Ferlii" />
                     <a
                       href="https://www.linkedin.com/in/erickaschwan/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         width="28"
@@ -546,8 +527,8 @@ const Team = () => {
                             y2="26.5"
                             gradientUnits="userSpaceOnUse"
                           >
-                            <stop stop-color="#35B5FC" />
-                            <stop offset="1" stop-color="#4E37EA" />
+                            <stop stopColor="#35B5FC" />
+                            <stop offset="1" stopColor="#4E37EA" />
                           </linearGradient>
                         </defs>
                       </svg>

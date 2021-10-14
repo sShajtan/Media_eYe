@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink, useHistory } from 'react-router-dom';
 import './CrerateProduct.css';
@@ -10,12 +10,13 @@ const CrerateProduct = (props) => {
   return (
     <div className="create_product">
       <div className="container">
-        <a className="goBack_button" onClick={() => history.goBack()}>
+        <button className="goBack_button" onClick={() => history.goBack()}>
           <span>&#8592; </span> GoBack
-        </a>
+        </button>
         <h3>Create collectible</h3>
         <span>
-          Choose “Single” if you want your collectible to be one of a kind or “Collection” if you want to sell one collectible multiple times
+          Choose “Single” if you want your collectible to be one of a kind or
+          “Collection” if you want to sell one collectible multiple times
         </span>
         <div className="create_product_main">
           <div className="create_product_block">
@@ -24,7 +25,10 @@ const CrerateProduct = (props) => {
                 {' '}
                 <div className="create_product_image_wrapper">
                   <img
-                    src={darkTheme ? '../img/single_dark.svg' : '../img/single.svg'}
+                    src={
+                      darkTheme ? '../img/single_dark.svg' : '../img/single.svg'
+                    }
+                    alt="single"
                   />
                 </div>
                 Single
@@ -41,14 +45,20 @@ const CrerateProduct = (props) => {
                         ? '../img/collection_dark.svg'
                         : '../img/collection.svg'
                     }
+                    alt="single"
                   />
                 </div>
                 Collection
               </button>
-            </NavLink> 
+            </NavLink>
           </div>
         </div>
-        <a className="view_collection_links" onClick={() => history.push("/account/collections")}>View Collections</a>
+        <button
+          className="view_collection_links"
+          onClick={() => history.push('/account/collections')}
+        >
+          View Collections
+        </button>
       </div>
     </div>
   );

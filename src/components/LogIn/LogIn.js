@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink, useHistory } from 'react-router-dom';
 import { updateLoggedInUser } from '../../store/app/appSlice';
@@ -35,9 +35,9 @@ const LogIn = (props) => {
       <div className="login_right">
         <div className="container">
           <div className="login_page_main">
-            <a className="goBack_button" onClick={() => history.goBack()}>
+            <button className="goBack_button" onClick={() => history.goBack()}>
               <span> &#8592;</span> GoBack
-            </a>
+            </button>
             <h2>LOG IN</h2>
             <form className="login_form" onSubmit={onSubmit}>
               <div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Profiler } from 'react';
 import ProfileWalletMain from '../components/Profile/ProfileWallet/ProfileWallet';
 import Sidebar from '../components/Profile/Sidebar/Sidebar';
 

@@ -1,22 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Popup.css';
 import CloseIcon from '../Icons/CloseIcon';
 
 const Popup = (props) => {
-  const { toggleMessagePopup } = props;
-  const [email, setEmail] = useState('');
-  const [showPopup, setShowPopup] = useState(false);
-
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
-
-  const toggleMainPopup = () => {
-    props.togglePopup();
-  };
-
-
-
   return (
     <React.Fragment>
       <div className={props.showPopup ? 'popup active' : 'popup'}>
@@ -32,9 +18,13 @@ const Popup = (props) => {
               <CloseIcon />
             </div>
             <div className="popup-main">
-              <h4 style={{marginBottom:"20px", textAlign: "center"}}>MeDIA eYe Public Presale Round Open</h4>
-              <form >
-                <a href="https://mediaeyenft.com/pitchdeck/whitelist/">Register</a>
+              <h4 style={{ marginBottom: '20px', textAlign: 'center' }}>
+                MeDIA eYe Public Presale Round Open
+              </h4>
+              <form>
+                <a href="https://mediaeyenft.com/pitchdeck/whitelist/">
+                  Register
+                </a>
               </form>
             </div>
           </div>

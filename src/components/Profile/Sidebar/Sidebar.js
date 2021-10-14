@@ -1,28 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
 var ReactDOM = require('react-dom');
 
 const Sidebar = (props) => {
-  const theme = useSelector((state) => state.app.darkTheme);
   const [fixSidebar, setFixSidebar] = useState(true);
   const mobileLinks = useRef(null);
 
   const focus = () => {
-    console.log(mobileLinks.current.children);
-    const element = ReactDOM.findDOMNode(
-      mobileLinks.current
-    ).getElementsByClassName('active');
-    console.log(element[0].focus());
+    ReactDOM.findDOMNode(mobileLinks.current).getElementsByClassName('active');
   };
 
   const handleScrollMen = (e) => {
-    if (
-      window.innerHeight + window.scrollY >
-      document.body.clientHeight - 40
-    ) {
+    if (window.innerHeight + window.scrollY > document.body.clientHeight - 40) {
       setFixSidebar(false);
     } else {
       setFixSidebar(true);
@@ -65,7 +56,7 @@ const Sidebar = (props) => {
           </div>
         </div>
         <div className="sidebar_avatar">
-          <img src="../../../img/creator_account_avatar.png" />
+          <img src="../../../img/creator_account_avatar.png" alt="avatar" />
           <h4>@Media_Creator</h4>
           <div className="download_sidebar">
             <label>

@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import './PutOnMarketplace.css';
-import { Collapse } from 'react-collapse';
 import Down from '../../Icons/down';
 
 const PutOnMarketplace = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
   const [activeBlockchain, setActiveBlockchain] = useState(null);
-  const [showPopup, setShowPopup] = useState(false);
   const [activeSingle, setActiveSingle] = useState(true);
   const [activeToken, setActiveToken] = useState(null);
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
 
   return (
     <div className="put_on_marketplace">
@@ -26,7 +21,7 @@ const PutOnMarketplace = (props) => {
         <div className="product_main">
           <div className="product_left">
             <div className="product_image">
-              <img src="img/product_auction.png"></img>
+              <img src="img/product_auction.png" alt="product"></img>
             </div>
             <div className="product_right">
               <h2>Product ID</h2>
@@ -34,7 +29,8 @@ const PutOnMarketplace = (props) => {
               <div className="product_header">
                 <span></span>
                 <span>
-                  Share: <img src="img/tw.png" /> <img src="img/facebook.png" />
+                  Share: <img src="img/tw.png" alt="twitter" />{' '}
+                  <img src="img/facebook.png" alt="facebook" />
                 </span>
               </div>
               <div className="product_description">
@@ -83,7 +79,8 @@ const PutOnMarketplace = (props) => {
             <div className="product_header">
               <span></span>
               <span>
-                Share: <img src="img/tw.png" /> <img src="img/facebook.png" />
+                Share: <img src="img/tw.png" alt="twitter" />{' '}
+                <img src="img/facebook.png" alt="facebook" />
               </span>
             </div>
             <div className="product_description">
@@ -99,13 +96,14 @@ const PutOnMarketplace = (props) => {
               <h5 className="blockchain_title">Blockchain</h5>
               <div>
                 <button
-                  className={activeBlockchain == 'ETH' ? 'active' : null}
+                  className={activeBlockchain === 'ETH' ? 'active' : null}
                   onClick={() => {
                     setActiveBlockchain('ETH');
                   }}
                 >
                   <img
                     src={theme ? '../img/eth_sm.png' : '../img/eth_sm_dark.png'}
+                    alt="ETH"
                   />
                   <div>
                     <h6>ETH</h6>
@@ -129,7 +127,7 @@ const PutOnMarketplace = (props) => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g clip-path="url(#clip1)">
+                      <g clipPath="url(#clip1)">
                         <path
                           d="M38.2812 18.375H36.75V12.25C36.75 5.49412 31.2559 0 24.5 0C17.7441 0 12.25 5.49412 12.25 12.25V18.375H10.7188C8.18708 18.375 6.125 20.435 6.125 22.9688V44.4062C6.125 46.94 8.18708 49 10.7188 49H38.2812C40.8129 49 42.875 46.94 42.875 44.4062V22.9688C42.875 20.435 40.8129 18.375 38.2812 18.375ZM16.3333 12.25C16.3333 7.74608 19.9961 4.08333 24.5 4.08333C29.0039 4.08333 32.6667 7.74608 32.6667 12.25V18.375H16.3333V12.25Z"
                           fill="white"
@@ -160,7 +158,7 @@ const PutOnMarketplace = (props) => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g clip-path="url(#clip2)">
+                      <g clipPath="url(#clip2)">
                         <path
                           d="M28.1695 38.626H3.67934C1.64822 38.626 0 40.274 0 42.3054V48.9959H31.8487V42.3054C31.8487 40.274 30.2006 38.626 28.1695 38.626Z"
                           fill="#A7A7A7"
@@ -191,7 +189,7 @@ const PutOnMarketplace = (props) => {
                 <span>Select from our accepted tokens.</span>
                 <div className="collection_block_buttons">
                   <button
-                    className={activeToken == 'ETH' ? 'active' : null}
+                    className={activeToken === 'ETH' ? 'active' : null}
                     onClick={() => {
                       setActiveToken('ETH');
                     }}
@@ -200,6 +198,7 @@ const PutOnMarketplace = (props) => {
                       src={
                         theme ? '../img/eth_sm.png' : '../img/eth_sm_dark.png'
                       }
+                      alt="ETH"
                     />
                     <div>
                       <h6>ETH</h6>
@@ -207,24 +206,24 @@ const PutOnMarketplace = (props) => {
                     </div>
                   </button>
                   <button
-                    className={activeToken == 'BNB' ? 'active' : null}
+                    className={activeToken === 'BNB' ? 'active' : null}
                     onClick={() => {
                       setActiveToken('BNB');
                     }}
                   >
-                    <img src="../img/bnb.png" />
+                    <img src="../img/bnb.png" alt="BNB" />
                     <div>
                       <h6>BNB</h6>
                       <span>Binance</span>
                     </div>
                   </button>
                   <button
-                    className={activeToken == 'eYe' ? 'active' : null}
+                    className={activeToken === 'eYe' ? 'active' : null}
                     onClick={() => {
                       setActiveToken('eYe');
                     }}
                   >
-                    <img src="../img/eye_sm.png" />
+                    <img src="../img/eye_sm.png" alt="eYe" />
                     <div>
                       <h6>eYe</h6>
                       <span>Media eYe</span>
@@ -263,7 +262,8 @@ const PutOnMarketplace = (props) => {
                   </div>
                 </div>
                 <h5>
-                  Charity (Optional) <img src="../../img/charity.png" />
+                  Charity (Optional){' '}
+                  <img src="../../img/charity.png" alt="charity" />
                 </h5>
                 <div className="selected_popup_bid piece_block">
                   <input type="number" placeholder="10" />
@@ -291,7 +291,7 @@ const PutOnMarketplace = (props) => {
                 <span>Select from our accepted tokens.</span>
                 <div className="collection_block_buttons">
                   <button
-                    className={activeToken == 'ETH' ? 'active' : null}
+                    className={activeToken === 'ETH' ? 'active' : null}
                     onClick={() => {
                       setActiveToken('ETH');
                     }}
@@ -300,6 +300,7 @@ const PutOnMarketplace = (props) => {
                       src={
                         theme ? '../img/eth_sm.png' : '../img/eth_sm_dark.png'
                       }
+                      alt="ETH"
                     />
                     <div>
                       <h6>ETH</h6>
@@ -307,24 +308,24 @@ const PutOnMarketplace = (props) => {
                     </div>
                   </button>
                   <button
-                    className={activeToken == 'BNB' ? 'active' : null}
+                    className={activeToken === 'BNB' ? 'active' : null}
                     onClick={() => {
                       setActiveToken('BNB');
                     }}
                   >
-                    <img src="../img/bnb.png" />
+                    <img src="../img/bnb.png" alt="BNB" />
                     <div>
                       <h6>BNB</h6>
                       <span>Binance</span>
                     </div>
                   </button>
                   <button
-                    className={activeToken == 'eYe' ? 'active' : null}
+                    className={activeToken === 'eYe' ? 'active' : null}
                     onClick={() => {
                       setActiveToken('eYe');
                     }}
                   >
-                    <img src="../img/eye_sm.png" />
+                    <img src="../img/eye_sm.png" alt="eYe" />
                     <div>
                       <h6>eYe</h6>
                       <span>Media eYe</span>
@@ -353,7 +354,8 @@ const PutOnMarketplace = (props) => {
                 </div>
                 <span>Bids below this amount won’t be allowed.</span>
                 <h5>
-                  Charity (Optional) <img src="../../img/charity.png" />
+                  Charity (Optional){' '}
+                  <img src="../../img/charity.png" alt="charity" />
                 </h5>
                 <div className="selected_popup_bid piece_block">
                   <input type="number" placeholder="10" />

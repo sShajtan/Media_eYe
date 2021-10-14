@@ -4,30 +4,26 @@ import CloseIcon from '../../../Icons/CloseIcon';
 
 const Popup = (props) => {
   const { togglePopup } = props;
-  
 
   return (
-    
     <React.Fragment>
       <div className={props.showPopup ? 'popup active' : 'popup'}>
         <div
           className="popup-wrapper mint_popup success_mint_popup"
           onClick={props.togglePopup}
         >
-          <div
-            onClick={(event) => event.stopPropagation()}
-          >
+          <div onClick={(event) => event.stopPropagation()}>
             <div className="container">
               <div className="main_mint_popup">
-              <div className="close" onClick={props.togglePopup}>
-                <CloseIcon />
+                <div className="close" onClick={props.togglePopup}>
+                  <CloseIcon />
+                </div>
+                <img src="../img/big_success.png" />
+                <h2>Your NFT has been minted successfully</h2>
               </div>
-              <img src="../img/big_success.png" />
-              <h2>Your NFT has been minted successfully</h2>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </React.Fragment>
   );

@@ -14,6 +14,7 @@ const MainInfo = (props) => {
           data-wow-duration="1.5s"
           data-wow-delay="0.5s"
           src={darkTheme ? 'img/nft_title_dark.svg' : 'img/nft_title.svg'}
+          alt="title"
         />
         <div className="main_info_main">
           <div className="main_info_left">

@@ -6,8 +6,7 @@ import CharitiesSingleBlock from '../CharitiesSingleBlock/CharitiesSingleBlock';
 import { useHistory } from 'react-router-dom';
 
 function SampleNextArrow(props) {
-  let history = useHistory();
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -21,7 +20,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -93,11 +92,17 @@ const CharitiesPlace = () => {
       <div className="container">
         <div className="charities_place_header">
           <div>
-            <img src="../../img/charities_place_header.png" />
-            <img src="../../img/charities_place_header_mobile.png" />
+            <img src="../../img/charities_place_header.png" alt="banner" />
+            <img
+              src="../../img/charities_place_header_mobile.png"
+              alt="banner"
+            />
           </div>
           <div onClick={() => history.push('/charities')}>
-            <img src="../../img/charities_place_header_right.png" />
+            <img
+              src="../../img/charities_place_header_right.png"
+              alt="banner"
+            />
           </div>
         </div>
         <div className="charities_place_main">

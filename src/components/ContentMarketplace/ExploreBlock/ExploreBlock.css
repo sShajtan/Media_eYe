@@ -1,0 +1,104 @@
+.explore_block_wrapper {
+  max-width: 23%;
+  margin: 0;
+  min-width: 265px;
+}
+
+.explore_block_wrapper .sold {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffb800 !important;
+}
+
+.explore_block_wrapper .marketplace_block_img {
+  position: relative;
+  max-width: 242px;
+  max-height: 212px;
+}
+
+.explore_block_wrapper .selected_block_timer {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+}
+
+.explore_block_wrapper .marketplace_block_img.bunding_block {
+  background: url('../../../assets/img/collection_block_border.png') no-repeat
+    center;
+  background-size: 100% 100%;
+  padding-top: 12px;
+}
+
+.explore_block_wrapper .marketplace_block_img_wrapper {
+  padding: 0 1px;
+}
+
+.marketplace .explore_block_wrapper .slick-prev {
+  background: none;
+  width: auto;
+  height: auto;
+}
+
+.marketplace .explore_block_wrapper .slick-prev::before {
+  content: '\203A';
+  opacity: 1;
+  background: none;
+  color: #0075ff;
+  font-size: 40px;
+  width: auto;
+  height: auto;
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+.marketplace .explore_block_wrapper .slick-next {
+  background: none;
+  width: auto;
+  height: auto;
+}
+
+.marketplace .explore_block_wrapper .slick-next::before {
+  content: '\203A';
+  opacity: 1;
+  background: none;
+  color: #0075ff;
+  font-size: 40px;
+  width: auto;
+  height: auto;
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+.marketplace .explore_block_wrapper .slick-next:hover {
+  margin-top: auto;
+}
+
+.explore_block_wrapper .marketplace_block_info h6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.explorer_block_buttons {
+  display: flex;
+}
+
+.explorer_block_buttons span {
+  margin: 0 5px;
+}
+
+@media (max-width: 1199.9px) {
+  .events_block h6 {
+    font-size: 20px;
+  }
+
+  .join_btn {
+    width: 75px;
+  }
+}

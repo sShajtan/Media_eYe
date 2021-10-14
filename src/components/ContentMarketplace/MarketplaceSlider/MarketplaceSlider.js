@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import MarketplaceBlock from '../MarketplaceBlock/MarketplaceBlock';
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -18,7 +18,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"

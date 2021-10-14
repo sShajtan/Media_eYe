@@ -4,32 +4,26 @@ import CloseIcon from '../../Icons/CloseIcon';
 import AddPopupBlock from '../AddPopupBlock/AddPopupBlock';
 import { useHistory } from 'react-router-dom';
 
-
-
 const Popup = (props) => {
   const { togglePopup } = props;
   let history = useHistory();
 
-
   return (
     <React.Fragment>
       <div className={props.showPopup ? 'popup active' : 'popup'}>
-        <div
-          className="popup-wrapper add_popup"
-          onClick={props.togglePopup}
-        >
-          <div
-            onClick={(event) => event.stopPropagation()}
-          >
+        <div className="popup-wrapper add_popup" onClick={props.togglePopup}>
+          <div onClick={(event) => event.stopPropagation()}>
             <div className="container">
               <div className="main_add_popup">
-              <div className="close" onClick={props.togglePopup}>
-                <CloseIcon />
-              </div>
+                <div className="close" onClick={props.togglePopup}>
+                  <CloseIcon />
+                </div>
                 <div className="main_add_popup_header">
-                    <button onClick={() => history.push("/create")}>Create NFT</button>
-                    <h4>Select minted content</h4>
-                    <div></div>
+                  <button onClick={() => history.push('/create')}>
+                    Create NFT
+                  </button>
+                  <h4>Select minted content</h4>
+                  <div></div>
                 </div>
                 <div className="main_add_popup_body">
                   <AddPopupBlock id={1} />

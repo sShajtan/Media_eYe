@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Collapse } from 'react-collapse';
 import Select from 'react-select';
@@ -19,7 +19,7 @@ let minters = [
     value: 'Artist_Title_1',
     label: (
       <span>
-        <img src={avatar} />
+        <img src={avatar} alt="avatar" />
         &ensp; Artist_Title<button>Add</button>
       </span>
     ),
@@ -30,7 +30,7 @@ let minters = [
     value: 'Artist_Title_2',
     label: (
       <span>
-        <img src={avatar} />
+        <img src={avatar} alt="avatar" />
         &ensp; Artist_Title<button>Add</button>
       </span>
     ),
@@ -41,7 +41,7 @@ let minters = [
     value: 'Artist_Title_3',
     label: (
       <span>
-        <img src={avatar} />
+        <img src={avatar} alt="avatar" />
         &ensp; Artist_Title<button>Add</button>
       </span>
     ),
@@ -52,7 +52,7 @@ let minters = [
     value: 'Artist_Title_4',
     label: (
       <span>
-        <img src={avatar} />
+        <img src={avatar} alt="avatar" />
         &ensp; Artist_Title<button>Add</button>
       </span>
     ),
@@ -61,15 +61,13 @@ let minters = [
 ];
 
 const SingleCollection = (props) => {
-  const [wallet, setWallet] = useState('9999999999999999999999999999999');
   const [showText, setShowText] = useState(false);
   const theme = useSelector((state) => state.app.darkTheme);
   const [grid, setGrid] = useState('1');
   const [showEditblock, setShowEditblock] = useState(false);
   const [activeMinters, setActiveMinters] = useState([]);
-  const [valueSelect, setValueSelect] = useState(null);
+  const [valueSelect] = useState(null);
   const activeTab = useSelector((state) => state.app.activeTab);
-  const Links = useRef(null);
   let history = useHistory();
 
   const handleChangMinters = (e) => {
@@ -80,7 +78,7 @@ const SingleCollection = (props) => {
     arr.push(e[0]);
     setActiveMinters(arr);
     minters.forEach(function (item, i) {
-      if (item.id == e[0].id) {
+      if (item.id === e[0].id) {
         minters.splice(i, 1);
       }
     });
@@ -89,7 +87,7 @@ const SingleCollection = (props) => {
   const deleteMinters = (id) => {
     let arr = activeMinters.slice();
     arr.forEach(function (item, i) {
-      if (item.id == id) {
+      if (item.id === id) {
         arr.splice(i, 1);
         minters.push(item);
       }
@@ -103,9 +101,10 @@ const SingleCollection = (props) => {
         <img
           src="../../img/close_btn.png"
           className="close_btn"
+          alt="close"
           onClick={() => deleteMinters(item.id)}
         />
-        <img src={item.img} />
+        <img src={item.img} alt="avatar" />
         <h5 onClick={() => history.push('/creator-account')}>{item.value}</h5>
       </div>
     );
@@ -116,12 +115,12 @@ const SingleCollection = (props) => {
       <div className="container">
         <div className="creator_account_main">
           <div className="img_line">
-            <img src="../../img/creator_account_1.png" />
+            <img src="../../img/creator_account_1.png" alt="line" />
             <button
               className="account_img_edit active"
               onClick={() => setShowEditblock(!showEditblock)}
             >
-              <img src="../../img/pen.png" />
+              <img src="../../img/pen.png" alt="edit" />
             </button>
             <div className="edit_block">
               <Collapse isOpened={showEditblock}>
@@ -132,52 +131,56 @@ const SingleCollection = (props) => {
           </div>
           <div className="creator_account_main_header">
             <div className="collection_left_block">
-              <a className="goBack_button" onClick={() => history.goBack()}>
+              <span className="goBack_button" onClick={() => history.goBack()}>
                 <span>&#8592; </span> Go Back
-              </a>
+              </span>
               <button onClick={() => history.push('/create/collection')}>
                 <span>Create Collection</span>
               </button>
             </div>
             <div className="creator_account_avatar">
-              <img src="../../img/creator_account_avatar.png" />
+              <img src="../../img/creator_account_avatar.png" alt="avatar" />
             </div>
             <div className="collection_right_block">
               <div className="account_links">
-                <a>
+                <a href="/">
                   <img
                     src={
                       theme
                         ? '../../img/account_links/1_dark.png'
                         : '../../img/account_links/1.png'
                     }
+                    alt="account link"
                   />
                 </a>
-                <a>
+                <a href="/">
                   <img
                     src={
                       theme
                         ? '../../img/account_links/2_dark.png'
                         : '../../img/account_links/2.png'
                     }
+                    alt="account link"
                   />
                 </a>
-                <a>
+                <a href="/">
                   <img
                     src={
                       theme
                         ? '../../img/account_links/3_dark.png'
                         : '../../img/account_links/3.png'
                     }
+                    alt="account link"
                   />
                 </a>
-                <a>
+                <a href="/">
                   <img
                     src={
                       theme
                         ? '../../img/account_links/4_dark.png'
                         : '../../img/account_links/4.png'
                     }
+                    alt="account link"
                   />
                 </a>
               </div>
@@ -227,7 +230,7 @@ const SingleCollection = (props) => {
               ovners
             </div>
             <div>
-              <img src="../../img/heart.png" />
+              <img src="../../img/heart.png" alt="heart" />
               123 k
             </div>
             <div>
@@ -235,7 +238,7 @@ const SingleCollection = (props) => {
               volume traded
             </div>
             <div>
-              <img src="../../img/eth.png" />
+              <img src="../../img/eth.png" alt="token eth" />
               ERC 721
             </div>
           </div>
@@ -281,19 +284,21 @@ const SingleCollection = (props) => {
                 <button className="2rows" onClick={() => setGrid('2')}>
                   <img
                     src={
-                      grid == '2'
+                      grid === '2'
                         ? '../../img/2rows-active.png'
                         : '../../img/2rows_' + theme + '.png'
                     }
+                    alt="two rows"
                   />
                 </button>
                 <button className="1rows" onClick={() => setGrid('1')}>
                   <img
                     src={
-                      grid == '1'
+                      grid === '1'
                         ? '../../img/1rows_active.png'
                         : '../../img/1rows_' + theme + '.png'
                     }
+                    alt="one row"
                   />
                 </button>
               </div>
@@ -308,7 +313,7 @@ const SingleCollection = (props) => {
           </div>
           <div
             className={
-              grid == '2'
+              grid === '2'
                 ? 'creator_account_main_block two_rows'
                 : 'creator_account_main_block one_row'
             }

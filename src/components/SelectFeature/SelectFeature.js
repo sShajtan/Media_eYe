@@ -2,13 +2,12 @@ import React from 'react';
 import './SelectFeature.css';
 
 const SelectFeature = (props) => {
-  const { darktheme } = props;
   return (
     <div className="select_feature">
       <div className="container">
         <h2>Select your Feature</h2>
         <span>
-          <a>Tutorial &#5125;</a>
+          <a href="/">Tutorial &#5125;</a>
         </span>
         <div className="select_feature_main">
           <div className="select_feature_block">

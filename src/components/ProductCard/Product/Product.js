@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import './Product.css';
 import { Collapse } from 'react-collapse';
 import MarketplaceBlock from '../../ContentMarketplace/MarketplaceBlock/MarketplaceBlock';
 import Popup from '../../Selected/SelectPopup/Popup';
-
 
 const Product = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
@@ -12,19 +11,18 @@ const Product = (props) => {
   const [showDropdownCharity, setShowDropdownCharity] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
-    const togglePopup = () => {
-        setShowPopup(!showPopup);
-    };
-
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
 
   return (
     <div className="product">
-    <Popup showPopup={showPopup} togglePopup={togglePopup} />
+      <Popup showPopup={showPopup} togglePopup={togglePopup} />
       <div className="container">
         <div className="product_main">
           <div className="product_left">
             <div className="product_image">
-              <img src="img/product_auction.png"></img>
+              <img src="img/product_auction.png" alt="product"></img>
             </div>
           </div>
           <div className="product_right">
@@ -32,11 +30,12 @@ const Product = (props) => {
             <div className="product_subtitle">NFT ID: 125815</div>
             <div className="product_header">
               <span>
-                <img src="img/heart.png" />
+                <img src="img/heart.png" alt="heart" />
                 1,2 k likes
               </span>
               <span>
-                Share: <img src="img/tw.png" /> <img src="img/facebook.png" />
+                Share: <img src="img/tw.png" alt="twitter" />{' '}
+                <img src="img/facebook.png" alt="facebook" />
               </span>
             </div>
             <div className="product_description">
@@ -52,22 +51,22 @@ const Product = (props) => {
               <div className="creator_block_info_wrapper">
                 <div className="creator_block_info_header">
                   {' '}
-                  <img src="img/checked.svg" />
+                  <img src="img/checked.svg" alt="checked" />
                   Owner:{' '}
                 </div>
                 <div className="creator_block_info">
                   <div className="creator_block_info_main">
                     <div className="creator_block_info_img">
-                      <img src="img/avatar.png" />
+                      <img src="img/avatar.png" alt="avatar" />
                     </div>
                     <div className="creator_block_info_text">
                       <h6>Artist_Title</h6>
                       <div>
                         <span>
-                          <img src="img/heart.svg" alt="heart" />{' '}1,2 k
+                          <img src="img/heart.svg" alt="heart" /> 1,2 k
                         </span>
                         <span>
-                          <img src="img/men.svg" alt="heart" />{' '}555
+                          <img src="img/men.svg" alt="heart" /> 555
                         </span>
                       </div>
                     </div>
@@ -77,13 +76,13 @@ const Product = (props) => {
               <div className="creator_block_info_wrapper">
                 <div className="creator_block_info_header">
                   {' '}
-                  <img src="img/Star.svg" />
+                  <img src="img/Star.svg" alt="star" />
                   Creator:
                 </div>
                 <div className="creator_block_info">
                   <div className="creator_block_info_main">
                     <div className="creator_block_info_img">
-                      <img src="img/avatar.png" />
+                      <img src="img/avatar.png" alt="avatar" />
                     </div>
                     <div className="creator_block_info_text">
                       <h6>Artist_Title</h6>
@@ -103,7 +102,7 @@ const Product = (props) => {
             <div className="product_part_collection">
               Part of Collection <span>1 [Title]</span> collection
             </div>
-            
+
             <div className="product_price">
               <div className="product_price_block">
                 <div>
@@ -118,25 +117,34 @@ const Product = (props) => {
                 </div>
               </div>
               <div className="product_price_buttons">
-                <button className="buy_now" onClick={togglePopup}>Buy Now</button>{' '}
+                <button className="buy_now" onClick={togglePopup}>
+                  Buy Now
+                </button>{' '}
                 <div className="selected_block_charity_product">
-                  <div onMouseEnter={() => setShowDropdownCharity(true)} onMouseLeave={() => setShowDropdownCharity(false)}>
-                      <img src="../../img/charity.png" /><span>&nbsp;10%</span>
-                      <div className="selected_block_price_dropdown_wrapper">
+                  <div
+                    onMouseEnter={() => setShowDropdownCharity(true)}
+                    onMouseLeave={() => setShowDropdownCharity(false)}
+                  >
+                    <img src="../../img/charity.png" alt="charity" />
+                    <span>&nbsp;10%</span>
+                    <div className="selected_block_price_dropdown_wrapper">
                       <Collapse isOpened={showDropdownCharity}>
-                          <div className="selected_block_price_dropdown_main charity">
-                              Description of charity
-                          </div>
+                        <div className="selected_block_price_dropdown_main charity">
+                          Description of charity
+                        </div>
                       </Collapse>
-                      </div>
                     </div>
+                  </div>
                 </div>
-                <button className="add_to_basket"><img src="../../img/Star.svg" />Add to Favorites</button>
+                <button className="add_to_basket">
+                  <img src="../../img/Star.svg" alt="star" />
+                  Add to Favorites
+                </button>
               </div>
             </div>
           </div>
         </div>
-                <div className="product_auction_main">
+        <div className="product_auction_main">
           <div className="product_auction_left">
             <h5>Details</h5>
             <div className="product_auction_details">
@@ -178,58 +186,98 @@ const Product = (props) => {
             </div>
             <div className="initial_listing_price_content_product">
               <div className="initial_listing_price_block_product">
+                <div>Offer</div>
                 <div>
-                    Offer
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="eth"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
                 <div>
-                  
+                  <a href="/">RiverZebra</a>
                 </div>
+                <div></div>
                 <div>an hour ago</div>
               </div>
               <div className="initial_listing_price_block_product">
+                <div>Offer</div>
                 <div>
-                    Offer
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="eth"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
                 <div>
-                  
+                  <a href="/">RiverZebra</a>
                 </div>
+                <div></div>
                 <div>an hour ago</div>
               </div>
               <div className="initial_listing_price_block_product">
+                <div>Offer</div>
                 <div>
-                    Offer
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
                 <div>
-                  
+                  <a href="/">RiverZebra</a>
                 </div>
+                <div></div>
                 <div>an hour ago</div>
               </div>
               <div className="initial_listing_price_block_product">
+                <div>Offer</div>
                 <div>
-                    Offer
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
                 <div>
-                  
+                  <a href="/">RiverZebra</a>
                 </div>
+                <div></div>
                 <div>an hour ago</div>
               </div>
               <div className="initial_listing_price_block_product">
+                <div>Offer</div>
                 <div>
-                    Offer
+                  <img
+                    src={
+                      theme
+                        ? '../../img/eth_sm.png'
+                        : '../../img/eth_sm_dark.png'
+                    }
+                    alt="ETH"
+                  />
+                  <strong>6,3</strong>&nbsp;ETH
                 </div>
-                <div><img  src={theme ? "../../img/eth_sm.png" : "../../img/eth_sm_dark.png" } /><strong>6,3</strong>&nbsp;ETH</div>
-                <div><a>RiverZebra</a></div>
                 <div>
-                  
+                  <a href="/">RiverZebra</a>
                 </div>
+                <div></div>
                 <div>an hour ago</div>
               </div>
             </div>

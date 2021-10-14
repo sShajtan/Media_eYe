@@ -5,7 +5,6 @@ import WOW from 'wowjs';
 import './MainBlock.css';
 
 const MainBlock = (props) => {
-  const { togglePopup, toggleSoonPopup } = props;
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   const [nav3, setNav3] = useState(null);

@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import { useHistory } from 'react-router-dom';
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -20,7 +20,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <button
       type="button"
@@ -59,7 +59,8 @@ const CharitiesSingle = (props) => {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2,
+          dots: true
         }
       },
       {
@@ -91,13 +92,13 @@ const CharitiesSingle = (props) => {
       />
       <div className="container">
         <div className="charities_single_main">
-          <a className="charities_back" onClick={() => history.goBack()}>
+          <button className="charities_back" onClick={() => history.goBack()}>
             <Down /> Charities
-          </a>
+          </button>
           <div className="charities_single_header">
             <div className="charities_single_header_left">
               <div className="charities_single_header_img_wrapper">
-                <img src="../../img/charity_img.png" />
+                <img src="../../img/charity_img.png" alt="charity" />
               </div>
             </div>
             <div className="charities_single_header_right">

@@ -13,10 +13,6 @@ const Popup = (props) => {
     setShowPopup(!showPopup);
   };
 
-  const toggleMainPopup = () => {
-    props.togglePopup();
-  };
-
   const handleChangeEmail = (event) => {
     setEmail(event.target.value);
   };

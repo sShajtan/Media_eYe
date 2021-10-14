@@ -294,6 +294,9 @@ h3 img {
   transition: 0.4s;
   display: flex;
   align-items: center;
+  outline: none;
+  border: none;
+  background: none;
 }
 .goBack_button span {
   font-size: 22px;

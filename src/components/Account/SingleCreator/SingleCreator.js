@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-import MarketplaceBlock from '../../ContentMarketplace/MarketplaceBlock/MarketplaceBlock';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Collapse } from 'react-collapse';
 import './SingleCreator.css';
 import SearchIcon from '../../Icons/SearchIcon';
@@ -10,17 +9,11 @@ import Down from '../../Icons/down';
 import avatar from '../../../assets/img/avatar_collection.png';
 import CollectionSingleBlock from '../CollectionSingleBlock/CollectionSingleBlock';
 
-var ReactDOM = require('react-dom');
-
 const SingleCreator = (props) => {
-  const [wallet, setWallet] = useState('9999999999999999999999999999999');
   const [showText, setShowText] = useState(false);
   const theme = useSelector((state) => state.app.darkTheme);
   const [grid, setGrid] = useState('1');
   const [showEditblock, setShowEditblock] = useState(false);
-  const [activeMinters, setActiveMinters] = useState([]);
-  const [valueSelect, setValueSelect] = useState(null);
-  const Links = useRef(null);
   let history = useHistory();
 
   return (
@@ -28,12 +21,12 @@ const SingleCreator = (props) => {
       <div className="container">
         <div className="creator_account_main">
           <div className="img_line">
-            <img src="../../../img/creator_account_1.png" />
+            <img src="../../../img/creator_account_1.png" alt="line" />
             <button
               className="account_img_edit active"
               onClick={() => setShowEditblock(!showEditblock)}
             >
-              <img src="../../../img/pen.png" />
+              <img src="../../../img/pen.png" alt="edit" />
             </button>
             <div className="edit_block">
               <Collapse isOpened={showEditblock}>
@@ -44,9 +37,9 @@ const SingleCreator = (props) => {
           </div>
           <div className="creator_account_main_header">
             <div className="collection_left_block">
-              <a className="goBack_button" onClick={() => history.goBack()}>
+              <span className="goBack_button" onClick={() => history.goBack()}>
                 <span>&#8592; </span> Go Back
-              </a>
+              </span>
               <button
                 onClick={() =>
                   history.push('/create/collection', { fromPopup: true })
@@ -56,44 +49,48 @@ const SingleCreator = (props) => {
               </button>
             </div>
             <div className="creator_account_avatar">
-              <img src="../../../img/creator_account_avatar.png" />
+              <img src="../../../img/creator_account_avatar.png" alt="avatar" />
             </div>
             <div className="collection_right_block">
               <div className="account_links">
-                <a>
+                <a href="/">
                   <img
                     src={
                       theme
                         ? '../../../img/account_links/1_dark.png'
                         : '../../../img/account_links/1.png'
                     }
+                    alt="account link"
                   />
                 </a>
-                <a>
+                <a href="/">
                   <img
                     src={
                       theme
                         ? '../../../img/account_links/2_dark.png'
                         : '../../../img/account_links/2.png'
                     }
+                    alt="account link"
                   />
                 </a>
-                <a>
+                <a href="/">
                   <img
                     src={
                       theme
                         ? '../../../img/account_links/3_dark.png'
                         : '../../../img/account_links/3.png'
                     }
+                    alt="account link"
                   />
                 </a>
-                <a>
+                <a href="/">
                   <img
                     src={
                       theme
                         ? '../../../img/account_links/4_dark.png'
                         : '../../../img/account_links/4.png'
                     }
+                    alt="account link"
                   />
                 </a>
               </div>
@@ -143,7 +140,7 @@ const SingleCreator = (props) => {
               ovners
             </div>
             <div>
-              <img src="../../../img/heart.png" />
+              <img src="../../../img/heart.png" alt="heart" />
               123 k
             </div>
             <div>
@@ -151,7 +148,7 @@ const SingleCreator = (props) => {
               volume traded
             </div>
             <div>
-              <img src="../../../img/eth.png" />
+              <img src="../../../img/eth.png" alt="token ETH" />
               ERC 721
             </div>
           </div>
@@ -164,7 +161,7 @@ const SingleCreator = (props) => {
             </div>
             <div className="add_block_colletion add_block_colletion_creator">
               <div class="active_minters_block_cretor">
-                <img src={avatar} />
+                <img src={avatar} alt="avatar" />
                 <div>
                   <h5>Artist_Title_1</h5>
                   <span>Owner</span>
@@ -176,19 +173,21 @@ const SingleCreator = (props) => {
                 <button className="2rows" onClick={() => setGrid('2')}>
                   <img
                     src={
-                      grid == '2'
+                      grid === '2'
                         ? '../../../img/2rows-active.png'
                         : '../../../img/2rows_' + theme + '.png'
                     }
+                    alt="two rows"
                   />
                 </button>
                 <button className="1rows" onClick={() => setGrid('1')}>
                   <img
                     src={
-                      grid == '1'
+                      grid === '1'
                         ? '../../../img/1rows_active.png'
                         : '../../../img/1rows_' + theme + '.png'
                     }
+                    alt="one row"
                   />
                 </button>
               </div>
@@ -198,7 +197,7 @@ const SingleCreator = (props) => {
           <div className="active_minters"></div>
           <div
             className={
-              grid == '2'
+              grid === '2'
                 ? 'creator_account_main_block two_rows'
                 : 'creator_account_main_block one_row'
             }

@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import './ProfileMain.css';
 
 const ProfileMain = (props) => {
-  const theme = useSelector((state) => state.app.darkTheme);
-
   return (
     <div className="profile_main">
       <h2>Profile</h2>

@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { RampInstantSDK } from '@ramp-network/ramp-instant-sdk';
 import { injectedConnector } from '../../../connectors';
 import './ProfileWallet.css';
- 
+
 const ProfileWallet = (props) => {
   const { chainId, account, activate, deactivate } = useWeb3React();
-  const theme = useSelector((state) => state.app.darkTheme);
-  console.log({
-    REACT_APP_RAMP_PRIVATE_KEY: process.env.REACT_APP_RAMP_PRIVATE_KEY
-  });
 
   const onConnectMetaMask = () => {
     activate(injectedConnector);
@@ -28,7 +23,7 @@ const ProfileWallet = (props) => {
     <div className="profile_wallet_page">
       <div className="profile_wallet_page_header">
         <h2>Wallet</h2>
-        <a>{account && account}</a>
+        <button>{account && account}</button>
       </div>
       <h6>Account balance</h6>
       <div className="profile_wallet_page_main">

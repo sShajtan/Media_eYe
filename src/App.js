@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Web3ReactProvider } from '@web3-react/core';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Main from './pages/Main';
 import Header from './components/Header/Header';
 import TimerPopup from './components/TimerPopup/Popup';
@@ -18,7 +18,7 @@ import './fonts/Poppins/stylesheet.css';
 import './fonts/Rambla/stylesheet.css';
 import './fonts/Roboto/stylesheet.css';
 import './fonts/neumatic/stylesheet.css';
-import { updateTimerPopup, updateRegisterPopup } from './store/app/appSlice';
+import './fonts/furore/style.css';
 import MessagePopup from './components/MessagePopup/MessagePopup';
 import ContentMarketplace from './pages/ContentMarketplace';
 import NftMarketplace from './pages/NftMarketplace';
@@ -57,6 +57,8 @@ import CharitiesSingle from './pages/CharitiesSingle';
 import CharitiesPopup from './components/Charity/CharitiesPopup/Popup';
 import PutOnMarketplace from './pages/PutOnMarketplace';
 import CharitiesPlace from './pages/CharitiesPlace';
+import Home from './pages/Home/Home';
+import ScrollToTop from './utils/scrollToTop';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -69,7 +71,6 @@ const App = () => {
   const [showMessagePopup, setshowMessagePopup] = useState(false);
   const [showNftCollapse, setShowNftCollpase] = useState(false);
   const [showWalletCollapse, setShowWalletCollapse] = useState(false);
-  const dispatch = useDispatch();
 
   const toggleSoonPopup = () => {
     setShowSoonPopup(!showSoonPopup);
@@ -114,6 +115,7 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <Web3ReactProvider getLibrary={getLibrary}>
         <div className={darkTheme ? 'App dark' : 'App'}>
           <SoonPopup showPopup={showSoonPopup} togglePopup={toggleSoonPopup} />
@@ -269,9 +271,9 @@ const App = () => {
             <Route path="/put-on-marketplace" exact>
               <PutOnMarketplace closeNftCollapse={closeNftCollapse} />
             </Route>
-            {/* <Route path="/home" exact>
+            <Route path="/home" exact>
               <Home closeNftCollapse={closeNftCollapse} />
-            </Route> */}
+            </Route>
             <Route path="/charity-place" exact>
               <CharitiesPlace
                 closeNftCollapse={closeNftCollapse}

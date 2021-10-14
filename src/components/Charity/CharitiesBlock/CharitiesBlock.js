@@ -13,7 +13,7 @@ const CharitiesBlock = (props) => {
     >
       <div className="charities_block_left">
         <div className="charities_block_img_wrapper">
-          <img src="../../img/marketplace_img.png" />
+          <img src="../../img/marketplace_img.png" alt="marketplace" />
         </div>
       </div>
       <div className="charities_block_right">

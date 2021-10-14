@@ -1,18 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Popup.css';
 import '../../Account/AddPopup/Popup.css';
 import CloseIcon from '../../Icons/CloseIcon';
-import { useHistory } from 'react-router-dom';
-import Slider from 'react-slick';
-import { useSelector } from 'react-redux';
-import Down from '../../Icons/down';
-import { Collapse } from 'react-collapse';
 
 const Popup = (props) => {
   const { togglePopup } = props;
-  const theme = useSelector((state) => state.app.darkTheme);
-  const [activeToken, setActiveToken] = useState(null);
-  let history = useHistory();
 
   return (
     <React.Fragment>
@@ -39,7 +31,7 @@ const Popup = (props) => {
                       recommended.
                     </span>
                     <label>
-                      <input type="file" ection_block />
+                      <input type="file" />
                     </label>
                   </div>
                   <div className="collection_block charity_block_input">

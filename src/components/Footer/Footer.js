@@ -10,14 +10,17 @@ import TwitterIcon from '../Icons/TwitterIcon';
 import './Footer.css';
 
 const Footer = (props) => {
-  const { toggleSoonPopup } = props;
   return (
     <footer>
       <div className="container">
         <div className="footer_main">
           <div className="footer_left">
             <a href="/">
-              <img className="footer_logo" src="../../../img/logo.png" alt="logo" />
+              <img
+                className="footer_logo"
+                src="../../../img/logo.png"
+                alt="logo"
+              />
             </a>
             <div className="footer_menu">
               <ul>
@@ -28,7 +31,7 @@ const Footer = (props) => {
                   <NavLink to="/gallerey">Gallery</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/creators">Creators</NavLink> 
+                  <NavLink to="/creators">Creators</NavLink>
                 </li>
               </ul>
               <ul>

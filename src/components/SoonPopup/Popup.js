@@ -13,10 +13,6 @@ const Popup = (props) => {
     setShowPopup(!showPopup);
   };
 
-  const toggleMainPopup = () => {
-    props.togglePopup();
-  };
-
   return (
     <React.Fragment>
       <div className={props.showPopup ? 'popup active' : 'popup'}>
@@ -34,13 +30,25 @@ const Popup = (props) => {
             <div className="popup-main soon">
               <h4>We are building something great!</h4>
               <div className="links">
-                <a href="https://medium.com/@MeDIAeYeNFT" target="_blank">
+                <a
+                  href="https://medium.com/@MeDIAeYeNFT"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <MediumIcon />
                 </a>
-                <a href="https://t.me/MeDIAeYeNFTofficial" target="_blank">
+                <a
+                  href="https://t.me/MeDIAeYeNFTofficial"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Telegramicon />
                 </a>
-                <a href="https://twitter.com/MeDIAeYeNFT" target="_blank">
+                <a
+                  href="https://twitter.com/MeDIAeYeNFT"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <TwitterIcon />
                 </a>
               </div>

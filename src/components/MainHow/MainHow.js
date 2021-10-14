@@ -14,6 +14,7 @@ const MainHow = (props) => {
         data-wow-duration="1.5s"
         data-wow-delay="0.5s"
         src={darkTheme ? 'img/how_title_dark.svg' : 'img/how_title.svg'}
+        alt="title"
       />
       <div className="main_how_main_wrapper">
         <div className="container">
@@ -24,7 +25,7 @@ const MainHow = (props) => {
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"
                 src={darkTheme ? 'img/left_nft_dark.svg' : 'img/left_nft.svg'}
-                alt="nft_image"
+                alt="nft"
               />
             </div>
             <div className="main_how_center">

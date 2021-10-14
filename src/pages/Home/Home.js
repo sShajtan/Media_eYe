@@ -1,34 +1,24 @@
 import React, { useState } from 'react';
-
 import './Home.scss';
 import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import MarketplaceSlider from '../../components/ContentMarketplace/MarketplaceSlider/MarketplaceSlider';
-import MarketplaceMain from '../../components/ContentMarketplace/MarketplaceMain/MarketplaceMain';
 import BannerItem from '../../components/Banner/BannerItem';
 import SampleNextArrow from '../../components/SampleNextArrow/SampleNextArrow';
 import SamplePrevArrow from '../../components/SamplePrevArrow/SamplePrevArrow';
 import CollectionBlock from '../../components/Account/CollectionBlock/CollectionBlock';
 import CreatorsBlockInfo from '../../components/Creators/CreatorsBlockInfo/CreatorsBlockInfo';
-import EventCard from '../../components/EventCard/EventCard';
-import { Collapse } from 'react-collapse';
-import All from '../../components/Icons/Categories/All';
-import Entertaiment from '../../components/Icons/Categories/Entertaiment';
-import Media from '../../components/Icons/Categories/Media';
-import Art from '../../components/Icons/Categories/Art';
-import Crypto from '../../components/Icons/Categories/Crypto';
-import Business from '../../components/Icons/Categories/Business';
-import Sport from '../../components/Icons/Categories/Sport';
 import Filter from '../../components/ContentMarketplace/Filter/Filter';
+import EventsBlock from '../../components/Events/EventsBlock/EventsBlock';
+import CharityBtn from '../../components/ContentMarketplace/Filter/CharityBtn/CharityBtn';
+import ExploreBlock from '../../components/ContentMarketplace/ExploreBlock/ExploreBlock';
+import MenuMarketplace from '../../components/ContentMarketplace/MenuMarketplace/MenuMarketplace';
+import { Collapse } from 'react-collapse';
+
 const Home = (props) => {
-
   const darkTheme = useSelector((state) => state.app.darkTheme);
-  const [showMobileCategories, setShowMobileCategories] = useState(false);
-
-  const toggleMobileCategories = () => {
-    setShowMobileCategories(!showMobileCategories);
-  };
-
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [activeDays, setActiveDays] = useState(7);
   const { closeNftCollapse } = props;
 
   const settings = {
@@ -39,8 +29,10 @@ const Home = (props) => {
     rows: 1,
     slidesPerRow: 1,
     arrows: false,
+    cssEase: 'linear',
+    speed: 1000,
     autoplay: true,
-    pauseOnHover: true,
+    pauseOnHover: true
   };
 
   const settingsCollention = {
@@ -73,18 +65,24 @@ const Home = (props) => {
         breakpoint: 574,
         settings: {
           dots: true,
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 374,
+        settings: {
+          dots: true,
           slidesToShow: 1
         }
       }
     ]
   };
-  const settingsSellers= {
+  const settingsSellers = {
     dots: false,
     infinite: true,
-    slidesToShow:  1,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    rows: 1,
-    slidesPerRow: 1,
+    rows: 3,
     arrows: true,
     autoplay: false,
     pauseOnHover: true,
@@ -107,8 +105,15 @@ const Home = (props) => {
       {
         breakpoint: 574,
         settings: {
-          dots: true,
-          slidesToShow: 1
+          slidesToShow: 2,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          dots: true
         }
       }
     ]
@@ -132,6 +137,14 @@ const Home = (props) => {
         settings: {
           slidesToShow: 1
         }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          arrows: true,
+          dots: true
+        }
       }
     ]
   };
@@ -141,32 +154,41 @@ const Home = (props) => {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
-    rows: 1,
-    slidesPerRow: 1,
     arrows: true,
-    autoplay: false,
-    pauseOnHover: true,
+    easing: 'linear',
+    speed: 1000,
+    lazyLoad: true,
+    swipeToSlide: true,
+    pauseOnHover: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
         breakpoint: 991,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 4,
+          arrows: false
         }
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          dots: true
+          slidesToShow: 3,
+          arrows: false
         }
       },
       {
         breakpoint: 574,
         settings: {
           dots: true,
-          slidesToShow: 1
+          slidesToShow: 3,
+          arrows: false
         }
       }
     ]
@@ -174,303 +196,214 @@ const Home = (props) => {
 
   return (
     <React.Fragment>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
       <div onClick={closeNftCollapse} className="home-page marketplace">
-       <div className='container'>
-         <div className='home-page-head'>
-           <div className='home-page-create'
-            style={{backgroundImage: "url('../img/home-top.png')"}}
-           >
-             <img src='../img/home-head.png'
-                  className="home-page-create__img"
-                  alt='' />
-             <div className='home-page-create__title'>
-               Create your <br/> own NFT
-             </div>
-             <button className="load_more">Create NFT</button>
-           </div>
-           <div className='home-head-banners'>
-             <Slider {...settings}>
-               <BannerItem
-                 title="Demo title1"
-                 image="home-head-banner.png"
-               />
-               <BannerItem
-                 title="Demo title1"
-                 image="home1.png"
-               />
-               <BannerItem
-                 title="Demo title1"
-                 image="home1.png"
-               />
-             </Slider>
+        <div className="container">
+          <div className="home-page-head">
+            <div
+              className="home-page-create"
+              style={{ backgroundImage: "url('../img/home-top.png')" }}
+            >
+              <img
+                src="../img/home-head.png"
+                className="home-page-create__img"
+                alt=""
+              />
+              <div className="home-page-create__title">
+                Create your <br /> NFT
+              </div>
+              <button className="load_more">Create NFT</button>
+            </div>
+            <div className="home-head-banners">
+              <Slider {...settings}>
+                <div className="home-head-banners_slide_wrapper">
+                  <div className="home-head-banners_slide">
+                    <img src="../../../img/home1.png" alt="title" />
+                    <h5>Demo title1</h5>
+                  </div>
+                </div>
+                <div className="home-head-banners_slide_wrapper">
+                  <div className="home-head-banners_slide">
+                    <img src="../../../img/home1.png" alt="title" />
+                    <h5>Demo title1</h5>
+                  </div>
+                </div>
+                <div className="home-head-banners_slide_wrapper">
+                  <div className="home-head-banners_slide">
+                    <img src="../../../img/home1.png" alt="title" />
+                    <h5>Demo title1</h5>
+                  </div>
+                </div>
+              </Slider>
+            </div>
+          </div>
+          <div className="home-banners">
+            <Slider {...settingsBanners}>
+              <BannerItem title="Demo title1" image="home1.png" />
+              <BannerItem title="Demo title1" image="home1.png" />
+              <BannerItem title="Demo title1" image="home1.png" />
+              <BannerItem title="Demo title1" image="home1.png" />
+              <BannerItem title="Demo title1" image="home1.png" />
+              <BannerItem title="Demo title1" image="home1.png" />
+            </Slider>
+          </div>
 
-           </div>
+          <h4
+            className={`${
+              darkTheme
+                ? 'subtitle subtitle_collection'
+                : 'subtitle subtitle_collection subtitle_white'
+            }`}
+          >
+            Top collections in
+            <span
+              className="gradient-txt"
+              onClick={() => setShowDropdown(!showDropdown)}
+            >
+              {activeDays} days{' '}
+            </span>
+            <img
+              src="../img/arrow.svg"
+              alt="down"
+              className={showDropdown ? 'active' : null}
+            />
+            <Collapse isOpened={showDropdown}>
+              <div className="selected_block_price_dropdown_main home_dropdown">
+                <span
+                  className={activeDays === 1 ? 'active' : null}
+                  onClick={() => {
+                    setActiveDays(1);
+                    setShowDropdown(false);
+                  }}
+                >
+                  1 day
+                </span>
+                <span
+                  className={activeDays === 7 ? 'active' : null}
+                  onClick={() => {
+                    setActiveDays(7);
+                    setShowDropdown(false);
+                  }}
+                >
+                  7 days
+                </span>
+                <span
+                  className={activeDays === 20 ? 'active' : null}
+                  onClick={() => {
+                    setActiveDays(30);
+                    setShowDropdown(false);
+                  }}
+                >
+                  30 days
+                </span>
+              </div>
+            </Collapse>
+          </h4>
+          <div className="collection-slider collection home_top_collection">
+            <Slider {...settingsCollention}>
+              <CollectionBlock />
+              <CollectionBlock />
+              <CollectionBlock />
+              <CollectionBlock />
+              <CollectionBlock />
+              <CollectionBlock />
+              <CollectionBlock />
+              <CollectionBlock />
+            </Slider>
+          </div>
 
-         </div>
-         <div className="home-banners">
-           <Slider {...settingsBanners}>
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
+          <h4
+            className={`${darkTheme ? 'subtitle' : 'subtitle subtitle_white'}`}
+          >
+            Top bids
+            <img src="../img/hot.svg" alt="hot" />
+          </h4>
+          <div className="collection-slider marketplace-slider">
+            <MarketplaceSlider />
+          </div>
+          <h4
+            className={`${darkTheme ? 'subtitle' : 'subtitle subtitle_white'}`}
+          >
+            Top sellers
+          </h4>
+          <div className="collection-slider sellers-slider">
+            <Slider {...settingsSellers}>
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+              <CreatorsBlockInfo link="#" />
+            </Slider>
+          </div>
 
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-             <BannerItem
-               title="Demo title1"
-               image="home1.png"
-             />
-           </Slider>
-
-         </div>
-         <h4
-           className={`${darkTheme ? "subtitle subtitle_collection" : "subtitle subtitle_collection subtitle_white"}`}
-         >
-           Top collections in
-           <span className="gradient-txt">
-                7 days
-           </span>
-           <img src='../img/arrow.svg' alt='' />
-         </h4>
-         <div className='collection-slider collection'>
-           <Slider {...settingsCollention}>
-             <CollectionBlock />
-             <CollectionBlock />
-             <CollectionBlock />
-             <CollectionBlock />
-             <CollectionBlock />
-             <CollectionBlock />
-             <CollectionBlock />
-             <CollectionBlock />
-           </Slider>
-         </div>
-
-         <h4
-           className={`${darkTheme ? "subtitle" : "subtitle subtitle_white"}`}
-         >
-           Top bids
-           <img src='../img/hot.svg' alt='' />
-         </h4>
-         <div className='collection-slider marketplace-slider'>
-           <MarketplaceSlider  />
-         </div>
-         <h4
-           className={`${darkTheme ? "subtitle" : "subtitle subtitle_white"}`}
-         >
-           Top sellers
-         </h4>
-         <div className='collection-slider sellers-slider mobile-hidden'>
-           <Slider {...settingsSellers}>
-             <div className='sellers-item'>
-               <div className='sellers-item-wrapper'>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-               </div>
-
-             </div>
-             <div className='sellers-item'>
-               <div className='sellers-item-wrapper'>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-               </div>
-
-             </div>
-
-           </Slider>
-         </div>
-         <div className='collection-slider sellers-slider mobile'>
-           <Slider {...settingsSellers}>
-
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-                 <div className="sellers-column">
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                   <CreatorsBlockInfo link="#"/>
-                 </div>
-               <div className="sellers-column">
-                 <CreatorsBlockInfo link="#"/>
-                 <CreatorsBlockInfo link="#"/>
-                 <CreatorsBlockInfo link="#"/>
-                 <CreatorsBlockInfo link="#"/>
-               </div>
-               <div className="sellers-column">
-                 <CreatorsBlockInfo link="#"/>
-                 <CreatorsBlockInfo link="#"/>
-                 <CreatorsBlockInfo link="#"/>
-                 <CreatorsBlockInfo link="#"/>
-               </div>
-
-           </Slider>
-         </div>
-         <h4
-           className={`${darkTheme ? "subtitle" : "subtitle subtitle_white"}`}
-         >
-           Popular events
-         </h4>
-         <div className='events'>
-           <div className='collection-slider'>
-             <Slider {...settingsEvent}>
-               <EventCard/>
-               <EventCard/>
-               <EventCard/>
-               <EventCard/>
-             </Slider>
-           </div>
-
-         </div>
-         <h4
-           className={`${darkTheme ? "subtitle" : "subtitle subtitle_white"}`}
-         >
-           Explore
-         </h4>
-         <div className='collection-slider'>
-           <div className="content_marketplace_header_main_wrapper">
-             <div className="content_marketplace_header_menu_mobile">
-               <button
-                 className={
-                   showMobileCategories
-                     ? 'categories_mobile_button open'
-                     : 'categories_mobile_button'
-                 }
-                 onClick={toggleMobileCategories}
-               >
-                 Categories
-               </button>
-               <Collapse isOpened={showMobileCategories}>
-                 <div
-                   className="filter_fields categories_filter"
-                   onClick={(event) => event.stopPropagation()}
-                 >
-                   <button>
-                     <All />
-                     All
-                   </button>
-                   <button>
-                     <Entertaiment />
-                     Gaming
-                   </button>
-                   <button>
-                     <Media />
-                     Media
-                   </button>
-                   <button>
-                     <Art />
-                     Art
-                   </button>
-                   <button>
-                     <Crypto />
-                     Crypto
-                   </button>
-                   <button>
-                     <Business />
-                     Business
-                   </button>
-                   <button>
-                     <Sport />
-                     Sports
-                   </button>
-                 </div>
-               </Collapse>
-             </div>
-             <div className="content_marketplace_header_menu">
-               <button className="active">All</button>
-               <button>Gaming</button>
-               <button>Media</button>
-               <button>Art</button>
-               <button>Crypto</button>
-               <button>Business</button>
-               <button>Sports</button>
-             </div>
-             <Filter />
-           </div>
-           <MarketplaceMain />
-         </div>
-
-       </div>
-
+          <div className="events">
+            <h4
+              className={`${
+                darkTheme ? 'subtitle' : 'subtitle subtitle_white'
+              }`}
+            >
+              Popular events
+            </h4>
+            <div className="collection-slider">
+              <Slider {...settingsEvent}>
+                <EventsBlock />
+                <EventsBlock />
+                <EventsBlock />
+                <EventsBlock />
+              </Slider>
+            </div>
+          </div>
+          <h4
+            className={`${darkTheme ? 'subtitle' : 'subtitle subtitle_white'}`}
+          >
+            Explore
+          </h4>
+          <div>
+            <div className="content_marketplace_header_main_wrapper">
+              <MenuMarketplace />
+              <CharityBtn />
+              <Filter />
+            </div>
+            <div className="explore_main">
+              <ExploreBlock isSold={true} />
+              <ExploreBlock isAuction={true} />
+              <ExploreBlock isBunding={true} />
+              <ExploreBlock />
+              <ExploreBlock />
+              <ExploreBlock />
+              <ExploreBlock />
+              <ExploreBlock />
+            </div>
+            <button className="load_more">Load more</button>
+          </div>
+        </div>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default Home;
