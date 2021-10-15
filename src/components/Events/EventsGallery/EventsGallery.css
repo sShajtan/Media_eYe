@@ -1,0 +1,156 @@
+.events_gallery {
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+.events_gallery_header {
+  position: relative;
+  margin: 40px auto;
+  width: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+.events_gallery img:nth-child(1) {
+  display: block;
+}
+
+.events_gallery img:nth-child(2) {
+  display: none;
+}
+
+.events_gallery_registration {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+  background: url('../../../assets/img/learn_more_button_bg.png') no-repeat
+    center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s;
+  width: 130px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  left: 6%;
+}
+
+.events_gallery_registration::before {
+  content: '';
+  background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.events_gallery_registration:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .events_gallery_registration:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.events_gallery_registration:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.events_gallery h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 103.5%;
+  color: rgba(49, 49, 57, 1);
+  margin: 0 -40px 20px -40px;
+}
+
+.dark .events_gallery h4 {
+  color: #ffffff;
+}
+
+.events_gallery_main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.events_gallery_main .events_block {
+  max-width: 49%;
+  margin: 20px 0;
+}
+
+@media (max-width: 1199.98px) {
+  .events_gallery_header {
+    width: 100%;
+  }
+  .events_gallery h4 {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .events_gallery_main .events_block {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+}
+@media (max-width: 768.98px) {
+  .events_gallery_header img:nth-child(1) {
+    display: none;
+  }
+
+  .events_gallery_header img:nth-child(2) {
+    display: block;
+    width: 100%;
+  }
+  .events_gallery .join_btn {
+    width: 85px !important;
+  }
+  .events_gallery_registration {
+    bottom: 45%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .events_gallery .join_btn {
+    width: 100px !important;
+  }
+  .charities_header {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  .charities_header img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .events_gallery .join_btn {
+    width: 75px !important;
+  }
+}

@@ -1,12 +1,13 @@
 .home-page {
   padding: 130px 0 50px;
+  overflow-x: hidden;
 
   .container {
   }
 }
 
 .home-banners {
-  margin: 40px -80px 0 -60px;
+  margin: 40px -90px 0 -90px;
 
   .home-banners-item {
   }
@@ -52,7 +53,7 @@
 .home-page-head {
   display: flex;
   justify-content: space-between;
-  margin: 0 -60px;
+  margin: 0 -90px;
 }
 
 .home-head-banners_slide_wrapper {
@@ -99,10 +100,22 @@
     li {
       width: 78px;
       height: 4px;
-      background: #313139;
+      background: #313131;
       margin: 0 13px;
+      transition: 1s;
+      width: 1%;
 
       &.slick-active {
+        button {
+          width: 100%;
+          transition: 4s;
+        }
+      }
+      button {
+        width: 0;
+        height: 100%;
+        padding: 0;
+        transition: 0.3s;
         background: #0085ff;
       }
     }
@@ -111,6 +124,10 @@
       opacity: 0 !important;
     }
   }
+}
+
+.dark .home-head-banners .slick-dots li {
+  background: #ffffff;
 }
 
 .subtitle {
@@ -281,8 +298,12 @@
 .marketplace .home-banners .slick-next {
   right: -25px;
 }
+.home-banners::-webkit-scrollbar {
+  width: 0;
+  opacity: 0;
+}
 
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   .home-banners {
     margin: 40px 0 0 0;
   }
@@ -292,6 +313,9 @@
   .subtitle {
     margin: 59px 0 0;
   }
+}
+
+@media (max-width: 1199px) {
 }
 
 @media (max-width: 992px) {
@@ -455,6 +479,15 @@
 }
 
 @media (max-width: 470px) {
+  .home-banners .home-banners-item {
+    width: 100%;
+    min-width: 100%;
+    height: 105px;
+    padding: 5px;
+    .home-banners-item__title {
+      display: none;
+    }
+  }
   .home-page {
     .container {
       padding: 0 20px;
@@ -464,7 +497,7 @@
     width: 100%;
   }
   .home-banners {
-    margin: 20px -20px;
+    margin: 20px 0;
   }
   .collection-slider.sellers-slider .creator_block_info {
     margin: 10px 20px;
@@ -480,9 +513,9 @@
   }
 
   .home-banners .home-banners-item {
-    width: 100px;
-    min-width: 100px;
-    height: 110px;
+    width: 100%;
+    min-width: 100%;
+    height: 105px;
     padding: 5px;
   }
   .join_btn {

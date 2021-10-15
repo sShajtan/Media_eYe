@@ -59,6 +59,7 @@ import PutOnMarketplace from './pages/PutOnMarketplace';
 import CharitiesPlace from './pages/CharitiesPlace';
 import Home from './pages/Home/Home';
 import ScrollToTop from './utils/scrollToTop';
+import EventsGallery from './pages/EventsGallery';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -290,6 +291,13 @@ const App = () => {
             </Route>
             <Route path="/charities/single" exact>
               <CharitiesSingle
+                closeNftCollapse={closeNftCollapse}
+                showPopup={showCharitiesPopup}
+                togglePopup={toggleCharitiesPopup}
+              />
+            </Route>
+            <Route path="/events-gallery" exact>
+              <EventsGallery
                 closeNftCollapse={closeNftCollapse}
                 showPopup={showCharitiesPopup}
                 togglePopup={toggleCharitiesPopup}

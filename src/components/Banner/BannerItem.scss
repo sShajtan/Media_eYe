@@ -2,8 +2,8 @@
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50.77%);
   border-radius: 14px;
   position: relative;
-  width: 90%;
-  height: 255px;
+  max-width: 250px;
+  height: 235px;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 25px 28px;
@@ -29,5 +29,17 @@
     color: #ffffff;
     z-index: 2;
     position: relative;
+  }
+}
+
+@media (max-width: 1290px) {
+  .home-banners-item {
+    height: 215px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .home-banners-item {
+    height: 195px;
   }
 }

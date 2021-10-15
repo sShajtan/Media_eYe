@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Home.scss';
 import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
@@ -14,12 +14,14 @@ import CharityBtn from '../../components/ContentMarketplace/Filter/CharityBtn/Ch
 import ExploreBlock from '../../components/ContentMarketplace/ExploreBlock/ExploreBlock';
 import MenuMarketplace from '../../components/ContentMarketplace/MenuMarketplace/MenuMarketplace';
 import { Collapse } from 'react-collapse';
+import Glide, { Slide } from 'react-glidejs';
 
 const Home = (props) => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeDays, setActiveDays] = useState(7);
   const { closeNftCollapse } = props;
+  const gliderRef = useRef(null);
 
   const settings = {
     dots: true,
@@ -30,6 +32,7 @@ const Home = (props) => {
     slidesPerRow: 1,
     arrows: false,
     cssEase: 'linear',
+    fade: true,
     speed: 1000,
     autoplay: true,
     pauseOnHover: true
@@ -149,53 +152,58 @@ const Home = (props) => {
     ]
   };
 
-  const settingsBanners = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: true,
-    easing: 'linear',
-    speed: 1000,
-    lazyLoad: true,
-    swipeToSlide: true,
-    pauseOnHover: false,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 4
-        }
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 4,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 3,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 574,
-        settings: {
-          dots: true,
-          slidesToShow: 3,
-          arrows: false
-        }
-      }
-    ]
-  };
+  // const settingsBanners = {
+  //   dots: false,
+  //   infinite: true,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   arrows: true,
+  //   easing: 'linear',
+  //   speed: 1000,
+  //   lazyLoad: true,
+  //   swipeToSlide: true,
+  //   pauseOnHover: false,
+  //   nextArrow: <SampleNextArrow />,
+  //   prevArrow: <SamplePrevArrow />,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1199,
+  //       settings: {
+  //         slidesToShow: 4
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 991,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         arrows: false
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         arrows: false
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 574,
+  //       settings: {
+  //         dots: true,
+  //         slidesToShow: 3,
+  //         arrows: false
+  //       }
+  //     }
+  //   ]
+  // };
 
   return (
     <React.Fragment>
+      <link
+        rel="stylesheet"
+        href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+      />
+
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -252,14 +260,35 @@ const Home = (props) => {
             </div>
           </div>
           <div className="home-banners">
-            <Slider {...settingsBanners}>
+            <Glide
+              ref={gliderRef}
+              type={'carousel'}
+              perView={5}
+              animationTimingFunc={'linear'}
+              animationDuration={800}
+              customSlideAnimation={{
+                timeout: 500,
+                classNames: 'fade'
+              }}
+              breakpoints={{
+                992: {
+                  perView: 4
+                },
+                768: {
+                  perView: 3
+                }
+              }}
+            >
               <BannerItem title="Demo title1" image="home1.png" />
               <BannerItem title="Demo title1" image="home1.png" />
               <BannerItem title="Demo title1" image="home1.png" />
               <BannerItem title="Demo title1" image="home1.png" />
               <BannerItem title="Demo title1" image="home1.png" />
               <BannerItem title="Demo title1" image="home1.png" />
-            </Slider>
+              <BannerItem title="Demo title1" image="home1.png" />
+              <BannerItem title="Demo title1" image="home1.png" />
+            </Glide>
+            {/* <Slider {...settingsBanners}></Slider> */}
           </div>
 
           <h4
