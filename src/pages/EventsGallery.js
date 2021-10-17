@@ -6,7 +6,7 @@ const EventsGallery = (props) => {
 
   return (
     <React.Fragment>
-      <div onClick={closeNftCollapse} className="marketplace">
+      <div onClick={closeNftCollapse}>
         <EventsGalleryMain />
       </div>
     </React.Fragment>

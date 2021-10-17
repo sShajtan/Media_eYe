@@ -4,34 +4,8 @@ import './CharitiesPlace.css';
 import Slider from 'react-slick';
 import CharitiesSingleBlock from '../CharitiesSingleBlock/CharitiesSingleBlock';
 import { useHistory } from 'react-router-dom';
-
-function SampleNextArrow(props) {
-  const { onClick } = props;
-  return (
-    <button
-      type="button"
-      data-role="none"
-      className="slick-arrow slick-next"
-      onClick={onClick}
-    >
-      <span>&#8594;</span>
-    </button>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <button
-      type="button"
-      data-role="none"
-      className="slick-arrow slick-prev"
-      onClick={onClick}
-    >
-      <span>&#8592;</span>
-    </button>
-  );
-}
+import SamplePrevArrow from '../../SamplePrevArrow/SamplePrevArrow';
+import SampleNextArrow from '../../SampleNextArrow/SampleNextArrow';
 
 const CharitiesPlace = () => {
   let history = useHistory();

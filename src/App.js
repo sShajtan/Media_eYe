@@ -60,6 +60,7 @@ import CharitiesPlace from './pages/CharitiesPlace';
 import Home from './pages/Home/Home';
 import ScrollToTop from './utils/scrollToTop';
 import EventsGallery from './pages/EventsGallery';
+import Event from './pages/Event';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -298,6 +299,13 @@ const App = () => {
             </Route>
             <Route path="/events-gallery" exact>
               <EventsGallery
+                closeNftCollapse={closeNftCollapse}
+                showPopup={showCharitiesPopup}
+                togglePopup={toggleCharitiesPopup}
+              />
+            </Route>
+            <Route path="/event" exact>
+              <Event
                 closeNftCollapse={closeNftCollapse}
                 showPopup={showCharitiesPopup}
                 togglePopup={toggleCharitiesPopup}

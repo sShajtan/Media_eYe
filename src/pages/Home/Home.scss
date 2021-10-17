@@ -102,20 +102,20 @@
       height: 4px;
       background: #313131;
       margin: 0 13px;
-      transition: 1s;
+      // transition: 1s;
       width: 1%;
 
       &.slick-active {
         button {
           width: 100%;
-          transition: 4s;
+          transition: width 4s;
         }
       }
       button {
         width: 0;
         height: 100%;
         padding: 0;
-        transition: 0.3s;
+        transition: width 0s linear 0.1s;
         background: #0085ff;
       }
     }
@@ -159,11 +159,20 @@
   margin-top: 35px;
 }
 
+.gradient-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    margin-top: 7px;
+  }
+}
+
 .gradient-txt {
   background: linear-gradient(180deg, #79a8ff 0%, #d516ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  cursor: pointer;
 }
 
 .subtitle img {

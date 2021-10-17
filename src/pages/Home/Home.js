@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './Home.scss';
 import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
@@ -14,14 +14,14 @@ import CharityBtn from '../../components/ContentMarketplace/Filter/CharityBtn/Ch
 import ExploreBlock from '../../components/ContentMarketplace/ExploreBlock/ExploreBlock';
 import MenuMarketplace from '../../components/ContentMarketplace/MenuMarketplace/MenuMarketplace';
 import { Collapse } from 'react-collapse';
-import Glide, { Slide } from 'react-glidejs';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
 
 const Home = (props) => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeDays, setActiveDays] = useState(7);
   const { closeNftCollapse } = props;
-  const gliderRef = useRef(null);
 
   const settings = {
     dots: true,
@@ -31,9 +31,9 @@ const Home = (props) => {
     rows: 1,
     slidesPerRow: 1,
     arrows: false,
-    cssEase: 'linear',
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
     fade: true,
-    speed: 1000,
+    speed: 900,
     autoplay: true,
     pauseOnHover: true
   };
@@ -197,6 +197,26 @@ const Home = (props) => {
   //   ]
   // };
 
+  const swiperSettings = {
+    slidesPerView: 3,
+    loop: true,
+    freeMode: true,
+    spaceBetween: 10,
+    speed: 1800,
+    breakpoints: {
+      769: {
+        slidesPerView: 4
+      },
+      991: {
+        slidesPerView: 5
+      },
+      1290: {
+        slidesPerView: 5,
+        spaceBetween: 15
+      }
+    }
+  };
+
   return (
     <React.Fragment>
       <link
@@ -246,7 +266,7 @@ const Home = (props) => {
                 </div>
                 <div className="home-head-banners_slide_wrapper">
                   <div className="home-head-banners_slide">
-                    <img src="../../../img/home1.png" alt="title" />
+                    <img src="../../../img/home1.jpg" alt="title" />
                     <h5>Demo title1</h5>
                   </div>
                 </div>
@@ -260,6 +280,15 @@ const Home = (props) => {
             </div>
           </div>
           <div className="home-banners">
+            <Swiper {...swiperSettings}>
+              {Array.from({ length: 10 }).map((_, i) => (
+                <SwiperSlide key={i}>
+                  <BannerItem title="Demo title1" image="home1.png" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* <div style={{ marginTop: 30 }}></div>
             <Glide
               ref={gliderRef}
               type={'carousel'}
@@ -287,7 +316,7 @@ const Home = (props) => {
               <BannerItem title="Demo title1" image="home1.png" />
               <BannerItem title="Demo title1" image="home1.png" />
               <BannerItem title="Demo title1" image="home1.png" />
-            </Glide>
+            </Glide> */}
             {/* <Slider {...settingsBanners}></Slider> */}
           </div>
 
@@ -299,17 +328,17 @@ const Home = (props) => {
             }`}
           >
             Top collections in
-            <span
-              className="gradient-txt"
+            <div
+              className="gradient-btn"
               onClick={() => setShowDropdown(!showDropdown)}
             >
-              {activeDays} days{' '}
-            </span>
-            <img
-              src="../img/arrow.svg"
-              alt="down"
-              className={showDropdown ? 'active' : null}
-            />
+              <span className="gradient-txt">{activeDays} days </span>
+              <img
+                src="../img/arrow.svg"
+                alt="down"
+                className={showDropdown ? 'active' : null}
+              />
+            </div>
             <Collapse isOpened={showDropdown}>
               <div className="selected_block_price_dropdown_main home_dropdown">
                 <span

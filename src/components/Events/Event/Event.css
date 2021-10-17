@@ -1,9 +1,14 @@
-.charities_single {
+.event_single {
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+.event_single {
   padding-top: 90px;
   padding-bottom: 70px;
 }
 
-.charities_single .charities_back {
+.event_single .event_back {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -18,44 +23,47 @@
   outline: none;
 }
 
-.charities_single .charities_back svg {
+.event_single .event_back svg {
   transform: rotate(90deg);
   margin-right: 10px;
 }
 
-.dark .charities_single .charities_back svg path {
+.dark .event_single .event_back svg path {
   fill: #ffffff;
 }
-.dark .charities_single .charities_back {
+.dark .event_single .event_back {
   color: #ffffff;
 }
 
-.charities_single_main {
+.event_single_main {
   padding: 50px 0;
 }
 
-.charities_single_header {
+.event_single_header {
   display: flex;
   margin-top: 40px;
 }
 
-.charities_single_header_left {
+.event_single_header_left {
   width: 35%;
   padding: 0 20px 20px 0;
 }
 
-.charities_single_header_img_wrapper {
+.event_single_header_img_wrapper {
   background: url('../../../assets/img/block_border.png') no-repeat center;
   background-size: 100% 100%;
   padding: 15px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
-.charities_single_header_img_wrapper img {
+.event_single_header_img_wrapper img {
   max-width: 100%;
   border-radius: 10px;
 }
 
-.charities_single_header .charities_single_header_right h5 {
+.event_single_header .event_single_header_right h5 {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -65,11 +73,11 @@
   margin: 0;
 }
 
-.dark .charities_single_header .charities_single_header_right h5 {
+.dark .event_single_header .event_single_header_right h5 {
   color: #ebebeb;
 }
 
-.charities_single_header .charities_single_header_right p {
+.event_single_header .event_single_header_right p {
   font-family: Poppins;
   font-style: normal;
   font-weight: 300;
@@ -80,11 +88,15 @@
   color: #313131;
 }
 
-.dark .charities_single_header .charities_single_header_right p {
+.dark .event_single_header .event_single_header_right p {
   color: #ebebeb;
 }
 
-.charities_single_header_footer h6 {
+.event_single_header_footer {
+  display: flex;
+}
+
+.event_single_header_footer h6 {
   font-family: Poppins;
   font-style: normal;
   font-weight: 300;
@@ -94,11 +106,11 @@
   margin: 10px 0;
 }
 
-.dark .charities_single_header_footer h6 {
+.dark .event_single_header_footer h6 {
   color: #ebebeb;
 }
 
-.charities_single_header_donate {
+.event_single_header_donate {
   border: none;
   outline: none;
   cursor: pointer;
@@ -122,7 +134,7 @@
   align-items: center;
 }
 
-.charities_single_header_donate::before {
+.event_single_header_donate::before {
   content: '';
   background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
   background-size: contain;
@@ -135,45 +147,60 @@
   transition: 0.4s;
 }
 
-.charities_single_header_donate:hover {
+.event_single_header_donate:hover {
   transition: 0.4s;
   background: transparent;
   color: #141233 !important;
 }
 
-.dark .charities_single_header_donate:hover {
+.dark .event_single_header_donate:hover {
   transition: 0.4s;
   background: transparent;
   color: #fff !important;
 }
 
-.charities_single_header_donate:hover::before {
+.event_single_header_donate:hover::before {
   transition: 0.4s;
   opacity: 1;
 }
 
-.charities_single_header_footer span {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 32px;
-  color: #0075ff;
+.event_single_header_footer {
+  margin: 15px 0;
 }
 
-.charities_single_header_right {
+.event_single_header_footer span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 0;
+  color: #313131;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.dark .event_single_header_footer span {
+  color: #ebebeb;
+}
+
+.event_single_header_footer span img {
+  margin-right: 5px;
+}
+
+.event_single_header_right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-left: 20px;
   width: 65%;
+  padding-bottom: 20px;
 }
 
-.charities_single_text {
+.event_single_text {
   margin-top: 50px;
 }
 
-.charities_single_text h3 {
+.event_single_text h3 {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -183,11 +210,11 @@
   margin-bottom: 20px;
 }
 
-.dark .charities_single_text h3 {
+.dark .event_single_text h3 {
   color: #ebebeb;
 }
 
-.charities_single_text p {
+.event_single_text p {
   font-family: Poppins;
   font-style: normal;
   font-weight: 300;
@@ -196,11 +223,11 @@
   color: #313131;
 }
 
-.dark .charities_single_text p {
+.dark .event_single_text p {
   color: #ebebeb;
 }
 
-.charities_single_text_info {
+.event_single_text_info {
   margin: 30px 0;
   font-family: Poppins;
   font-style: normal;
@@ -210,40 +237,40 @@
   color: #313131;
 }
 
-.dark .charities_single_text_info {
+.dark .event_single_text_info {
   color: #ebebeb;
 }
 
-.charities_single_text_info span {
+.event_single_text_info span {
   color: #0075ff;
 }
 
-.charities_single .slick-dots li {
+.event_single .slick-dots li {
   width: 15px;
 }
 
 @media (max-width: 767.98px) {
-  .charities_single_header_img_wrapper {
+  .event_single_header_img_wrapper {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
   }
-  .charities_single_header_left {
+  .event_single_header_left {
     width: 100%;
   }
-  .charities_single_header_right {
+  .event_single_header_right {
     width: 100%;
   }
-  .charities_single_header {
+  .event_single_header {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .charities_single_header_left {
+  .event_single_header_left {
     max-width: 100%;
     padding: 0;
   }
-  .charities_single_header_right {
+  .event_single_header_right {
     width: 100%;
     margin-top: 30px;
     padding: 0;

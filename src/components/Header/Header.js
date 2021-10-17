@@ -136,98 +136,117 @@ const Header = (props) => {
                   </div>
                 </div>
               </div>
-              <button
-                className="ntf_header"
-                onClick={() => history.push('/create')}
-              >
-                Create NFT
-              </button>
+
               {isLogin ? (
-                !account ? (
+                !account ? null : (
+                  // <button
+                  //   className="ntf_header"
+                  //   onClick={() => history.push('/connect-wallet')}
+                  // >
+                  //   Connect Wallet
+                  // </button>
+                  <React.Fragment>
+                    <button
+                      className="ntf_header"
+                      onClick={() => history.push('/create')}
+                    >
+                      Create NFT
+                    </button>
+                    <div className="user_header_menu">
+                      <div onClick={() => history.push('/selected')}>
+                        <img src="../../../img/b_start.png" alt="star" />
+                        <span>1123</span>
+                      </div>
+
+                      <div className="header_avatar">
+                        <div
+                          className="header_avatar_wrapper"
+                          onClick={toggleWalletCollapse}
+                        >
+                          <img src="../../../img/avatar.png" alt="avatar" />
+                        </div>
+                        <div
+                          className={
+                            showWalletCollapse
+                              ? 'wallet_collapse active'
+                              : 'wallet_collapse'
+                          }
+                        >
+                          <Collapse isOpened={showWalletCollapse}>
+                            <div className="wallet_collapse_main">
+                              <h5>{account && account}</h5>
+                              <div className="wallet_row">
+                                <img
+                                  src="../../../img/token_1.png"
+                                  alt="token"
+                                />
+                                <div>
+                                  <h6>eYe Balance</h6>
+                                  <span>0 eYe</span>
+                                </div>
+                                <button className="buy_eye">Buy eYe</button>
+                              </div>
+                              <div className="wallet_row">
+                                <img
+                                  src="../../../img/token_2.png"
+                                  alt="token"
+                                />
+                                <div>
+                                  <h6>Balance</h6>
+                                  <span>0.037 ETH $119</span>
+                                </div>
+                              </div>
+                              <div className="wallet_row">
+                                <img
+                                  src="../../../img/token_3.png"
+                                  alt="token"
+                                />
+                                <div>
+                                  <h6>Bidding Balance</h6>
+                                  <span>0 wETH</span>
+                                </div>
+                              </div>
+                              <div className="wallet_footer">
+                                <NavLink className="" to="/account/minted-nft">
+                                  <Item />
+                                  &ensp;My Profile
+                                </NavLink>
+                                <NavLink className="" to="/profile">
+                                  <Edit />
+                                  &ensp;Edit profile
+                                </NavLink>
+                              </div>
+                            </div>
+                          </Collapse>
+                        </div>
+                      </div>
+                      <div className="network">
+                        Network &nbsp;
+                        <span>
+                          ETH <i>&#9660;</i>
+                        </span>
+                      </div>
+                    </div>
+                  </React.Fragment>
+                )
+              ) : (
+                <React.Fragment>
                   <button
-                    className="ntf_header"
+                    className="ntf_header connect_wallet_btn"
                     onClick={() => history.push('/connect-wallet')}
                   >
                     Connect Wallet
                   </button>
-                ) : (
-                  <div className="user_header_menu">
-                    <div onClick={() => history.push('/selected')}>
-                      <img src="../../../img/b_start.png" alt="star" />
-                      <span>1123</span>
-                    </div>
-
-                    <div className="header_avatar">
-                      <div
-                        className="header_avatar_wrapper"
-                        onClick={toggleWalletCollapse}
-                      >
-                        <img src="../../../img/avatar.png" alt="avatar" />
-                      </div>
-                      <div
-                        className={
-                          showWalletCollapse
-                            ? 'wallet_collapse active'
-                            : 'wallet_collapse'
-                        }
-                      >
-                        <Collapse isOpened={showWalletCollapse}>
-                          <div className="wallet_collapse_main">
-                            <h5>{account && account}</h5>
-                            <div className="wallet_row">
-                              <img src="../../../img/token_1.png" alt="token" />
-                              <div>
-                                <h6>eYe Balance</h6>
-                                <span>0 eYe</span>
-                              </div>
-                              <button className="buy_eye">Buy eYe</button>
-                            </div>
-                            <div className="wallet_row">
-                              <img src="../../../img/token_2.png" alt="token" />
-                              <div>
-                                <h6>Balance</h6>
-                                <span>0.037 ETH $119</span>
-                              </div>
-                            </div>
-                            <div className="wallet_row">
-                              <img src="../../../img/token_3.png" alt="token" />
-                              <div>
-                                <h6>Bidding Balance</h6>
-                                <span>0 wETH</span>
-                              </div>
-                            </div>
-                            <div className="wallet_footer">
-                              <NavLink className="" to="/account/minted-nft">
-                                <Item />
-                                &ensp;My Profile
-                              </NavLink>
-                              <NavLink className="" to="/profile">
-                                <Edit />
-                                &ensp;Edit profile
-                              </NavLink>
-                            </div>
-                          </div>
-                        </Collapse>
-                      </div>
-                    </div>
-                    <div className="network">
-                      Network &nbsp;
-                      <span>
-                        ETH <i>&#9660;</i>
-                      </span>
-                    </div>
+                  <div className="auth">
+                    <Link to="/login" className="login">
+                      <span>Log in</span>
+                    </Link>
+                    <Link to="/signup" className="signup">
+                      <span>Sign Up</span>
+                    </Link>
+                    *
                   </div>
-                )
-              ) : (
-                <div className="auth">
-                  <Link to="/login" className="login">
-                    <span>Log in</span>
-                  </Link>
-                  <Link to="/signup" className="signup">
-                    <span>Sign Up</span>
-                  </Link>
-                  *
-                </div>
+                </React.Fragment>
               )}
             </div>
           </div>
@@ -380,9 +399,21 @@ const Header = (props) => {
           </div>
           <div className="menu-item">
             <div>
-              <button onClick={toggleSoonPopup}>
-                <span>Create NFT</span>
-              </button>
+              {isLogin ? (
+                <button
+                  className="ntf_header"
+                  onClick={() => history.push('/create')}
+                >
+                  Create NFT
+                </button>
+              ) : (
+                <button
+                  className="connect_wallet_btn"
+                  onClick={() => history.push('/connect-wallet')}
+                >
+                  Connect Wallet
+                </button>
+              )}
               <button className="login">
                 <span>Login</span>
               </button>

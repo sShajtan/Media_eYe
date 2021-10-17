@@ -236,6 +236,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: inline-block;
   text-align: center;
 }
+
+.bm-item .connect_wallet_btn {
+  font-size: 14px;
+}
 div.menu-item div {
   display: flex;
   justify-content: space-around;
@@ -432,9 +436,9 @@ div.menu-item .soc_header_mobile {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.header_right_menu button:nth-child(3) {
+/* .header_right_menu button:nth-child(3) {
   color: #0075ff;
-}
+} */
 
 .mobile_search.header_search {
   display: none;
@@ -458,7 +462,7 @@ div.menu-item .soc_header_mobile {
 .auth {
   display: flex;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .auth .signup,
@@ -868,6 +872,10 @@ div.menu-item .soc_header_mobile {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.ntf_header.connect_wallet_btn {
+  font-size: 11px;
+  width: 100px;
 }
 
 .ntf_header:hover {

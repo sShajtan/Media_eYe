@@ -89,9 +89,7 @@ const AccountCollections = (props) => {
               </div>
               <button
                 className="create_collection create_collection_mobile"
-                onClick={() =>
-                  history.push('/create/collection', { fromPopup: true })
-                }
+                onClick={() => history.push('/create/collection')}
               >
                 Create Collection
               </button>

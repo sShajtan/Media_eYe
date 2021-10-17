@@ -29,6 +29,7 @@
   padding: 10px;
   background: url('../../../assets/img/marketplace_border.png') no-repeat center;
   background-size: 99% 99%;
+  cursor: pointer;
 }
 
 .events_block_img_wrapper img {
@@ -63,6 +64,7 @@
   line-height: 22px;
   color: #313139;
   margin: 8px 0;
+  cursor: pointer;
 }
 
 .dark .events_block h6 {

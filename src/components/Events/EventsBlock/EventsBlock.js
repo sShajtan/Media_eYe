@@ -1,11 +1,17 @@
 import React from 'react';
 import './EventsBlock.css';
+import { useHistory } from 'react-router-dom';
 
 const EventsBlock = () => {
+  let history = useHistory();
+
   return (
     <div className="events_block">
       <div className="events_block_left">
-        <div className="events_block_img_wrapper">
+        <div
+          className="events_block_img_wrapper"
+          onClick={() => history.push('/event')}
+        >
           <img src="../../img/event.png" alt="event" />
         </div>
       </div>
@@ -16,7 +22,8 @@ const EventsBlock = () => {
         <a className="user" href="/">
           @nickname
         </a>
-        <h6>NFT Crypto Comicon</h6>
+
+        <h6 onClick={() => history.push('/event')}>NFT Crypto Comicon</h6>
         <p>Description:</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed...</p>
         <div className="events_block_footer">
