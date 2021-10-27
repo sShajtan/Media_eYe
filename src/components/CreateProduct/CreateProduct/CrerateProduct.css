@@ -116,7 +116,7 @@
 }
 
 .view_collection_links {
-  margin: 60px auto 40px 50%;
+  margin: 60px auto 40px 66%;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -134,6 +134,9 @@
 @media (max-width: 991.98px) {
   .create_product_block {
     width: 340px;
+  }
+  .view_collection_links {
+    margin: 60px auto 40px;
   }
 }
 

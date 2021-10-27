@@ -319,6 +319,30 @@ h3 img {
   display: flex;
 }
 
+.App .slick-dots li {
+  display: none;
+  transition: 0.4s;
+}
+
+.slick-dots li.slick-active {
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.slick-dots li.lg_dots {
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.slick-dots li.sm_dots {
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.slick-dots li.lg_dots button:before {
+  font-size: 14px !important;
+}
+
 @media (max-width: 991.98px) {
   .main_profile {
     flex-direction: column;
@@ -327,6 +351,25 @@ h3 img {
 
 @media (min-width: 1299.98px) {
   .profile .container {
+    max-width: 1290px;
+  }
+}
+
+@media (min-width: 1399.98px) {
+  .home-page .container,
+  .marketplace_slider .container,
+  .marketplace_main .container,
+  .content_marketplace_header .container,
+  .product_footer .container,
+  .account_main_block_wrapper .container,
+  .creator_account .container,
+  .product .container,
+  .charities_place .container,
+  .charities_single_slider .container,
+  .event_single_slider_wrapper .container,
+  .event_single .container,
+  .charities_single .container,
+  .hub_main_page .container {
     max-width: 1290px;
   }
 }

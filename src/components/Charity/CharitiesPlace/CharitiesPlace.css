@@ -80,7 +80,7 @@
 }
 
 .charities_place .charities_single_block_wrapper {
-  max-width: 260px;
+  max-width: 265px;
   margin-bottom: 20px;
 }
 
@@ -98,11 +98,14 @@
     margin: 40px auto 20px;
   }
   .charities_place .charities_single_block_wrapper {
-    max-width: 250px;
+    max-width: 230px;
   }
 }
 
 @media (max-width: 575.98px) {
+  .charities_place .charities_single_block_wrapper {
+    max-width: 265px;
+  }
   .charities_place_header div:first-child img:nth-child(2) {
     display: block;
   }

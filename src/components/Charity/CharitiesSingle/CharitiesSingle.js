@@ -1,9 +1,10 @@
 import React from 'react';
 import Down from '../../Icons/down';
-import CharitiesSingleBlock from '../CharitiesSingleBlock/CharitiesSingleBlock';
 import './CharitiesSingle.css';
 import Slider from 'react-slick';
 import { useHistory } from 'react-router-dom';
+import ExploreBlock from '../../ContentMarketplace/ExploreBlock/ExploreBlock';
+import limitDotsSlider from '../../../utils/limitDotsSlider';
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -46,21 +47,39 @@ const CharitiesSingle = (props) => {
     arrows: true,
     autoplay: false,
     pauseOnHover: true,
+    beforeChange: () => {
+      limitDotsSlider();
+    },
+    onInit: () => {
+      limitDotsSlider();
+    },
+    onReInit: () => {
+      limitDotsSlider();
+    },
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          rows: 1
+        }
+      },
+      {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
-          rows: 4
+          rows: 1
         }
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          dots: true
+          slidesToShow: 1,
+          rows: 1,
+          dots: true,
+          arrows: false
         }
       },
       {
@@ -68,7 +87,8 @@ const CharitiesSingle = (props) => {
         settings: {
           dots: true,
           slidesToShow: 1,
-          rows: 1
+          rows: 1,
+          arrows: false
         }
       }
     ]
@@ -160,18 +180,20 @@ const CharitiesSingle = (props) => {
               <span> USA</span>
             </div>
           </div>
-          <div className="charities_single_slider">
-            <Slider {...settings}>
-              <CharitiesSingleBlock isAuction={true} />
-              <CharitiesSingleBlock />
-              <CharitiesSingleBlock />
-              <CharitiesSingleBlock isAuction={true} />
-              <CharitiesSingleBlock />
-              <CharitiesSingleBlock />
-              <CharitiesSingleBlock isAuction={true} />
-              <CharitiesSingleBlock />
-            </Slider>
-          </div>
+        </div>
+      </div>
+      <div className="charities_single_slider">
+        <div className="container">
+          <Slider {...settings}>
+            <ExploreBlock charities={50} />
+            <ExploreBlock charities={50} />
+            <ExploreBlock charities={50} />
+            <ExploreBlock charities={50} />
+            <ExploreBlock charities={50} />
+            <ExploreBlock charities={50} />
+            <ExploreBlock charities={50} />
+            <ExploreBlock charities={50} />
+          </Slider>
         </div>
       </div>
     </div>

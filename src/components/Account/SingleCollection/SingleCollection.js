@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Collapse } from 'react-collapse';
 import Select from 'react-select';
@@ -9,9 +9,97 @@ import SearchIcon from '../../Icons/SearchIcon';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import { useHistory } from 'react-router-dom';
 import Down from '../../Icons/down';
-import CollectionSingleBlock from '../CollectionSingleBlock/CollectionSingleBlock';
+import EditAvatar from '../../Icons/EditAvatart';
+import ExploreBlock from '../../ContentMarketplace/ExploreBlock/ExploreBlock';
 
 const animatedComponents = makeAnimated();
+
+const products = [
+  {
+    img: ['../../img/home_explore/1.png'],
+    isAuction: true,
+    fullImage: ['../../img/home_explore/f1.jpg']
+  },
+  {
+    img: ['../../img/home_explore/2.png'],
+    isSold: true,
+    fullImage: ['../../img/home_explore/f2.jpg']
+  },
+  {
+    img: ['../../img/home_explore/3.png'],
+    isAuction: true,
+    fullImage: ['../../img/home_explore/f3.jpg']
+  },
+  {
+    img: ['../../img/home_explore/4.png'],
+    fullImage: ['../../img/home_explore/f4.jpg']
+  },
+  {
+    img: ['../../img/home_explore/5.png'],
+    fullImage: ['../../img/home_explore/f5.jpg'],
+    isAuction: true
+  },
+  {
+    img: ['../../img/home_explore/6.png'],
+    isSold: true,
+    fullImage: ['../../img/home_explore/f6.jpg']
+  },
+  {
+    img: ['../../img/home_explore/7.png', '../../img/home_explore/3.png'],
+    isBunding: true,
+    fullImage: [
+      '../../img/home_explore/f7.jpg',
+      '../../img/home_explore/f3.jpg'
+    ]
+  },
+  {
+    img: ['../../img/home_explore/8.png'],
+    fullImage: ['../../img/home_explore/f8.jpg']
+  },
+  {
+    img: ['../../img/home_explore/9.png'],
+    fullImage: ['../../img/home_explore/f9.jpg']
+  },
+  {
+    img: [
+      '../../img/home_explore/10.png',
+      '../../img/home_explore/2.png',
+      '../../img/home_explore/3.png'
+    ],
+    isBunding: true,
+    fullImage: [
+      '../../img/home_explore/f10.jpg',
+      '../../img/home_explore/f2.jpg',
+      '../../img/home_explore/f3.jpg'
+    ],
+    isAuction: true
+  },
+  {
+    img: ['../../img/home_explore/11.png'],
+    fullImage: ['../../img/home_explore/f11.jpg']
+  },
+  {
+    img: ['../../img/home_explore/6.png'],
+    isSold: true,
+    fullImage: ['../../img/home_explore/f6.jpg']
+  },
+  {
+    img: ['../../img/home_explore/7.png'],
+    fullImage: ['../../img/home_explore/f7.jpg']
+  },
+  {
+    img: ['../../img/home_explore/9.png'],
+    fullImage: ['../../img/home_explore/f9.jpg']
+  },
+  {
+    img: ['../../img/home_explore/6.png'],
+    fullImage: ['../../img/home_explore/f6.jpg']
+  },
+  {
+    img: ['../../img/home_explore/16.jpg'],
+    fullImage: ['../../img/home_explore/f16.jpg']
+  }
+];
 
 let minters = [
   {
@@ -60,15 +148,34 @@ let minters = [
   }
 ];
 
+const productPerPage = 8;
+let arrayForHoldingProducts = [];
+
 const SingleCollection = (props) => {
   const [showText, setShowText] = useState(false);
   const theme = useSelector((state) => state.app.darkTheme);
-  const [grid, setGrid] = useState('1');
   const [showEditblock, setShowEditblock] = useState(false);
   const [activeMinters, setActiveMinters] = useState([]);
   const [valueSelect] = useState(null);
   const activeTab = useSelector((state) => state.app.activeTab);
+  const [productToShow, setproductToShow] = useState([]);
+  const [next, setNext] = useState(8);
   let history = useHistory();
+
+  const loopWithSlice = (start, end) => {
+    const slicedProducts = products.slice(start, end);
+    arrayForHoldingProducts = [...arrayForHoldingProducts, ...slicedProducts];
+    setproductToShow(arrayForHoldingProducts);
+  };
+
+  useEffect(() => {
+    loopWithSlice(0, productPerPage);
+  }, []);
+
+  const handleShowMoreProducts = () => {
+    loopWithSlice(next, next + productPerPage);
+    setNext(next + productPerPage);
+  };
 
   const handleChangMinters = (e) => {
     if (e[0] === undefined) {
@@ -112,6 +219,21 @@ const SingleCollection = (props) => {
 
   return (
     <div className="creator_account account_collection single_collection">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
       <div className="container">
         <div className="creator_account_main">
           <div className="img_line">
@@ -140,6 +262,9 @@ const SingleCollection = (props) => {
             </div>
             <div className="creator_account_avatar">
               <img src="../../img/creator_account_avatar.png" alt="avatar" />
+              <button className="edit_avatar">
+                <EditAvatar />
+              </button>
             </div>
             <div className="collection_right_block">
               <div className="account_links">
@@ -187,7 +312,6 @@ const SingleCollection = (props) => {
             </div>
             <div className="creator_account_info">
               <h4>Collection 1 [Title]</h4>
-
               <Collapse isOpened={showText}>
                 <div className="single_collection_info">
                   {!showText ? <div className="oppacity_wrapper"></div> : null}
@@ -227,7 +351,7 @@ const SingleCollection = (props) => {
             </div>
             <div>
               <span>2.3k</span>
-              ovners
+              owners
             </div>
             <div>
               <img src="../../img/heart.png" alt="heart" />
@@ -280,28 +404,6 @@ const SingleCollection = (props) => {
               )}
             </div>
             <div className="grid_filter">
-              <div className="grid_menu">
-                <button className="2rows" onClick={() => setGrid('2')}>
-                  <img
-                    src={
-                      grid === '2'
-                        ? '../../img/2rows-active.png'
-                        : '../../img/2rows_' + theme + '.png'
-                    }
-                    alt="two rows"
-                  />
-                </button>
-                <button className="1rows" onClick={() => setGrid('1')}>
-                  <img
-                    src={
-                      grid === '1'
-                        ? '../../img/1rows_active.png'
-                        : '../../img/1rows_' + theme + '.png'
-                    }
-                    alt="one row"
-                  />
-                </button>
-              </div>
               <FilterAccount />
             </div>
           </div>
@@ -311,23 +413,14 @@ const SingleCollection = (props) => {
             ) : null}
             {activeMintersList}
           </div>
-          <div
-            className={
-              grid === '2'
-                ? 'creator_account_main_block two_rows'
-                : 'creator_account_main_block one_row'
-            }
-          >
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
+          <div className="creator_account_main_block ">
+            {productToShow.map((product, i) => (
+              <ExploreBlock product={product} key={i} />
+            ))}
           </div>
-          <button className="load_more">Load More</button>
+          <button className="load_more" onClick={handleShowMoreProducts}>
+            Load More
+          </button>
         </div>
       </div>
     </div>

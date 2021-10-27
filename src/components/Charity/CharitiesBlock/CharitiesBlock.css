@@ -14,12 +14,6 @@
   border: 1px solid #ffffff;
 }
 
-.charities_block_img_wrapper {
-  background: url('../../../assets/img/block_border.png') no-repeat center;
-  background-size: 100% 100%;
-  padding: 10px;
-}
-
 .charities_block_img_wrapper img {
   border-radius: 10px;
   max-width: 200px;

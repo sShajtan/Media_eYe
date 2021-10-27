@@ -1,0 +1,134 @@
+.top_sellers_block_wrapper {
+  border: 1px solid #646464;
+  box-sizing: border-box;
+  border-radius: 14px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  min-width: 230px;
+  margin: 25px auto;
+}
+
+.top_sellers_block {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.top_sellers_block_wrapper:hover {
+  border: 0.5px solid transparent;
+  background-image: linear-gradient(#e9f1ff, #e9f1ff),
+    linear-gradient(180deg, #8498ff 0%, #b34eff 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.dark .top_sellers_block_wrapper:hover {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#141233, #141233),
+    linear-gradient(180deg, #8498ff 0%, #b34eff 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.top_sellers_block h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+  margin: 0;
+}
+
+.dark .top_sellers_block h6 {
+  color: #fff;
+}
+
+.top_sellers_block span {
+  display: flex;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #0075ff;
+}
+
+.top_sellers_block span img {
+  margin-right: 5px;
+}
+.top_sellers_block .top_sellers_block_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50px;
+}
+
+.top_sellers_block_ava {
+  border-radius: 5px;
+  margin: 3px;
+  margin-right: 10px;
+  width: 55px;
+  height: 55px;
+}
+
+@media (max-width: 1399.98px) {
+  .top_sellers_block_wrapper {
+    min-width: 220px;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .top_sellers_block_wrapper {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .rewards_block {
+    flex-wrap: wrap;
+    max-height: inherit;
+    min-width: inherit;
+  }
+  .rewards_block h5 {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rewards_block div span {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .top_sellers_block_wrapper {
+    padding-right: 10px;
+    min-width: 220px;
+  }
+
+  .top_sellers_block_ava {
+    width: 45px;
+    height: 45px;
+    margin-right: 6px;
+  }
+  .top_sellers_block .top_sellers_block_info {
+    min-height: 45px;
+  }
+
+  .top_sellers_block span,
+  .top_sellers_block h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .top_sellers_block_wrapper {
+    min-width: auto;
+  }
+}

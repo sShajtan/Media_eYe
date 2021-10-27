@@ -27,10 +27,10 @@ const Single = (props) => {
               <button className="product_single_select">
                 <span>Upload Your Content</span>
               </button>
-              <h4>Have already approved content</h4>
+              {/* <h4>Have already approved content</h4>
               <button className="product_single_upload">
                 <span>Browse</span>
-              </button>
+              </button> */}
             </div>
           </div>
           <div className="product_single_mainform">

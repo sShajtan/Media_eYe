@@ -57,7 +57,7 @@ const Popup = (props) => {
                     </div>
                   </div>
                   <div className="feature_payments_token">
-                    <h6>Subscription term</h6>
+                    <h6>Payment tokens</h6>
                     <div className="collection_block_buttons">
                       <button
                         className={activeToken === 'ETH' ? 'active' : null}

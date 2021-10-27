@@ -5,3 +5,113 @@
 .content_marketplace_header_main {
   padding-top: 40px;
 }
+
+.nft_marketplace_banner {
+  max-width: 200%;
+  border-radius: 20px;
+  border: 1px solid rgba(157, 202, 255, 1);
+  margin: 0 -50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sell_nft {
+  position: absolute;
+  left: 4.5%;
+  bottom: 10%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+  background: url('../../../assets/img/learn_more_button_bg.png') no-repeat
+    center;
+  background-size: contain;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.4s;
+  width: 140px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 0;
+}
+
+.sell_nft::before {
+  content: '';
+  background: url('../../../assets/img/signup_button_bg.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.sell_nft:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #141233 !important;
+}
+
+.dark .sell_nft:hover {
+  transition: 0.4s;
+  background: transparent;
+  color: #fff !important;
+}
+
+.sell_nft:hover::before {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.nft_marketplace_banner_mobile {
+  display: none;
+}
+
+@media (max-width: 1269.98px) {
+  .nft_marketplace_banner {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .sell_nft {
+    width: 110px;
+    font-size: 16px;
+    bottom: 3%;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .nft_marketplace_banner {
+    display: none;
+  }
+
+  .nft_marketplace_banner_mobile {
+    display: block;
+    position: relative;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+  .nft_marketplace_banner_mobile img {
+    margin: 0 auto;
+  }
+
+  .nft_marketplace_banner_mobile .sell_nft {
+    width: 110px;
+    font-size: 16px;
+    bottom: inherit;
+    left: 7%;
+    top: 14%;
+  }
+}

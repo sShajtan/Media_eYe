@@ -2,10 +2,11 @@ import React from 'react';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import './CharitiesPlace.css';
 import Slider from 'react-slick';
-import CharitiesSingleBlock from '../CharitiesSingleBlock/CharitiesSingleBlock';
 import { useHistory } from 'react-router-dom';
 import SamplePrevArrow from '../../SamplePrevArrow/SamplePrevArrow';
 import SampleNextArrow from '../../SampleNextArrow/SampleNextArrow';
+import ExploreBlock from '../../ContentMarketplace/ExploreBlock/ExploreBlock';
+import limitDotsSlider from '../../../utils/limitDotsSlider';
 
 const CharitiesPlace = () => {
   let history = useHistory();
@@ -16,12 +17,28 @@ const CharitiesPlace = () => {
     slidesToScroll: 1,
     rows: 2,
     slidesPerRow: 1,
-    arrows: true,
+    arrows: false,
     autoplay: false,
     pauseOnHover: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    beforeChange: () => {
+      limitDotsSlider();
+    },
+    onInit: () => {
+      limitDotsSlider();
+    },
+    onReInit: () => {
+      limitDotsSlider();
+    },
     responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          rows: 3
+        }
+      },
       {
         breakpoint: 991,
         settings: {
@@ -87,14 +104,14 @@ const CharitiesPlace = () => {
             </div>
             <div className="charities_place_nfts_main">
               <Slider {...settings}>
-                <CharitiesSingleBlock />
-                <CharitiesSingleBlock isAuction="true" />
-                <CharitiesSingleBlock />
-                <CharitiesSingleBlock isAuction="true" />
-                <CharitiesSingleBlock />
-                <CharitiesSingleBlock isAuction="true" />
-                <CharitiesSingleBlock />
-                <CharitiesSingleBlock />
+                <ExploreBlock charities={50} />
+                <ExploreBlock charities={50} />
+                <ExploreBlock charities={50} />
+                <ExploreBlock charities={40} />
+                <ExploreBlock charities={50} />
+                <ExploreBlock charities={40} />
+                <ExploreBlock charities={50} />
+                <ExploreBlock charities={50} />
               </Slider>
             </div>
           </div>
@@ -103,14 +120,14 @@ const CharitiesPlace = () => {
               <h4>NFTs by Creators</h4>
             </div>
             <div className="charities_place_creators_main">
-              <CharitiesSingleBlock />
-              <CharitiesSingleBlock isAuction="true" />
-              <CharitiesSingleBlock />
-              <CharitiesSingleBlock isAuction="true" />
-              <CharitiesSingleBlock />
-              <CharitiesSingleBlock isAuction="true" />
-              <CharitiesSingleBlock />
-              <CharitiesSingleBlock />
+              <ExploreBlock charities={50} />
+              <ExploreBlock charities={50} />
+              <ExploreBlock charities={50} />
+              <ExploreBlock charities={50} />
+              <ExploreBlock charities={50} />
+              <ExploreBlock charities={50} />
+              <ExploreBlock charities={50} />
+              <ExploreBlock charities={50} />
             </div>
           </div>
         </div>

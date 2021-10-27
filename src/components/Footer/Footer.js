@@ -118,9 +118,9 @@ const Footer = (props) => {
             >
               <TiktokIcon />
             </a>
-            <button>
+            <a href="/">
               <GithubIcon />
-            </button>
+            </a>
             <a
               href="https://www.instagram.com/mediaeyenfts/"
               target="_blank"

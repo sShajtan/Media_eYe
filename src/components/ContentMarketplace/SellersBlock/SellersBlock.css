@@ -1,0 +1,127 @@
+.sellers_block_wrapper {
+  border: 1px solid #646464;
+  box-sizing: border-box;
+  border-radius: 14px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  min-width: 230px;
+  margin: 25px auto;
+}
+
+.sellers_block {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.sellers_block_wrapper:hover {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#e9f1ff, #e9f1ff),
+    linear-gradient(180deg, #8498ff 0%, #b34eff 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.dark .sellers_block_wrapper:hover {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#141233, #141233),
+    linear-gradient(180deg, #8498ff 0%, #b34eff 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.sellers_block h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+  margin: 0;
+}
+
+.dark .sellers_block h6 {
+  color: #ffffff;
+}
+
+.sellers_block span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  margin-right: 10px;
+}
+
+.dark .sellers_block span {
+  color: #ffffff;
+}
+
+.sellers_block span svg {
+  margin-right: 5px;
+}
+.sellers_block .sellers_block_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50px;
+}
+.sellers_block .sellers_block_info div {
+  display: flex;
+}
+
+.sellers_block_ava {
+  border-radius: 5px;
+  margin: 3px;
+  margin-right: 10px;
+  width: 55px;
+  height: 55px;
+}
+
+@media (max-width: 1399.98px) {
+  .sellers_block_wrapper {
+    min-width: 220px;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .sellers_block_wrapper {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+  .sellers_block_wrapper {
+    padding-right: 10px;
+    min-width: 220px;
+  }
+
+  .sellers_block_ava {
+    width: 45px;
+    height: 45px;
+    margin-right: 6px;
+  }
+  .sellers_block .sellers_block_info {
+    min-height: 45px;
+  }
+
+  .sellers_block span,
+  .sellers_block h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .sellers_block_wrapper {
+    min-width: auto;
+  }
+}

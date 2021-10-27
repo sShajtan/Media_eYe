@@ -27,7 +27,7 @@ const Popup = (props) => {
                   <div className="collection_logo_img collection_block collection_block_img">
                     <h5>Logo image</h5>
                     <span>
-                      This image will also be used for nsvigation. 350 x 350
+                      This image will also be used for nsvigation. 270 x 270
                       recommended.
                     </span>
                     <label>

@@ -16,7 +16,7 @@ const AccountMenu = () => {
 
   useEffect(() => {
     focus();
-  });
+  }, [Links]);
 
   return (
     <div className="creator_account_menu_wrapper">
@@ -47,6 +47,10 @@ const AccountMenu = () => {
         </NavLink>
         <NavLink exact to="/account/content">
           <span>Content</span>
+          <div className="line"></div>
+        </NavLink>
+        <NavLink exact to="/account/events">
+          <span>Events</span>
           <div className="line"></div>
         </NavLink>
       </div>

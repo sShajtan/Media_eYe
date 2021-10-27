@@ -224,7 +224,7 @@ const Collection = (props) => {
           <div className="collection_logo_img collection_block collection_block_img">
             <h5>Logo image</h5>
             <span>
-              This image will also be used for nsvigation. 350 x 350
+              This image will also be used for nsvigation. 140 x 140
               recommended.
             </span>
             <label>
@@ -236,8 +236,7 @@ const Collection = (props) => {
             <span>
               (optional) This image will be used for featuring your collection
               on the homepage, category pages, or othe promotional areas of
-              Media eYe. . 600 x 600 recommendedhis image will also be used for
-              nsvigation. 350 x 350 recommended.
+              Media eYe. 280 x 170 recommended
             </span>
             <label>
               <input type="file" />
@@ -248,7 +247,7 @@ const Collection = (props) => {
             <span>
               (optional) This image will appear at the top of your collection
               page. Avoid icluding too much text in this banner image, as the
-              dimensions change on different devices. 1400 x 400 recommended.
+              dimensions change on different devices. 1500 x 240 recommended.
             </span>
             <label>
               <input type="file" />

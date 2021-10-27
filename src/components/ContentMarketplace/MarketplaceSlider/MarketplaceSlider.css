@@ -43,6 +43,16 @@
   left: -4%;
 }
 
+.nft_marketplace .slick-dots li {
+  width: 15px;
+}
+
+.nft_marketplace .marketplace_block_wrapper {
+  position: relative;
+  max-width: 265px;
+  margin: 0 auto;
+}
+
 .marketplace .slick-prev:hover {
   background: url('../../../assets/img/prev-arrow.png') no-repeat;
   background-size: cover;
@@ -115,24 +125,36 @@
   transition: 0.4s;
 }
 
-.dark .marketplace .slick-next span,
-.dark .marketplace .slick-prev span {
+.marketplace .slick-next span,
+.marketplace .slick-prev span {
+  color: #8f8f8f;
+}
+
+.marketplace .slick-next:hover span,
+.marketplace .slick-prev :hover span {
   color: #fff;
 }
 
-body .slick-next:focus,
 .marketplace .slick-next:hover {
   background: url('../../../assets/img/next-arrow.png') no-repeat center;
   background-size: cover;
 }
 
-body .slick-prev:focus,
 .marketplace .slick-prev:hover {
   background: url('../../../assets/img/prev-arrow.png') no-repeat center;
   background-size: cover;
 }
 
+@media (max-width: 991.98px) {
+  .nft_marketplace .marketplace_block_wrapper {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 767.98px) {
+  .nft_marketplace .marketplace_slider {
+    padding-bottom: 100px;
+  }
   .marketplace_slider {
     padding-bottom: 50px;
   }
@@ -172,14 +194,28 @@ body .slick-prev:focus,
   }
   .marketplace .slick-dots li button:before {
     font-size: 10px;
+    color: #717171;
   }
   .dark .marketplace .slick-dots li button:before {
     font-size: 10px;
-    color: #fff;
+    color: #717171;
     opacity: 0.7;
+    line-height: 22px;
   }
-  .dark .marketplace .slick-dots {
-    /* border: 2px solid #fff; */
+
+  .marketplace .slick-dots li.slick-active {
+    width: 36px;
+  }
+
+  .marketplace .slick-dots li.slick-active button {
+    width: 36px;
+    height: 6px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #66c7ff 4.17%, #ce21ff 100%);
+  }
+
+  .marketplace .slick-dots li.slick-active button::before {
+    content: none;
   }
 
   .marketplace .slick-dots li.slick-active button:before {
@@ -193,13 +229,13 @@ body .slick-prev:focus,
     opacity: 1;
   }
   .marketplace .slick-dots {
-    border: 2px solid #797979;
+    border: none;
     position: absolute;
     display: block;
     width: 214px;
     margin: 0 auto;
     height: 38px;
-    top: 110%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     padding: 0px 0px 5px 0px;
@@ -234,6 +270,7 @@ body .slick-prev:focus,
   .dark .marketplace .slick-dots {
     color: #fff;
     border-color: #fff;
+    border: none;
   }
   .marketplace .slick-next::before,
   .marketplace .slick-prev::before {

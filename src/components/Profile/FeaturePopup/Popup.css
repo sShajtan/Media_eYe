@@ -74,7 +74,20 @@
   margin: 30px 0 10px;
 }
 
+@media (max-width: 767.98px) {
+  .feature_payments_token .collection_block_buttons {
+    flex-wrap: wrap;
+  }
+  .main_feature_popup .collection_block_buttons button {
+    min-width: 140px;
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 575.98px) {
+  .main_feature_popup .collection_block_buttons button {
+    margin-right: 0;
+  }
   .feature_payments_token .collection_block_buttons {
     display: flex;
     flex-wrap: wrap;

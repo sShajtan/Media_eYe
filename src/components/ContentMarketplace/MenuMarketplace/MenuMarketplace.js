@@ -72,19 +72,19 @@ const MenuMarketplace = (props) => {
           <span>All</span>
         </button>
         <button>
-          <span>Gaming</span>
-        </button>
-        <button>
-          <span>Media</span>
-        </button>
-        <button>
           <span>Art</span>
         </button>
         <button>
           <span>Crypto</span>
         </button>
         <button>
+          <span>Gaming</span>
+        </button>
+        <button>
           <span>Business</span>
+        </button>
+        <button>
+          <span>Media</span>
         </button>
         <button>
           <span>Sports</span>

@@ -5,15 +5,31 @@ import { useSelector } from 'react-redux';
 import Switch from 'react-switch';
 import Popup from '../../Selected/SelectPopup/Popup';
 import PopupBid from '../../Selected/SelectPopupBid/Popup';
+import Twitter from '../../Icons/ProductIcons/Twitter';
+import Facebook from '../../Icons/ProductIcons/Facebook';
+import Instagram from '../../Icons/ProductIcons/Instagram';
+import { useLocation } from 'react-router-dom';
+import AddStar from '../../Icons/AddStar';
+import SellersBlock from '../../ContentMarketplace/SellersBlock/SellersBlock';
+import PopupImage from '../ProductPopup/Popup';
 
 const ProductAuction = (props) => {
+  const location = useLocation();
+  const [like, setLike] = useState(false);
+  const product = location.state.product;
   const theme = useSelector((state) => state.app.darkTheme);
   const [checked, setChecked] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showPopupBid, setShowPopupBid] = useState(false);
+  const [favorite, setFavorite] = useState(false);
+  const [showPopupImage, setShowPopupImage] = useState(false);
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
+  };
+
+  const togglePopupImage = () => {
+    setShowPopupImage(!showPopupImage);
   };
 
   const togglePopupBid = () => {
@@ -24,24 +40,39 @@ const ProductAuction = (props) => {
     <div className="product product_auction">
       <Popup showPopup={showPopup} togglePopup={togglePopup} />
       <PopupBid showPopup={showPopupBid} togglePopupBid={togglePopupBid} />
+      <PopupImage
+        showPopup={showPopupImage}
+        togglePopup={togglePopupImage}
+        img={
+          location.state !== undefined
+            ? location.state.product.fullImage !== undefined
+              ? location.state.product.fullImage
+              : 'img/product_auction.png'
+            : 'img/product_auction.png'
+        }
+      />
       <div className="container">
         <div className="product_main">
           <div className="product_left">
-            <div className="product_image">
-              <img src="img/product_auction.png" alt="product" />
+            <div className="product_image" onClick={togglePopupImage}>
+              <img
+                alt="nft_card"
+                src={product ? product.fullImage : 'img/product_auction.png'}
+              />
             </div>
           </div>
           <div className="product_right">
-            <h2>Product ID</h2>
+            <h2>Title</h2>
             <div className="product_subtitle">NFT ID: 125815</div>
             <div className="product_header">
               <span>
-                <img src="img/heart.png" alt="heart" />
+                <div className="like_wrapper" onClick={() => setLike(!like)}>
+                  <div class={like ? 'scattering active' : 'scattering'}></div>
+                </div>
                 1,2 k likes
               </span>
               <span>
-                Share: <img src="img/tw.png" alt="twitter" />{' '}
-                <img src="img/facebook.png" alt="facebook" />
+                Share: <Twitter /> <Facebook /> <Instagram />
               </span>
             </div>
             <div className="product_description">
@@ -60,24 +91,7 @@ const ProductAuction = (props) => {
                   <img src="img/checked.svg" alt="checked" />
                   Owner:{' '}
                 </div>
-                <div className="creator_block_info">
-                  <div className="creator_block_info_main">
-                    <div className="creator_block_info_img">
-                      <img src="img/avatar.png" alt="avatar" />
-                    </div>
-                    <div className="creator_block_info_text">
-                      <h6>Artist_Title</h6>
-                      <div>
-                        <span>
-                          <img src="img/heart.svg" alt="heart" /> 1,2 k
-                        </span>
-                        <span>
-                          <img src="img/men.svg" alt="heart" /> 555
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <SellersBlock />
               </div>
               <div className="creator_block_info_wrapper">
                 <div className="creator_block_info_header">
@@ -85,24 +99,7 @@ const ProductAuction = (props) => {
                   <img src="img/Star.svg" alt="star" />
                   Creator:
                 </div>
-                <div className="creator_block_info">
-                  <div className="creator_block_info_main">
-                    <div className="creator_block_info_img">
-                      <img src="img/avatar.png" alt="avatar" />
-                    </div>
-                    <div className="creator_block_info_text">
-                      <h6>Artist_Title</h6>
-                      <div>
-                        <span>
-                          <img src="img/heart.svg" alt="heart" /> 1,2 k
-                        </span>
-                        <span>
-                          <img src="img/men.svg" alt="heart" /> 555
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <SellersBlock />
               </div>
             </div>
             <div className="auction_timer_main">
@@ -150,8 +147,13 @@ const ProductAuction = (props) => {
                 <button className="buy_now" onClick={togglePopupBid}>
                   Place a Bid
                 </button>{' '}
-                <button className="add_to_basket">
-                  <img src="../../img/Star.svg" alt="star" />
+                <button
+                  className={
+                    favorite ? 'add_to_basket active' : 'add_to_basket'
+                  }
+                  onClick={() => setFavorite(!favorite)}
+                >
+                  <AddStar />
                   Add to Favorites
                 </button>
               </div>

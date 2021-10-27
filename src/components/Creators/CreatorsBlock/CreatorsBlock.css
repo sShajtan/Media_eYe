@@ -15,12 +15,7 @@
 
 .creator_block_img {
   padding: 8px;
-  background: #fff;
   border-radius: 10px;
-}
-
-.dark .creator_block_img {
-  background: #282550;
 }
 
 .creator_block_info {

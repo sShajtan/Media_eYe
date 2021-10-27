@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import './PutOnMarketplace.css';
 import Down from '../../Icons/down';
+import Twitter from '../../Icons/ProductIcons/Twitter';
+import Facebook from '../../Icons/ProductIcons/Facebook';
+import Instagram from '../../Icons/ProductIcons/Instagram';
 
 const PutOnMarketplace = (props) => {
   const theme = useSelector((state) => state.app.darkTheme);
@@ -79,8 +82,7 @@ const PutOnMarketplace = (props) => {
             <div className="product_header">
               <span></span>
               <span>
-                Share: <img src="img/tw.png" alt="twitter" />{' '}
-                <img src="img/facebook.png" alt="facebook" />
+                Share: <Twitter /> <Facebook /> <Instagram />
               </span>
             </div>
             <div className="product_description">

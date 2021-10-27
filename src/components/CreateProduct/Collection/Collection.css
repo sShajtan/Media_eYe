@@ -151,7 +151,7 @@
   display: block;
   background: rgba(255, 255, 255, 0.02);
   background-image: url('../../../assets/img/collection_img.png');
-  background-size: 81px 81px;
+  background-size: 60px 60px;
   background-repeat: no-repeat;
   background-position: center;
   border: 1px dashed #797979;
@@ -159,17 +159,21 @@
   backdrop-filter: blur(16px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 12px;
-  width: 20%;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   cursor: pointer;
 }
 
 .collection_product .collection_block.collection_fratured_img label {
-  width: 40%;
+  width: 280px;
+  height: 170px;
+  background-size: 81px 81px;
 }
 
 .collection_product .collection_block.collection_banner_img label {
   width: 65%;
+  background-size: 81px 81px;
+  height: 200px;
 }
 
 .collection_block input,

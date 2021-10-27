@@ -7,6 +7,7 @@ import Popup from '../../Selected/SelectPopup/Popup';
 import PopupBid from '../../Selected/SelectPopupBid/Popup';
 import './AccountFavorite.css';
 import SelectedBlock from '../../Selected/SelectedBlock/SelectedBlock';
+import EditAvatar from '../../Icons/EditAvatart';
 
 const AccountFavorite = (props) => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -25,7 +26,7 @@ const AccountFavorite = (props) => {
   };
 
   return (
-    <div className="selected">
+    <div className="selected creator_account">
       <Popup showPopup={showPopup} togglePopup={togglePopup} />
       <PopupBid showPopup={showPopupBid} togglePopupBid={togglePopupBid} />
       <div className="container">
@@ -44,6 +45,9 @@ const AccountFavorite = (props) => {
           </div>
           <div className="creator_account_avatar">
             <img src="../img/creator_account_avatar.png" alt="avatar" />
+            <button className="edit_avatar">
+              <EditAvatar />
+            </button>
           </div>
           <div className="collection_right_block">
             <button>
@@ -79,7 +83,7 @@ const AccountFavorite = (props) => {
               </div>
             </div>
             <div className="account_balance">
-              <img src="../img/token_1.png" alt="token" />
+              <img src="../img/token_11.png" alt="token" />
               Balance: 123345 eYe ($1234)
             </div>
           </div>

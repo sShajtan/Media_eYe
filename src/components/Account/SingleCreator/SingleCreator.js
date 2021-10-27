@@ -7,12 +7,11 @@ import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import { useHistory } from 'react-router-dom';
 import Down from '../../Icons/down';
 import avatar from '../../../assets/img/avatar_collection.png';
-import CollectionSingleBlock from '../CollectionSingleBlock/CollectionSingleBlock';
+import ExploreBlock from '../../ContentMarketplace/ExploreBlock/ExploreBlock';
 
 const SingleCreator = (props) => {
   const [showText, setShowText] = useState(false);
   const theme = useSelector((state) => state.app.darkTheme);
-  const [grid, setGrid] = useState('1');
   const [showEditblock, setShowEditblock] = useState(false);
   let history = useHistory();
 
@@ -169,47 +168,19 @@ const SingleCreator = (props) => {
               </div>
             </div>
             <div className="grid_filter">
-              <div className="grid_menu">
-                <button className="2rows" onClick={() => setGrid('2')}>
-                  <img
-                    src={
-                      grid === '2'
-                        ? '../../../img/2rows-active.png'
-                        : '../../../img/2rows_' + theme + '.png'
-                    }
-                    alt="two rows"
-                  />
-                </button>
-                <button className="1rows" onClick={() => setGrid('1')}>
-                  <img
-                    src={
-                      grid === '1'
-                        ? '../../../img/1rows_active.png'
-                        : '../../../img/1rows_' + theme + '.png'
-                    }
-                    alt="one row"
-                  />
-                </button>
-              </div>
               <FilterAccount />
             </div>
           </div>
           <div className="active_minters"></div>
-          <div
-            className={
-              grid === '2'
-                ? 'creator_account_main_block two_rows'
-                : 'creator_account_main_block one_row'
-            }
-          >
-            <CollectionSingleBlock count={'1/1000'} />
-            <CollectionSingleBlock count={'2/1000'} />
-            <CollectionSingleBlock count={'1/1'} />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
-            <CollectionSingleBlock />
+          <div className="creator_account_main_block">
+            <ExploreBlock mintedBlock={'1/1111'} />
+            <ExploreBlock mintedBlock={'2/1111'} />
+            <ExploreBlock mintedBlock={'1/1'} />
+            <ExploreBlock />
+            <ExploreBlock />
+            <ExploreBlock />
+            <ExploreBlock />
+            <ExploreBlock />
           </div>
           <button className="load_more">Load More</button>
         </div>

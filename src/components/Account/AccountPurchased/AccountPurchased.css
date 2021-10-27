@@ -1,0 +1,13 @@
+.account_collection.account_purchased .marketplace_block_footer {
+  justify-content: space-between;
+}
+
+.account_collection.account_purchased
+  .marketplace_block_footer
+  span:nth-child(2),
+.dark
+  .account_collection.account_purchased
+  .marketplace_block_footer
+  span:nth-child(2) {
+  color: #0047ff;
+}

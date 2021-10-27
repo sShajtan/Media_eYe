@@ -6,7 +6,11 @@ const CharityBtn = (props) => {
   return (
     <div className="charity_btn_wrapper">
       <NavLink className="charity_btn" to="/charity-place">
-        <span>Charity</span>
+        <span>
+          {' '}
+          <img src="../../img/charity.png" alt="charity" />
+          Charity
+        </span>
       </NavLink>
     </div>
   );

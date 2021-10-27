@@ -26,25 +26,26 @@
 }
 
 .events_block_img_wrapper {
-  padding: 10px;
-  background: url('../../../assets/img/marketplace_border.png') no-repeat center;
-  background-size: 99% 99%;
+  padding: 0 10px 0 0;
   cursor: pointer;
 }
 
 .events_block_img_wrapper img {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .events_block .collection_block_ava {
   margin: 5px 0;
   width: 35px;
   height: 35px;
+  border: 1px solid rgba(97, 97, 97, 1);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .events_block .collection_block_ava img {
-  max-width: 25px;
-  max-height: 25px;
+  width: 100%;
+  height: 100%;
 }
 
 .events_block .user {
@@ -159,6 +160,13 @@
 .join_btn:hover::before {
   transition: 0.4s;
   opacity: 1;
+}
+
+@media (max-width: 1199.98px) {
+  .join_btn {
+    width: 75px;
+    height: 35px;
+  }
 }
 
 @media (max-width: 575.98px) {

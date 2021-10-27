@@ -8,8 +8,8 @@
 .creator_account_main_block .marketplace_block_wrapper,
 .product_footer_products .marketplace_block_wrapper {
   position: relative;
-  max-width: 22%;
-  margin: 0 auto 30px;
+  max-width: 23%;
+  margin: 0 auto 20px;
 }
 
 .marketplace_block_wrapper input::-webkit-outer-spin-button,
@@ -36,16 +36,12 @@
 
 .marketplace_block_img {
   padding: 8px;
-  background: #fff;
   border-radius: 10px;
 }
 
 .marketplace_block_img_wrapper {
   overflow: hidden;
   border-radius: 10px;
-}
-.dark .marketplace_block_img {
-  background: #282550;
 }
 
 .marketplace_block_img img {
@@ -146,28 +142,6 @@
 
 .collection_block_wrapper .marketplace_block_info h6 {
   text-align: center;
-}
-
-.collection_block_ava {
-  background: url('../../../assets/img/colection_ava.png') no-repeat center;
-  background-size: 99% 99%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  position: relative;
-  margin: -30px auto 0;
-}
-
-.dark .collection_block_ava {
-  background: url('../../../assets/img/colection_ava_dark.png') no-repeat center;
-  background-size: 99% 99%;
-}
-
-.collection_block_ava img {
-  max-width: 50px;
 }
 
 @media (max-width: 991.98px) {

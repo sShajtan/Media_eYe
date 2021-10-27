@@ -71,8 +71,9 @@
 .single_collection .collection_left_block {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 0;
-  width: 40%;
+  width: 30%;
   justify-content: space-around;
 }
 

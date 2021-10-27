@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Filter.css';
 import { Collapse } from 'react-collapse';
 
 const Filter = (props) => {
   const [showFilter, setShowFilter] = useState(false);
+  const Filter = useRef(null);
   const [status, setStatus] = useState(false);
   const [price, setPrice] = useState(false);
   const [collections, setCollections] = useState(false);
   const [chains, setChains] = useState(false);
   const [onSaleIn, setOnSaleIn] = useState(false);
+  const [changeFilter, setChangeFilter] = useState(false);
 
   const toggleFilter = () => {
     setShowFilter(!showFilter);
@@ -34,8 +36,12 @@ const Filter = (props) => {
     setOnSaleIn(!onSaleIn);
   };
 
+  useEffect(() => {
+    Filter.current.addEventListener('input', () => setChangeFilter(true));
+  }, []);
+
   return (
-    <div className="filter_wrapper filter">
+    <div className="filter_wrapper filter" ref={Filter}>
       <button
         className={showFilter ? 'filter_button open' : 'filter_button'}
         onClick={toggleFilter}
@@ -294,9 +300,11 @@ const Filter = (props) => {
               </Collapse>
             </li>
             <li>
-              <button type="button" className="applay_filter">
-                Applay
-              </button>
+              {changeFilter ? (
+                <button type="button" className="applay_filter">
+                  Applay
+                </button>
+              ) : null}
             </li>
           </ul>
         </div>

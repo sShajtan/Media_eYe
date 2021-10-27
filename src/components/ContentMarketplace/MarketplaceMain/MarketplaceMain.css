@@ -23,6 +23,7 @@
 .marketplace_main_main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .load_more {

@@ -5,22 +5,38 @@
 }
 
 .creator_account_avatar {
-  background: url('../../../assets/img/creator_account_avatar_bg.png') no-repeat
-    center;
-  background-size: 100% 100%;
-  width: 156px;
-  height: 156px;
+  width: 132px;
+  height: 132px;
   margin: 0 auto;
   margin-top: -75px;
   position: relative;
   z-index: 1;
-  padding: 10px;
+  background: #fff;
+  border: 1px solid #7e7e7e;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.creator_account_avatar img {
+  border-radius: 5px;
+}
+.edit_avatar {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  outline: none;
+  border: none;
+  background: none;
+  right: -16px;
+  bottom: -20px;
+  cursor: pointer;
+}
+
+.dark .edit_avatar svg rect {
+  fill: #141233;
 }
 
 .dark .creator_account_avatar {
-  background: url('../../../assets/img/creator_account_avatar_bg_dark.png')
-    no-repeat center;
-  background-size: 100% 100%;
+  background: #060028;
 }
 
 .creator_account_main_header {
@@ -28,13 +44,26 @@
   margin: 0 -30px;
 }
 
-.collection_left_block {
+.collection_left_block,
+.account_minted .collection_left_block {
   position: absolute;
   left: 0;
   top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.account_collection.account_owned .marketplace_block_footer {
+  justify-content: space-between;
+}
+
+.account_collection.account_owned .marketplace_block_footer span:nth-child(2),
+.dark
+  .account_collection.account_owned
+  .marketplace_block_footer
+  span:nth-child(2) {
+  color: #0047ff;
 }
 
 .collection_right_block {
@@ -61,7 +90,7 @@
 }
 
 .img_line {
-  margin: 0 -30px;
+  margin: 0 -50px;
   position: relative;
 }
 
@@ -147,6 +176,7 @@
   font-size: 42px;
   line-height: 64px;
   color: #000;
+  margin-top: 15px;
 }
 
 .dark .creator_account_info h4 {
@@ -183,6 +213,8 @@
 }
 .account_balance img {
   margin-right: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .dark .account_balance {
@@ -372,6 +404,10 @@
   cursor: pointer;
 }
 
+.copy_btn img {
+  width: 17px;
+}
+
 .copy_block {
   background: linear-gradient(90deg, #37dbff -5.68%, #df17ff 107.39%);
   -webkit-background-clip: text;
@@ -389,6 +425,11 @@
 .creator_account_main_block .marketplace_block_wrapper {
   margin: 0 0 20px;
   max-width: 24%;
+}
+
+.account_main_block {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .creator_account_search input {
@@ -498,6 +539,10 @@
   border: none !important;
 }
 
+.img_line img {
+  border-radius: 10px;
+}
+
 .creator_account_menu a.active .line {
   background: linear-gradient(90deg, #37dbff -5.68%, #df17ff 107.39%);
   width: 100%;
@@ -508,6 +553,12 @@
 
 .creator_account_menu a.active span {
   background: linear-gradient(90deg, #37dbff -5.68%, #df17ff 107.39%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.creator_account_menu a.active span i {
+  background: #00fff0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -632,7 +683,7 @@
   }
   .creator_account_main_header h6.mobile_level {
     display: block;
-    margin: 0 auto;
+    margin: 10px auto 0;
     top: 0;
     text-align: center;
   }
@@ -653,8 +704,10 @@
     width: 95px;
   }
 
-  .collection_left_block {
-    top: 50px;
+  .collection_left_block,
+  .collection_left_block,
+  .account_minted .collection_left_block {
+    top: 40px;
   }
   .account_collection .creator_account_menu button,
   .account_collection .creator_account_menu a {
@@ -698,7 +751,7 @@
   }
 
   .creator_account_avatar {
-    margin-top: -45px;
+    margin-top: -35px;
   }
   .account_links div span {
     font-size: 18px;
@@ -731,8 +784,9 @@
   }
 
   .img_line img {
-    height: 90px;
+    height: 100%;
     width: auto;
+    border-radius: 5px;
   }
   .creator_account_menu button,
   .creator_account_menu button a {
@@ -743,8 +797,8 @@
     font-size: 16px;
   }
   .creator_account_avatar {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
   .collection_block_wrapper .marketplace_block {
     padding: 5px;

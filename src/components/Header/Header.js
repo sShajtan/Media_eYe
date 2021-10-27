@@ -10,6 +10,9 @@ import './Header.css';
 import Item from '../Icons/Item';
 import Edit from '../Icons/Edit';
 import SearchIcon from '../Icons/SearchIcon';
+import StarHeader from '../Icons/StarHeader';
+import Sun from '../Icons/Sun';
+import Moon from '../Icons/Moon';
 
 const Header = (props) => {
   const {
@@ -70,18 +73,12 @@ const Header = (props) => {
                   <Collapse isOpened={showNftCollapse}>
                     <Link to="/nft-marketplace">NFT Marketplace </Link>
                     {/* <button onClick={toggleSoonPopup}>NFT Marketplace</button> */}
-                    <Link to="/gallery">Gallery </Link>
+                    <Link to="/events-gallery">Events Gallery </Link>
                     {/* <button onClick={toggleSoonPopup}>Gallery</button> */}
                   </Collapse>
                 </div>
               </div>
-              <a
-                href="https://mediaeyenft.com/blog/about/what-is-the-media-eye-nft-portal/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                About
-              </a>
+              <NavLink to="/about">About</NavLink>
               <a
                 href="https://mediaeyenft.com/blog/"
                 target="_blank"
@@ -110,18 +107,11 @@ const Header = (props) => {
                 }
               />
             </div>
-            <div className="mobile_switch" onClick={toggleTheme}>
-              <img
-                alt="toggle_theme_icon"
-                src={
-                  theme
-                    ? '../../../img/sun_mobile.png'
-                    : '../../../img/sun_mobile_dark.png'
-                }
-              />
+            <div className="toggle_theme toggle_theme_mobile">
+              <div onClick={toggleTheme}>{theme ? <Sun /> : <Moon />}</div>
             </div>
             <div className="header_right_menu">
-              <div className="toggle-button-cover">
+              {/* <div className="toggle-button-cover">
                 <div className="button-cover">
                   <div className="button b2" id="button-12">
                     <input
@@ -135,10 +125,12 @@ const Header = (props) => {
                     <div className="layer"></div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              {isLogin ? (
-                !account ? null : (
+              {/* {isLogin  ? ( */}
+              {true ? (
+                // !account ? null : (
+                false ? null : (
                   // <button
                   //   className="ntf_header"
                   //   onClick={() => history.push('/connect-wallet')}
@@ -153,8 +145,17 @@ const Header = (props) => {
                       Create NFT
                     </button>
                     <div className="user_header_menu">
-                      <div onClick={() => history.push('/selected')}>
-                        <img src="../../../img/b_start.png" alt="star" />
+                      <div className="network">
+                        Network &nbsp;
+                        <span>
+                          ETH <i>&#9660;</i>
+                        </span>
+                      </div>
+                      <div
+                        onClick={() => history.push('/favorites')}
+                        className="header_selected_link"
+                      >
+                        <StarHeader />
                         <span>1123</span>
                       </div>
 
@@ -207,24 +208,23 @@ const Header = (props) => {
                                 </div>
                               </div>
                               <div className="wallet_footer">
-                                <NavLink className="" to="/account/minted-nft">
+                                <a className="" href="/account/minted">
                                   <Item />
                                   &ensp;My Profile
-                                </NavLink>
-                                <NavLink className="" to="/profile">
+                                </a>
+                                <a className="" href="/profile">
                                   <Edit />
                                   &ensp;Edit profile
-                                </NavLink>
+                                </a>
                               </div>
                             </div>
                           </Collapse>
                         </div>
                       </div>
-                      <div className="network">
-                        Network &nbsp;
-                        <span>
-                          ETH <i>&#9660;</i>
-                        </span>
+                      <div className="toggle_theme">
+                        <div onClick={toggleTheme}>
+                          {theme ? <Sun /> : <Moon />}
+                        </div>
                       </div>
                     </div>
                   </React.Fragment>
@@ -244,7 +244,12 @@ const Header = (props) => {
                     <Link to="/signup" className="signup">
                       <span>Sign Up</span>
                     </Link>
-                    *
+                  </div>
+
+                  <div className="toggle_theme">
+                    <div onClick={toggleTheme}>
+                      {theme ? <Sun /> : <Moon />}
+                    </div>
                   </div>
                 </React.Fragment>
               )}

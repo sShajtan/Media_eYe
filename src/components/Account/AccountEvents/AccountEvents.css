@@ -1,0 +1,15 @@
+.account_events_main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.account_events_main .events_block {
+  width: 47%;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991.98px) {
+  .account_events_main .events_block {
+    width: auto;
+  }
+}

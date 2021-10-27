@@ -1,9 +1,81 @@
-import React from 'react';
-import CollectionBlock from '../CollectionBlock/CollectionBlock';
+import React, { useEffect, useState } from 'react';
+import CollectionBlock from '../../ContentMarketplace/CollectionBlock/CollectionBlock';
 import CreatorMenu from '../CreatorMenu/CreatorMenu';
 import './CreatorCollection.css';
 
+const collections = [
+  {
+    img: '../../img/top_collection_home/1.png',
+    ava: '../../img/top_collection_home/a1.png'
+  },
+  {
+    img: '../../img/top_collection_home/2.png',
+    ava: '../../img/top_collection_home/a2.png'
+  },
+  {
+    img: '../../img/top_collection_home/3.png',
+    ava: '../../img/top_collection_home/a3.png'
+  },
+  {
+    img: '../../img/top_collection_home/4.png',
+    ava: '../../img/top_collection_home/a4.png'
+  },
+  {
+    img: '../../img/top_collection_home/5.png',
+    ava: '../../img/top_collection_home/a5.png'
+  },
+  {
+    img: '../../img/top_collection_home/3.png',
+    ava: '../../img/top_collection_home/a3.png'
+  },
+  {
+    img: '../../img/top_collection_home/1.png',
+    ava: '../../img/top_collection_home/a1.png'
+  },
+  {
+    img: '../../img/top_collection_home/2.png',
+    ava: '../../img/top_collection_home/a2.png'
+  },
+  {
+    img: '../../img/top_collection_home/3.png',
+    ava: '../../img/top_collection_home/a3.png'
+  },
+  {
+    img: '../../img/top_collection_home/4.png',
+    ava: '../../img/top_collection_home/a4.png'
+  },
+  {
+    img: '../../img/top_collection_home/5.png',
+    ava: '../../img/top_collection_home/a5.png'
+  },
+  {
+    img: '../../img/top_collection_home/3.png',
+    ava: '../../img/top_collection_home/a3.png'
+  }
+];
+
+const productPerPage = 8;
+let arrayForHoldingProducts = [];
+
 const CreatorCollection = (props) => {
+  const [productToShow, setproductToShow] = useState([]);
+  const [next, setNext] = useState(8);
+
+  const loopWithSlice = (start, end) => {
+    const slicedProducts = collections.slice(start, end);
+    arrayForHoldingProducts = [...arrayForHoldingProducts, ...slicedProducts];
+    setproductToShow(arrayForHoldingProducts);
+  };
+
+  useEffect(() => {
+    loopWithSlice(0, productPerPage);
+  }, []);
+
+  const handleShowMoreProducts = () => {
+    loopWithSlice(next, next + productPerPage);
+    setNext(next + productPerPage);
+  };
+
   return (
     <div className="creator_account">
       <div className="container">
@@ -56,15 +128,13 @@ const CreatorCollection = (props) => {
           </div>
           <CreatorMenu />
           <div className="creator_account_main_block">
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
+            {productToShow.map((collection, i) => (
+              <CollectionBlock collection={collection} key={i} />
+            ))}
           </div>
+          <button className="load_more" onClick={handleShowMoreProducts}>
+            Load More
+          </button>
         </div>
       </div>
     </div>

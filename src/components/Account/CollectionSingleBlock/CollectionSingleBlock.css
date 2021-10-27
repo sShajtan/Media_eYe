@@ -26,15 +26,11 @@
 
 .marketplace_block_img {
   padding: 8px;
-  background: #fff;
   border-radius: 10px;
 }
 
 .marketplace_block_img_wrapper {
   overflow: hidden;
-}
-.dark .marketplace_block_img {
-  background-color: #282550;
 }
 
 .marketplace_block_img img {
@@ -49,29 +45,9 @@
 
 .marketplace_block_info {
   background: #fff;
-  padding: 7px;
+  padding: 7px 14px;
   border-radius: 10px;
-  margin-top: 10px;
-  -webkit-clip-path: polygon(
-    0% 0%,
-    /* верхняя левая */ 0% 0%,
-    /* верхняя левая */ 100% 0%,
-    /* верхняя правая */ 100% 0%,
-    /* верхняя правая */ 100% 87%,
-    /* нижняя правая */ 96% 100%,
-    /* нижняя правая */ 0% 100%,
-    /* нижняя левая */ 0 100% /* нижняя левая */
-  );
-  clip-path: polygon(
-    0% 0%,
-    /* верхняя левая */ 0% 0%,
-    /* верхняя левая */ 100% 0%,
-    /* верхняя правая */ 100% 0%,
-    /* верхняя правая */ 100% 87%,
-    /* нижняя правая */ 96% 100%,
-    /* нижняя правая */ 0% 100%,
-    /* нижняя левая */ 0 100% /* нижняя левая */
-  );
+  margin: 10px 5px 5px;
 }
 
 .dark .marketplace_block_info {

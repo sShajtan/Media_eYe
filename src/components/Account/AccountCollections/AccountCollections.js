@@ -3,21 +3,90 @@ import { useSelector, useDispatch } from 'react-redux';
 import './AccountCollections.css';
 import SearchIcon from '../../Icons/SearchIcon';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
-import CollectionBlock from '../CollectionBlock/CollectionBlock';
+import CollectionBlock from '../../ContentMarketplace/CollectionBlock/CollectionBlock';
 import AccountMenu from '../AccountMenu/AccountMenu';
 import { useHistory } from 'react-router-dom';
 import { updateActiveTab } from '../../../store/app/appSlice';
+import EditAvatar from '../../Icons/EditAvatart';
+
+const collections = [
+  {
+    img: '../../img/top_collection_home/1.png',
+    ava: '../../img/top_collection_home/a1.png'
+  },
+  {
+    img: '../../img/top_collection_home/2.png',
+    ava: '../../img/top_collection_home/a2.png'
+  },
+  {
+    img: '../../img/top_collection_home/3.png',
+    ava: '../../img/top_collection_home/a3.png'
+  },
+  {
+    img: '../../img/top_collection_home/4.png',
+    ava: '../../img/top_collection_home/a4.png'
+  },
+  {
+    img: '../../img/top_collection_home/5.png',
+    ava: '../../img/top_collection_home/a5.png'
+  },
+  {
+    img: '../../img/top_collection_home/3.png',
+    ava: '../../img/top_collection_home/a3.png'
+  },
+  {
+    img: '../../img/top_collection_home/1.png',
+    ava: '../../img/top_collection_home/a1.png'
+  },
+  {
+    img: '../../img/top_collection_home/2.png',
+    ava: '../../img/top_collection_home/a2.png'
+  },
+  {
+    img: '../../img/top_collection_home/3.png',
+    ava: '../../img/top_collection_home/a3.png'
+  },
+  {
+    img: '../../img/top_collection_home/4.png',
+    ava: '../../img/top_collection_home/a4.png'
+  },
+  {
+    img: '../../img/top_collection_home/5.png',
+    ava: '../../img/top_collection_home/a5.png'
+  },
+  {
+    img: '../../img/top_collection_home/3.png',
+    ava: '../../img/top_collection_home/a3.png'
+  }
+];
+
+const productPerPage = 8;
+let arrayForHoldingProducts = [];
 
 const AccountCollections = (props) => {
-  const theme = useSelector((state) => state.app.darkTheme);
   const [wallet] = useState('9999999999999999999999999999999');
   // const [activeTab, setActiveTab] = useState('owner');
   const dispatch = useDispatch();
   const activeTab = useSelector((state) => state.app.activeTab);
-  const [grid, setGrid] = useState('1');
   const [copyWallet, setCopyWallet] = useState(false);
+  const [productToShow, setproductToShow] = useState([]);
+  const [next, setNext] = useState(8);
+  const history = useHistory();
 
-  let history = useHistory();
+  const loopWithSlice = (start, end) => {
+    const slicedProducts = collections.slice(start, end);
+    arrayForHoldingProducts = [...arrayForHoldingProducts, ...slicedProducts];
+    setproductToShow(arrayForHoldingProducts);
+  };
+
+  useEffect(() => {
+    loopWithSlice(0, productPerPage);
+  }, []);
+
+  const handleShowMoreProducts = () => {
+    loopWithSlice(next, next + productPerPage);
+    setNext(next + productPerPage);
+  };
 
   useEffect(() => {
     if (copyWallet === true) {
@@ -46,6 +115,9 @@ const AccountCollections = (props) => {
             </div>
             <div className="creator_account_avatar">
               <img src="../img/creator_account_avatar.png" alt="avatar" />
+              <button className="edit_avatar">
+                <EditAvatar />
+              </button>
             </div>
             <div className="collection_right_block">
               <button>
@@ -84,7 +156,7 @@ const AccountCollections = (props) => {
                 </div>
               </div>
               <div className="account_balance">
-                <img src="../img/token_1.png" alt="token" />
+                <img src="../img/token_11.png" alt="token" />
                 Balance: 123345 eYe ($1234)
               </div>
               <button
@@ -126,48 +198,17 @@ const AccountCollections = (props) => {
               Create Collection
             </button>
             <div className="grid_filter">
-              <div className="grid_menu">
-                <button className="2rows" onClick={() => setGrid('2')}>
-                  <img
-                    src={
-                      grid === '2'
-                        ? '../../img/2rows-active.png'
-                        : '../../img/2rows_' + theme + '.png'
-                    }
-                    alt="two rows"
-                  />
-                </button>
-                <button className="1rows" onClick={() => setGrid('1')}>
-                  <img
-                    src={
-                      grid === '1'
-                        ? '../../img/1rows_active.png'
-                        : '../../img/1rows_' + theme + '.png'
-                    }
-                    alt="one row"
-                  />
-                </button>
-              </div>
               <FilterAccount />
             </div>
           </div>
-          <div
-            className={
-              grid === '2'
-                ? 'creator_account_main_block two_rows'
-                : 'creator_account_main_block one_row'
-            }
-          >
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
-            <CollectionBlock />
+          <div className="creator_account_main_block">
+            {productToShow.map((collection, i) => (
+              <CollectionBlock collection={collection} key={i} />
+            ))}
           </div>
-          <button className="load_more">Load More</button>
+          <button className="load_more" onClick={handleShowMoreProducts}>
+            Load More
+          </button>
         </div>
       </div>
     </div>

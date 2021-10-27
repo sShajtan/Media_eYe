@@ -1,69 +1,65 @@
 import React from 'react';
 import './MarketplaceSlider.css';
 import Slider from 'react-slick';
-import MarketplaceBlock from '../MarketplaceBlock/MarketplaceBlock';
-
-function SampleNextArrow(props) {
-  const { onClick } = props;
-  return (
-    <button
-      type="button"
-      data-role="none"
-      className="slick-arrow slick-next"
-      onClick={onClick}
-    >
-      <span>&#8594;</span>
-    </button>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <button
-      type="button"
-      data-role="none"
-      className="slick-arrow slick-prev"
-      onClick={onClick}
-    >
-      <span>&#8592;</span>
-    </button>
-  );
-}
+import SampleNextArrow from '../../SampleNextArrow/SampleNextArrow';
+import SamplePrevArrow from '../../SamplePrevArrow/SamplePrevArrow';
+import ExploreBlock from '../ExploreBlock/ExploreBlock';
+import limitDotsSlider from '../../../utils/limitDotsSlider';
 
 const MarketplaceSlider = (props) => {
-  const { title } = props;
+  const { title, rows, products } = props;
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    rows: 1,
+    rows: rows,
     slidesPerRow: 1,
     arrows: true,
     autoplay: false,
     pauseOnHover: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    beforeChange: () => {
+      limitDotsSlider();
+    },
+    onInit: () => {
+      limitDotsSlider();
+    },
+    onReInit: () => {
+      limitDotsSlider();
+    },
     responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          rows: 1
+        }
+      },
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 2,
+          rows: 1
         }
       },
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 2,
-          dots: true
+          rows: 1,
+          dots: true,
+          arrows: false
         }
       },
       {
         breakpoint: 574,
         settings: {
           dots: true,
-          slidesToShow: 1
+          rows: 1,
+          slidesToShow: 1,
+          arrows: false
         }
       }
     ]
@@ -90,11 +86,9 @@ const MarketplaceSlider = (props) => {
         <h4>{title}</h4>
         <div className="marketplace_slider_main">
           <Slider {...settings}>
-            <MarketplaceBlock />
-            <MarketplaceBlock />
-            <MarketplaceBlock />
-            <MarketplaceBlock />
-            <MarketplaceBlock />
+            {products.map((product, i) => (
+              <ExploreBlock key={i} product={product} />
+            ))}
           </Slider>
         </div>
       </div>

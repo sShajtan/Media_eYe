@@ -11,7 +11,6 @@ import SoonPopup from './components/SoonPopup/Popup';
 import PartnersPopup from './components/PartnersPopup/Popup';
 import Footer from './components/Footer/Footer';
 import NoMatch from './pages/NoMatch';
-import Gallery from './pages/Gallery';
 import Creators from './pages/Creators';
 import './App.css';
 import './fonts/Poppins/stylesheet.css';
@@ -20,7 +19,6 @@ import './fonts/Roboto/stylesheet.css';
 import './fonts/neumatic/stylesheet.css';
 import './fonts/furore/style.css';
 import MessagePopup from './components/MessagePopup/MessagePopup';
-import ContentMarketplace from './pages/ContentMarketplace';
 import NftMarketplace from './pages/NftMarketplace';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
@@ -61,6 +59,9 @@ import Home from './pages/Home/Home';
 import ScrollToTop from './utils/scrollToTop';
 import EventsGallery from './pages/EventsGallery';
 import Event from './pages/Event';
+import AccountEvents from './pages/AccountEvents';
+import CreatorEvents from './pages/CreatorEvents';
+import Hub from './pages/Hub';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -157,6 +158,9 @@ const App = () => {
           />
           <Switch>
             <Route path="/" exact>
+              <Home closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/about" exact>
               <Main
                 toggleSoonPopup={toggleSoonPopup}
                 togglePartnersPopup={togglePartnersPopup}
@@ -166,11 +170,6 @@ const App = () => {
                 toggleNftCollapse={toggleNftCollapse}
                 closeNftCollapse={closeNftCollapse}
               />
-            </Route>
-            <Route path="/content-marketplace" exact>
-              <ContentMarketplace
-                closeNftCollapse={closeNftCollapse}
-              ></ContentMarketplace>
             </Route>
             <Route path="/nft-marketplace" exact>
               <NftMarketplace
@@ -183,17 +182,29 @@ const App = () => {
             <Route path="/login" exact>
               <LogIn />
             </Route>
-            <Route path="/gallery" exact>
-              <Gallery closeNftCollapse={closeNftCollapse} />
-            </Route>
             <Route path="/creators" exact>
               <Creators closeNftCollapse={closeNftCollapse} />
             </Route>
-            <Route path="/creator-account" exact>
+            <Route path="/creator/on-sale" exact>
+              <CreatorAccount closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/creator/owned" exact>
+              <CreatorAccount closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/creator/created" exact>
+              <CreatorAccount closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/creator/liked" exact>
+              <CreatorAccount closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/creator/activity" exact>
               <CreatorAccount closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="/creator/collections" exact>
               <CreatorCollection closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/creator/events" exact>
+              <CreatorEvents closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="/connect-wallet" exact>
               <ConnectWallet closeNftCollapse={closeNftCollapse} />
@@ -240,8 +251,11 @@ const App = () => {
             <Route path="/profile" exact>
               <Profile closeNftCollapse={closeNftCollapse} />
             </Route>
-            <Route path="/selected" exact>
+            <Route path="/favorites" exact>
               <Selected closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/account/events" exact>
+              <AccountEvents closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="/account/collections" exact>
               <CreatorAccountCollections closeNftCollapse={closeNftCollapse} />
@@ -273,9 +287,7 @@ const App = () => {
             <Route path="/put-on-marketplace" exact>
               <PutOnMarketplace closeNftCollapse={closeNftCollapse} />
             </Route>
-            <Route path="/home" exact>
-              <Home closeNftCollapse={closeNftCollapse} />
-            </Route>
+
             <Route path="/charity-place" exact>
               <CharitiesPlace
                 closeNftCollapse={closeNftCollapse}
@@ -313,6 +325,9 @@ const App = () => {
             </Route>
             <Route path="/theOne/canvas" exact>
               <Canvas closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/hub" exact>
+              <Hub closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="*">
               <NoMatch onClick={closeNftCollapse} />

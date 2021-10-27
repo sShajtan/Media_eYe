@@ -3,6 +3,7 @@ import './CollectionBlock.css';
 import { useHistory } from 'react-router-dom';
 
 const CollectionBlock = (props) => {
+  const { collection } = props;
   let history = useHistory();
 
   return (
@@ -12,13 +13,21 @@ const CollectionBlock = (props) => {
         onClick={() => history.push('/account/collections/collection')}
       >
         <div className="marketplace_block_img">
-          <div className="marketplace_block_img_wrapper ">
-            <img src="../../img/05china05.png" alt="marketplace block" />
+          <div className="marketplace_block_img_wrapper">
+            <img
+              src={collection ? collection.img : '../../img/05china05.png'}
+              alt="marketplace block"
+            />
           </div>
         </div>
-        <div className="collection_block_ava">
-          <img src="../../img/creator_account_avatar.png" alt="avatar" />
-        </div>
+        <div
+          className="collection_block_ava"
+          style={{
+            backgroundImage: `url(${
+              collection ? collection.img : '../../img/05china05.png'
+            })`
+          }}
+        ></div>
         <div className="marketplace_block_info">
           <h6>Collection 1 [Title]</h6>
           <span>$345,000</span>

@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './AccountMainted.css';
-import { useSelector } from 'react-redux';
 import SearchIcon from '../../Icons/SearchIcon';
 import FilterAccount from '../../ContentMarketplace/Filter/FilterAccount';
 import AccountMenu from '../AccountMenu/AccountMenu';
-import MintedBlock from '../MintedBlock/MintedBlock';
+import ExploreBlock from '../../ContentMarketplace/ExploreBlock/ExploreBlock';
+import EditAvatar from '../../Icons/EditAvatart';
 
 const AccountMainted = (props) => {
-  const theme = useSelector((state) => state.app.darkTheme);
   const [wallet] = useState('9999999999999999999999999999999');
   // const [activeTab, setActiveTab] = useState('owner');
-  const [grid, setGrid] = useState('1');
   const [copyWallet, setCopyWallet] = useState(false);
 
   useEffect(() => {
@@ -22,7 +20,7 @@ const AccountMainted = (props) => {
   });
 
   return (
-    <div className="creator_account account_collection single_collection account_minted">
+    <div className="creator_account account_collection account_minted">
       <div className="container">
         <div className="creator_account_main">
           <div className="img_line">
@@ -40,6 +38,9 @@ const AccountMainted = (props) => {
             </div>
             <div className="creator_account_avatar">
               <img src="../img/creator_account_avatar.png" alt="avatar" />
+              <button className="edit_avatar">
+                <EditAvatar />
+              </button>
             </div>
             <div className="collection_right_block">
               <button>
@@ -78,11 +79,15 @@ const AccountMainted = (props) => {
                 </div>
               </div>
               <div className="account_balance">
-                <img src="../img/token_1.png" alt="token" />
+                <img src="../img/token_11.png" alt="token" />
                 Balance: 123345 eYe ($1234)
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="account_main_block_wrapper">
+        <div className="container">
           <AccountMenu />
           <div className="creator_account_filter">
             <div className="creator_account_search">
@@ -93,50 +98,22 @@ const AccountMainted = (props) => {
             </div>
 
             <div className="grid_filter">
-              <div className="grid_menu">
-                <button className="2rows" onClick={() => setGrid('2')}>
-                  <img
-                    src={
-                      grid === '2'
-                        ? '../../img/2rows-active.png'
-                        : '../../img/2rows_' + theme + '.png'
-                    }
-                    alt="two rows"
-                  />
-                </button>
-                <button className="1rows" onClick={() => setGrid('1')}>
-                  <img
-                    src={
-                      grid === '1'
-                        ? '../../img/1rows_active.png'
-                        : '../../img/1rows_' + theme + '.png'
-                    }
-                    alt="one rows"
-                  />
-                </button>
-              </div>
               <FilterAccount />
             </div>
           </div>
-          <div
-            className={
-              grid === '2'
-                ? 'creator_account_main_block two_rows'
-                : 'creator_account_main_block one_row'
-            }
-          >
-            <MintedBlock count={'1/1000'} />
-            <MintedBlock count={'2/1000'} />
-            <MintedBlock count={'1/1'} />
-            <MintedBlock />
-            <MintedBlock />
-            <MintedBlock />
-            <MintedBlock />
-            <MintedBlock />
+          <div className="account_main_block">
+            <ExploreBlock mintedBlock={'1/1111'} />
+            <ExploreBlock mintedBlock={'2/1111'} />
+            <ExploreBlock mintedBlock={'1/1'} />
+            <ExploreBlock />
+            <ExploreBlock />
+            <ExploreBlock />
+            <ExploreBlock />
+            <ExploreBlock />
           </div>
-          <button className="load_more">Load More</button>
         </div>
       </div>
+      <button className="load_more">Load More</button>
     </div>
   );
 };

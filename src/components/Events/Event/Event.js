@@ -5,7 +5,54 @@ import Slider from 'react-slick';
 import { useHistory } from 'react-router-dom';
 import SampleNextArrow from '../../SampleNextArrow/SampleNextArrow';
 import SamplePrevArrow from '../../SamplePrevArrow/SamplePrevArrow';
-import EventSingleBlock from '../EventSingleBlock/EventSingleBlock';
+import ExploreBlock from '../../ContentMarketplace/ExploreBlock/ExploreBlock';
+import limitDotsSlider from '../../../utils/limitDotsSlider';
+
+const products = [
+  {
+    img: ['../../img/home_explore/1.png'],
+    isAuction: true,
+    fullImage: ['../../img/home_explore/f1.jpg']
+  },
+  {
+    img: ['../../img/home_explore/2.png'],
+    isSold: true,
+    fullImage: ['../../img/home_explore/f2.jpg']
+  },
+  {
+    img: ['../../img/home_explore/3.png'],
+    isAuction: true,
+    fullImage: ['../../img/home_explore/f3.jpg']
+  },
+  {
+    img: ['../../img/home_explore/4.png'],
+    fullImage: ['../../img/home_explore/f4.jpg']
+  },
+  {
+    img: ['../../img/home_explore/5.png'],
+    fullImage: ['../../img/home_explore/f5.jpg'],
+    isAuction: true,
+    isCharity: true
+  },
+  {
+    img: ['../../img/home_explore/6.png'],
+    isSold: true,
+    fullImage: ['../../img/home_explore/f6.jpg']
+  },
+  {
+    img: ['../../img/home_explore/7.png', '../../img/home_explore/3.png'],
+    isBunding: true,
+    fullImage: [
+      '../../img/home_explore/f7.jpg',
+      '../../img/home_explore/f3.jpg'
+    ]
+  },
+  {
+    img: ['../../img/home_explore/8.png'],
+    fullImage: ['../../img/home_explore/f8.jpg'],
+    isCharity: true
+  }
+];
 
 const Event = (props) => {
   let history = useHistory();
@@ -21,19 +68,37 @@ const Event = (props) => {
     pauseOnHover: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    beforeChange: () => {
+      limitDotsSlider();
+    },
+    onInit: () => {
+      limitDotsSlider();
+    },
+    onReInit: () => {
+      limitDotsSlider();
+    },
     responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          rows: 1
+        }
+      },
       {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
-          rows: 4
+          rows: 1
         }
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          dots: true
+          slidesToShow: 1,
+          dots: true,
+          arrows: false,
+          rows: 1
         }
       },
       {
@@ -41,7 +106,8 @@ const Event = (props) => {
         settings: {
           dots: true,
           slidesToShow: 1,
-          rows: 1
+          rows: 1,
+          arrows: false
         }
       }
     ]
@@ -101,16 +167,15 @@ const Event = (props) => {
               <button className="join_btn">Join</button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="event_single_slider_wrapper">
+        <div className="container">
           <div className="event_single_slider">
             <Slider {...settings}>
-              <EventSingleBlock isAuction={true} />
-              <EventSingleBlock />
-              <EventSingleBlock isCharity={true} />
-              <EventSingleBlock />
-              <EventSingleBlock isAuction={true} isCharity={true} />
-              <EventSingleBlock />
-              <EventSingleBlock isCharity={true} />
-              <EventSingleBlock />
+              {products.map((product, i) => (
+                <ExploreBlock product={product} key={i} />
+              ))}
             </Slider>
           </div>
         </div>

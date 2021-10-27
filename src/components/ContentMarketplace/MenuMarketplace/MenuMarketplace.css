@@ -7,7 +7,7 @@
 .content_marketplace_header_main_wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0 10px;
+  margin: 10px 15px 10px;
 }
 
 .content_marketplace_header_menu button {
@@ -69,10 +69,6 @@
   transition: 0.4s;
 }
 
-.content_marketplace_header_menu button:hover,
-.content_marketplace_header_menu button.active {
-}
-
 .dark .content_marketplace_header_menu button:hover,
 .dark .content_marketplace_header_menu button.active {
   color: #fff;
@@ -83,12 +79,10 @@
 }
 
 @media (max-width: 991.98px) {
-  .content_marketplace_header_menu {
-    margin-left: 10px;
-  }
   .content_marketplace_header_menu button {
     margin-right: 8px;
     padding: 4px;
+    min-width: 70px;
   }
 }
 
