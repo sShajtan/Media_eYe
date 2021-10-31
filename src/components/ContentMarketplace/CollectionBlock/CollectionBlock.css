@@ -64,24 +64,31 @@
   position: relative;
   width: 20px;
   height: 20px;
-  margin-bottom: -5px;
-  margin-left: -1px;
+  margin-right: 2px;
 }
 
 .collection_block_single .scattering {
   width: 50px;
-  height: 50px;
+  height: 40px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: url('../../../assets/img/heart_animation.png') no-repeat;
+  background: url('../../../assets/img/heart_animation_light.png') no-repeat;
   background-position: 0 0;
   cursor: pointer;
+  background-size: cover;
+}
+
+.dark .collection_block_single .scattering {
+  background: url('../../../assets/img/heart_animation.png') no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 }
 .collection_block_single .scattering.active {
-  background-position: -1400px 0;
+  background-position: 100.1% 0;
   transition: background 1s steps(28);
+  background-size: cover;
 }
 @-webkit-keyframes fave-heart {
   0% {

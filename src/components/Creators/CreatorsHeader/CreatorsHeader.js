@@ -10,6 +10,7 @@ import Sport from '../../Icons/Categories/Sport';
 import './CreatorsHeader.css';
 import { Collapse } from 'react-collapse';
 import Filter from '../../ContentMarketplace/Filter/Filter';
+import MenuMarketplace from '../../ContentMarketplace/MenuMarketplace/MenuMarketplace';
 
 const CreatorsHeader = (props) => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -24,68 +25,17 @@ const CreatorsHeader = (props) => {
       <div className="container">
         <div className="content_marketplace_header_main">
           <img
-            src={
-              darkTheme ? 'img/creator_title_dark.png' : 'img/creator_title.png'
-            }
+            className="creator_title"
+            src="img/creator_title.png"
+            alt="title"
+          />
+          <img
+            className="creator_title_mobile"
+            src="img/creator_title_mobile.png"
             alt="title"
           />
           <div className="content_marketplace_header_main_wrapper">
-            <div className="content_marketplace_header_menu_mobile">
-              <button
-                className={
-                  showMobileCategories
-                    ? 'categories_mobile_button open'
-                    : 'categories_mobile_button'
-                }
-                onClick={toggleMobileCategories}
-              >
-                Categories
-              </button>
-              <Collapse isOpened={showMobileCategories}>
-                <div
-                  className="filter_fields categories_filter"
-                  onClick={(event) => event.stopPropagation()}
-                >
-                  <button>
-                    <All />
-                    All
-                  </button>
-                  <button>
-                    <Entertaiment />
-                    Entertainment
-                  </button>
-                  <button>
-                    <Media />
-                    Media
-                  </button>
-                  <button>
-                    <Art />
-                    Art
-                  </button>
-                  <button>
-                    <Crypto />
-                    Crypto
-                  </button>
-                  <button>
-                    <Business />
-                    Business
-                  </button>
-                  <button>
-                    <Sport />
-                    Sports
-                  </button>
-                </div>
-              </Collapse>
-            </div>
-            <div className="content_marketplace_header_menu">
-              <button className="active">All</button>
-              <button>Entertainment</button>
-              <button>Media</button>
-              <button>Art</button>
-              <button>Crypto</button>
-              <button>Business</button>
-              <button>Sports</button>
-            </div>
+            <MenuMarketplace />
             <Filter />
           </div>
         </div>

@@ -207,6 +207,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  top: 89px;
 }
 
 /* General sidebar styles */
@@ -228,7 +229,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em 0;
-  padding-top: 110px;
+}
+.bm-menu-wrap {
+  border: none !important;
 }
 
 /* Individual item */
@@ -434,6 +437,7 @@ div.menu-item .soc_header_mobile {
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+  top: 0;
 }
 
 /* .header_right_menu button:nth-child(3) {
@@ -1164,6 +1168,8 @@ div .header_avatar_wrapper img {
 
 .wallet_footer a {
   color: #000;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .dark .wallet_footer a {

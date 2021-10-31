@@ -1,0 +1,22 @@
+.content_marketplace_header_main .content_marketplace_header_main_wrapper {
+  margin: 30px 0 0;
+}
+
+.creator_title {
+  display: block;
+}
+
+.creator_title_mobile {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .creator_title {
+    display: none;
+  }
+
+  .creator_title_mobile {
+    display: block;
+    margin: 0 auto;
+  }
+}

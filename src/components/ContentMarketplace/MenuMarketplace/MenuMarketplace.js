@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './MenuMarketplace.css';
+import { useHistory } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import All from '../../../components/Icons/Categories/All';
 import Entertaiment from '../../../components/Icons/Categories/Entertaiment';
@@ -14,6 +15,7 @@ const MenuMarketplace = (props) => {
   const toggleMobileCategories = () => {
     setShowMobileCategories(!showMobileCategories);
   };
+  const history = useHistory();
   return (
     <React.Fragment>
       <div className="content_marketplace_header_menu_mobile">
@@ -60,7 +62,7 @@ const MenuMarketplace = (props) => {
               <Sport />
               Sports
             </button>
-            <button>
+            <button onClick={() => history.push('/charity-place')}>
               <img src="../../img/charity.png" alt="charity" />
               Charity
             </button>

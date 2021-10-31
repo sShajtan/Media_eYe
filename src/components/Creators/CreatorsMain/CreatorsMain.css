@@ -1,5 +1,4 @@
 .creators_main {
-  margin-top: 70px;
   padding-bottom: 70px;
   /* background: url('../../../assets/img/marketplace_main_bg.png') no-repeat
     bottom; */
@@ -25,7 +24,7 @@
   flex-wrap: wrap;
 }
 
-.load_more {
+.creators_main .load_more {
   border: none;
   outline: none;
   cursor: pointer;
@@ -78,4 +77,13 @@
 .load_more:hover::before {
   transition: 0.4s;
   opacity: 1;
+}
+
+@media (max-width: 767.98px) {
+  .content_marketplace_header .filter .filter_block {
+    width: 100%;
+  }
+  .content_marketplace_header_menu_mobile .categories_filter {
+    width: 100%;
+  }
 }

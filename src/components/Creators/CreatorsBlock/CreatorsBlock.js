@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Heart from '../../Icons/Heart';
+import Men from '../../Icons/Men';
 import './CreatorsBlock.css';
 
 const CreatorsBlock = (props) => {
@@ -8,25 +10,23 @@ const CreatorsBlock = (props) => {
     <div className="creator_block_wrapper">
       <NavLink to={link}>
         <div className="creator_block">
-          <div className="creator_block_img">
-            <img src="img/creators_img.png" alt="marketplace block img" />
+          <div className="creator_block_header">
+            <img src="../../img/creators_block_header.png" />
           </div>
-        </div>
-        <div className="creator_block_info">
-          <div className="creator_block_info_main">
-            <div className="creator_block_info_img">
-              <img src="img/avatar.png" alt="avatar" />
-            </div>
-            <div className="creator_block_info_text">
-              <h6>Artist_Title</h6>
-              <div>
-                <span>
-                  <img src="img/heart.svg" alt="heart" /> 1,2 k
-                </span>
-                <span>
-                  <img src="img/men.svg" alt="heart" /> 555
-                </span>
-              </div>
+          <div className="creators_block_ava">
+            <img src="../../img/sellers_ava.png" alt="avatar" />
+          </div>
+          <div className="creator_block_content">
+            <h6>Username</h6>
+            <div>
+              <span>
+                <Heart />
+                1,2 k
+              </span>
+              <span>
+                <Men />
+                555
+              </span>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Home.scss';
 import { useSelector } from 'react-redux';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link, useLocation } from 'react-router-dom';
 import Slider from 'react-slick';
 import BannerItem from '../../components/Banner/BannerItem';
 import SampleNextArrow from '../../components/SampleNextArrow/SampleNextArrow';

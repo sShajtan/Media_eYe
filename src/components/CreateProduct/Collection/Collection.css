@@ -893,6 +893,12 @@ div[class*='-menu'] div {
 }
 
 @media (max-width: 575.98px) {
+  div[class*='-menu'] {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    right: 0;
+  }
   .collection_block_buttons button {
     width: 130px;
     min-width: auto;

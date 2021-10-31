@@ -485,8 +485,8 @@
   position: relative;
   width: 20px;
   height: 20px;
-  margin-bottom: -5px;
-  margin-right: 5px;
+  margin-bottom: 2px;
+  margin-right: 2px;
 }
 
 .initial_listing_price_content_product {
@@ -496,7 +496,7 @@
 
 .product_header .scattering {
   width: 50px;
-  height: 50px;
+  height: 40px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -504,18 +504,21 @@
   background: url('../../../assets/img/heart_animation_light.png') no-repeat;
   background-position: 0 0;
   cursor: pointer;
+  background-size: cover;
 }
 
 .product_header .scattering.active,
 .dark .product_header .scattering.active {
-  background-position: -1400px 0;
+  background-position: 100.1% 0;
   transition: background 1s steps(28);
+  background-size: cover;
 }
 
 .dark .product_header .scattering,
 .dark .product_header .scattering {
   background: url('../../../assets/img/heart_animation.png') no-repeat;
   background-position: 0 0;
+  background-size: cover;
 }
 
 @-webkit-keyframes fave-heart {

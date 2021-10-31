@@ -263,14 +263,17 @@ const Header = (props) => {
           onClose={handleIsOpen}
           isOpen={isOpen}
           width={'100%'}
+          outerContainerId={'root'}
         >
-          <button className="menu-item" onClick={toggleSoonPopup}>
+          <a className="menu-item" href="nft-marketplace">
             NFT Marketplace
-          </button>
-          <button className="menu-item" onClick={toggleSoonPopup}>
-            Gallery
-          </button>
-          <button className="menu-item">Creators</button>
+          </a>
+          <a href="/events-gallery" className="menu-item">
+            Events Gallery
+          </a>
+          <a className="menu-item" href="/creators">
+            Creators
+          </a>
           <button className="menu-item" onClick={toggleNftCollapse}>
             Investors ▾
           </button>

@@ -369,7 +369,10 @@ h3 img {
   .event_single_slider_wrapper .container,
   .event_single .container,
   .charities_single .container,
-  .hub_main_page .container {
+  .hub_main_page .container,
+  .creators_main .container,
+  .content_marketplace_header .container,
+  .hub_main_partner .container {
     max-width: 1290px;
   }
 }

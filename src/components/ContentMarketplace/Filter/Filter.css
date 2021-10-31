@@ -628,6 +628,9 @@
 }
 
 @media (max-width: 575.98px) {
+  .filter_block ul li .filter_title button {
+    white-space: nowrap;
+  }
   .status_filter input {
     width: 45%;
   }

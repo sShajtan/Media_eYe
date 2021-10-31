@@ -67,7 +67,9 @@ const ProductAuction = (props) => {
             <div className="product_header">
               <span>
                 <div className="like_wrapper" onClick={() => setLike(!like)}>
-                  <div class={like ? 'scattering active' : 'scattering'}></div>
+                  <div
+                    className={like ? 'scattering active' : 'scattering'}
+                  ></div>
                 </div>
                 1,2 k likes
               </span>

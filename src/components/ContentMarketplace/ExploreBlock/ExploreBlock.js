@@ -23,24 +23,12 @@ const ExploreBlock = (props) => {
     className: 'explorer_slide'
   };
 
-  let link = '/product';
-  if (product) {
-    if (product.isBunding) {
-      link = '/product-bunding';
-    }
-    if (product.isAuction) {
-      link = '/product-auction';
-    }
-    if (product.isBunding & product.isAuction) {
-      link = '/product-bunding-auction';
-    }
-  }
   return (
     <div className="explore_block_wrapper ">
       <div className="explore_block">
         <Link
           to={{
-            pathname: link,
+            pathname: '/product',
             state: { product }
           }}
         >

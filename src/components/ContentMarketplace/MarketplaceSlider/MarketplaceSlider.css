@@ -195,12 +195,14 @@
   .marketplace .slick-dots li button:before {
     font-size: 10px;
     color: #717171;
+    transition: 0.4s;
   }
   .dark .marketplace .slick-dots li button:before {
     font-size: 10px;
     color: #717171;
     opacity: 0.7;
     line-height: 22px;
+    transition: 0.4s;
   }
 
   .marketplace .slick-dots li.slick-active {
@@ -212,6 +214,7 @@
     height: 6px;
     border-radius: 5px;
     background: linear-gradient(90deg, #66c7ff 4.17%, #ce21ff 100%);
+    transition: 0.4s width;
   }
 
   .marketplace .slick-dots li.slick-active button::before {

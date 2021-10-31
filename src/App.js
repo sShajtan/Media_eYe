@@ -62,6 +62,7 @@ import Event from './pages/Event';
 import AccountEvents from './pages/AccountEvents';
 import CreatorEvents from './pages/CreatorEvents';
 import Hub from './pages/Hub';
+import HubPartner from './pages/HubPartner';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -212,17 +213,8 @@ const App = () => {
             <Route path="/feature" exact>
               <Feature closeNftCollapse={closeNftCollapse} />
             </Route>
-            <Route path="/product-auction" exact>
-              <ProductAuction closeNftCollapse={closeNftCollapse} />
-            </Route>
             <Route path="/product" exact>
               <Product closeNftCollapse={closeNftCollapse} />
-            </Route>
-            <Route path="/product-bunding" exact>
-              <ProductBunding closeNftCollapse={closeNftCollapse} />
-            </Route>
-            <Route path="/product-bunding-auction" exact>
-              <ProductBundingAuction closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="/create" exact>
               <CreateProduct closeNftCollapse={closeNftCollapse} />
@@ -328,6 +320,9 @@ const App = () => {
             </Route>
             <Route path="/hub" exact>
               <Hub closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/hub/partner" exact>
+              <HubPartner closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="*">
               <NoMatch onClick={closeNftCollapse} />
