@@ -426,7 +426,7 @@ const PutOnMarketplace = (props) => {
                           </ol>
                           <ol>
                             {recepient.map((item, i) => (
-                              <li>
+                              <li key={i}>
                                 <div>
                                   <span>{i + 1}</span>
                                   {item.substring(0, 5)}...
@@ -579,7 +579,7 @@ const PutOnMarketplace = (props) => {
                       </ol>
                       <ol>
                         {recepient.map((item, i) => (
-                          <li>
+                          <li key={i}>
                             <div>
                               <span>{i + 1}</span>
                               {item.substring(0, 5)}...

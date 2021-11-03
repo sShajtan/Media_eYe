@@ -135,6 +135,10 @@
   font-size: 20px;
 }
 
+.filter_block ul li .filter_title button.active {
+  color: #0075ff;
+}
+
 .filter_block ul li .filter_title.open {
   color: #4fc3f7;
   transition: 0.4s;

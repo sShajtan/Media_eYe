@@ -4,6 +4,7 @@ import { Collapse } from 'react-collapse';
 
 const FilterPutOn = (props) => {
   const [showFilter, setShowFilter] = useState(false);
+  const [activeFilter, setActiveFilter] = useState(null);
 
   const toggleFilter = () => {
     setShowFilter(!showFilter);
@@ -44,32 +45,68 @@ const FilterPutOn = (props) => {
           <ul>
             <li>
               <div className="filter_title">
-                <button>Creator</button>
+                <button
+                  className={activeFilter === 'Creator' ? 'active' : null}
+                  onClick={() => setActiveFilter('Creator')}
+                >
+                  Creator
+                </button>
               </div>
             </li>
             <li>
               <div className="filter_title">
-                <button>Owner</button>
+                <button
+                  className={activeFilter === 'Owner' ? 'active' : null}
+                  onClick={() => setActiveFilter('Owner')}
+                >
+                  Owner
+                </button>
               </div>
             </li>
             <li>
               <div className="filter_title">
-                <button>Recently Listed</button>
+                <button
+                  className={
+                    activeFilter === 'Recently Listed' ? 'active' : null
+                  }
+                  onClick={() => setActiveFilter('Recently Listed')}
+                >
+                  Recently Listed
+                </button>
               </div>
             </li>
             <li>
               <div className="filter_title">
-                <button>Recently Created</button>
+                <button
+                  className={
+                    activeFilter === 'Recently Created' ? 'active' : null
+                  }
+                  onClick={() => setActiveFilter('Recently Created')}
+                >
+                  Recently Created
+                </button>
               </div>
             </li>
             <li>
               <div className="filter_title">
-                <button>Recently Received</button>
+                <button
+                  className={
+                    activeFilter === 'Recently Received' ? 'active' : null
+                  }
+                  onClick={() => setActiveFilter('Recently Received')}
+                >
+                  Recently Received
+                </button>
               </div>
             </li>
             <li>
               <div className="filter_title">
-                <button>Oldest</button>
+                <button
+                  className={activeFilter === 'Oldest' ? 'active' : null}
+                  onClick={() => setActiveFilter('Oldest')}
+                >
+                  Oldest
+                </button>
               </div>
             </li>
           </ul>
