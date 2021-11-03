@@ -63,6 +63,7 @@ import AccountEvents from './pages/AccountEvents';
 import CreatorEvents from './pages/CreatorEvents';
 import Hub from './pages/Hub';
 import HubPartner from './pages/HubPartner';
+import PutOnMarketplaceCreate from './pages/PutOnMarketplaceCreate';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -279,7 +280,9 @@ const App = () => {
             <Route path="/put-on-marketplace" exact>
               <PutOnMarketplace closeNftCollapse={closeNftCollapse} />
             </Route>
-
+            <Route path="/put-on-marketplace/create" exact>
+              <PutOnMarketplaceCreate closeNftCollapse={closeNftCollapse} />
+            </Route>
             <Route path="/charity-place" exact>
               <CharitiesPlace
                 closeNftCollapse={closeNftCollapse}

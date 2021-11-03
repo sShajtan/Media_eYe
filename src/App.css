@@ -372,7 +372,8 @@ h3 img {
   .hub_main_page .container,
   .creators_main .container,
   .content_marketplace_header .container,
-  .hub_main_partner .container {
+  .hub_main_partner .container,
+  .put_on_marketplace .container {
     max-width: 1290px;
   }
 }

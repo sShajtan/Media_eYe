@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './CollectionBlock.css';
 import Slider from 'react-slick';
-import Timer from 'react-compound-timer/build';
 
 const MarketplaceBlock = (props) => {
   const { id, activeToken, product } = props;
@@ -22,36 +21,16 @@ const MarketplaceBlock = (props) => {
     className: 'explorer_slide'
   };
 
-  let link = '/product';
-  if (product) {
-    if (product.isBunding) {
-      link = '/product-bunding';
-    }
-    if (product.isAuction) {
-      link = '/product-auction';
-    }
-    if (product.isBunding & product.isAuction) {
-      link = '/product-bunding-auction';
-    }
-  }
   return (
     <div className="explore_block_wrapper ">
       <div className="explore_block">
         <Link
           to={{
-            pathname: link,
+            pathname: '/product',
             state: { product }
           }}
         >
-          <div
-            className={
-              product
-                ? product.isBunding !== undefined
-                  ? 'explore_block_img bunding_block'
-                  : 'explore_block_img'
-                : null
-            }
-          >
+          <div className="explore_block_img">
             <Slider {...settings} ref={sliderRef}>
               {product ? (
                 product.img.map((image, i) => (
@@ -73,41 +52,6 @@ const MarketplaceBlock = (props) => {
                 </React.Fragment>
               )}
             </Slider>
-
-            {product ? (
-              product.isAuction ? (
-                <div className="explore_block_timer">
-                  <span>
-                    <Timer initialTime={550000000} direction="backward">
-                      {() => (
-                        <React.Fragment>
-                          <Timer.Hours />:
-                          <Timer.Minutes />:
-                          <Timer.Seconds />
-                        </React.Fragment>
-                      )}
-                    </Timer>
-                  </span>
-                  left <img src="../../img/fire.png" alt="fire" />
-                </div>
-              ) : null
-            ) : null}
-
-            {product ? (
-              product.isBunding ? (
-                <div
-                  className="explorer_block_buttons"
-                  onClick={(event) => event.preventDefault()}
-                >
-                  <span onClick={() => sliderRef?.current?.slickNext()}>
-                    <img src="../../img/left_arrow.png" alt="left" />
-                  </span>
-                  <span onClick={() => sliderRef?.current?.slickPrev()}>
-                    <img src="../../img/right_arrow.png" alt="right" />
-                  </span>
-                </div>
-              ) : null
-            ) : null}
           </div>
         </Link>
 

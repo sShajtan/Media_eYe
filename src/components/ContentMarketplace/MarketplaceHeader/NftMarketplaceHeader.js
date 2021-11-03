@@ -3,10 +3,11 @@ import './MarketplaceHeader.css';
 import Filter from '../Filter/Filter';
 import MenuMarketplace from '../MenuMarketplace/MenuMarketplace';
 import CharityBtn from '../Filter/CharityBtn/CharityBtn';
+import { useHistory } from 'react-router-dom';
 
 const NftMarketplaceHeader = (props) => {
   const { darkTheme } = props;
-
+  const history = useHistory();
   return (
     <div className="content_marketplace_header">
       <div className="container">
@@ -20,7 +21,12 @@ const NftMarketplaceHeader = (props) => {
               }
               alt="title"
             />
-            <button className="sell_nft">Sell NFT</button>
+            <button
+              className="sell_nft"
+              onClick={() => history.push('/put-on-marketplace')}
+            >
+              Sell NFT
+            </button>
           </div>
           <div className="nft_marketplace_banner">
             <img
@@ -31,7 +37,12 @@ const NftMarketplaceHeader = (props) => {
               }
               alt="title"
             />
-            <button className="sell_nft">Sell NFT</button>
+            <button
+              className="sell_nft"
+              onClick={() => history.push('/put-on-marketplace')}
+            >
+              Sell NFT
+            </button>
           </div>
           <div className="content_marketplace_header_main_wrapper">
             <MenuMarketplace />

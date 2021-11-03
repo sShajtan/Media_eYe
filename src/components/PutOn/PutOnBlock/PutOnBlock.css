@@ -1,0 +1,88 @@
+.put_on_block_single {
+  display: flex;
+  justify-content: space-between;
+  min-height: 66px;
+}
+
+.put_on_block_single label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 103.5%;
+  color: #898989;
+  margin-top: 5px;
+}
+
+.put_on_block_single input {
+  min-width: auto;
+  width: auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #797979;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 5px;
+  padding: 2px 5px;
+  outline: none;
+  color: #000;
+  margin-left: 4px;
+  max-width: 100px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.put_on_block_single .on_sale_in_checkbox {
+  padding: 0;
+}
+
+.marketplace_block_info .on_sale_in_checkbox {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0;
+  padding: 0 3px;
+  align-items: baseline;
+}
+
+.on_sale_in_checkbox input[type='checkbox'] + label > span {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.on_sale_in_checkbox input[type='checkbox']:checked + label > span {
+  border: 2px solid #0075ff;
+}
+
+.on_sale_in_checkbox input[type='checkbox']:checked + label > span:before {
+  content: '';
+  color: #0075ff;
+  font-weight: 900;
+  font-size: 25px;
+  width: 90%;
+  height: 90%;
+  background: url('../../../assets/img/check_arrow.png') no-repeat center;
+  background-size: contain;
+}
+
+.on_sale_in_checkbox input[type='checkbox']:checked + label > span {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.collection_product .on_sale_in_checkbox input[type='checkbox'] + label > span {
+  margin: 0;
+}
+
+.collection_product .on_sale_in_checkbox input[type='checkbox'] + label {
+  margin: 0;
+}
+
+.put_on_block_single_quantity {
+  display: inline-block;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 103.5%;
+  color: #aeaeae;
+  height: 20px;
+}

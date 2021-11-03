@@ -1,308 +1,205 @@
 .put_on_marketplace {
   padding-top: 90px;
-  padding-bottom: 50px;
 }
 
 .put_on_marketplace_header {
-  background: #a5b4ff;
-  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
-  padding: 30px 0;
+  margin: 30px 0;
 }
 
-.dark .put_on_marketplace_header {
+.put_on_marketplace_header h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.dark .put_on_marketplace_header h2 {
+  color: #fff;
+}
+
+.put_on_marketplace_menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.put_on_marketplace .filter_wrapper {
+  margin: 0;
+}
+
+.put_on_marketplace_search {
+  position: relative;
+}
+
+.put_on_marketplace_search input {
+  background: #e9f1ff;
+  border-radius: 10px;
+  border: 1px solid#606060;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  outline: none;
+  padding: 8px 40px 8px 10px;
+  transition: 0.2s;
+  position: relative;
+  width: 300px;
+  color: #000;
+}
+.dark .put_on_marketplace_search input {
+  transition: 0.2s;
+  background: #141233;
+  color: #fff;
+}
+
+.put_on_marketplace_search button {
+  border: none;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  background: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.put_on_marketplace_search button svg {
+  margin-top: 4px;
+  transition: 0.4s;
+}
+
+.dark .put_on_marketplace_search button svg path,
+.dark .put_on_marketplace_search button svg circle {
+  transition: 0.4s;
+  stroke: #fff;
+}
+
+.put_on_marketplace_main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.put_on_marketplace_buttons_wrapper {
+  background: #eff2ff;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+.put_on_marketplace_buttons_wrapper.fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.dark .put_on_marketplace_buttons_wrapper {
   background: #292560;
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
 }
 
-.put_on_marketplace_header .container {
+.put_on_marketplace_buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
-.put_on_marketplace_header button:first-child {
+.put_on_marketplace_buttons a:first-child {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
   background: linear-gradient(90.12deg, #6a37fd -10.07%, #9e2993 116.16%);
   border: 1px solid #797979;
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  /* Note: backdrop-filter has minimal browser support */
   border-radius: 12px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ffffff;
-  border: #797979 1px solid;
+  padding: 15px 50px;
   outline: none;
-  padding: 20px;
   margin: 0 20px;
+  display: block;
 }
 
-.put_on_marketplace_header button:nth-child(2) {
-  background: #360c92;
+.put_on_marketplace_buttons a.disabled,
+.put_on_marketplace_buttons div:nth-child(2) a.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+  background: transparent;
+  color: #000;
+}
+
+.dark .put_on_marketplace_buttons a.disabled,
+.dark .put_on_marketplace_buttons div:nth-child(2) a.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+  background: transparent;
+  color: #fff;
+}
+
+.put_on_marketplace_buttons div:nth-child(2) a {
+  font-family: Poppins;
+  outline: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  background: linear-gradient(90.31deg, #6900d1 -7.12%, #4075ff 110.52%);
   border: 1px solid #797979;
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   /* Note: backdrop-filter has minimal browser support */
+  padding: 15px 15px;
   border-radius: 12px;
-  border-radius: 12px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ffffff;
-  border: #797979 1px solid;
-  outline: none;
-  padding: 20px;
   margin: 0 20px;
+  text-align: center;
 }
 
-.put_on_marketplace .product_main {
-  margin-top: 50px;
+.put_on_marketplace .__react_component_tooltip.show {
+  border: 1px solid #4075ff;
+  border-radius: 3px;
+  max-width: 250px;
 }
 
-.put_on_marketplace .product_header span:nth-child(2) {
-  margin-left: 0;
-}
-
-.put_on_marketplace h5 {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 103.5%;
-  color: #313131;
-}
-
-.dark .put_on_marketplace h5 {
-  color: #ebebeb;
-}
-
-.dark .put_on_marketplace .collection_block_buttons button span {
-  color: rgba(124, 124, 124, 1);
-}
-.put_on_marketplace .collection_block_buttons button.active span {
-  color: #ebebeb;
-}
-
-.put_on_marketplace .put_on_block {
-  display: block;
-}
-
-.put_on_marketplace .product_single_fixed_block span,
-.put_on_marketplace .product_auction_fixed_block span {
-  color: rgba(124, 124, 124, 1);
-}
-
-.put_on_marketplace .collection_block_blockchain .product_single_fixed_block,
-.put_on_marketplace .collection_block_blockchain .product_auction_fixed_block {
-  display: none;
-}
-
-.put_on_marketplace
-  .collection_block_blockchain
-  .product_single_fixed_block.active,
-.put_on_marketplace
-  .collection_block_blockchain
-  .product_auction_fixed_block.active {
-  display: block;
-}
-
-.put_on_marketplace .price_info div {
-  margin: 5px 0;
-}
-
-.put_on_marketplace .product_single_fixed_block h4,
-.put_on_marketplace .product_auction_fixed_block h4 {
-  color: #313131;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 103.5%;
-  color: #313139;
-  margin: 40px 0 10px;
-}
-
-.dark .put_on_marketplace .product_single_fixed_block h4,
-.dark .put_on_marketplace .product_auction_fixed_block h4 {
-  color: #ebebeb;
-}
-
-.put_on_marketplace .collection_block_buttons {
-  flex-direction: row;
-  margin-top: 20px;
-}
-
-.put_on_marketplace .collection_block_buttons > div {
-  display: inherit;
-}
-
-.put_on_marketplace .selected_popup_bid_dropdown {
-  display: flex;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 10px;
-  color: #797979;
-}
-.put_on_marketplace .selected_popup_bid_dropdown svg {
-  margin-left: 10px;
-}
-
-.put_on_marketplace .selected_popup_bid_dropdown svg path {
-  fill: #797979;
-}
-
-.put_on_marketplace .selected_block_price_dropdown {
-  color: #797979;
-}
-
-.put_on_marketplace .piece_block {
-  max-width: 300px;
-}
-
-.put_on_marketplace .collection_block_blockchain .auction_date h6 {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  color: #313131;
-  margin: 10px 0;
-}
-
-.dark .put_on_marketplace .collection_block_blockchain h6 {
-  color: #ebebeb;
-}
-
-.put_on_marketplace .collection_block_blockchain h5 {
-  margin: 30px 0 0;
+.put_on_marketplace_buttons .inf_btn {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.put_on_marketplace .collection_block_blockchain h5 img {
-  margin-left: 10px;
-}
-
-.put_on_marketplace .collection_block_blockchain .blockchain_title {
-  margin: 30px 0 20px;
-}
-
-.put_on_marketplace .price_info div {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  color: #313139;
-}
-
-.dark .put_on_marketplace .price_info div {
-  color: #ebebeb;
-}
-
-.put_on_marketplace .price_info span {
-  color: rgba(0, 10, 255, 1);
-}
-
-.product_auction_fixed_block .auction_date {
-  display: flex;
-  flex-direction: row;
-}
-
-.auction_date > div {
-  width: 50%;
-  max-width: 50%;
-}
-
-.auction_date > div input {
-  width: 95%;
-  min-width: 95%;
-}
-
-.put_on_marketplace .auction_date > div > div {
-  position: relative;
-}
-
-.put_on_marketplace .auction_date > div .selected_popup_bid_dropdown {
-  margin-right: 20px;
-}
-
-.put_on_marketplace .product_left .product_right {
-  display: none;
-  margin-top: 40px;
-}
-
-@media (max-width: 1199.98px) {
-  .collection_block_buttons button {
-    margin-right: 10px;
-    min-width: 137px;
-    width: 137px;
-    padding: 5px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .collection_block_buttons button {
-    margin-right: 30px;
-    min-width: 170px;
-    width: auto;
-    padding: 10px;
-  }
-
-  .put_on_marketplace .product_left .product_right {
-    display: block;
-  }
-
-  .put_on_marketplace .product_left .product_right h2,
-  .put_on_marketplace .product_left .product_right .product_subtitle,
-  .put_on_marketplace .product_left .product_right .product_description,
-  .put_on_marketplace .product_left .product_right .product_header {
-    display: block;
-  }
-
-  .put_on_marketplace .product_right h2,
-  .put_on_marketplace .product_right .product_subtitle,
-  .put_on_marketplace .product_right .product_description,
-  .put_on_marketplace .product_right .product_header {
-    display: none;
-  }
+.put_on_marketplace_buttons .inf_btn img {
+  max-width: 24px;
 }
 
 @media (max-width: 575.98px) {
-  .put_on_marketplace .collection_block_buttons {
-    flex-wrap: wrap;
-    justify-content: space-around;
+  .put_on_marketplace_menu {
+    flex-direction: column;
+    align-items: flex-end;
   }
-
-  .auction_date > div {
+  .put_on_marketplace_search input {
     width: 100%;
   }
-
-  .auction_date {
-    flex-wrap: wrap;
-  }
-  .auction_date > div input {
+  .put_on_marketplace_search {
+    margin-bottom: 20px;
     width: 100%;
-    min-width: 100%;
   }
-  .put_on_marketplace_header button:first-child,
-  .put_on_marketplace_header button:nth-child(2) {
-    margin: 0 5px;
-    padding: 20px 10px;
-  }
-  .put_on_marketplace_header .container {
-    justify-content: space-between;
-  }
-  .collection_block_buttons button {
-    min-width: auto;
-    margin-right: 5px;
-    margin-left: 5px;
+  .put_on_marketplace_buttons div:nth-child(2) a,
+  .put_on_marketplace_buttons a:first-child {
+    margin: 0 8px;
+    font-size: 17px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
   }
 }

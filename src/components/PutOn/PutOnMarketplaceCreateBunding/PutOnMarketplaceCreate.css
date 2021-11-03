@@ -1,0 +1,48 @@
+.cover_image {
+  display: flex;
+  align-items: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.dark .cover_image {
+  color: #ffffff;
+}
+
+.cover_image svg {
+  margin-right: 10px;
+}
+
+.prodcut_bunding_small_slide.active {
+  border: 1px solid #1f50ff;
+}
+
+.dark .prodcut_bunding_small_slide.active {
+  border: 1px solid #12ffff;
+}
+
+.bundle_count {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
+  margin-top: 10px;
+}
+
+.dark .bundle_count {
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .bundle_count_desktop {
+    display: none !important;
+  }
+}
