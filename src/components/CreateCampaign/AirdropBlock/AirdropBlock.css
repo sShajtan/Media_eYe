@@ -1,0 +1,365 @@
+.airdrop_recepient_block {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #797979;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 12px;
+  max-width: 300px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+}
+
+.airdrop_recepient_block_search {
+  position: relative;
+}
+
+.airdrop_recepient_block_search input {
+  min-width: auto;
+  width: 100%;
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  padding-right: 15%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  height: 30px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #797979;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  outline: none;
+  color: #000;
+}
+
+.dark .airdrop_recepient_block_search input {
+  color: #fff;
+}
+
+.airdrop_recepient_block_search button {
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  min-width: auto;
+  margin: 0;
+  height: auto;
+  margin-top: 3px;
+  padding: 0;
+}
+
+.airdrop_recepient_block_search button:hover {
+  border: inherit;
+}
+
+.airdrop_recepient_block_search button svg {
+  width: 23px;
+}
+
+.dark .airdrop_recepient_block_search button svg path,
+.dark .airdrop_recepient_block_search button svg circle {
+  stroke: #fff;
+}
+
+.airdrop_recepient_block .airdrop_recepient_block_add_adress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+
+.airdrop_recepient_block .airdrop_recepient_block_add_adress input {
+  min-width: auto;
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 5px;
+  padding: 3px;
+  height: 30px;
+  min-width: 243px;
+  margin: 0;
+  border: 1px solid #797979;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  outline: none;
+  color: #000;
+}
+
+.dark .airdrop_recepient_block .airdrop_recepient_block_add_adress input {
+  color: #fff;
+}
+
+.airdrop_recepient_block .airdrop_recepient_block_add_adress button {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.dark .airdrop_recepient_block .airdrop_recepient_block_add_adress button {
+  color: #ffffff;
+}
+
+.airdrop_recepient_block .airdrop_recepient_block_add_adress button span {
+  border: 1px solid #0075ff;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000 !important;
+  margin-right: 5px;
+}
+
+.dark .airdrop_recepient_block .airdrop_recepient_block_add_adress button span {
+  color: #fff !important;
+}
+
+.airdrop_recepient_block_adress_list ol {
+  margin: 0;
+  padding: 0;
+}
+
+.airdrop_recepient_block_adress_list ol:nth-child(2) {
+  max-height: 170px;
+  overflow-y: scroll;
+}
+
+.airdrop_recepient_block_adress_list ol:nth-child(2)::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+  z-index: 2;
+  position: relative;
+}
+
+.airdrop_recepient_block_adress_list ol:nth-child(2)::-webkit-scrollbar-thumb {
+  background-color: #bababa;
+  z-index: 2;
+  position: relative;
+  border-radius: 10px;
+  height: 30px;
+}
+
+.airdrop_recepient_block_adress_list ol:nth-child(2) li:first-child {
+  margin-top: 0;
+}
+
+.airdrop_recepient_block_adress_list ol li {
+  display: flex;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+.airdrop_recepient_block_adress_list ol li div:first-child {
+  width: 110px;
+}
+
+.airdrop_recepient_block_adress_list ol li div,
+.airdrop_recepient_block_adress_list ol li div span {
+  color: #000;
+}
+
+.dark .airdrop_recepient_block_adress_list ol li,
+.dark .airdrop_recepient_block_adress_list ol li div,
+.dark .airdrop_recepient_block_adress_list ol li div span {
+  color: #fff;
+}
+
+.airdrop_recepient_block_adress_list ol li div {
+  display: block;
+}
+.airdrop_recepient_block_adress_list ol li div span {
+  margin-right: 10px;
+}
+
+.airdrop_recepient_block_adress_list ol li input {
+  background: rgba(255, 255, 255, 0.04);
+  max-width: 40px;
+  min-width: auto;
+  padding: 2px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0;
+  border: 1px solid #797979;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  outline: none;
+  color: #000;
+}
+
+.dark .airdrop_recepient_block_adress_list ol li input {
+  color: #fff;
+}
+
+.airdrop_recepient_block_adress_list ol li button {
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  width: auto;
+  min-width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.dark .airdrop_recepient_block_adress_list ol li button {
+  color: #fff;
+}
+.airdrop_recepient_block_adress_list ol li button:hover {
+  border: inherit;
+}
+
+.airdrop_recepient_block_footer {
+  background: rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 11px;
+  margin: 0 -10px -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.airdrop_recepient_block_footer input {
+  display: none;
+}
+
+.airdrop_recepient_block_footer span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000;
+  margin-right: 10px;
+  display: block;
+  height: 20px;
+}
+
+.dark .airdrop_recepient_block_footer span {
+  color: #fff;
+}
+
+.airdrop_recepient_block_footer label {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.airdrop_block {
+  margin-bottom: 20px;
+}
+
+.airdrop_block h5 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  margin: 20px 0 0 3px;
+}
+
+.airdrop_block h5 svg {
+  transition: 0.4s;
+  margin-left: 10px;
+}
+
+.airdrop_block h5.active svg {
+  transition: 0.4s;
+  transform: rotate(180deg);
+}
+
+.dark .airdrop_block h5 {
+  color: #fff;
+}
+
+.dark .airdrop_block h5 svg path {
+  fill: #fff;
+}
+
+@media (max-width: 1399.98px) {
+  .airdrop_recepient_block .airdrop_recepient_block_add_adress input {
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .airdrop_recepient_block .airdrop_recepient_block_add_adress input {
+    min-width: 237px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .airdrop_recepient_block .airdrop_recepient_block_add_adress input {
+    min-width: 195px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .airdrop_recepient_block .airdrop_recepient_block_add_adress input {
+    min-width: 243px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .airdrop_recepient_block .airdrop_recepient_block_add_adress input {
+    min-width: 205px;
+  }
+}

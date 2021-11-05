@@ -8,10 +8,17 @@ import TelegramIcon from '../Icons/TelegramIcon';
 import TiktokIcon from '../Icons/TiktokIcon';
 import TwitterIcon from '../Icons/TwitterIcon';
 import './Footer.css';
+import { withRouter } from 'react-router';
 
 const Footer = (props) => {
   return (
-    <footer>
+    <footer
+      style={
+        props.location.pathname === '/hub/treasureland'
+          ? { display: 'none' }
+          : null
+      }
+    >
       <div className="container">
         <div className="footer_main">
           <div className="footer_left">
@@ -135,4 +142,4 @@ const Footer = (props) => {
   );
 };
 
-export default Footer;
+export default withRouter(Footer);

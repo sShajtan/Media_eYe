@@ -1,7 +1,7 @@
 .put_on_block_single {
   display: flex;
   justify-content: space-between;
-  min-height: 66px;
+  min-height: 80px;
 }
 
 .put_on_block_single label {

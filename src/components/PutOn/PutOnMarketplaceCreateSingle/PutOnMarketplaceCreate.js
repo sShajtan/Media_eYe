@@ -89,7 +89,7 @@ const PutOnMarketplace = (props) => {
 
   const deleteRecepient = (i) => {
     let arr = recepient.slice();
-    delete arr[i];
+    arr.splice(i, 1);
     setRecpient(arr);
   };
 

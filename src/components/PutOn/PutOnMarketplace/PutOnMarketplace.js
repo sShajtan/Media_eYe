@@ -5,6 +5,7 @@ import Filter from '../../ContentMarketplace/Filter/FilterPutOn';
 import PutOnBlock from '../PutOnBlock/PutOnBlock';
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
+import AddEmptyBlocks from '../../../utils/AddEmptyBlocks';
 
 const product = [
   {
@@ -343,6 +344,7 @@ const PutOnMarketplace = (props) => {
           {product.map((product, i) => (
             <PutOnBlock product={product} key={i} addImage={addImage} />
           ))}
+          {AddEmptyBlocks(product.length)}
         </div>
       </div>
       <div

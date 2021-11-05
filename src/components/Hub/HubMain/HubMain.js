@@ -11,9 +11,14 @@ const HubMain = (props) => {
         </div>
         <div className="hub_main_page_content">
           <HubMainBlock
+            link="/hub/treasureland"
+            title="Treasureland"
+            img="../../../img/hub_main/treasureland.png"
+          />
+          {/* <HubMainBlock
             title="Open Sea"
             img="../../../img/hub_main/OpenSea.png"
-          />
+          /> */}
           <HubMainBlock
             title="Rarible"
             img="../../../img/hub_main/Rarible.png"

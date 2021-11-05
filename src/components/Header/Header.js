@@ -13,6 +13,7 @@ import SearchIcon from '../Icons/SearchIcon';
 import StarHeader from '../Icons/StarHeader';
 import Sun from '../Icons/Sun';
 import Moon from '../Icons/Moon';
+import { withRouter } from 'react-router';
 
 const Header = (props) => {
   const {
@@ -31,6 +32,7 @@ const Header = (props) => {
   const [isLogin, setIsLogin] = useState(isAuth());
   const [mobileSearch, setMobileSearch] = useState(false);
   const wrapperRef = useRef(null);
+
   useEffect(() => {
     setIsLogin(user?.token ? true : false);
   }, [user]);
@@ -52,7 +54,13 @@ const Header = (props) => {
 
   return (
     <React.Fragment>
-      <header>
+      <header
+        style={
+          props.location.pathname === '/hub/treasureland'
+            ? { position: 'relative' }
+            : null
+        }
+      >
         <div className="container">
           <div className="header_main" ref={wrapperRef}>
             <div className="header_logo">
@@ -433,4 +441,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

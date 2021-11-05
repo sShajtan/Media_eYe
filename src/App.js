@@ -64,6 +64,10 @@ import CreatorEvents from './pages/CreatorEvents';
 import Hub from './pages/Hub';
 import HubPartner from './pages/HubPartner';
 import PutOnMarketplaceCreate from './pages/PutOnMarketplaceCreate';
+import CreateCampaign from './pages/CreateCampaign';
+import Airdrop from './pages/Airdrop';
+import AirdropSingle from './pages/AirdropSingle';
+import Treasureland from './pages/Treasureland';
 
 const App = () => {
   const darkTheme = useSelector((state) => state.app.darkTheme);
@@ -326,6 +330,18 @@ const App = () => {
             </Route>
             <Route path="/hub/partner" exact>
               <HubPartner closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/hub/treasureland" exact>
+              <Treasureland closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/create-campaign" exact>
+              <CreateCampaign closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/create-campaign/airdrop" exact>
+              <Airdrop closeNftCollapse={closeNftCollapse} />
+            </Route>
+            <Route path="/airdrop" exact>
+              <AirdropSingle closeNftCollapse={closeNftCollapse} />
             </Route>
             <Route path="*">
               <NoMatch onClick={closeNftCollapse} />

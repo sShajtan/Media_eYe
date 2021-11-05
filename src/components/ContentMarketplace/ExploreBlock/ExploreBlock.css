@@ -378,7 +378,9 @@
   .marketplace_slider_main .explore_block_wrapper,
   .event_single_slider_wrapper .explore_block_wrapper,
   .charities_single_slider .explore_block_wrapper,
-  .product_footer_products .explore_block_wrapper {
+  .product_footer_products .explore_block_wrapper,
+  .create_campaign_content_main .explore_block_wrapper,
+  .put_on_marketplace_main .explore_block_wrapper {
     max-width: 275px;
     margin: 0 auto;
   }
@@ -399,7 +401,9 @@
     width: 302px;
   }
   .marketplace_slider_main .explore_block_wrapper,
-  .event_single_slider_wrapper .explore_block_wrapper {
+  .event_single_slider_wrapper .explore_block_wrapper,
+  .create_campaign_content_main .explore_block_wrapper,
+  .put_on_marketplace_main .explore_block_wrapper {
     max-width: 295px;
   }
 }

@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import './HubMainBlock.css';
 
 const HubMainBlock = (props) => {
-  const { img } = props;
+  const { img, link } = props;
   return (
     <Link
       to={{
-        pathname: '/hub/partner',
+        pathname: link ? link : '/hub/partner',
         state: { img }
       }}
     >

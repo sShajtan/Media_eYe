@@ -429,7 +429,9 @@
   justify-content: space-between;
   margin: 8px 0;
 }
-
+.recepient_block_adress_list ol li div:first-child {
+  width: 110px;
+}
 .recepient_block_adress_list ol li div,
 .recepient_block_adress_list ol li div span {
   color: #000;
