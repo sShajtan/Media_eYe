@@ -583,6 +583,9 @@ div.menu-item .soc_header_mobile {
 }
 
 @media (max-width: 1199.98px) {
+  .header_main .buy_eye {
+    font-size: 14px;
+  }
   .header_main a,
   .header_main button {
     font-size: 11px;
@@ -1074,7 +1077,7 @@ div .header_avatar_wrapper img {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 25px 0;
+  margin: 12px 0;
 }
 
 .wallet_collapse_main h5 {
@@ -1095,8 +1098,8 @@ div .header_avatar_wrapper img {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -1117,7 +1120,13 @@ div .header_avatar_wrapper img {
   color: #0075ff !important;
 }
 
-.wallet_row h6 {
+.wallet_claim {
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+.wallet_row h6,
+.wallet_claim h6 {
   margin: 0;
   font-family: Poppins;
   font-style: normal;
@@ -1127,6 +1136,96 @@ div .header_avatar_wrapper img {
   display: flex;
   align-items: center;
   color: #8e8e8e;
+}
+
+.wallet_claim div {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.wallet_claim div label {
+  max-width: 45%;
+  display: block;
+  position: relative;
+}
+
+.wallet_claim div span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.dark .wallet_claim div span {
+  color: #fff;
+}
+
+.wallet_claim div input {
+  outline: none;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #797979;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 6px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 2px 25px 2px 5px;
+  color: #000;
+  max-width: 90%;
+}
+
+.dark .wallet_claim div input {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #797979;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 6px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  max-width: 90%;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 2px 25px 2px 5px;
+}
+
+.wallet_claim .claim_btn {
+  white-space: nowrap;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  outline: none;
+  background: none;
+  border: 1px solid #0075ff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.dark .wallet_claim .claim_btn {
+  color: #fff;
+}
+
+.wallet_claim .claim_btn:hover {
+  color: #0075ff;
 }
 
 .wallet_row span {

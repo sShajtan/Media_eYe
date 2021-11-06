@@ -183,7 +183,9 @@ const Header = (props) => {
                         >
                           <Collapse isOpened={showWalletCollapse}>
                             <div className="wallet_collapse_main">
-                              <h5>{account && account}</h5>
+                              <h5 className="gradient-txt">
+                                {account && account}0xfhr4co9f38f...e345
+                              </h5>
                               <div className="wallet_row">
                                 <img
                                   src="../../../img/token_1.png"
@@ -213,6 +215,15 @@ const Header = (props) => {
                                 <div>
                                   <h6>Bidding Balance</h6>
                                   <span>0 wETH</span>
+                                </div>
+                              </div>
+                              <div className="wallet_claim">
+                                <h6>Reward distribution</h6>
+                                <div>
+                                  <span>10.0023 ETH</span>
+                                  <button className="claim_btn">
+                                    Claim a reward
+                                  </button>
                                 </div>
                               </div>
                               <div className="wallet_footer">
