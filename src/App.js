@@ -328,12 +328,13 @@ const App = () => {
             <Route path="/hub" exact>
               <Hub closeNftCollapse={closeNftCollapse} />
             </Route>
-            <Route path="/hub/partner" exact>
-              <HubPartner closeNftCollapse={closeNftCollapse} />
-            </Route>
             <Route path="/hub/treasureland" exact>
               <Treasureland closeNftCollapse={closeNftCollapse} />
             </Route>
+            <Route path="/hub/:slug" exact>
+              <HubPartner closeNftCollapse={closeNftCollapse} />
+            </Route>
+
             <Route path="/create-campaign" exact>
               <CreateCampaign closeNftCollapse={closeNftCollapse} />
             </Route>

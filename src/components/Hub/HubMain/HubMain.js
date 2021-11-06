@@ -21,27 +21,37 @@ const HubMain = (props) => {
           /> */}
           <HubMainBlock
             title="Rarible"
+            link="/hub/rarible"
             img="../../../img/hub_main/Rarible.png"
           />
-          <HubMainBlock title="Dapper" img="../../../img/hub_main/Dapper.png" />
+          <HubMainBlock
+            title="Dapper"
+            link="/hub/dapper"
+            img="../../../img/hub_main/Dapper.png"
+          />
           <HubMainBlock
             title="SuperRare"
+            link="/hub/superrare"
             img="../../../img/hub_main/SuperRаre.png"
           />
           <HubMainBlock
             title="Foundation"
+            link="/hub/foundation"
             img="../../../img/hub_main/Foundation.png"
           />
           <HubMainBlock
             title="KnownOrigin"
+            link="/hub/knownorigin"
             img="../../../img/hub_main/KnownOrigin.png"
           />
           <HubMainBlock
             title="Nifti Gаtewаy"
+            link="/hub/niftigаtewаy"
             img="../../../img/hub_main/NiftiGаtewаy.png"
           />
           <HubMainBlock
             title="Portion"
+            link="/hub/portion"
             img="../../../img/hub_main/Portion.png"
           />
         </div>
