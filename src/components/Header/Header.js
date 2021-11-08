@@ -184,7 +184,7 @@ const Header = (props) => {
                           <Collapse isOpened={showWalletCollapse}>
                             <div className="wallet_collapse_main">
                               <h5 className="gradient-txt">
-                                {account && account}0xfhr4co9f38f...e345
+                                {account && account}
                               </h5>
                               <div className="wallet_row">
                                 <img
